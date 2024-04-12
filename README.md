@@ -1,12 +1,12 @@
 # Proyecto: Manos a la Obra
 Elaborado por: Alebrijes Full Stack, equipo 1 de la cohorte 39 del BootCamp "Desarrollador(a) Java Full Stack" de Generation México.
 #### Integrantes del equipo:
-- [Angel Soto Martinez](https://www.linkedin.com/ "Angel Soto Martinez")
+- [Angel Soto Martinez](https://www.linkedin.com/in/ansotomar/ "Angel Soto Martinez")
 - [Asbel Monserrat Torales Anell](https://www.linkedin.com/in/asbeltorales/ "Asbel Monserrat Torales Anell")
 - [David Ortiz Campos](https://www.linkedin.com/in/david-ortiz-campos/ " David Ortiz Campos")
 - [David Giovanni Salvatori González](https://www.linkedin.com/in/david-salvatori-3561bb2b6/ "David Salvatori González")
 - [Diana Mariela López Ortiz](https://www.linkedin.com/ "Diana Mariela López Ortiz")
-- [Eduardo Sosa Eguía](https://www.linkedin.com/ "Eduardo Sosa Eguía")
+- [Eduardo Sosa Eguía](https://www.linkedin.com/in/eduardo-sosa-fullstack/ "Eduardo Sosa Eguía")
 - [Jorge Antonio Nichols Villalobos](https://www.linkedin.com/ "Jorge Antonio Nichols Villalobos")
 - [Sergio Cruz Estrada](https://www.linkedin.com/in/sergioce "Sergio Cruz Estrada")
 
