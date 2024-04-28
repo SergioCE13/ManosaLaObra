@@ -1,0 +1,77 @@
+:root{
+    --color--primario: #E31B9F;
+    --color--secundario: #E4DDD3;
+    --color--terciario: #969696;
+    --color--yellow: #ECAC44; 
+    --color--blanco: #FFFFFF;
+    --color--negro: #000000;
+}
+
+/*----------------------------------------------- Estilos de la NAVBAR --------------------------------------*/
+
+.container-search{ /* Estilos de la barra de búsqueda*/ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar { /* Estilos de la Navbar*/
+    background-color: var(--color--primario);
+}
+
+.navbar-nav .nav-link{ /* Estilo de los links en la barra de búsqueda*/
+    color: var(--color--blanco);
+}
+
+#search_btn {/* Estilos del botón de la barra de búsqueda*/
+    background-color: var(--color--primario);
+    color: var(--color--blanco);
+    border-color: var(--color--blanco);
+    display: flex;
+    align-items: center;
+}
+
+/* --------------------------------------------- Estilos del Cuerpo -------------------------------------------*/
+.body--tag{ /* Estilos de la etiquea body*/
+    background-color: #E4DDD3;
+}
+
+.container--title{ /* Estilos del banner del sitio*/
+    display: flex;
+    justify-content: center;
+    background-color: #969696;
+    opacity: 0.6;
+    padding-top: 10px;
+}
+
+.container--title h1{
+    font-family: "Open Sans", sans-serif;
+    justify-content: center;
+    margin-top: 5px;
+    color: #FFFFFF;
+}
+
+label, input{
+    font-family: "Open Sans", sans-serif;
+}
+
+#forma>img{
+    grid-area: a;
+
+}
+#forma>#form{
+    grid-area: b;
+}
+
+img{
+    width: 100%;
+    
+}
+
+#form{
+    display: grid;
+    padding-left: 50px;
+    padding-right: 10px;
+    width: 100%;
+    padding-top: 20px;
+}
