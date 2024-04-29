@@ -22,9 +22,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
     <!--Conexión Styles-->
-    <link rel="stylesheet" href="./style-general.css">
-    <link rel="stylesheet" href="./style-aboutus.css">
-    <link rel="stylesheet" href="./style-sobre-nosotros.css">
+    <link rel="stylesheet" href="./assets/styles/style-general.css">
+    <link rel="stylesheet" href="./assets/styles/style-sobre-nosotros.css">
 
     <!--Conexión Tipografía Darker Grotesque-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,54 +41,53 @@
 
 <!-------------------------------------------------Inicia Navbar----------------------------------------------->
     
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <div  class="logo-img"  style="padding-left: 20px">
-                <img src="./assets/img.logo/logo-MAO-SL.png" width="50" height="50" padding-right=20px>
-                </div>
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="./assets/images/Logo.png" width="50" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Index.html" style="color: #FFFFFF">Manos a la
+              Obra</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Tienda</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Nosotros
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" style="color: #FFFFFF">Manos a la
-                            Obra</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tienda</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Nosotros
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Acerca de Nosotros</a></li>
-                            <li><a class="dropdown-item" href="#">Acerca de nuestros Artesanos</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="index_contactanos.html">Contactanos</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex position-absolute top-50 start-50 translate-middle" role="search">
-                    <input class="form-control me-2" style="width:350px" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" id="search_btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                    </svg></button>
-                </form>
-                <i class="bi bi-cart3" style="padding-right: 15px; padding-left: 10px; color: #FFFFFF; font-size: 1.5rem;"></i>
-                <i class="bi bi-person" style="padding-right: 15px; color: #FFFFFF; font-size: 1.8rem;" ></i>
-                
-            </div>
-        </div>
-    </nav>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index-sobre-nosotros.html">Acerca de Nosotros</a></li>
+              <li><a class="dropdown-item" href="NuestrosArtesanos.html">Acerca de nuestros Artesanos</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="Contactanos.html">Contactanos</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex position-absolute top-50 start-50 translate-middle" role="search">
+          <input class="form-control me-2" style="width:350px" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" id="search_btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
+              width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg></button>
+        </form>
+        <i class="bi bi-cart3" style="padding-right: 15px; padding-left: 10px; color: #FFFFFF; font-size: 1.5rem;"></i>
+        <i class="bi bi-person" style="padding-right: 15px; color: #FFFFFF; font-size: 1.8rem;"></i>
+
+      </div>
+    </div>
+  </nav>
 </header>
 
 <body class="body-style">
@@ -117,7 +115,7 @@
                   <div class="carousel-item active">
 
                       <!--Imagen de la página 1-->
-                        <img src="assets/Imagenes.carousel/img-quienesSomos.png" class="d-block w-100" alt="Imagen referente a quienes somos">
+                        <img src="./assets/images/Imagenes.carousel/img-quienesSomos.png" class="d-block w-100" alt="Imagen referente a quienes somos">
                     
                         <div class="carousel-caption d-none d-md-block">
 
@@ -141,7 +139,7 @@
 
                 <div class="carousel-item">
                        <!--Imagen de la página 2-->
-                       <img src="./assets/Imagenes.carousel/img-barros.png" class="d-block w-100" alt="Imagen referente a nuestra Mision">
+                       <img src="./assets/images/Imagenes.carousel/img-barros.png" class="d-block w-100" alt="Imagen referente a nuestra Mision">
                          
                         <div class="carousel-caption d-none d-md-block">
                             
@@ -167,7 +165,7 @@
 
                 <div class="carousel-item">
                      <!--Imagen de la página 3-->
-                    <img src="./assets/Imagenes.carousel/img-visión.png" class="d-block w-100" alt="Imagen de nuestra visión">
+                    <img src="./assets/images/Imagenes.carousel/img-visión.png" class="d-block w-100" alt="Imagen de nuestra visión">
                       <div class="carousel-caption d-none d-md-block">
 
                         <!--Contenedor del texto de la página-->
@@ -192,7 +190,7 @@
 
                 <div class="carousel-item">
                     <!--Imagen de la página 4-->
-                    <img src="./assets/Imagenes.carousel/img-artesanos.png" class="d-block w-100" alt="Slide 4">
+                    <img src="./assets/images/Imagenes.carousel/img-artesanos.png" class="d-block w-100" alt="Slide 4">
                         <div class="carousel-caption">
 
                           <!--Contenedor del texto de la página-->
@@ -252,7 +250,7 @@
                         
                         <!--Inicia Card Angel Soto-->
                         <div class="card" style="width: 18rem;">
-                          <img class="card-img-top" src="./assets/img.equipo/img-angel-byn.jpg" alt="Foto Angel">
+                          <img class="card-img-top" src="./assets/images/img.equipo/img-angel-byn.jpg" alt="Foto Angel">
                           <div class="card-body">
                             <h5 class="card-title">Angel Soto</h5>
                             <p class="card-text">Developer FullStack</p>
@@ -289,7 +287,7 @@
                          
                          <!--Inicia Card Asbel Torales-->
                         <div class="card" style="width: 18rem;">
-                          <img class="card-img-top" src="./assets/img.equipo/img-asbel.webp" alt="Foto Asbel">
+                          <img class="card-img-top" src=".//assets/images/img.equipo/img-asbel.webp" alt="Foto Asbel">
                            <div class="card-body">
                              <h5 class="card-title">Asbel Torales</h5>
                               <p class="card-text">Developer FullStack</p>
@@ -329,7 +327,7 @@
                            
                         <!--Inicia Card David Ortiz-->
                         <div class="card" style="width: 18rem;">
-                          <img class="card-img-top" src="./assets/img.equipo/img-david-byn.jpg" alt="Foto David">
+                          <img class="card-img-top" src="./assets/images/img.equipo/img-david-byn.jpg" alt="Foto David">
                           <div class="card-body">
                             <h5 class="card-title">David Ortiz</h5>
                             <p class="card-text">Developer FullStack</p>
@@ -366,7 +364,7 @@
 
                         <!--Inicia Card David Salvatori-->
                         <div class="card" style="width: 18rem;">
-                          <img class="card-img-top" src="./assets/img.equipo/img-salva-byn.jpg" alt="Foto David Salva">
+                          <img class="card-img-top" src=".//assets/images/img.equipo/img-salva-byn.jpg" alt="Foto David Salva">
                           <div class="card-body">
                             <h5 class="card-title">David Salvatori</h5>
                             <p class="card-text">Developer FullStack</p>
@@ -423,7 +421,7 @@
 
                       <!--Contenedor de la Card de Diana López-->
                       <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./assets/img.equipo/img-diana-byn.jpg" alt="Foto Diana">
+                        <img class="card-img-top" src="./assets/images/img.equipo/img-diana-byn.jpg" alt="Foto Diana">
                         <div class="card-body">
                           <h5 class="card-title">Diana López</h5>
                           <p class="card-text">Developer FullStack</p>
@@ -462,7 +460,7 @@
                           
                       <!--Contenedor Card de Eduardo Sosa-->
                       <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./assets/img.equipo/img-lalo-byn.jpg" alt="Foto Lalo">
+                        <img class="card-img-top" src="./assets/images/img.equipo/img-lalo-byn.jpg" alt="Foto Lalo">
                         <div class="card-body">
                           <h5 class="card-title">Eduardo Sosa</h5>
                           <p class="card-text">Product Owner</p>
@@ -501,7 +499,7 @@
 
                       <!--Contenedor Card Jorge Nichols-->
                       <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./assets/img.equipo/img-nichols-byn.jpg" alt="Foto Nichols">
+                        <img class="card-img-top" src="./assets/images/img.equipo/img-nichols-byn.jpg" alt="Foto Nichols">
                         <div class="card-body">
                           <h5 class="card-title">Jorge Nichols</h5>
                           <p class="card-text">Scrum Master</p>
@@ -538,7 +536,7 @@
                          
                       <!--Contenedor de Sergio Cruz-->
                       <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./assets/img.equipo/img-sergio-byn.jpg" alt="Foto Sergio">
+                        <img class="card-img-top" src="./assets/images/img.equipo/img-sergio-byn.jpg" alt="Foto Sergio">
                         <div class="card-body">
                           <h5 class="card-title">Sergio Cruz</h5>
                           <p class="card-text">Developer FullStack</p>
