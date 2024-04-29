@@ -149,3 +149,17 @@ img{
 .custom-toggler.navbar-toggler {
     border-color: rgb(255, 255, 255);
 } 
+
+@media only screen and (max-width: 990px){
+    #principal{ /* Queries para pantallas entre 601px a 990px*/
+        display: block;
+    }
+    #principal1{
+        display: none;
+    }
+    #buscar{
+        width: 55%;
+        padding-left: 10%;
+        margin-right: 0;
+    }
+}
