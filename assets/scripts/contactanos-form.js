@@ -7,9 +7,10 @@ const emailInput = document.getElementById('input-email');
 // Campo de texto para el teléfono:
 const phoneInput = document.getElementById('input-phone');
 //Campo de texto para escribir un mensaje:
-const mensaje = document.getElementById('input-mensage').value;
+const mensajeInput = document.getElementById('input-mensage');
 // Botón para enviar el formulario:
 const buttonSubmit = document.getElementById("button--submit");
+
 
 // Deshabilitamos el botón del formularo ya que incialmente los campos están vacíos.
 buttonSubmit.classList.add('button-disabled');
@@ -43,6 +44,7 @@ function validarCampos() {
     const nombre = nameInput.value;
     const correo = emailInput.value;
     const telefono = phoneInput.value;
+    const mensaje = mensajeInput.value;
 
     // Evaluamos las cadenas en la expresión Regex correspondiente
     const nombreValido = nameRegex.test(nombre);
