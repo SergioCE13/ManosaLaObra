@@ -40,6 +40,7 @@ footer{
     position:absolute;
     bottom:0;
     width: 100%;
+    align-items: flex-end;
 }
 footer .row {
     margin-left:70px;
@@ -48,6 +49,11 @@ footer p{
     margin-left:30px;
 }
 
+.image-container{
+    display: flex;
+    
+    
 
+}
 
 
