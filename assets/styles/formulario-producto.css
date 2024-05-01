@@ -1,17 +1,51 @@
+body form{
+    display: flex;
+    justify-content: center;
+
+}
+
 .caja-blanca {
     background-color: white;
-    max-width: 700px;
-    margin: 50px 200px 50px 270px;
     border-radius: 15px;
-
+    margin: 50px 0px;;
 }
 
 .formulario {
-    margin: 50px;
-    padding: 50px 50px;
+    margin: 30px 20px;
+    padding: 0px 50px;
 }
 
-#titulo {
+.container-titulo {
     text-align: center;
-    color: yellowgreen;
+    color: #E31B9F;
+    padding: 10px 0px;
+    font-size: 25px;
+}
+
+.form-button{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px 15px 0px;
+}
+
+.boton-enviar{
+    background-color: #ECAC44;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 100%;
+    justify-self: center;
+}
+
+.boton-enviar :hover{
+    background-color: #ECAC44;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 100%;
+    justify-self: center;
 }
