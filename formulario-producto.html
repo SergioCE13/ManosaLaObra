@@ -24,16 +24,6 @@
     <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
     <link rel="stylesheet" href="./assets/styles/formulario-producto.css">
 
-    <style>
-        /* Estilos para el contenedor de información */
-        #informacion {
-            display: none;
-            /* Inicialmente oculto */
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin-top: 20px;
-        }
-    </style>
 
 </head>
 
@@ -109,69 +99,76 @@
         <h1>Registro de producto</h1>
     </div>
 
+    <!--------------------------------- Inicia el html del formulario ---------------------------------------->
     <form>
-        <div class="caja-blanca">
-            <div class="formulario">
-                <div class="container-titulo">
-                    <label id="titulo">Agrega información sobre tu producto</label>
+        <div class="caja-blanca"> <!-- Contenedor del cuerpo de la página-->
+            <div class="formulario"> <!-- Contenedor del formulario-->
+                <div class="container-titulo"> <!-- Contenedor del título de la página -->
+                    <label id="titulo-formulario">Agrega información sobre tu producto</label>
+                </div> 
+                <div class="form-group"> <!-- Contenedor del nombre del producto-->
+                    <label for="input-nombre-producto" >Nombre del producto</label>
+                    <input type="text" class="form-control" id="input-nombre-producto" placeholder="Introduce tu nombre">
+                    <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Nombre del producto</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text text-muted">Este campo es obligatorio</small>
+                <div class="form-group"> <!-- Conenedor del precio del producto-->
+                    <label for="input-precio-producto">Precio:</label>
+                    <input type="number" class="form-control" id="input-precio-producto" placeholder="Fija el precio de tu producto">
+                    <small id="info-precio-producto" class="form-text text-muted">Este campo es obligatorio</small>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Precio:</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                <div> <!-- Contenedor del título de categorías-->
+                    <label for="grupo-radio-buttons">Categoria:</label>
                 </div>
-                <div>
-                    <label for="exampleInputPassword1">Categoria:</label>
-                </div>
-                <div class="radio"> <!-- Inicia el contenendor de los radio buttons -->
-                    <div class="form-check form-check-inline">
+                <div class="grupo-radio-buttons"> <!-- Inicia el contenendor de los radio buttons -->
+                    <div class="form-check form-check-inline"> <!-- Primer radio button -->
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                             value="option1">
                         <label class="form-check-label" for="inlineRadio1">Barro negro</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline"> <!-- Segundo radio button -->
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
                             value="option2">
                         <label class="form-check-label" for="inlineRadio2">Textiles</label>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Alebrijes</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Ceramica</label>
-                    </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline"><!-- Tercer radio button -->
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                            value="option3"> <!-- Agregrar la propiedad disable para deshabilitar-->
-                        <label class="form-check-label" for="inlineRadio3">Juguetes</label>
+                            value="option3">
+                        <label class="form-check-label" for="inlineRadio3">Alebrijes</label>
                     </div>
+                    <div class="form-check form-check-inline"><!-- Cuarto radio button -->
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+                            value="option4">
+                        <label class="form-check-label" for="inlineRadio4">Ceramica</label>
+                    </div>
+                    <div class="form-check form-check-inline"> <!-- Quinto radio button -->
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
+                            value="option5"> <!-- Agregar la propiedad disable para deshabilitar-->
+                        <label class="form-check-label" for="inlineRadio5">Juguetes</label>
+                    </div>
+                </div> <!-- Termina el contenedor de los radio buttons-->
+                <small id="info-categoria-producto" class="form-text text-muted">Este campo es obligatorio</small>
+                <div class="form-group"> <!-- Contenedor del area de texto para la descripción-->
+                    <label for="textArea-desc-producto"> Descripción: </label>
+                    <textarea class="form-control" id="textArea-desc-producto" rows="3" placeholder="Escribe una descripción general de tu producto"></textarea>
+                    <small id="info-desc-producto" class="form-text text-muted">Este campo es obligatorio</small>
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1"> Descripción: </label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <div class="form-group"> <!-- Contenedor del área de texto para información adicional-->
+                    <label for="textArea-info-adicional"> Información adicional: </label>
+                    <textarea class="form-control" id="textArea-info-adicional" rows="3" placeholder="Aqui puedes escribir algún dato curioso sobre tu producto"></textarea>
+                    <small id="info-infoAdicional-producto" class="form-text text-muted">Este campo es obligatorio</small>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Información adicional:</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Stock:</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                <div class="form-group"> <!-- Contenedor del campo de existencias-->
+                    <label for="">Existencias:</label>
+                    <input type="number" class="form-control" min="1" max="100" step="1" value="1" id="">
+                    <small id="info-stock-producto" class="form-text text-muted">Este campo es obligatorio</small>
                 </div>
             
-                <div class="form-group form-button">
-                    <label for="exampleFormControlFile1">Ingresa una imagen de tu producto:</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <div class="form-group form-button"> <!-- Contenedor para ingresar imagen del producto -->
+                    <label for="">Ingresa una imagen de tu producto:</label>
+                    <input type="file" class="form-control-file img-button" id="">
+                    <small id="info-imagen-producto" class="form-text text-muted">Este campo es obligatorio</small>
                 </div>
-                <button type="submit" class="boton-enviar">Enviar</button>
+                <button type="submit" class="boton-enviar" id ="button-submit">Enviar</button>
             </div> <!-- Cierre del div del formulario-->
         </div> <!-- Cierre del div de Caja blanca -->
     </form>

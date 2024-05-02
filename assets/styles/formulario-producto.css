@@ -1,8 +1,13 @@
+/* Estilos del body para centrar el contenido*/
+
 body form{
     display: flex;
     justify-content: center;
 
 }
+
+
+/* Estilos del cuerpo de la página*/
 
 .caja-blanca {
     background-color: white;
@@ -10,10 +15,7 @@ body form{
     margin: 50px 0px;;
 }
 
-.formulario {
-    margin: 30px 20px;
-    padding: 0px 50px;
-}
+/* Estilos del formulario*/
 
 .container-titulo {
     text-align: center;
@@ -21,6 +23,12 @@ body form{
     padding: 10px 0px;
     font-size: 25px;
 }
+
+.formulario {
+    margin: 30px 20px;
+    padding: 0px 50px;
+}
+
 
 .form-button{
     display: flex;
