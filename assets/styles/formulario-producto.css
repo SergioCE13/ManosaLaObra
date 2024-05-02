@@ -36,7 +36,7 @@ body form{
     margin: 15px 0px 15px 0px;
 }
 
-.boton-enviar{
+#button-submit{
     background-color: #ECAC44;
     color: #FFFFFF;
     font-weight: 700;
@@ -48,7 +48,7 @@ body form{
     justify-self: center;
 }
 
-.boton-enviar :hover{
+#button-submit :hover{
     background-color: #ECAC44;
     color: #FFFFFF;
     border: none;
@@ -56,4 +56,15 @@ body form{
     padding: 10px 10px;
     width: 100%;
     justify-self: center;
+}
+
+#button-submit:disabled{
+    background-color: #969696;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 100%;
+    justify-self: center;
+    cursor: not-allowed; /* Cursor no permitido */
 }
