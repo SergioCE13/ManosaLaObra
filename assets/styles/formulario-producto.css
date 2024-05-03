@@ -1,17 +1,71 @@
+/* Estilos del body para centrar el contenido*/
+
+body form{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+/* Estilos del cuerpo de la página*/
+
 .caja-blanca {
     background-color: white;
-    max-width: 700px;
-    margin: 50px 200px 50px 270px;
     border-radius: 15px;
+    margin: 50px 0px;;
+}
 
+/* Estilos del formulario*/
+
+.container-titulo {
+    text-align: center;
+    color: #E31B9F;
+    padding: 10px 0px;
+    font-size: 25px;
 }
 
 .formulario {
-    margin: 50px;
-    padding: 50px 50px;
+    margin: 30px 20px;
+    padding: 0px 50px;
 }
 
-#titulo {
-    text-align: center;
-    color: yellowgreen;
+
+.form-button{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px 15px 0px;
+}
+
+#button-submit{
+    background-color: #ECAC44;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 100%;
+    justify-self: center;
+}
+
+#button-submit :hover{
+    background-color: #ECAC44;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 100%;
+    justify-self: center;
+    cursor: pointer;
+}
+
+#button-submit:disabled{
+    background-color: #969696;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 100%;
+    justify-self: center;
+    cursor: not-allowed; /* Cursor no permitido */
 }
