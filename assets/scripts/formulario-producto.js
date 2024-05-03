@@ -8,13 +8,20 @@ const inputStock = document.getElementById('input-stock-producto');
 const buttonSubmit = document.getElementById("button-submit");
 
 
+// Obtenemos los valores que contienen los campos de entrada.
+const nombreProducto =  inputNombre.value;
+const precioProducto = inputPrecio.value;
+const descripcionProducto = inputDescripcion.value;
+const infoAdicionalProducto = inputInfoAd.value;
+const stockProducto = inputStock.value;
+
+
 // Deshabilitamos el botón del formularo ya que incialmente los campos están vacíos.
 buttonSubmit.classList.add('button-disabled');
 buttonSubmit.disabled = true;
 
 
-function validarCampos(){
-    const nombreProducto =  inputNombre.value;    
+function validarCampos(){   
     if(nombreProducto !== ""){
         buttonSubmit.classList.remove('button-disabled');
         buttonSubmit.disabled = false;
@@ -27,3 +34,5 @@ function validarCampos(){
 
     // Agregamos escucha de eventos a cada uno de los campos de entrada para llamar a la función validarCampos cuando se ingrese  o modifique texto:
     inputNombre.addEventListener('input', validarCampos);
+
+    
