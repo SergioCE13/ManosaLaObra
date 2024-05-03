@@ -40,7 +40,16 @@ function validarCampos(){
     inputNombre.addEventListener('input', validarCampos);
 
 
+    buttonSubmit.addEventListener('click', function(){ 
+        // Obtener la lista de productos existentes del localStorage
+        let productos = JSON.parse(localStorage.getItem('productos')) || [];
     
+        const nombreProducto = inputNombre.value;
+        const validaPrecio = inputPrecio.value;
+        const validaDescripcion = inputDescripcion.value;
+        const validaInfoAd = inputInfoAd.value;
+        const validaStock = inputStock.value;
+      
         const productoJSON = { 
             "nombreProducto" : nombreProducto,
             "validaPrecio" : validaPrecio,
@@ -49,6 +58,16 @@ function validarCampos(){
             "validaStock" : validaStock 
         };
     
+
+        // Agregar el nuevo producto a la lista
+        productos.push(productoJSON);
+    
+        // Actualizar el localStorage con la lista de productos actualizada
+        localStorage.setItem('productos', JSON.stringify(productos));
+    
+        alert('Se agregó el producto correctamente');
+    });
+
 
     /*
         Función para obtener el valor seleccionado de los radio buttons
