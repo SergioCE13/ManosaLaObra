@@ -49,7 +49,7 @@ function validarCampos(){
         const validaDescripcion = inputDescripcion.value;
         const validaInfoAd = inputInfoAd.value;
         const validaStock = inputStock.value;
-    
+      
         const productoJSON = { 
             "nombreProducto" : nombreProducto,
             "validaPrecio" : validaPrecio,
@@ -58,6 +58,7 @@ function validarCampos(){
             "validaStock" : validaStock 
         };
     
+
         // Agregar el nuevo producto a la lista
         productos.push(productoJSON);
     
@@ -66,6 +67,7 @@ function validarCampos(){
     
         alert('Se agregó el producto correctamente');
     });
+
 
     /*
         Función para obtener el valor seleccionado de los radio buttons
@@ -82,9 +84,3 @@ function validarCampos(){
 
     para llamar a la función ocuparemos un obtenerCategoriaSeleccionada(radios);
 */
-
-
-    
-
-
-    
