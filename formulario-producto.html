@@ -122,27 +122,27 @@
                 <div class="grupo-radio-buttons"> <!-- Inicia el contenendor de los radio buttons -->
                     <div class="form-check form-check-inline"> <!-- Primer radio button -->
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1">
+                            value="Barrro negro">
                         <label class="form-check-label" for="inlineRadio1">Barro negro</label>
                     </div>
                     <div class="form-check form-check-inline"> <!-- Segundo radio button -->
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
+                            value="Textiles">
                         <label class="form-check-label" for="inlineRadio2">Textiles</label>
                     </div>
                     <div class="form-check form-check-inline"><!-- Tercer radio button -->
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                            value="option3">
+                            value="Alebrijes">
                         <label class="form-check-label" for="inlineRadio3">Alebrijes</label>
                     </div>
                     <div class="form-check form-check-inline"><!-- Cuarto radio button -->
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
-                            value="option4">
+                            value="Ceramica">
                         <label class="form-check-label" for="inlineRadio4">Ceramica</label>
                     </div>
                     <div class="form-check form-check-inline"> <!-- Quinto radio button -->
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
-                            value="option5"> <!-- Agregar la propiedad disable para deshabilitar-->
+                            value="Juguetes"> <!-- Agregar la propiedad disable para deshabilitar-->
                         <label class="form-check-label" for="inlineRadio5">Juguetes</label>
                     </div>
                 </div> <!-- Termina el contenedor de los radio buttons-->
@@ -168,14 +168,27 @@
                     <input type="file" class="form-control-file img-button" id="">
                     <small id="info-imagen-producto" class="form-text text-muted">Este campo es obligatorio</small>
                 </div>
-
-
+                <!-- Contenedor de la alerta de BootStrap-->
+                <div class ="alert alert-success mt-3 alert-dismissible fade show" role ="alert" id="alerta-success">
+                    <strong>Aviso: </strong> El registro del producto se ha realizado exitosamente.
+                    <!-- <a href="#" class ="alert-link"> lorem </a> -->
+                    <button type ="button" class ="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+                    </button>
+                </div>
+                <!-- Contenedor de la alerta de BootStrap-->
+                <div class ="alert alert-danger mt-3 alert-dismissible fade show" role ="alert" id ="alerta-danger">
+                    <strong>Aviso: </strong> El registro del producto se ha realizado exitosamente.
+                    <!-- <a href="#" class ="alert-link"> lorem </a> -->
+                    <button type ="button" class ="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+                    </button>
+                </div>
+                <!-- Botón para enviar el formulario-->
                 <input type="button" value="Enviar" id ="button-submit" class = "button-disabled">
             </div> <!-- Cierre del div del formulario-->
         </div> <!-- Cierre del div de Caja blanca -->
     </form>
 
-
+    <script src="js/bootstrap.bundle.min.js"></script>
 
 
 </body>
