@@ -113,7 +113,7 @@
                 </div>
                 <div class="form-group"> <!-- Conenedor del precio del producto-->
                     <label for="input-precio-producto">Precio:</label>
-                    <input type="number" class="form-control" id="input-precio-producto" placeholder="Fija el precio de tu producto">
+                    <input type="number" inputmode="numeric" class="form-control" id="input-precio-producto" placeholder="Fija el precio de tu producto">
                     <small id="info-precio-producto" class="form-text text-muted">Este campo es obligatorio</small>
                 </div>
                 <div> <!-- Contenedor del título de categorías-->
@@ -159,15 +159,15 @@
                 </div>
                 <div class="form-group"> <!-- Contenedor del campo de existencias-->
                     <label for="">Existencias:</label>
-                    <input type="number" class="form-control" min="1" max="100" step="1" value="1" id="input-stock-producto">
+                    <input type="number" inputmode="numeric" class="form-control" min="1" max="100" step="1" value="1" id="input-stock-producto">
                     <small id="info-stock-producto" class="form-text text-muted">Este campo es obligatorio</small>
                 </div>
                 <div class="form-group" id="Dimensiones"> <!-- Contenedor del campo de medidas-->
                     <label for="Dimensiones">Dimensiones:</label>
                     <div class="dim">
-                    <label for="input-alto">Alto:  <input type="number" class="form-control" id="input-alto"></label>
-                    <label for="input-ancho">Ancho:   <input type="number" class="form-control" id="input-ancho"></label>
-                    <label for="input-largo">Largo:   <input type="number" class="form-control" id="input-largo"></label>
+                    <label for="input-alto">Alto (cm):  <input type="number" inputmode="numeric" class="form-control" id="input-alto"></label>
+                    <label for="input-ancho">Ancho (cm):   <input type="number" inputmode="numeric" class="form-control" id="input-ancho"></label>
+                    <label for="input-largo">Largo (cm):   <input type="number" inputmode="numeric" class="form-control" id="input-largo"></label>
                     </div>
                     <small id="info-stock-producto" class="form-text text-muted">Este campo es obligatorio</small>
                 </div>
