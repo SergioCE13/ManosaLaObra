@@ -1,17 +1,102 @@
-.caja-blanca {
-    background-color: white;
-    max-width: 700px;
-    margin: 50px 200px 50px 270px;
-    border-radius: 15px;
+/* Estilos del body para centrar el contenido*/
 
+body form{
+    display: flex; /* Centramos el div que contendrá a el formulario*/
+    justify-content: center;
+
+}
+
+.caja-blanca { /* Estilos del contenedor del cuerpo del sitio*/
+    background-color: white;
+    border-radius: 15px;
+    margin: 50px 0px;
+    width: 70%;
+    -webkit-box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.85); 
+    box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.85);
+}  
+@media only screen and (max-width: 490px){
+    .caja-blanca{ /* Media query para el contenedor del cuerpo*/
+        width: 90%;
+        margin: 25px 0px;
+    }
+    
+
+}
+
+/* Estilos del formulario*/
+
+.container-titulo { /* Estilos para el título del formulario*/
+    text-align: center;
+    color: #E31B9F;
+    padding: 10px 0px;
+    font-size: 25px;
 }
 
 .formulario {
-    margin: 50px;
-    padding: 50px 50px;
+    margin: 30px 20px;
 }
 
-#titulo {
-    text-align: center;
-    color: yellowgreen;
+
+.form-button{ /* Estilos para el botón*/
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px 15px 0px;
 }
+
+#button-submit{
+    background-color: #ECAC44;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 100%;
+    justify-self: center;
+}
+
+#button-submit:hover{
+    background-color: #ebb661;
+    border: 1px solid rgb(97, 95, 95);
+}
+
+
+#button-submit:disabled{
+    background-color: #969696;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 100%;
+    justify-self: center;
+    cursor: not-allowed; /* Cursor no permitido */
+}
+
+/* Estilos de las vistas previas de las imagenes cargadas en el formulario*/
+#Dimensiones{
+    display: flex;
+    flex-direction: column;
+
+}
+.dim{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.dim input{
+    width: 70px;
+}
+.dim label{
+    text-align: center;
+}
+#preview{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3%;
+    gap: 10px;
+    opacity: 90%;
+    overflow: hidden;
+}
+

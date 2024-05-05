@@ -25,7 +25,7 @@ buttonSubmit.disabled = true;
 const nameRegex = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]+$/;
 
 /* Almacenamos la expresión regular para verificar los correos en una constante:
-    Esta expresión regular valida direcciones de correo electrónico acorde a los estandares RFC 5321 y RFC5322.
+    Esta expresión regular valida direcciones de correo electrónico acorde a los estandares RFC 5321 y RFC 5322.
 */
 const emailRegex = /^(?:(?:[^<>()[\]\\.,;:\s@\"]+(?:\.[^<>()[\]\\.,;:\s@\"]+)*)|(?:\".+\"))@(?:(?:\[(?:IPv6:(?:[a-fA-F0-9]{1,4}:){7}[a-fA-F0-9]{1,4}|(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))\])|(?:(?:[a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
 
@@ -37,7 +37,6 @@ const phoneRegex = /^\d{10}$/;
 
 /* Creamos la funciones para verificar si las cadenas de texto de cada campo cumplen con su expresión regular correspondiente*/
 
-// Verificación del campo "Correo Electrónico": 
 // Función para verificar si todos los campos cumplen con las expresiones regulares:
 function validarCampos() {
     // Obtenermos las cadenas de texto extistentes en los campos.
@@ -52,7 +51,7 @@ function validarCampos() {
     const telefonoValido = phoneRegex.test(telefono);
 
     // Si todos los campos cumplen con las expresiones regulares, habilitamos el botón:
-    if (nombreValido && correoValido && telefonoValido) {
+    if (nombreValido && correoValido && telefonoValido && mensaje !== ""){
         buttonSubmit.disabled = false;
         buttonSubmit.classList.remove('button-disabled');
     } else {
@@ -65,3 +64,5 @@ function validarCampos() {
 nameInput.addEventListener('input', validarCampos);
 emailInput.addEventListener('input', validarCampos);
 phoneInput.addEventListener('input', validarCampos);
+
+
