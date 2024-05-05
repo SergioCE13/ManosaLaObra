@@ -1,3 +1,58 @@
+/*----------------------------------------------- Estilos de la NAVBAR --------------------------------------*/
+
+.container-search{ /* Estilos de la barra de búsqueda*/ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar { /* Estilos de la Navbar*/
+    background-color: var(--color--primario);
+}
+
+.navbar-nav .nav-link{ /* Estilo de los links en la barra de búsqueda*/
+    color: var(--color--blanco);
+}
+
+#search_btn {/* Estilos del botón de la barra de búsqueda*/
+    background-color: var(--color--primario);
+    color: var(--color--blanco);
+    border-color: var(--color--blanco);
+    display: flex;
+    align-items: center;
+}
+#principal{
+    display: none;
+    font-size: 20px;
+}
+
+.custom-btn{
+    color: #FFFFFF;
+}
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgb(255, 255, 255);
+} 
+
+@media only screen and (max-width: 990px){
+    #principal{ /* Queries para pantallas entre 601px a 990px*/
+        display: block;
+    }
+    #principal1{
+        display: none;
+    }
+    #buscar{
+        width: 55%;
+        padding-left: 10%;
+        margin-right: 0;
+    }
+}
+
+
+
 /* Estilos del body para centrar el contenido*/
 
 body form{
@@ -6,16 +61,22 @@ body form{
 
 }
 
-
-/* Estilos del cuerpo de la pÃ¡gina*/
-
 .caja-blanca {
     background-color: white;
     border-radius: 15px;
-    margin: 50px 0px;;
+    margin: 50px 0px;
+    width: 70%;
     -webkit-box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.85); 
     box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.85);
 }  
+@media only screen and (max-width: 490px){
+    .caja-blanca{
+        width: 90%;
+        margin: 25px 0px;
+    }
+    
+
+}
 
 /* Estilos del formulario*/
 
@@ -28,7 +89,7 @@ body form{
 
 .formulario {
     margin: 30px 20px;
-    padding: 0px 50px;
+   
 }
 
 
@@ -66,3 +127,31 @@ body form{
     justify-self: center;
     cursor: not-allowed; /* Cursor no permitido */
 }
+
+#Dimensiones{
+    display: flex;
+    flex-direction: column;
+
+}
+.dim{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.dim input{
+    width: 70px;
+}
+.dim label{
+    text-align: center;
+}
+#preview{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3%;
+    gap: 10px;
+    opacity: 90%;
+    overflow: hidden;
+}
+
