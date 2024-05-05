@@ -61,10 +61,6 @@ body form{
 
 }
 
-
-
-/* Estilos del cuerpo de la página*/
-
 .caja-blanca {
     background-color: white;
     border-radius: 15px;
@@ -115,15 +111,11 @@ body form{
     justify-self: center;
 }
 
-#button-submit :hover{
-    background-color: #ECAC44;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 10px;
-    width: 100%;
-    justify-self: center;
+#button-submit:hover{
+    background-color: #ebb661;
+    border: 1px solid rgb(97, 95, 95);
 }
+
 
 #button-submit:disabled{
     background-color: #969696;
@@ -135,6 +127,7 @@ body form{
     justify-self: center;
     cursor: not-allowed; /* Cursor no permitido */
 }
+
 #Dimensiones{
     display: flex;
     flex-direction: column;
@@ -161,3 +154,4 @@ body form{
     opacity: 90%;
     overflow: hidden;
 }
+
