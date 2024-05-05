@@ -41,7 +41,10 @@ function validarCampos(){
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 3f0040d0ddaa822b32752b9e0548a6f16cbda7ee
     buttonSubmit.addEventListener('click', function(){ 
         // Obtener la lista de productos existentes del localStorage
         let productos = JSON.parse(localStorage.getItem('productos')) || [];
@@ -51,8 +54,12 @@ function validarCampos(){
         const validaDescripcion = inputDescripcion.value;
         const validaInfoAd = inputInfoAd.value;
         const validaStock = inputStock.value;
+<<<<<<< HEAD
 >>>>>>> d0f1d70ef5a3df5f1b11c3f3a7f5568cab4e8c1b
     
+=======
+      
+>>>>>>> 3f0040d0ddaa822b32752b9e0548a6f16cbda7ee
         const productoJSON = { 
             "nombreProducto" : nombreProducto,
             "validaPrecio" : validaPrecio,
@@ -62,7 +69,11 @@ function validarCampos(){
         };
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 3f0040d0ddaa822b32752b9e0548a6f16cbda7ee
         // Agregar el nuevo producto a la lista
         productos.push(productoJSON);
     
@@ -71,7 +82,11 @@ function validarCampos(){
     
         alert('Se agregó el producto correctamente');
     });
+<<<<<<< HEAD
 >>>>>>> d0f1d70ef5a3df5f1b11c3f3a7f5568cab4e8c1b
+=======
+
+>>>>>>> 3f0040d0ddaa822b32752b9e0548a6f16cbda7ee
 
     /*
         Función para obtener el valor seleccionado de los radio buttons
@@ -88,6 +103,7 @@ function validarCampos(){
 
     para llamar a la función ocuparemos un obtenerCategoriaSeleccionada(radios);
 <<<<<<< HEAD
+<<<<<<< HEAD
 */
 =======
 */
@@ -98,3 +114,6 @@ function validarCampos(){
 
     
 >>>>>>> d0f1d70ef5a3df5f1b11c3f3a7f5568cab4e8c1b
+=======
+*/
+>>>>>>> 3f0040d0ddaa822b32752b9e0548a6f16cbda7ee
