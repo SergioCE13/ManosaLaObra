@@ -88,3 +88,8 @@ label, input{
         margin-right: 0;
     }
 }
+
+#principal{  /*Lo agregué*/
+    display: none;
+    font-size: 20px;
+}
