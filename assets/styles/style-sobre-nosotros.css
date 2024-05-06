@@ -24,6 +24,7 @@
 .cards-wrapper {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     
 }
 
@@ -41,6 +42,8 @@
 
     margin-top: 70px;
     margin-bottom: 70px;
+    display: flex;
+    flex-wrap: wrap;
 
 
 }
@@ -85,7 +88,7 @@
 }
 
 /*Estilos del botón*/
-.btn {
+.btn-custom-color {
     background-color: var(--color--yellow);
     border-color: var(--color--yellow);
     font-family: "Open Sans", sans-serif;
@@ -100,7 +103,7 @@
 
 /*Estilo al interactuar con el botón*/
 
-.btn:hover {
+.btn-custom-color:hover {
     color: var(--color--primario);
 
 }
@@ -116,6 +119,12 @@
     font-variation-settings:"wdth" 100;
     color: var(--color--blanco);
 
+
+}
+
+.carousel-caption { /*Lo agregué*/
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
@@ -153,8 +162,51 @@
     width: 650px;
     margin: 10%;
     padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
 
 }
+
+.modal-dialog {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+@media (max-width: 400px) {
+
+   
+    .card{
+        width: 100%;
+    }
+
+    .card-img-top{
+        width: 100%;
+    }
+
+    .card-body{
+        width: 100%;
+    }
+
+    .container-text{
+        width:100%;
+    }
+
+    .modal-dialog{
+
+        width:100%
+    }
+   
+    .carousel-caption{ /*Lo agregué*/
+
+        width:100%
+
+    }
+    
+}
+
+
 
 
 
