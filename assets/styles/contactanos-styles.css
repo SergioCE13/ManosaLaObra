@@ -1,0 +1,166 @@
+:root{
+    --color--primario: #E31B9F;
+    --color--secundario: #E4DDD3;
+    --color--terciario: #969696;
+    --color--yellow: #ECAC44; 
+    --color--blanco: #FFFFFF;
+    --color--negro: #000000;
+}
+
+/*----------------------------------------------- Estilos de la NAVBAR --------------------------------------*/
+
+.container-search{ /* Estilos de la barra de búsqueda*/ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar { /* Estilos de la Navbar*/
+    background-color: var(--color--primario);
+}
+
+.navbar-nav .nav-link{ /* Estilo de los links en la barra de búsqueda*/
+    color: var(--color--blanco);
+}
+
+#search_btn {/* Estilos del botón de la barra de búsqueda*/
+    background-color: var(--color--primario);
+    color: var(--color--blanco);
+    border-color: var(--color--blanco);
+    display: flex;
+    align-items: center;
+}
+#principal{
+    display: none;
+    font-size: 20px;
+}
+
+.custom-btn{
+    color: #FFFFFF;
+}
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgb(255, 255, 255);
+} 
+
+@media only screen and (max-width: 990px){
+    #principal{ /* Queries para pantallas entre 601px a 990px*/
+        display: block;
+    }
+    #principal1{
+        display: none;
+    }
+    #buscar{
+        width: 55%;
+        padding-left: 10%;
+        margin-right: 0;
+    }
+}
+
+
+/* --------------------------------------------- Estilos del Cuerpo -------------------------------------------*/
+body{ /* Estilos de la etiquea body*/
+    background-color: #E4DDD3;
+}
+
+.container--title{ /* Estilos del banner del sitio*/
+    display: flex;
+    justify-content: center;
+    background-color: #969696;
+    opacity: 0.6;
+    padding-top: 10px;
+}
+
+.container--title h1{
+    font-family: "Open Sans", sans-serif;
+    justify-content: center;
+    margin-top: 5px;
+    color: #FFFFFF;
+}
+
+label, input{
+    font-family: "Open Sans", sans-serif;
+}
+
+#forma>img{
+    grid-area: a;
+
+}
+#forma>#form{
+    grid-area: b;
+}
+
+img{
+    width: 100%;
+    
+}
+
+#form{
+    display: grid;
+    padding-left: 50px;
+    padding-right: 10px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+/*--------------------------------------- Estilos del Formulario ------------------------------------------------*/
+.container-form{ /* Estilos de la caja que contiene al formulario*/
+    background-color: var(--color--blanco);
+    display: grid;
+    grid-template-areas: "a b";
+    grid-template-columns: 50% 50%;
+    justify-content: space-around;
+    align-items: center;
+    height: auto; 
+    border: none;
+    border-radius: 20px;
+     /* Agrega un margen de 200px alrededor del contenedor */
+    margin: 30px 50px; 
+
+    /* Ajusta el relleno según sea necesario */
+    -webkit-box-shadow: 5px 6px 6px 0px #000000; 
+    box-shadow: 5px 6px 6px 0px #000000;
+}
+
+.container-form .mb-3 {
+    display: grid;
+    width: 100%; /* Ajustar el ancho de los elementos al contenedor */
+    max-width: 400px; /* Opcional: limitar el ancho máximo de los elementos */
+    /* Agrega más estilos según sea necesario */
+}
+
+
+#button--submit{ /* Estilos del botón de Submit*/
+    background-color: #ECAC44;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 80%;
+    justify-self: center;
+}
+
+
+#button--submit:disabled{
+    cursor: not-allowed; /* Cursor no permitido */
+    background-color: var(--color--terciario);
+}
+
+
+
+/* --------------------------------- Medias Queries para el funcionamiento responsive -------------------------*/ 
+@media only screen and (max-width: 600px) { /*Queries para pantallas de hasta 600px*/
+    .container-form{
+        display: block;
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-top: 10px;
+    }
+    #form{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}

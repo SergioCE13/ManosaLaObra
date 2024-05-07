@@ -1,0 +1,215 @@
+.container-int{
+    background-color: white;
+    width: 1200px;
+    height: 600px;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.carouselExampleCaptions{
+    width: 400px;
+    height: 200px;
+}
+
+.carousel-container {
+    width: 80%; /* Ancho del contenedor */
+    margin: 0 auto; /* Centrar horizontalmente */
+    border-radius: 20px; /* Bordes redondos */
+    overflow: hidden; /* Evitar que las esquinas de las imágenes sobresalgan */
+  }
+
+/*Estilos del contenedor las Cards*/
+.cards-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+/*Estilos de las Cards*/
+.card {
+    background-color: var(--color--secundario);
+    margin: 0.5em;
+    border-color: none;
+    box-shadow: 5px 5px 15px gray;
+    overflow: hidden; 
+}
+
+/*Estilos del contenedor del Carousel*/
+.carousel-container{
+
+    margin-top: 70px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+/*Estilos del titulo de la la página de "nuestro equipo"*/
+.text-equipo {
+    text-align: center;
+    font-family: "Darker Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+
+/*Estilos del titulo de las Cards*/
+.card-title {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+
+}
+
+/*Estilos del texto de las Cards*/
+.card-text {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    
+}
+
+/*Estilos del cuerpo de las Cards*/
+.card-body {
+    background-color: var(--color--secundario);
+    
+    
+   
+}
+
+/*Estilos del botón*/
+.btn-custom-color {
+    background-color: var(--color--yellow);
+    border-color: var(--color--yellow);
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    color: var(--color--blanco);
+
+}
+
+
+/*Estilo al interactuar con el botón*/
+
+.btn-custom-color:hover {
+    color: var(--color--primario);
+
+}
+
+
+/*Estilos del texto del carousel*/
+.container-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente del texto */
+    border-radius: 10px;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    color: var(--color--blanco);
+
+
+}
+
+.carousel-caption { /*Lo agregué*/
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/*Para quitarle las viñetas a la página de valores*/
+ .desc-valores li {
+
+    list-style: none;
+}
+
+/*Estilos para el titulo del modal*/
+.modal-title {
+    text-align: center;
+    font-family: "Darker Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+   
+}
+
+/*Estilos para la descripción del Modal*/
+.modal-body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+   
+
+}
+
+/*Estilos para el contenedor del Modal*/
+.modal-content  {
+    
+    background-color: var(--color--secundario);
+    width: 650px;
+    margin: 10%;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.modal-dialog {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+@media (max-width: 400px) {
+
+   
+    .card{
+        width: 100%;
+    }
+
+    .card-img-top{
+        width: 100%;
+    }
+
+    .card-body{
+        width: 100%;
+    }
+
+    .container-text{
+        width:100%;
+    }
+
+    .modal-dialog{
+
+        width:100%
+    }
+   
+    .carousel-caption{ /*Lo agregué*/
+
+        width:100%
+
+    }
+    
+}
+
+
+
+
+
+
+
+
