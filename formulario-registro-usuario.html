@@ -107,11 +107,21 @@
                     <h1 id="titulo-formulario">Ayudanos con tu información</h1>
                 </div> 
                 <div class="form-group"> <!-- Contenedor del nombre del usuario-->
-                    <label for="input-nombre-usuario" >Nombre completo</label>
+                    <label for="input-nombre-usuario" >Nombre</label>
                     <input type="text" class="form-control" id="input-nombre-usuario" placeholder="Introduce tu nombre">
                     <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
                 </div>
-                <div class="form-group"> <!-- Conenedor del número de télefono-->
+                <div class="form-group"> <!-- Contenedor del nombre del usuario-->
+                    <label for="input-apellido-paterno" >Apellido paterno</label> 
+                    <input type="text" class="form-control" id="input-apellido-paterno" placeholder="Introduce apellido paterno">
+                    <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
+                </div>
+                <div class="form-group"> <!-- Contenedor del apellido paterno-->
+                    <label for="input-apellido-materno" >Apellido materno</label>
+                    <input type="text" class="form-control" id="input-apellido-materno" placeholder="Introduce apellido materno">
+                    <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
+                </div>
+                <div class="form-group"> <!-- Conenedor del apellido materno-->
                     <label for="input-numero-telefono">Número de télefono:</label>
                     <input type="number" inputmode="numeric" class="form-control" id="input-numero-telefono" placeholder="Introduce tu número de celular">
                     <small id="info-precio-producto" class="form-text text-muted">Este campo es obligatorio</small>
@@ -140,13 +150,9 @@
                             value="Femenino">
                         <label class="form-check-label" for="inlineRadio2">Femenino</label>
                     </div>
+                    <div class="form-check form-check-inline">
                     <div class="form-check form-check-inline"><!-- Tercer radio button -->
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                            value="No-binario">
-                        <label class="form-check-label" for="inlineRadio3">No-binario</label>
-                    </div>
-                    <div class="form-check form-check-inline"><!-- Cuarto radio button -->
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
                             value="Otro"><!-- Agregar la propiedad disable para deshabilitar-->
                         <label class="form-check-label" for="inlineRadio4">Otro</label>
                     </div>
@@ -155,7 +161,7 @@
                     <label for="input-direccion-envio" >Dirección de envío</label>
                     <input type="text" class="form-control" id="input-direccion-envio" placeholder="Introduce tu dirección">
                     <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
-                </div>
+                </div>                
                 <div class="form-group"> <!-- Contenedor de la edad del usuario-->
                     <label for="">Edad:</label>
                     <input type="number" inputmode="numeric" class="form-control" min="14" max="100" step="1" value="1" id="input-edad-usuario">
@@ -167,7 +173,7 @@
                     <div id="preview"></div>
                     <small id="info-imagen-producto" class="form-text text-muted">Este campo es obligatorio</small>
                 </div> -->
-                <div class="mb-3 form-check">
+                <div class="mb-3 form-check"> <!--Checkbox terminos y condiciones -->
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Acepto los terminos y condiciones</label>
                 </div>
