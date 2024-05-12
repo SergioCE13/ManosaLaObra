@@ -105,7 +105,7 @@ let listaProductos = [
 
     },
     {
-      "nombre": "Pulsera huichol",
+      "name": "Pulsera huichol",
       "cost": 20,
       "category": "Moda",
       "description": "Pulsera artesanal con diseño huichol.",
@@ -253,7 +253,7 @@ agregarObjeto('JSONProducts',nuevoObjeto);
 //editando objeto
 editarObjeto('JSONProducts', "Pulsera huichol" , nuevaInformacion); 
 
-  
+
 //eliminando objeto
 eliminarObjeto('JSONProducts', "Protector para celular");
   
