@@ -8,6 +8,10 @@
     align-items: flex-end;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%; /* Posiciona los controles en la mitad superior del carousel */
+}
 .carouselExampleCaptions{
     width: 400px;
     height: 200px;
