@@ -2,118 +2,136 @@
 //lista de productos (listaProductos) con el nombre de las artesanías.
 let listaProductos = [
     {
-      "nombre": "Cartera morada tipo Clutch",
-      "categoria": "Moda",
-      "acercaDelProducto": "Cartera elegante para ocasiones especiales.",
-      "caracteristicas": "Color morado, diseño tipo Clutch, material sintético.",
-      "informacionAdicional": "Incluye cadena para llevarla al hombro.",
-      "precio": 50,
+      "name": "Cartera morada tipo Clutch",
+      "cost": 50,
+      "category": "Moda",
+      "description": "Cartera elegante para ocasiones especiales.",
+      "additionalInfo": "Incluye cadena para llevarla al hombro.",
       "stock": 20,
-      "medidas": "20cm x 10cm",
-      "tecnica": "Fabricación industrial"
+      "height":12,
+      "width":25,
+      "lenght":8,
+      "images": ["imagen1.jpg", "imagen2.png", "imagen3.jpg"]
     },
     {
-      "nombre": "Bolsa tejida a manos con Grecas Rosas",
-      "categoria": "Moda",
-      "acercaDelProducto": "Bolsa artesanal con diseño tejido.",
-      "caracteristicas": "Color rosa, tejido a mano, material natural.",
-      "informacionAdicional": "Ideal para uso diario o como accesorio.",
-      "precio": 80,
+      "name": "Bolsa tejida a manos con Grecas Rosas",
+      "cost": 80,
+      "category": "Moda",
+      "description": "Bolsa artesanal con diseño tejido.",
+      "additionalInfo": "Ideal para uso diario o como accesorio.",
       "stock": 15,
-      "medidas": "30cm x 25cm",
-      "tecnica": "Tejido a mano"
+      "height": 80,
+      "width": 65,
+      "lenght": 10,
+      "images": ["imagen1.jpg", "imagen2.png", "imagen3.jpg"]
+
     },
     {
-      "nombre": "Bolsa de palma redonda",
-      "categoria": "Moda",
-      "acercaDelProducto": "Bolsa de estilo casual con diseño redondo.",
-      "caracteristicas": "Material de palma, color natural, asas de tela.",
-      "informacionAdicional": "Resistente y cómoda para llevar objetos personales.",
-      "precio": 40,
+      "name": "Bolsa de palma redonda",
+      "cost": 40,
+      "category": "Moda",
+      "description": "Bolsa de estilo casual con diseño redondo.",
+      "additionalInfo": "Resistente y cómoda para llevar objetos personales.",
       "stock": 30,
-      "medidas": "25cm de diámetro",
-      "tecnica": "Tejido artesanal"
+      "height": 75,
+      "width": 42,
+      "lenght": 18,
+      "images": ["imagen1.jpg", "imagen2.png", "imagen3.jpg"]
+
     },
     {
-      "nombre": "Sombrero de hombre cafe",
-      "categoria": "Moda",
-      "acercaDelProducto": "Sombrero clásico para hombre.",
-      "caracteristicas": "Color café, ala ancha, ajustable.",
-      "informacionAdicional": "Protección UV, ideal para días soleados.",
-      "precio": 35,
+      "name": "Sombrero de hombre cafe",
+      "cost": 35,
+      "category": "Moda",
+      "description": "Sombrero clásico para hombre.",
+      "additionalInfo": "Protección UV, ideal para días soleados.",
       "stock": 25,
-      "medidas": "Talla única ajustable",
-      "tecnica": "Fabricación industrial"
+      "height": 20,
+      "width": 72,
+      "lenght": 72,
+      "images": ["imagen1.jpg", "imagen2.png", "imagen3.jpg"]
+
     },
     {
-      "nombre": "Aretes Colores",
-      "categoria": "Moda",
-      "acercaDelProducto": "Aretes llamativos con diseño colorido.",
-      "caracteristicas": "Variedad de colores, diseño moderno.",
-      "informacionAdicional": "Ligeros y fáciles de combinar.",
-      "precio": 15,
+      "name": "Aretes Colores",
+      "cost": 15,
+      "category": "Moda",
+      "description": "Aretes llamativos con diseño colorido.",
+      "additionalInfo": "Ligeros y fáciles de combinar.",
       "stock": 50,
-      "medidas": "3cm de diámetro",
-      "tecnica": "Fabricación industrial"
+      "height": 8,
+      "width": 5,
+      "lenght": 2,
+      "images": ["imagen1.jpg", "imagen2.png", "imagen3.jpg"]
+
     },
     {
-      "nombre": "Aretes Clásicos",
-      "categoria": "Moda",
-      "acercaDelProducto": "Aretes elegantes y versátiles.",
-      "caracteristicas": "Color plateado, diseño clásico.",
-      "informacionAdicional": "Atemporales, ideales para ocasiones formales.",
-      "precio": 25,
+      "name": "Aretes Clásicos",
+      "cost": 25,
+      "category": "Moda",
+      "description": "Aretes elegantes y versátiles.",
+      "additionalInfo": "Atemporales, ideales para ocasiones formales.",
       "stock": 40,
-      "medidas": "2cm de diámetro",
-      "tecnica": "Fabricación industrial"
+      "height": 8,
+      "width": 5,
+      "lenght": 3,
+      "images": ["imagen1.jpg", "imagen2.png", "imagen3.jpg"]
+
     },
     {
-      "nombre": "Jarron Céramica",
-      "categoria": "Hogar",
-      "acercaDelProducto": "Jarrón decorativo de cerámica.",
-      "caracteristicas": "Diseño moderno, color blanco.",
-      "informacionAdicional": "Ideal para arreglos florales o como adorno.",
-      "precio": 30,
+      "name": "Jarron Céramica",
+      "cost": 30,
+      "category": "Hogar",
+      "description": "Jarrón decorativo de cerámica.",
+      "additionalInfo": "Ideal para arreglos florales o como adorno.",
       "stock": 15,
-      "medidas": "30cm de altura",
-      "tecnica": "Fabricación artesanal"
+      "height": 30,
+      "width": 20,
+      "lenght": 20,
+      "images": ["imagen1.jpg", "imagen2.png", "imagen3.jpg"]
+
     },
     {
-      "nombre": "Sombrero pintado a mano estilo Tenango",
-      "categoria": "Moda",
-      "acercaDelProducto": "Sombrero pintado a mano con diseño Tenango.",
-      "caracteristicas": "Diseño colorido y tradicional.",
-      "informacionAdicional": "Pieza única y artesanal.",
-      "precio": 50,
+      "name": "Sombrero pintado a mano estilo Tenango",
+      "cost": 50,
+      "category": "Moda",
+      "description": "Sombrero pintado a mano con diseño Tenango.",
+      "additionalInfo": "Pieza única y artesanal.",
       "stock": 10,
-      "medidas": "Talla única ajustable",
-      "tecnica": "Pintura artesanal"
+      "height": 20,
+      "width": 65,
+      "lenght": 65,
+      "images": ["imagen1.jpg", "imagen2.png", "imagen3.jpg"]
+
     },
     {
-      "nombre": "Pulsera huichol",
-      "categoria": "Moda",
-      "acercaDelProducto": "Pulsera artesanal con diseño huichol.",
-      "caracteristicas": "Colores vibrantes y diseño étnico.",
-      "informacionAdicional": "Hecha a mano por artesanos.",
-      "precio": 20,
+      "name": "Pulsera huichol",
+      "cost": 20,
+      "category": "Moda",
+      "description": "Pulsera artesanal con diseño huichol.",
+      "additionalInfo": "Hecha a mano por artesanos.",
       "stock": 35,
-      "medidas": "Ajustable",
-      "tecnica": "Tejido artesanal"
+      "height": 1.5,
+      "width": 12,
+      "lenght": 12,
+      "images": ["imagen1.jpg", "imagen2.png", "imagen3.jpg"]
+
     },
     {
-      "nombre": "Protector para celular",
-      "categoria": "Accesorios",
-      "acercaDelProducto": "Protector resistente para celular.",
-      "caracteristicas": "Material duradero, varios modelos disponibles.",
-      "informacionAdicional": "Protege tu celular de golpes y caídas.",
-      "precio": 15,
+      "name": "Protector para celular",
+      "cost": 15,
+      "category": "Accesorios",
+      "description": "Protector resistente para celular.",
+      "additionalInfo": "Protege tu celular de golpes y caídas.",
       "stock": 60,
-      "medidas": "Modelo específico para cada celular",
-      "tecnica": "Fabricación artesanal"
+      "height": 20,
+      "width": 12,
+      "lenght": 1.2,
+      "images": ["imagen1.jpg", "imagen2.png", "imagen3.jpg"]
+
     }
   ];
   
- 
 
 /*-------------------------------Función para agregar un Objeto al JSON----------------------------------------------*/
 
@@ -136,7 +154,7 @@ function editarObjeto(nombreLista, nombreProducto, nuevaInformacion) {
     const tokenObject = JSON.parse(localStorageItem); //Covirtiendolo a objeto de Js
     
     // Buscando el índice del objeto cuyo nombre coincida con nombreProducto en listaProductos
-    let indiceElemento = tokenObject.findIndex(producto => producto.nombre === nombreProducto);
+    let indiceElemento = tokenObject.findIndex(producto => producto.name === nombreProducto);
      // Verificando si se encontró el elemento (índiceElemento !== -1)
     if (indiceElemento !== -1) {
         // Utiliza el operador de propagación (...) para combinar la información existente con la nueva información
@@ -158,7 +176,7 @@ function editarObjeto(nombreLista, nombreProducto, nuevaInformacion) {
     const tokenObject = JSON.parse(localStorageItem); //Covirtiendolo a objeto de Js
     
     // Buscando el índice del objeto cuyo nombre coincida con nombreProducto en listaProductos
-    let indiceElemento = tokenObject.findIndex(producto => producto.nombre === nombreProducto);
+    let indiceElemento = tokenObject.findIndex(producto => producto.name === nombreProducto);
     // Verificando si se encontró el elemento (índiceElemento !== -1)
     if (indiceElemento !== -1) {
     // Utilizando el método splice para eliminar 1 elemento a partir del índice indiceElemento
@@ -202,15 +220,16 @@ function addToLocalStorage (nombreLista, lista) {
 
 //Agregando un nuevo Objeto
 let nuevoObjeto = {
-  "nombre": "Aretes de Pirita",
-  "categoria": "Aretes",
-  "acercaDelProducto": "Aretes elaborados con Pirita",
-  "caracteristicas": "Tipo de Arete colgante con Pirita 100% Natural, Plata Ag .925, color Ocre",
-  "informacionAdicional": "Piezas seleccionadas, auténticas y originales (Marca Argentum Taxco)",
-  "precio": 65,
+  "name": "Aretes de Pirita",
+  "cost": 65,
+  "category": "Aretes",
+  "description": "Aretes elaborados con Pirita",
+  "additionalInfo": "Piezas seleccionadas, auténticas y originales (Marca Argentum Taxco)",
   "stock": 10,
-  "medidas": "2 cm x 1 mm" ,
-  "tecnica": "Artesanal"
+  "height": 8,
+  "width": 2,
+  "lenght": 2,
+  "images": ["imagen1.jpg", "imagen2.png", "imagen3.jpg"]
 };
 
 
@@ -218,8 +237,8 @@ let nuevoObjeto = {
 
 //Agregando nueva información a donde se quiere editar
   let nuevaInformacion = {
-    "categoria": "Pulseras",
-    "precio": 100,
+    "category": "Pulseras",
+    "cost": 100,
     "stock": 10
   };
   
@@ -234,15 +253,12 @@ agregarObjeto('JSONProducts',nuevoObjeto);
 //editando objeto
 editarObjeto('JSONProducts', "Pulsera huichol" , nuevaInformacion); 
 
-  
+
 //eliminando objeto
 eliminarObjeto('JSONProducts', "Protector para celular");
   
 //borrando lista
 //borrarLista('JSONProducts');
-  
-
- 
 
 
 

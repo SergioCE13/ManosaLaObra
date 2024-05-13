@@ -33,11 +33,9 @@
     <!------------------------------ Inicia la NavBar ------------------------------------>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="Index.html">
                 <img src="./assets/images/Logo.png" width="50" height="50">
             </a>
-            <a id="principal" class="nav-link active" aria-current="page" href="Index.html" style="color: #FFFFFF">Manos a la
-                Obra</a>
             <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" style="box-shadow: none;">
@@ -46,13 +44,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a id="principal1" class="nav-link active" aria-current="page" href="./Index.html" style="color: #FFFFFF">Manos a la
-                            Obra</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="./Index.html">Tienda</a>
                     </li>
-                    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -75,9 +68,17 @@
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                     </svg></button>
                 </form>
-                <i class="bi bi-cart3" style="padding-right: 15px; padding-left: 10px; color: #FFFFFF; font-size: 1.5rem;"></i>
-                <i class="bi bi-person" style="padding-right: 15px; color: #FFFFFF; font-size: 1.8rem;" ></i>
-                
+                <a href="./carrito-de-compras.html">
+                  <i class="bi bi-cart3" style="padding-right: 15px; padding-left: 10px; color: #FFFFFF; font-size: 1.5rem;"></i>
+              </a>                
+                <div class="dropdown">
+                  <i class="bi bi-person" style="padding-right: 15px; color: #FFFFFF; font-size: 1.8rem;" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                      <li><a class="dropdown-item" href="./login.html">Login</a></li>
+                      <li><a class="dropdown-item" href="./perfil-de-usuario.html">Mi Perfil</a></li>
+                      <li><a class="dropdown-item" href="./wishlist.html">Wishlist</a></li>    
+                  </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -100,7 +101,7 @@
                 </div> 
                 <div class="form-group"> <!-- Contenedor del nombre del producto-->
                     <label for="input-nombre-producto" >Nombre del producto</label>
-                    <input type="text" class="form-control" id="input-nombre-producto" placeholder="Introduce tu nombre">
+                    <input type="text" class="form-control" id="input-nombre-producto" placeholder="Introduce el nombre del producto">
                     <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
                 </div>
                 <div class="form-group"> <!-- Conenedor del precio del producto-->

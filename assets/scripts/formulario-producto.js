@@ -8,7 +8,7 @@ const buttonSubmit = document.getElementById("button-submit");
 const radio1 = document.getElementById('inlineRadio1');
 const radio2 = document.getElementById('inlineRadio2');
 const radio3 = document.getElementById('inlineRadio3');
-const radio4 = document.getElementById('inlineRadio4');
+const radio4 = document.getElementById('inlineRadio4'); 
 const radio5 = document.getElementById('inlineRadio5');
 const inputAlto = document.getElementById('input-alto');
 const inputAncho = document.getElementById('input-ancho');
@@ -73,10 +73,10 @@ buttonSubmit.addEventListener('click', function(){
 
     //Obtenemos los valores de los campos.
     const nombreProducto = inputNombre.value;
-    const validaPrecio = inputPrecio.value;
-    const validaDescripcion = inputDescripcion.value;
-    const validaInfoAd = inputInfoAd.value;
-    const validaStock = inputStock.value;
+    const precioProducto = inputPrecio.value;
+    const descripcionProducto = inputDescripcion.value;
+    const infoAdicional = inputInfoAd.value;
+    const stockProducto = inputStock.value;
     const radioSeleccionado = obtenerRadioSeleccionado();
     const imagenes = obtenerNombresImagenes();
     const altoProducto = inputAlto.value;
@@ -86,11 +86,11 @@ buttonSubmit.addEventListener('click', function(){
     //Creamos un objeto JavaScript para proceder a generar el formato JSON
     const productoJSON = { 
         "name" : nombreProducto,
-        "cost" : validaPrecio,
+        "cost" : precioProducto,
         "category": radioSeleccionado,
-        "description" : validaDescripcion,
-        "aditionalInfo" : validaInfoAd,
-        "stock" : validaStock,
+        "description" : descripcionProducto,
+        "aditionalInfo" : infoAdicional,
+        "stock" : stockProducto,
         "height": altoProducto,
         "widht": anchoProducto,
         "lenght": largoProducto,
