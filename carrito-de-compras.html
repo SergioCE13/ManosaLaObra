@@ -103,40 +103,54 @@
         <!-------------------------------------- Termina la NavBar ----------------------------------->
     </header>
 <body>
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Carrito de Compra</a>
-    </nav>
-
-    <!-- Contenido principal -->
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">Tu Carrito</h5>
-                    </div>
-                    <div class="card-body">
-                        <!-- Lista de productos en el carrito -->
-                        <ul class="list-group">
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Producto 1
-                                <span class="badge badge-primary badge-pill">$10.00</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Producto 2
-                                <span class="badge badge-primary badge-pill">$20.00</span>
-                            </li>
-                            <!-- Agrega más elementos de la lista aquí -->
-                        </ul>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Total: $30.00
-                    </div>
-                </div>
-            </div>
+    <div class="container mt-5">
+        <h2 class="mb-4">Carrito de Compras</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Producto 1</td>
+                        <td>$10.00</td>
+                        <td><input type="number" class="form-control" value="1"></td>
+                        <td>$10.00</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Producto 2</td>
+                        <td>$20.00</td>
+                        <td><input type="number" class="form-control" value="2"></td>
+                        <td>$40.00</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="text-end">Total:</td>
+                        <td>$50.00</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-secondary me-2">Vaciar Carrito</button>
+            <button class="btn btn-primary">Proceder al Pago</button>
         </div>
     </div>
+
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3 mt-4">
