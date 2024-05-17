@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nombre-Producto</title>
+
+    <link rel="stylesheet" href="./assets/styles/producto.css">
+    <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
+</head>
+<header>
+    <!------ Navbar-->
+</header>
+
+<body>
+<div class="caja-blanca"> <!--Contenedor de caja blanca para el contenido-->
+    <!-------------------- Inicia seccion 1 Información del producto --------------------------------------->
+    <section class="seccion-info-producto">
+
+        <!------ Inica fila 1 de la sección de información del producto ------->
+        
+            <!-- Inicia div para la columna 1"Imagenes del producto"-->
+            <div class="images-producto">
+                <div class="imagen-main"></div>
+                <div class="minidivaturas"></div>
+                <div class="info-vendedor"></div>
+            </div><!-- Termina div columna 1-->
+
+            <!-- Inicia div para la columna 2, fila 1 "Interacción con el producto"-->
+            <div class="interac-producto">
+
+                <!-- Inicia div para el Título, estrellas y boton fav del producto -->
+                <div class="titulo-stars-fav">
+                    <div class="titulo"></div>
+                    <div class="stars"></div>
+                    <div class="fav"></div>
+                </div><!-- Termina div de título-->
+
+                <!-- Inicia div para precio del producto y de envio-->
+                <div class="precio-envio">
+                    <div class="precio"></div>
+                    <div class="envio"></div>
+                </div><!-- Termina div precio-->
+
+                <!-- Inicia el div para los botones comprar y carrito -->
+                <div class="botones-producto">
+                    <button class="comprar">Comprar</button>
+                    <button class="carrito">Agregar al carrito</button>
+                </div><!-- Termina div botones-->
+
+                <!-- Inicia el div para mostrar la descripción del producto-->
+                <div class="acerca-producto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nulla
+                    repellat, neque perspiciatis ducimus dolores sunt voluptatum incidunt! Ipsum cumque officia
+                    voluptatem nostrum consequatur sit aut eligendi impedit fugit aliquam.
+                </div><!-- Termina div descripción-->
+            </div><!-- Termina div interacción producto-->
+
+
+
+            <!-------- Inicia fila 2 de la sección de información del producto ------->
+            <div class="info-extra">
+                <div class="caracteristicas-producto"></div>
+                <div class="info-adicional"></div>
+            </div> <!-- Termina fila 2 información del producto-->
+    </section>
+    <!-------------------- Termina seccion 1 Información del producto --------------------------------------->
+
+
+    <!-------------------- Inicia sección 2 Comentarios del producto --------------------------------------->
+    <section class="seccion-comentarios">
+        <!-- Inicia div de preguntas y respuestas-->
+        <div class="titulo-preguntas"> <!-- Inicia titulo preguntas/respuestas-->
+            <h4 class="titulo">Preguntas y respuestas</h4>
+        </div> <!-- Termina pregutnas/respuestas-->
+        <div class="botones-preguntas"><!-- Inicia que quieres saber-->
+            <h5 class="sub-titulo">¿Qué quieres saber?</h5>
+            <button class="btn1">Costo y tiempo de envío</button><button class="btn2">Medios de pago y
+                promociones</button><button class="btn3">Calidad</button>
+        </div> <!-- Termina que quieres saber-->
+        <div class="preguntar"> <!-- Inicia div preguntar -->
+            <h5 class="ref-pregunta">Preguntale al vendedor y/o otros compradores</h5>
+            <input type="text" name="" id="" class="texto-pregunta">
+            <button class="btn-preguntar">Preguntar</button>
+            <select class="opciones-busqueda">
+                <option>Más recientes</option>
+                <option>Destacados</option>
+            </select>
+        </div> <!-- Termina div preguntar-->
+
+        <!-- Inicia div de comentario-->
+        <div class="comentario">
+            <h6 class="nombre-usuario">Rosario Alfonso</h6> <!-- Nombre-usuario --> <!--Estrellas de bootstrap-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+            </svg> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+            </svg><!-- Calificación estrellas-->
+            <div class="texto-comentario">¡Hola! Estoy encantada con esta pieza, creo que es estupenda para la decoración de mi casa ¿Hacen envios internacionales?</div> <!-- Texto del comentario-->
+            <button class="like">Me gusta</button> <!-- Botones like y responder-->
+            <button class="responder">Responder</button>
+        </div>
+
+        <!-- Este HTML genera un comentario que responde a otro previamente realizado.
+        <div class="comentario">
+            <h6 class="nombre-usuario"></h6> 
+            <div class="stars"></div> 
+            <div class="texto-comentario"></div>
+            <button class="like"></button><button class="responder"></button> 
+        </div>
+        -->
+        
+    </section>
+    <!-------------------- Termina sección 2 Comentarios del producto --------------------------------------->
+</div>
+    <!-- Footer -->
+    <footer> </footer>
+
+</body>
+
+</html>
