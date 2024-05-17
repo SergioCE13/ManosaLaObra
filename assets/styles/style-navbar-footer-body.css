@@ -31,6 +31,15 @@
     align-items: center;
 }
 
+.dropdown-menu .dropdown-item:hover {
+    background-color: #000000; /* Cambiar el color de fondo */
+    color: #FFFFFF; /* Cambiar el color del texto */
+}
+
+.dropdown-menu .dropdown-item:active {
+    background-color: #555555; /* Mantener el color de fondo al hacer clic */
+    color: #FFFFFF; /* Mantener el color del texto al hacer clic */
+}
 /* --------------------------------------------- Estilos del Cuerpo -------------------------------------------*/
 body{ /* Estilos de la etiquea body*/
     background-color: #E4DDD3;

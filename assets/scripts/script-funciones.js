@@ -1,4 +1,3 @@
-
 //lista de productos (listaProductos) con el nombre de las artesanías.
 let listaProductos = [
     {
@@ -259,11 +258,4 @@ eliminarObjeto('JSONProducts', "Protector para celular");
   
 //borrando lista
 //borrarLista('JSONProducts');
-
-
-
-
-
-  
-
   
