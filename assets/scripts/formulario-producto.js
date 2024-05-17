@@ -17,6 +17,7 @@ const inputLargo = document.getElementById('input-largo');
 // Variable para almacenar el estado de carga de imágenes
 let imagenesCargadas = false;
 
+
 // Deshabilitamos el botón del formularo ya que incialmente los campos están vacíos.
 buttonSubmit.classList.add('button-disabled');
 buttonSubmit.disabled = true;

@@ -1,0 +1,82 @@
+body {
+    line-height: 1.5;
+    font-family: "Open Sans", sans-serif;
+    
+}
+
+main {
+    background-image:url("../images/img.login/artesana.jpg");
+    background-repeat:round;
+
+}
+
+.main {
+    
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    transition: transform 0.2s;
+    width: 350px;
+    text-align: center;
+}
+
+h1 {
+    color: var(--color--primario);
+}
+
+label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+    font-weight: bold;
+}
+
+
+.input-login {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn-login {
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: var(--color--yellow);
+    width: 100%;
+    font-size: 16px;
+}
+
+.btn-login:hover {
+    background-color: #D5942B;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-link {
+    font-size: 13px;
+}
+
+.signup-link a {
+    color: #969696;
+}
+
+.signup-link a:hover {
+    color:var(--color--primario);
+}
