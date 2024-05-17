@@ -1,71 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Nombre-Producto</title>
-
     <link rel="stylesheet" href="./assets/styles/producto.css">
-    <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
+
+        <!--Conexión Tipografía Darker Grotesque-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
+        
+        <!--Conexión Tipografía Open Sans-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+
 </head>
 <header>
     <!------ Navbar-->
 </header>
 
 <body>
-<div class="caja-blanca"> <!--Contenedor de caja blanca para el contenido-->
-    <!-------------------- Inicia seccion 1 Información del producto --------------------------------------->
-    <section class="seccion-info-producto">
+    <div class="caja-blanca">
+        <!-------------------- Inicia seccion 1 Información del producto --------------------------------------->
+        <section class="seccion-info-producto" style="margin:  20px; ">
 
-        <!------ Inica fila 1 de la sección de información del producto ------->
-        
-            <!-- Inicia div para la columna 1"Imagenes del producto"-->
-            <div class="images-producto">
-                <div class="imagen-main"></div>
-                <div class="minidivaturas"></div>
-                <div class="info-vendedor"></div>
-            </div><!-- Termina div columna 1-->
+            <!------ Inica fila 1 de la sección de información del producto ------->
+            <div class="columnas-info-producto">
+                <!-- Inicia div para la columna 1"Imagenes del producto"-->
+                <div class="images-producto">
+                    <div class="imagen-main">
+                        <img id = "imagen-principal"src="./assets/images/producto/producto1.png" width="100%">
+                    </div><br>
+                    <div class="miniaturas">
+                        <img src="./assets/images/producto/producto1.png" alt="" width="35%">
+                        <img src="./assets/images/producto/producto2.png" alt="" width="35%">
+                    </div><br>
+                    <div class="info-vendedor">
+                        <a href="./NuestrosArtesanos.html"><img src="./assets/images/producto/artista.png" alt="" width="100%"></a>
+                    </div>
+                </div><!-- Termina div columna 1-->
 
-            <!-- Inicia div para la columna 2, fila 1 "Interacción con el producto"-->
-            <div class="interac-producto">
+                <!-- Inicia div para la columna 2, fila 1 "Interacción con el producto"-->
+                <div class="interac-producto">
 
-                <!-- Inicia div para el Título, estrellas y boton fav del producto -->
-                <div class="titulo-stars-fav">
-                    <div class="titulo"></div>
-                    <div class="stars"></div>
-                    <div class="fav"></div>
-                </div><!-- Termina div de título-->
+                    <!-- Inicia div para el Título, estrellas y boton fav del producto -->
+                    <div class="titulo-stars-fav">
+                        <div class="titulo-producto">Centro de mesa de barro negro &#x2661;</div>
+                        <div class = "titulo-stars">Puntuación:</div>
+                        <div class="stars">★★★★★</div>
+                    </div><!-- Termina div de título-->
 
-                <!-- Inicia div para precio del producto y de envio-->
-                <div class="precio-envio">
-                    <div class="precio"></div>
-                    <div class="envio"></div>
-                </div><!-- Termina div precio-->
+                    <!-- Inicia div para precio del producto y de envio-->
+                    <div class="precio-envio">
+                        <div class="precio">$2,500.00</div>
+                        <div class="envio"> + $96.23 de envio</div>
+                    </div><!-- Termina div precio-->
 
-                <!-- Inicia el div para los botones comprar y carrito -->
-                <div class="botones-producto">
-                    <button class="comprar">Comprar</button>
-                    <button class="carrito">Agregar al carrito</button>
-                </div><!-- Termina div botones-->
+                    <!-- Inicia el div para los botones comprar y carrito -->
+                    <div class="botones-producto">
+                        <button id="boton-comprar">Comprar</button>
+                        <button id="boton-carrito">Agregar al carrito</button>
+                    </div><!-- Termina div botones-->
 
-                <!-- Inicia el div para mostrar la descripción del producto-->
-                <div class="acerca-producto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nulla
-                    repellat, neque perspiciatis ducimus dolores sunt voluptatum incidunt! Ipsum cumque officia
-                    voluptatem nostrum consequatur sit aut eligendi impedit fugit aliquam.
-                </div><!-- Termina div descripción-->
-            </div><!-- Termina div interacción producto-->
-
-
+                    <!-- Inicia el div para mostrar la descripción del producto-->
+                    <div class="acerca-producto"><span> Acerca del producto:</span><br><br>Esta pieza forma parte de la propuesta original del Taller "Fabian", inspirado en la fusión del diseño de calidad con cortes arriesgados, sobre la cerámica de barro negro, es una pieza que puede exponerse de distintas formas y en diferentes espacios, principalmente esta pensada para lucirlo en una mesa de centro en un área común o lucirlo en un espacio de trabajo ya sea en un escritorio o un muebel multiusos.
+                    </div><!-- Termina div descripción-->
+                </div><!-- Termina div interacción producto-->
+            </div>
 
             <!-------- Inicia fila 2 de la sección de información del producto ------->
             <div class="info-extra">
-                <div class="caracteristicas-producto"></div>
-                <div class="info-adicional"></div>
+
+                <div class="caracteristicas-producto">
+                    <span>Medidas del producto:</span><br><br>Ancho: 25cm<br>Largo: 25cm<br>Alto: 25cm
+                </div>
+                <div class="info-adicional">
+                    <span>Información adicional:</span><br><br>Técnica: Corte en barro negro<br>Existencias: 25<br>
+                </div>
             </div> <!-- Termina fila 2 información del producto-->
-    </section>
-    <!-------------------- Termina seccion 1 Información del producto --------------------------------------->
+        </section>
+        <!-------------------- Termina seccion 1 Información del producto --------------------------------------->
 
 
     <!-------------------- Inicia sección 2 Comentarios del producto --------------------------------------->
@@ -112,20 +128,22 @@
             <button class="responder">Responder</button>
         </div>
 
-        <!-- Este HTML genera un comentario que responde a otro previamente realizado.
+        <!-- Este HTML genera un comentario que responde a otro previamente realizado.-->
+
         <div class="comentario">
             <h6 class="nombre-usuario"></h6> 
             <div class="stars"></div> 
             <div class="texto-comentario"></div>
             <button class="like"></button><button class="responder"></button> 
         </div>
-        -->
-        
-    </section>
-    <!-------------------- Termina sección 2 Comentarios del producto --------------------------------------->
-</div>
+      
+        </section>
+        <!-------------------- Termina sección 2 Comentarios del producto --------------------------------------->
+    </div><!-- Caja producto -->
+
     <!-- Footer -->
     <footer> </footer>
+    <script src="./assets/scripts/producto.js"></script>
 
 </body>
 
