@@ -15,6 +15,144 @@ body {
     border: 1px solid;
     border-radius: 30px;
     background-color: #FFFFFF;
+
+.seccion-comentarios{
+    margin: 20px ;
+}
+
+.titulo-preguntas {
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.titulo{
+    font-weight: 100;
+}
+
+.sub-titulo{
+    font-size: 15px;
+    font-weight: 300px;
+}
+
+.botones-preguntas{
+    font-family: "Open Sans", sans-serif; 
+    font-size: 17px;
+    font-weight: 100;
+}
+
+.btn1{
+    font-family: "Open Sans", sans-serif;
+    border-radius: 5px; 
+    border: none;
+    margin: 5px 10px;
+    background-color: #ECAC44;
+    width: 25%;
+    height: 25px;
+}
+
+.btn2{
+    font-family: "Open Sans", sans-serif;
+    border-radius: 5px;
+    border: none;
+    margin:  5px  10px;
+    background-color: #ECAC44;
+    width: 30%;
+    height: 25px ;
+
+
+
+}
+
+.btn3 {
+    font-family: "Open Sans", sans-serif;
+    border-radius: 5px;
+    border-bottom: 0px;
+    border: none;
+    margin:  5px  10px;
+    background-color: #ECAC44;
+    width: 10% ;
+    height: 25px ;
+    
+}
+
+@media only screen and (max-width: 100%){
+    .btn1{
+        width: 13%;
+    }
+
+    .btn2{
+        width: 15%;
+    }
+
+    .btn3{
+        width: 5%;
+    }
+}
+
+.ref-pregunta {
+    font-family:"Open Sans", sans-serif;
+    font-size: 15px;
+
+}
+
+.btn-preguntar{
+    width: 90px;
+    height: 35px;
+    background-color: #E31B9F;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+
+.texto-pregunta{
+    border-color: #888c8c;
+    border-radius: 4px;
+    border-width: 0.666667px;
+    border-style: solid;
+    box-shadow: #0f111126 0px 1px 2px 0px;
+    width: 65%;
+    height: 35px;
+    margin: 0% 0% 0% 2%;
+}
+
+@media only screen and (max-width: 600px) {
+    .btn-preguntar{
+        width:30 ;
+    }
+
+    .texto-pregunta{
+        width: 20%;
+    }
+}
+.opciones-busqueda{
+    width: 130px;
+    height: 25px;
+    border-radius: 4px;
+    float: right;
+    margin: 5% 10%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.comentario{
+    margin: 10% 30% 10% 10%;
+}
+
+.nombre-usuario, .stars{
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size: small;
+}
+
+.like{
+    margin: 5% 10%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.responder{
+    margin: 5% 10%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
     max-width: 80%;
     width: 100%;               /* Asegura que el div tome el ancho máximo permitido */
     max-width: 1200px;         /* Establece un ancho máximo fijo para evitar que se haga demasiado grande */
