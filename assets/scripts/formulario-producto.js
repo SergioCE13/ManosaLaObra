@@ -17,6 +17,7 @@ const inputLargo = document.getElementById('input-largo');
 // Variable para almacenar el estado de carga de imágenes
 let imagenesCargadas = false;
 
+
 // Deshabilitamos el botón del formularo ya que incialmente los campos están vacíos.
 buttonSubmit.classList.add('button-disabled');
 buttonSubmit.disabled = true;
@@ -73,10 +74,10 @@ buttonSubmit.addEventListener('click', function(){
 
     //Obtenemos los valores de los campos.
     const nombreProducto = inputNombre.value;
-    const validaPrecio = inputPrecio.value;
-    const validaDescripcion = inputDescripcion.value;
-    const validaInfoAd = inputInfoAd.value;
-    const validaStock = inputStock.value;
+    const precioProducto = inputPrecio.value;
+    const descripcionProducto = inputDescripcion.value;
+    const infoAdicional = inputInfoAd.value;
+    const stockProducto = inputStock.value;
     const radioSeleccionado = obtenerRadioSeleccionado();
     const imagenes = obtenerNombresImagenes();
     const altoProducto = inputAlto.value;
@@ -86,11 +87,11 @@ buttonSubmit.addEventListener('click', function(){
     //Creamos un objeto JavaScript para proceder a generar el formato JSON
     const productoJSON = { 
         "name" : nombreProducto,
-        "cost" : validaPrecio,
+        "cost" : precioProducto,
         "category": radioSeleccionado,
-        "description" : validaDescripcion,
-        "aditionalInfo" : validaInfoAd,
-        "stock" : validaStock,
+        "description" : descripcionProducto,
+        "aditionalInfo" : infoAdicional,
+        "stock" : stockProducto,
         "height": altoProducto,
         "widht": anchoProducto,
         "lenght": largoProducto,
