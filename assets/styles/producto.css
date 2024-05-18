@@ -3,18 +3,14 @@
     -fuente-cuerpo: "Open Sans", sans-serif;
 }
 
-body {
-    background-color: #E4DDD3;
-    display: flex;             /* Convierte al body en un contenedor flex */
-    justify-content: center;   /* Centra el contenido horizontalmente */
-    align-items: center;       /* Centra el contenido verticalmente */
-    margin: 30px 0px;                 /* Elimina los márgenes por defecto */
-}
 
 .caja-blanca {
-    border: 1px solid;
+    
     border-radius: 30px;
     background-color: #FFFFFF;
+    width: 60%;      
+}       
+
 
 .seccion-comentarios{
     margin: 20px ;
@@ -47,8 +43,6 @@ body {
     border: none;
     margin: 5px 10px;
     background-color: #ECAC44;
-    width: 25%;
-    height: 25px;
 }
 
 .btn2{
@@ -57,11 +51,6 @@ body {
     border: none;
     margin:  5px  10px;
     background-color: #ECAC44;
-    width: 30%;
-    height: 25px ;
-
-
-
 }
 
 .btn3 {
@@ -71,24 +60,24 @@ body {
     border: none;
     margin:  5px  10px;
     background-color: #ECAC44;
-    width: 10% ;
-    height: 25px ;
-    
 }
 
-@media only screen and (max-width: 100%){
-    .btn1{
-        width: 13%;
-    }
-
-    .btn2{
-        width: 15%;
-    }
-
-    .btn3{
-        width: 5%;
-    }
+@media only screen and (min-width: 1124px){
+.btn1{
+    width: 25%;
+    height: 25px;
 }
+.btn2{
+    width: 30%;
+    height: 25px
+}
+.btn3{
+    width: 10%;
+    height: 25px;
+}
+}
+
+
 
 .ref-pregunta {
     font-family:"Open Sans", sans-serif;
@@ -97,8 +86,6 @@ body {
 }
 
 .btn-preguntar{
-    width: 90px;
-    height: 35px;
     background-color: #E31B9F;
     border: none;
     border-radius: 4px;
@@ -111,18 +98,18 @@ body {
     border-width: 0.666667px;
     border-style: solid;
     box-shadow: #0f111126 0px 1px 2px 0px;
-    width: 65%;
-    height: 35px;
     margin: 0% 0% 0% 2%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 1124px) {
     .btn-preguntar{
-        width:30 ;
+        width: 15%;
+        height: 35px;
     }
 
     .texto-pregunta{
-        width: 20%;
+        width: 65%;
+        height: 35px;
     }
 }
 .opciones-busqueda{
@@ -153,10 +140,7 @@ body {
     margin: 5% 10%;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
-    max-width: 80%;
-    width: 100%;               /* Asegura que el div tome el ancho máximo permitido */
-    max-width: 1200px;         /* Establece un ancho máximo fijo para evitar que se haga demasiado grande */
-}
+
 
 
 .seccion-info-producto{
@@ -323,6 +307,4 @@ body {
 }
 .info-adicional span{
     font-size: 30px;
-}
-
-
+} 
