@@ -64,6 +64,9 @@ label, input{
     font-family: "Open Sans", sans-serif;
 }
 
+i{
+    cursor: pointer;
+}
 
 /* --------------------------------- Medias Queries para el funcionamiento responsive -------------------------*/ 
 @media only screen and (max-width: 600px) { /*Queries para pantallas de hasta 600px*/
