@@ -1,150 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Etiquetas meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nombre-Producto</title>
+    <meta name="author" content="Alebrijes FullStack">
+    <meta name="description" content="Plataforma ecommerce enfocada a la venta de artesanías mexicanas">
+    <meta name="keywords" content="ecomerce, México, artesanías, venta, compra">
+    <meta name="application-name" content="Manos a la Obra">
+
+    <!-- Título de la página-->
+    <title>Manos a al obra</title>
+
+    <!--Conexión Iconos BootStrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Conexión del Sitio con BootStrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--Conexión Styles-->
+    <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
     <link rel="stylesheet" href="./assets/styles/producto.css">
 
-        <!--Conexión Tipografía Darker Grotesque-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
-        
-        <!--Conexión Tipografía Open Sans-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos para el contenedor de información */
+        #informacion {
+            display: none;
+            /* Inicialmente oculto */
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
 
 </head>
+
+
+<!--------------------------------------- Inicia el Header ------------------------------------------->
 <header>
-    <!------ Navbar-->
-</header>
+    <!------------------------------ Inicia la NavBar ------------------------------------>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Index.html">
+                <img src="./assets/images/Logo.png" width="50" height="50">
+            </a>
+            <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation" style="box-shadow: none;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <ul class="dropdown-menu" style="background-color: #e31ba0c5;">
+                            <li><a class="dropdown-item" href="./index-sobre-nosotros.html">Acerca de Nosotros</a></li>
+                            <li><a class="dropdown-item" href="./NuestrosArtesanos.html">Acerca de nuestros Artesanos</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./Contactanos.html">Contactanos</a></li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+                <form id="buscar" name="formulario" class="d-flex position-absolute top-50 start-50 translate-middle" role="search">
+                    <input class="form-control me-2"  type="search" placeholder="Search" aria-label="Search" id="buscarnav">
+                    <button class="btn btn-outline-success" id="search_btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg></button>
+                </form>
+                <a href="./carrito-de-compras.html">
+                  <i class="bi bi-cart3" style="padding-right: 15px; padding-left: 10px; color: #FFFFFF; font-size: 1.5rem;"></i>
+              </a>                
+              <div class="dropdown">
+                <i class="bi bi-person" style="padding-right: 15px; color: #FFFFFF; font-size: 1.8rem;" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="background-color: #e31ba0c5;">
+                    <li><a class="dropdown-item" href="./login.html" style="color: #FFFFFF;">Login</a></li>
+                    <li><a class="dropdown-item" href="./formulario-registro-usuario.html" style="color: #FFFFFF;">Registro de Usuario</a></li>
+                    <li><a class="dropdown-item" href="./formulario-producto.html" style="color: #FFFFFF;">Registro de Producto</a></li>
+                    <li><a class="dropdown-item" href="./perfil-de-usuario.html" style="color: #FFFFFF;">Mi Perfil</a></li>
+                    <li><a class="dropdown-item" href="./wishlist.html" style="color: #FFFFFF;">Wishlist</a></li>
+                    <li><a class="dropdown-item" href="./configuracion-usuario.html" style="color: #FFFFFF;">Configuración</a></li>
+                    <li><a class="dropdown-item" href="./configuracion-del-vendedor.html" style="color: #FFFFFF;">Configuración del Vendedor</a></li>         
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
+        <!-------------------------------------- Termina la NavBar ----------------------------------->
+    </header>
+    <!------------------------------- Termina el Header --------------------------------------------------------------->
 
-<body>
-    <div class="caja-blanca">
-        <!-------------------- Inicia seccion 1 Información del producto --------------------------------------->
-        <section class="seccion-info-producto" style="margin:  20px; ">
+<body class="cuerpo-producto">
+    <div class="body-container">
+        <div class="caja-blanca">
+            <!-------------------- Inicia seccion 1 Información del producto --------------------------------------->
+            <section class="seccion-info-producto" style="margin:  20px; ">
 
-            <!------ Inica fila 1 de la sección de información del producto ------->
-            <div class="columnas-info-producto">
-                <!-- Inicia div para la columna 1"Imagenes del producto"-->
-                <div class="images-producto">
-                    <div class="imagen-main">
-                        <img id = "imagen-principal"src="./assets/images/producto/producto1.png" width="100%">
-                    </div><br>
-                    <div class="miniaturas">
-                        <img src="./assets/images/producto/producto1.png" alt="" width="35%">
-                        <img src="./assets/images/producto/producto2.png" alt="" width="35%">
-                    </div><br>
-                    <div class="info-vendedor">
-                        <a href="./NuestrosArtesanos.html"><img src="./assets/images/producto/artista.png" alt="" width="100%"></a>
+                <!------ Inica fila 1 de la sección de información del producto ------->
+                <div class="columnas-info-producto">
+                    <!-- Inicia div para la columna 1"Imagenes del producto"-->
+                    <div class="images-producto">
+                        <div class="imagen-main">
+                            <img id = "imagen-principal"src="./assets/images/producto/producto1.png" width="100%">
+                        </div><br>
+                        <div class="miniaturas">
+                            <img src="./assets/images/producto/producto1.png" alt="" width="35%">
+                            <img src="./assets/images/producto/producto2.png" alt="" width="35%">
+                        </div><br>
+                        <div class="info-vendedor">
+                            <a href="./NuestrosArtesanos.html"><img src="./assets/images/producto/artista.png" alt="" width="100%"></a>
+                        </div>
+                    </div><!-- Termina div columna 1-->
+
+                    <!-- Inicia div para la columna 2, fila 1 "Interacción con el producto"-->
+                    <div class="interac-producto">
+
+                        <!-- Inicia div para el Título, estrellas y boton fav del producto -->
+                        <div class="titulo-stars-fav">
+                            <div class="titulo-producto">
+                                Centro de mesa de barro negro
+                                <button id = "boton-corazon" onclick="cambioCorazon()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="M440-497Zm0 376-99-91q-87-80-144.5-137T104-452q-35-46-49.5-86.5T40-625q0-90 60.5-152.5T250-840q57 0 105.5 26.5T440-736q42-54 89-79t101-25q80.58 0 135.29 55Q820-730 832-652h-59q-9-55-46.5-91.5T630-780q-51 0-95 31t-71 88h-49q-26-56-70-87.5T250-780q-66 0-108 44.5T100-625q0 39 15.5 76t53.89 84.07q38.39 47.06 104.5 110Q340-292 440-200q32-29 60.5-54t56.5-49l6.63 6.47q6.63 6.48 14.37 14.03 7.74 7.55 14.37 14.03L599-262q-27 24-56 49t-62 55l-41 37Zm290-159v-130H600v-60h130v-130h60v130h130v60H790v130h-60Z"/></svg>
+                                </button>
+                            </div>
+                            <div class = "titulo-stars">Puntuación:</div>
+                            <div class="stars">★★★★★</div>
+                        </div><!-- Termina div de título-->
+
+                        <!-- Inicia div para precio del producto y de envio-->
+                        <div class="precio-envio">
+                            <div class="precio">$2,500.00</div>
+                            <div class="envio"> + $96.23 de envio</div>
+                        </div><!-- Termina div precio-->
+
+                        <!-- Inicia el div para los botones comprar y carrito -->
+                        <div class="d-grid gap-2 col-6 mx-auto botones-producto">
+                            <button class="btn btn-primary" id="bonton-comprar" type="button">Button</button>
+                            <button class="btn btn-primary" id ="boton-carrito" type="button">Añadir al carrito</button>
+                          </div>
+
+                        <!-- Inicia el div para mostrar la descripción del producto-->
+                        <div class="acerca-producto"><span> Acerca del producto:</span><br><br>Esta pieza forma parte de la propuesta original del Taller "Fabian", inspirado en la fusión del diseño de calidad con cortes arriesgados, sobre la cerámica de barro negro, es una pieza que puede exponerse de distintas formas y en diferentes espacios, principalmente esta pensada para lucirlo en una mesa de centro en un área común o lucirlo en un espacio de trabajo ya sea en un escritorio o un muebel multiusos.
+                        </div><!-- Termina div descripción-->
+                    </div><!-- Termina div interacción producto-->
+                </div>
+
+                <!-------- Inicia fila 2 de la sección de información del producto ------->
+                <div class="info-extra">
+
+                    <div class="caracteristicas-producto">
+                        <span>Medidas del producto:</span><br>Ancho: 25cm<br>Largo: 25cm<br>Alto: 25cm
                     </div>
-                </div><!-- Termina div columna 1-->
+                    <div class="info-adicional">
+                        <span>Información adicional:</span><br>Técnica: Corte en barro negro<br>Materiales: Ceramica, pintura, barniz<br>
+                    </div>
+                </div> <!-- Termina fila 2 información del producto-->
+            </section>
+            <!-------------------- Termina seccion 1 Información del producto --------------------------------------->
 
-                <!-- Inicia div para la columna 2, fila 1 "Interacción con el producto"-->
-                <div class="interac-producto">
 
-                    <!-- Inicia div para el Título, estrellas y boton fav del producto -->
-                    <div class="titulo-stars-fav">
-                        <div class="titulo-producto">Centro de mesa de barro negro &#x2661;</div>
-                        <div class = "titulo-stars">Puntuación:</div>
-                        <div class="stars">★★★★★</div>
-                    </div><!-- Termina div de título-->
 
-                    <!-- Inicia div para precio del producto y de envio-->
-                    <div class="precio-envio">
-                        <div class="precio">$2,500.00</div>
-                        <div class="envio"> + $96.23 de envio</div>
-                    </div><!-- Termina div precio-->
+        <!-------------------- Inicia sección 2 Comentarios del producto --------------------------------------->
+        <section class="seccion-comentarios">
+            <!-- Inicia div de preguntas y respuestas-->
+            <div class="titulo-preguntas"> <!-- Inicia titulo preguntas/respuestas-->
+                <h4 class="titulo">Preguntas y respuestas</h4>
+            </div> <!-- Termina pregutnas/respuestas-->
+            <div class="botones-preguntas"><!-- Inicia que quieres saber-->
+                <h5 class="sub-titulo">¿Qué quieres saber?</h5>
+                <button class="btn1">Costo y tiempo de envío</button><button class="btn2">Medios de pago y
+                    promociones</button><button class="btn3">Calidad</button>
+            </div> <!-- Termina que quieres saber-->
+            <div class="preguntar"> <!-- Inicia div preguntar -->
+                <h5 class="ref-pregunta">Preguntale al vendedor y/o otros compradores</h5>
+                <input type="text" name="" id="" class="texto-pregunta">
+                <button class="btn-preguntar">Preguntar</button>
+                <select class="opciones-busqueda">
+                    <option>Más recientes</option>
+                    <option>Destacados</option>
+                </select>
+            </div> <!-- Termina div preguntar-->
 
-                    <!-- Inicia el div para los botones comprar y carrito -->
-                    <div class="botones-producto">
-                        <button id="boton-comprar">Comprar</button>
-                        <button id="boton-carrito">Agregar al carrito</button>
-                    </div><!-- Termina div botones-->
-
-                    <!-- Inicia el div para mostrar la descripción del producto-->
-                    <div class="acerca-producto"><span> Acerca del producto:</span><br><br>Esta pieza forma parte de la propuesta original del Taller "Fabian", inspirado en la fusión del diseño de calidad con cortes arriesgados, sobre la cerámica de barro negro, es una pieza que puede exponerse de distintas formas y en diferentes espacios, principalmente esta pensada para lucirlo en una mesa de centro en un área común o lucirlo en un espacio de trabajo ya sea en un escritorio o un muebel multiusos.
-                    </div><!-- Termina div descripción-->
-                </div><!-- Termina div interacción producto-->
+            <!-- Inicia div de comentario-->
+            <div class="comentario">
+                <h6 class="nombre-usuario">Rosario Alfonso</h6> <!-- Nombre-usuario --> <!--Estrellas de bootstrap-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                    <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                </svg> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                    <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                    <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                    <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                    <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                </svg><!-- Calificación estrellas-->
+                <div class="texto-comentario">¡Hola! Estoy encantada con esta pieza, creo que es estupenda para la decoración de mi casa ¿Hacen envios internacionales?</div> <!-- Texto del comentario-->
+                <button class="like">Me gusta</button> <!-- Botones like y responder-->
+                <button class="responder">Responder</button>
             </div>
 
-            <!-------- Inicia fila 2 de la sección de información del producto ------->
-            <div class="info-extra">
+            <!-- Este HTML genera un comentario que responde a otro previamente realizado.-->
 
-                <div class="caracteristicas-producto">
-                    <span>Medidas del producto:</span><br><br>Ancho: 25cm<br>Largo: 25cm<br>Alto: 25cm
-                </div>
-                <div class="info-adicional">
-                    <span>Información adicional:</span><br><br>Técnica: Corte en barro negro<br>Existencias: 25<br>
-                </div>
-            </div> <!-- Termina fila 2 información del producto-->
-        </section>
-        <!-------------------- Termina seccion 1 Información del producto --------------------------------------->
-
-
-    <!-------------------- Inicia sección 2 Comentarios del producto --------------------------------------->
-    <section class="seccion-comentarios">
-        <!-- Inicia div de preguntas y respuestas-->
-        <div class="titulo-preguntas"> <!-- Inicia titulo preguntas/respuestas-->
-            <h4 class="titulo">Preguntas y respuestas</h4>
-        </div> <!-- Termina pregutnas/respuestas-->
-        <div class="botones-preguntas"><!-- Inicia que quieres saber-->
-            <h5 class="sub-titulo">¿Qué quieres saber?</h5>
-            <button class="btn1">Costo y tiempo de envío</button><button class="btn2">Medios de pago y
-                promociones</button><button class="btn3">Calidad</button>
-        </div> <!-- Termina que quieres saber-->
-        <div class="preguntar"> <!-- Inicia div preguntar -->
-            <h5 class="ref-pregunta">Preguntale al vendedor y/o otros compradores</h5>
-            <input type="text" name="" id="" class="texto-pregunta">
-            <button class="btn-preguntar">Preguntar</button>
-            <select class="opciones-busqueda">
-                <option>Más recientes</option>
-                <option>Destacados</option>
-            </select>
-        </div> <!-- Termina div preguntar-->
-
-        <!-- Inicia div de comentario-->
-        <div class="comentario">
-            <h6 class="nombre-usuario">Rosario Alfonso</h6> <!-- Nombre-usuario --> <!--Estrellas de bootstrap-->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
-            </svg> 
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
-            </svg><!-- Calificación estrellas-->
-            <div class="texto-comentario">¡Hola! Estoy encantada con esta pieza, creo que es estupenda para la decoración de mi casa ¿Hacen envios internacionales?</div> <!-- Texto del comentario-->
-            <button class="like">Me gusta</button> <!-- Botones like y responder-->
-            <button class="responder">Responder</button>
-        </div>
-
-        <!-- Este HTML genera un comentario que responde a otro previamente realizado.-->
-
-        <div class="comentario">
+            <div class="comentario">
             <h6 class="nombre-usuario">Mariana Vallejo</h6> 
             <div class="stars"></div> 
             <div class="texto-comentario"></div>
             <button class="like"></button><button class="responder"></button> 
-        </div>
-    
-        </section>
-        <!-------------------- Termina sección 2 Comentarios del producto --------------------------------------->
-    </div><!-- Caja producto -->
+            </div>
+        
+            </section>
+            <!-------------------- Termina sección 2 Comentarios del producto --------------------------------------->
+        </div><!-- Caja producto -->
+    </div>
+
 
     <!-- Footer -->
     <footer> </footer>
     <script src="./assets/scripts/producto.js"></script>
-    <script src="./assets/scripts/server.js"></script>
+
 </body>
+
+ <!---------------------------------------------Inicio de Footer----------------------------------------------------->
+
+ <footer class="text-center text-lg-start text-white" style="background-color: #969696">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+    <!-- Section: Links -->
+    <section class="">
+        <!--Grid row-->
+        <div class="row d-flex align-items-center">
+        <!-- Grid column -->
+        <div class="col-md-7 col-lg-8 text-center text-md-start">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+                Manos a la Obra
+            </h6>
+            <p class="font-weight-bold">
+                Preguntas frecuentes  |  <a href="Terminos y condiciones.html" target="_blank">Terminos y Condiciones</a>  | <a href="Politicas de Privacidad.html" target="_blank">Aviso de privacidad</a>  | <a href="Politas de envio.html" target="_blank">Política de envío</a>
+            </p>
+        </div>
+    <!-- Section: Copyright -->
+    
+        <div class="row d-flex align-items-center">
+        <!-- Grid column -->
+        <div class="col-md-7 col-lg-8 text-center text-md-start">
+            <!-- Copyright -->
+            <div>
+            © 2024 Alebrijes Fullstack
+            
+            
+            </div>
+            <!-- Copyright -->
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+            <!-- Facebook -->
+            <a
+            href="https://www.facebook.com"
+            target="_blank"
+            class="btn btn-outline-light btn-floating m-1"
+            class="text-white"
+            role="button"
+            ><i class="bi bi-facebook"></i
+            ></a>
+
+            <!-- Twitter -->
+            <a
+            href="https://twitter.com"
+            target="_blank"
+            class="btn btn-outline-light btn-floating m-1"
+            class="text-white"
+            role="button"
+            ><i class="bi bi-twitter"></i
+            ></a>
+
+            <!-- Google -->
+            <a
+            href="https://www.google.com"
+            target="_blank"
+            class="btn btn-outline-light btn-floating m-1"
+            class="text-white"
+            role="button"
+            ><i class="bi bi-google"></i
+            ></a>
+
+            <!-- Instagram -->
+            <a
+            href="https://www.instagram.com"
+            target="_blank"
+            class="btn btn-outline-light btn-floating m-1"
+            class="text-white"
+            role="button"
+            ><i class="bi bi-instagram"></i></a>
+        </div>
+        <!-- Grid column -->
+        </div>
+    </section>
+    <!-- Section: Copyright -->
+    </div>
+    <!-- Grid container -->
+</footer>
+<!-- Fin del Footer -->
+
+
+
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--Conexión JS-->
+    <script src="navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
 </html>
