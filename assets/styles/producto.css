@@ -37,17 +37,18 @@
 
 .titulo-preguntas {
     font-family: "Open Sans", sans-serif;
-    font-size: 25px;
-    font-weight: 100;
 }
 
 .titulo{
     font-weight: 100;
+    font-size: 40px;
+    margin: 5% 0% 0% 0%;
 }
 
 .sub-titulo{
-    font-size: 15px;
-    font-weight: 300px;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5% 0px 1.5% 0px;
 }
 
 .botones-preguntas{
@@ -62,7 +63,29 @@
     border: none;
     margin: 5px 10px;
     background-color: #ECAC44;
+    font-size: 20px;
 }
+
+
+.btn2{
+    font-family: "Open Sans", sans-serif;
+    border-radius: 5px;
+    border: none;
+    margin:  5px  10px;
+    background-color: #ECAC44;
+    font-size: 20px;
+}
+
+.btn3 {
+    font-family: "Open Sans", sans-serif;
+    border-radius: 5px;
+    border-bottom: 0px;
+    border: none;
+    margin:  5px  10px;
+    background-color: #ECAC44;
+    font-size: 20px;
+}
+/*
 
 @media only screen and (min-width: 1124px){
     .btn1{
@@ -79,9 +102,16 @@
     }
 }
 
+*/
+
+
 .ref-pregunta {
     font-family:"Open Sans", sans-serif;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 4% 0px 0px 0px;
+
+
 }
 
 .btn-preguntar{
@@ -89,6 +119,9 @@
     border: none;
     border-radius: 4px;
     color: white;
+    width: 23%;
+    height: 40px;
+    margin: 0px 15px;
 }
 
 .texto-pregunta{
@@ -97,19 +130,9 @@
     border-width: 0.666667px;
     border-style: solid;
     box-shadow: #0f111126 0px 1px 2px 0px;
-    margin: 0% 0% 0% 2%;
-}
-
-@media only screen and (min-width: 1124px) {
-    .btn-preguntar{
-        width: 15%;
-        height: 35px;
-    }
-
-    .texto-pregunta{
-        width: 65%;
-        height: 35px;
-    }
+    margin: 4% 0% 0% 2%;
+    width: 65%;
+    height: 40px;
 }
 
 .opciones-busqueda{
@@ -117,28 +140,57 @@
     height: 25px;
     border-radius: 4px;
     float: right;
-    margin: 5% 10%;
+    margin: 4% 10%;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
 .comentario{
-    margin: 10% 30% 10% 10%;
+    margin: 8% 0% 0% 6%;
+    max-width: 75%;
 }
 
-.nombre-usuario, .stars{
+.comentario-replica{
+    margin: 0% 17% 0% 10%;
+    max-width: 75%
+}
+
+.nombre-usuario{
     display: inline-block;
     font-family: "Open Sans", sans-serif;
-    font-size: small;
+    font-size: 21px;
+    font-weight: bold;
+
+}
+
+.texto-comentario{
+    font-size: 20px;
+    text-align: justify;
+}
+
+@media (max-width: 800px) {
+    .nombre-usuario{
+        margin: 12px 0px 0px 0px;
+    }
+
 }
 
 .like{
-    margin: 5% 10%;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    margin: 2% 3% 3% 0%;
+    border-color: #DEDBDB;
+    border-radius: 10px ;
+    border-width: 1px;
+    box-shadow: #DEDBDB 3px 5px 5px 0px;
 }
 
 .responder{
-    margin: 5% 10%;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    margin: 2% 3% 3% 0%;
+    border-color: #DEDBDB;
+    border-radius: 10px ;
+    border-width: 1px;
+    font-weight: 500;
+    box-shadow: #DEDBDB 3px 5px 5px 0px;
 }
 
 .seccion-info-producto{

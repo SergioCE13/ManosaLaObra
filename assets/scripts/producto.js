@@ -1,10 +1,14 @@
-const botonComprar = document.getElementById('boton-comprar');
-let x = 0;
+let contador = 0;
 
-botonComprar.addEventListener('click', function(){
-    console.log('Hola', x);
-    x++;
-});
+function like() {
+    contador++;
+    document.getElementById('contador').textContent = contador;
+}
+
+const contadorLike= document.getElementById('btn-like');
+contadorLike.addEventListener('click', like);
+
+
 
 /* const miniaturas = document.querySelectorAll('.miniaturas img');
 const imagenPrincipal = document.getElementById('imagen-principal');
@@ -34,6 +38,7 @@ function cambioCorazon() {
 
     alert('¡Su producto a sido agregado a favoritos existosamente!');
 }
+
 
 
 function cambioCorazon2() {
@@ -186,5 +191,6 @@ document.querySelectorAll('.imagen-zoom img').forEach(img => {
         zoomArea.style.display = 'none';
     });
 });
+
 
 
