@@ -155,7 +155,7 @@
 }
 
 .nombre-usuario{
-    display: inline-block;
+    
     font-family: "Open Sans", sans-serif;
     font-size: 21px;
     font-weight: bold;
@@ -465,6 +465,9 @@ h1{
 
     .caracteristicas-producto span{
         font-size: 20px;
+    }
+    .interac-producto{
+        margin: 10px 0px;
     }
     .caracteristicas-producto{
         font-size: 15px;
