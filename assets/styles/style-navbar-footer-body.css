@@ -17,6 +17,7 @@
 
 .navbar { /* Estilos de la Navbar*/
     background-color: var(--color--primario);
+    padding:10px;
 }
 
 .navbar-nav .nav-link{ /* Estilo de los links en la barra de búsqueda*/
@@ -29,6 +30,17 @@
     border-color: var(--color--blanco);
     display: flex;
     align-items: center;
+}
+#principal{
+    display: none;
+    font-size: 20px;
+}
+
+.custom-btn{
+    color: #FFFFFF;
+}
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .dropdown-menu .dropdown-item:hover {
@@ -43,6 +55,9 @@
 /* --------------------------------------------- Estilos del Cuerpo -------------------------------------------*/
 body{ /* Estilos de la etiquea body*/
     background-color: #E4DDD3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container--title{ /* Estilos del banner del sitio*/
@@ -50,7 +65,6 @@ body{ /* Estilos de la etiquea body*/
     justify-content: center;
     background-color: #969696;
     opacity: 0.6;
-    padding-top: 10px;
 }
 
 .container--title h1{
@@ -65,6 +79,10 @@ label, input{
 }
 
 
+i{
+    cursor: pointer;
+}
+
 /* --------------------------------- Medias Queries para el funcionamiento responsive -------------------------*/ 
 @media only screen and (max-width: 600px) { /*Queries para pantallas de hasta 600px*/
     .container-form{
@@ -74,28 +92,6 @@ label, input{
         margin-top: 10px;
     }
 
-}
-
-.custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.custom-toggler.navbar-toggler {
-    border-color: rgb(255, 255, 255);
-} 
-
-@media only screen and (max-width: 990px){
-    #principal{ /* Queries para pantallas entre 601px a 990px*/
-        display: block;
-    }
-    #principal1{
-        display: none;
-    }
-    #buscar{
-        width: 55%;
-        padding-left: 10%;
-        margin-right: 0;
-    }
 }
 
 #principal{  /*Lo agregué*/

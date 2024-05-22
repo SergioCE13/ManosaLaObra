@@ -1,36 +1,116 @@
+/*----------------------------------------------- Estilos de la NAVBAR --------------------------------------*/
+
+.container-search{ /* Estilos de la barra de búsqueda*/ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar { /* Estilos de la Navbar*/
+    background-color: var(--color--primario);
+}
+
+.navbar-nav .nav-link{ /* Estilo de los links en la barra de búsqueda*/
+    color: var(--color--blanco);
+}
+
+#search_btn {/* Estilos del botón de la barra de búsqueda*/
+    background-color: var(--color--primario);
+    color: var(--color--blanco);
+    border-color: var(--color--blanco);
+    display: flex;
+    align-items: center;
+}
+
+
+.custom-btn{
+    color: #FFFFFF;
+}
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgb(255, 255, 255);
+} 
+
+@media only screen and (max-width: 990px){
+    #principal{ /* Queries para pantallas entre 601px a 990px*/
+        display: block;
+    }
+    #principal1{
+        display: none;
+    }
+    #buscar{
+        width: 55%;
+        padding-left: 10%;
+        margin-right: 0;
+    }
+}
 .container-int{
     background-color: white;
     width: 1200px;
     height: 600px;
     border-radius: 10px;
     padding: 30px;
-    display: flex;
-    align-items: flex-end;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    top: 50%; /* Posiciona los controles en la mitad superior del carousel */
-}
-
-.carouselExampleCaptions{
-    width: 400px;
-    height: 200px;
-}
-
+/*Estilos del contenedor del Carousel*/
 .carousel-container {
-    width: 80%; /* Ancho del contenedor */
+    width: 100%; /* Ancho del contenedor */
     margin: 0 auto; /* Centrar horizontalmente */
     border-radius: 20px; /* Bordes redondos */
     overflow: hidden; /* Evitar que las esquinas de las imágenes sobresalgan */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
+
+.carousel-caption {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.container-text {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
+
+.desc-valores {
+    height: 200px;
+}
+
+.mostrar-div {
+    padding: 50px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente del texto */
+    border-radius: 10px;
+    color: var(--color--blanco);
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    
+
+}
+
+@media screen and (max-width: 992px) {
+    .mostrar-div{
+        display:block;
+
+
+    }
+}
 
 /*Estilos del contenedor las Cards*/
 .cards-wrapper {
     display: flex;
-    justify-content: space-around;
-   flex-wrap: wrap;
-    
+    justify-content: space-around
+    flex-wrap: wrap;
+    margin-bottom: 30px;    
 }
 
 /*Estilos de las Cards*/
@@ -39,18 +119,7 @@
     margin: 0.5em;
     border-color: none;
     box-shadow: 5px 5px 15px gray;
-    overflow: hidden; 
-}
-
-/*Estilos del contenedor del Carousel*/
-.carousel-container{
-
-    margin-top: 70px;
-    margin-bottom: 70px;
-    display: flex;
-    flex-wrap: wrap;
-
-
+    overflow: hidden;
 }
 
 /*Estilos del titulo de la la página de "nuestro equipo"*/
@@ -177,40 +246,6 @@
     flex-wrap: wrap;
 
 }
-
-
-@media (max-width: 400px) {
-
-   
-    .card{
-        width: 100%;
-    }
-
-    .card-img-top{
-        width: 100%;
-    }
-
-    .card-body{
-        width: 100%;
-    }
-
-    .container-text{
-        width:100%;
-    }
-
-    .modal-dialog{
-
-        width:100%
-    }
-   
-    .carousel-caption{ /*Lo agregué*/
-
-        width:100%
-
-    }
-    
-}
-
 
 
 
