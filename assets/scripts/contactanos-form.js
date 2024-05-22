@@ -1,49 +1,68 @@
-/* Traemos los componentes que vamos a utilizar para realizar la validación de los campos */
+/* Traemos los componentes que vamos a utilizar para la verificación de los campos por medio de getElementById*/ 
 
-const inputNombre = document.getElementById('input-nombre-producto');
-const inputPrecio = document.getElementById('input-precio-producto');
-const inputDescripcion = document.getElementById('textArea-desc-producto');
-const inputInfoAd = document.getElementById('textArea-info-adicional');
-const inputStock = document.getElementById('input-stock-producto');
-const buttonSubmit = document.getElementById("button-submit");
-const radio1 = document.getElementById('inlineRadio1');
-const radio2 = document.getElementById('inlineRadio2');
-const radio3 = document.getElementById('inlineRadio3');
-const radio4 = document.getElementById('inlineRadio4');
-const radio5 = document.getElementById('inlineRadio5');
+// Campo de texto para el nombre:
+const nameInput = document.getElementById('input-name');
+// Campo de texto para el correo:
+const emailInput = document.getElementById('input-email');
+// Campo de texto para el teléfono:
+const phoneInput = document.getElementById('input-phone');
+//Campo de texto para escribir un mensaje:
+const mensajeInput = document.getElementById('input-mensage');
+// Botón para enviar el formulario:
+const buttonSubmit = document.getElementById("button--submit");
 
-// Deshabilitamos el botón del formulario ya que incialmente los campos están vacíos.
+
+// Deshabilitamos el botón del formularo ya que incialmente los campos están vacíos.
 buttonSubmit.classList.add('button-disabled');
 buttonSubmit.disabled = true;
 
-//Se valida en la cadena que contiene la letra de a-z, mayuscula y minuscula, ademas de caracteres tildados.
+
+/*Creamos las expresiones regulares para la verificación de las cadenas existentes en los difernetes campos de texto. */
+
+/* Almacenamos la expresión regular para verificar los nombres en una constante:
+    Esta expresión regular es valida cadenas de texto con espacios, que contienen letras a-z mayúsculas y minúsculas además de los caracteres tildados: áéíóúÁÉÍÓÚüÜñÑ
+*/
 const nameRegex = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]+$/;
 
-//Se validan los datos en los campos
+/* Almacenamos la expresión regular para verificar los correos en una constante:
+    Esta expresión regular valida direcciones de correo electrónico acorde a los estandares RFC 5321 y RFC 5322.
+*/
+const emailRegex = /^(?:(?:[^<>()[\]\\.,;:\s@\"]+(?:\.[^<>()[\]\\.,;:\s@\"]+)*)|(?:\".+\"))@(?:(?:\[(?:IPv6:(?:[a-fA-F0-9]{1,4}:){7}[a-fA-F0-9]{1,4}|(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))\])|(?:(?:[a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+
+/* Almacenamos la expresión regular para verificar los números de telefono:
+    Esta expresión regular valida cadenas compuestas por 10 dígitos numéricos.
+*/
+const phoneRegex = /^\d{10}$/;
+
+
+/* Creamos la funciones para verificar si las cadenas de texto de cada campo cumplen con su expresión regular correspondiente*/
+
+// Función para verificar si todos los campos cumplen con las expresiones regulares:
 function validarCampos() {
-    const nombreProducto = inputNombre.value;    
-    const precioProducto = inputPrecio.value;
-    const descProducto = inputDescripcion.value;
-    const InforAdici = inputInfoAd.value;
-    const Stock = inputStock.value;
-    const RadioButon = document.querySelectorAll('input[name="radio1"]:checked, input[name="radio2"]:checked, input[name="radio3"]:checked, input[name="radio4"]:checked, input[name="radio5"]:checked');
-    if (nombreProducto && precioProducto && descProducto && InforAdici && Stock && RadioButon) {
-        buttonSubmit.classList.remove('button-disabled');
+    // Obtenermos las cadenas de texto extistentes en los campos.
+    const nombre = nameInput.value;
+    const correo = emailInput.value;
+    const telefono = phoneInput.value;
+    const mensaje = mensajeInput.value;
+
+    // Evaluamos las cadenas en la expresión Regex correspondiente
+    const nombreValido = nameRegex.test(nombre);
+    const correoValido = emailRegex.test(correo);
+    const telefonoValido = phoneRegex.test(telefono);
+
+    // Si todos los campos cumplen con las expresiones regulares, habilitamos el botón:
+    if (nombreValido && correoValido && telefonoValido && mensaje !== ""){
         buttonSubmit.disabled = false;
+        buttonSubmit.classList.remove('button-disabled');
     } else {
-        buttonSubmit.classList.add('button-disabled');
         buttonSubmit.disabled = true;
+        buttonSubmit.classList.add('button-disabled');
     }
 }
 
-// Agregamos escucha de eventos a cada uno de los campos de entrada para llamar a la función validarCampos cuando se ingrese o modifique texto:
-inputNombre.addEventListener('input', validarCampos);
-inputDescripcion.addEventListener('input', validarCampos);
-inputInfoAd.addEventListener('input', validarCampos);
-inputPrecio.addEventListener('input', validarCampos);
-inputStock.addEventListener('input', validarCampos);
-radio1.addEventListener('change', validarCampos);
-radio2.addEventListener('change', validarCampos);
-radio3.addEventListener('change', validarCampos);
-radio4.addEventListener('change', validarCampos);
-radio5.addEventListener('change', validarCampos);
+// Agregamos escucha de eventos a cada uno de los campos de entrada para llamar a la función validarCampos cuando se ingrese  o modifique texto:
+nameInput.addEventListener('input', validarCampos);
+emailInput.addEventListener('input', validarCampos);
+phoneInput.addEventListener('input', validarCampos);
+
+

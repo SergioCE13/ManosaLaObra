@@ -17,6 +17,7 @@
 
 .navbar { /* Estilos de la Navbar*/
     background-color: var(--color--primario);
+    padding:10px;
 }
 
 .navbar-nav .nav-link{ /* Estilo de los links en la barra de búsqueda*/
@@ -55,6 +56,11 @@ label, input{
     font-family: "Open Sans", sans-serif;
 }
 
+#footer{
+    position: end;
+    justify-content: last baseline;
+    display: end;
+}
 
 /* --------------------------------- Medias Queries para el funcionamiento responsive -------------------------*/ 
 @media only screen and (max-width: 600px) { /*Queries para pantallas de hasta 600px*/
