@@ -20,7 +20,7 @@
    
     <!--Conexión Styles-->
     <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
-    <link rel="stylesheet" href="./assets/styles/style-configuración-usuario.css">
+    <link rel="stylesheet" href="./">
     <link rel="stylesheet" href="./assets/styles/contactanos-styles.css">
 
     <!--Conexión Tipografía Darker Grotesque-->
@@ -34,13 +34,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
 
 
-    <!--Conexión JS-->
-     <script src="navbar.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-       crossorigin="anonymous"></script>
-   
-     <script src="script-funciones.js"></script>
    
 
 </head>
@@ -197,7 +190,7 @@
                     <input type="password" id="pwd" maxlength= "8" required><br>
                     <label for="confirmPassword">Confirmar nueva contraseña:</label>
                     <input type="password" id="confirmPassword" required><br>
-                    <button type="button" class="ButtonsConfig" onclick="saveChanges()">Guardar</button>
+                    <button type="button" id = "boton-guardar-usuario" class="ButtonsConfig" onclick="saveChanges()">Guardar</button>
                     <button type="button" class="ButtonsConfig" onclick="closeForm()">Cancelar</button>
                   </form>
                 </div>
@@ -225,7 +218,7 @@
                   <input type="text" id="expiryDate" placeholder="MM/AA" required><br>
                   <label for="securityCode">Código de seguridad:</label>
                   <input type="text" id="securityCode" maxlength="3" placeholder="CVV" required><br>
-                  <button type="button"  class="ButtonsConfig" onclick="saveCard()">Guardar</button>
+                  <button type="button" id="guardar-tarjeta" class="ButtonsConfig">Guardar</button>
                   <button type="button" class="ButtonsConfig" onclick="closeForm()">Cancelar</button>
                 </form>
               </div>
@@ -259,7 +252,7 @@
                   <input type="text" id="city" required><br>
                   <label for="country">País:</label>
                   <input type="text" id="country" required><br>
-                  <button type="button" class="ButtonsConfig" onclick="saveAddress()">Guardar</button>
+                  <button type="button" id = "guardar-direccion" class="ButtonsConfig">Guardar</button>
                   <button type="button" class="ButtonsConfig" onclick="closeForm()">Cancelar</button>
                 </form>
               </div>
@@ -376,7 +369,13 @@
     <!-- Grid container -->
 </footer>
 <!-- Fin del Footer -->
-
-<script src="./assets/scripts/script-configuración-usuario.js"></script>
+    <!--Conexión JS-->
+    <script src="navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+  
+    <script src="script-funciones.js"></script>
+<script src="./assets/scripts/script-configuración-usuario.js"></script>
 </body>
 </html>
