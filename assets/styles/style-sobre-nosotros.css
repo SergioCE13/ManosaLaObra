@@ -53,10 +53,9 @@
 /*Estilos del contenedor las Cards*/
 .cards-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around
     flex-wrap: wrap;
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px;    
 }
 
 /*Estilos de las Cards*/
