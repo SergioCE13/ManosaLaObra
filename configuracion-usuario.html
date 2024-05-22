@@ -151,15 +151,18 @@
     
               <div class="account-details">
                 <h4>Mi cuenta</h4>
-                <p>Nombre: <span id="name"></span></p>
+                <br>
+                <p>Nombre: Roberto <span id="name"></span></p>
                 <hr>
-                <p>Apellido paterno: <span id="lastnameDad"></span></p>
+                <p>Apellido paterno: Rodrirguez <span id="lastnameDad"></span></p>
                 <hr>
-                <p>Apellido materno: <span id="lastnameMom"></span></p>
+                <p>Apellido materno: Castro <span id="lastnameMom"></span></p>
                 <hr>
-                <p>Correo: <span id="email"></span></p>
+                <p>Correo: example@example.com <span id="email"></span></p>
                 <hr>
-                <p>Contraseña: <span id="password"></span></p>
+                <p>Número de teléfono: 5552962378 <span id="num"></span></p>
+                <hr>
+                <p>Contraseña: ******* <span id="password"></span></p>
                 <hr>
               </div>
             </div>
@@ -184,14 +187,18 @@
                     <label for="lastName">Apellido materno:</label>
                     <input type="text" id="lastName" required><br>
                     <label for="email">Correo:</label>
-                    <!--<input type="email" id="email" readonly><br>-->
-                    <p id="emailNote">(Este campo no se puede editar)</p>
-                    <label for="password">Nueva Contraseña:</label>
-                    <input type="password" id="pwd" maxlength= "8" required><br>
-                    <label for="confirmPassword">Confirmar nueva contraseña:</label>
-                    <input type="password" id="confirmPassword" required><br>
-                    <button type="button" id = "boton-guardar-usuario" class="ButtonsConfig" onclick="saveChanges()">Guardar</button>
-                    <button type="button" class="ButtonsConfig" onclick="closeForm()">Cancelar</button>
+                    <input type="email" id="email" readonly placeholder="Este campo no se puede modificar"><br>
+                    <!--<label for="tel">Número de teléfono:</label>
+                    <input type="number" id="tel" required><br>-->
+                    <button type="button" class="ButtonsConfig" onclick="togglePasswordFields()">Editar Contraseña</button><br><br>
+                    <div id="passwordFields">
+                    <label for="pwd">Nueva contraseña:</label>
+                    <input type="password" id="pwd" name="pwd" ><br><br>
+                    <label for="confirmPassword">Confirmar Contraseña:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+                    </div>
+                    <button type="button" class="ButtonsConfig" onclick="saveChanges()">Guardar</button>
+                    <button type="button" class="ButtonsConfig" onclick="closeFormCuenta()">Cancelar</button>
                   </form>
                 </div>
               </div>
@@ -219,7 +226,7 @@
                   <label for="securityCode">Código de seguridad:</label>
                   <input type="text" id="securityCode" maxlength="3" placeholder="CVV" required><br>
                   <button type="button" id="guardar-tarjeta" class="ButtonsConfig">Guardar</button>
-                  <button type="button" class="ButtonsConfig" onclick="closeForm()">Cancelar</button>
+                  <button type="button" class="ButtonsConfig" onclick="closeFormCards()">Cancelar</button>
                 </form>
               </div>
             </div>
@@ -253,7 +260,7 @@
                   <label for="country">País:</label>
                   <input type="text" id="country" required><br>
                   <button type="button" id = "guardar-direccion" class="ButtonsConfig">Guardar</button>
-                  <button type="button" class="ButtonsConfig" onclick="closeForm()">Cancelar</button>
+                  <button type="button" class="ButtonsConfig" onclick="closeFormAddresses()">Cancelar</button>
                 </form>
               </div>
                 

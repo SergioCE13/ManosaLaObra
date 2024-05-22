@@ -157,22 +157,25 @@
             
     
               <div class="account-details">
-                <h4>Mi cuenta</h4>
-                <p>Nombre: <span id="name"></span></p>
+                <h4>Cuenta Vendedor</h4>
+                <br>
+                <p>Nombre: Carmen  <span id="name"></span></p>
                 <hr>
-                <p>Apellido paterno: <span id="lastnameDad"></span></p>
+                <p>Apellido paterno: Romero <span id="lastnameDad"></span></p>
                 <hr>
-                <p>Apellido materno: <span id="lastnameMom"></span></p>
+                <p>Apellido materno: Gracia <span id="lastnameMom"></span></p>
                 <hr>
-                <p>Correo: <span id="email"></span></p>
+                <p>Correo: example@example.com <span id="email"></span></p>
                 <hr>
-                <p>Contraseña: <span id="password"></span></p>
+                <p>Contraseña: ******** <span id="password"></span></p>
                 <hr>
-                <p>RFC: <span id="text"></span></p>
+                <p>RFC: CRGJ880326 <span id="rfc"></span></p>
                 <hr>
-                <p>Descripción del vendedor: <span id="text"></span></p>
+                <p>Número de teléfono: 5552962378 <span id="num"></span></p>
                 <hr>
-                <p>Estado de residencia: <span id="text"></span></p>
+                <p>Descripción del vendedor: Hola soy Carmen. (Historia) 
+                <hr>
+                <p>Estado de residencia: Puebla <span id="est"></span></p>
                 <hr>
               </div>
             </div>
@@ -189,7 +192,7 @@
                 <!-- Formulario para editar datos de la cuenta -->
                 <div id="editForm" class="form-popup" style="display: none;">
                   <form id="editFormContent" class="form-container">
-                    <h4>Editar Mi cuenta</h4>
+                    <h4>Editar cuenta vendedor</h4>
                     <label for="firstName">Nombre:</label>
                     <input type="text" id="firstName" required><br>
                     <label for="middleName">Apellido paterno:</label>
@@ -197,21 +200,26 @@
                     <label for="lastName">Apellido materno:</label>
                     <input type="text" id="lastName" required><br>
                     <label for="email">Correo:</label>
-                    <!--<input type="email" id="email" readonly><br>-->
-                    <p id="emailNote">(Este campo no se puede editar)</p>
-                    <label for="password">Nueva Contraseña:</label>
-                    <input type="password" id="pwd" maxlength= "8" required><br>
-                    <label for="confirmPassword">Confirmar nueva contraseña:</label>
-                    <input type="password" id="confirmPassword" required><br>
+                    <input type="email" id="email" readonly placeholder="Este campo no se puede modificar"><br>
                     <label for="rfc">RFC:</label>
                     <input type="text" id="rfc" required><br>
+                    <label for="num">Número de teléfono:</label>
+                    <input type="number" id="tel" required><br>
                     <label for="desc">Descripción del vendedor:</label>
                     <input type="text" id="desc" required><br>
                     <label for="desc">Estado de residencia:</label>
                     <input type="text" id="resi" required><br>
-                    
+                    <button type="button" class="ButtonsConfig" onclick="togglePasswordFields()">Editar Contraseña</button><br><br>
+                    <div id="passwordFields">
+                    <label for="pwd">Nueva contraseña:</label>
+                    <input type="password" id="pwd" name="pwd" ><br><br>
+                    <label for="confirmPassword">Confirmar Contraseña:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+                    </div>
+                    <label for="foto">Foto:</label>
+                    <input type="file" id="foto" name="foto" accept="image/*" required>
                     <button type="button" class="ButtonsConfig" onclick="saveChanges()">Guardar</button>
-                    <button type="button" class="ButtonsConfig" onclick="closeForm()">Cancelar</button>
+                    <button type="button" class="ButtonsConfig" onclick="closeFormCuenta()">Cancelar</button>
                   </form>
                 </div>
               </div>
@@ -224,7 +232,7 @@
                 <!-- Tarjetas se agregarán dinámicamente aquí -->
               </div>
             
-              <button class="ButtonsConfig" onclick="openFormCards()">Tarjeta</button>
+              <button class="ButtonsConfig" onclick="openFormCards()">Añadir tarjeta</button>
             
               <!-- Formulario para agregar/editar tarjetas -->
               <div id="cardForm" class="form-popup" style="display: none;">
@@ -238,10 +246,10 @@
                   <input type="text" id="expiryDate" placeholder="MM/AA" required><br>
                   <label for="securityCode">Código de seguridad:</label>
                   <input type="text" id="securityCode" maxlength="3" placeholder="CVV" required><br>
-                  <label for="securityCode">Código de seguridad:</label>
-                  <input type="text" id="securityCode" maxlength="3" placeholder="CVV" required><br>
+                  <label for="estadoCuenta">Estado de cuenta:</label>
+                  <input type="text" id="estadoCuenta" readonly value="Valor por defecto"><br>
                   <button type="button"  class="ButtonsConfig" onclick="saveCard()">Guardar</button>
-                  <button type="button" class="ButtonsConfig" onclick="closeForm()">Cancelar</button>
+                  <button type="button" class="ButtonsConfig" onclick="closeFormCards()">Cancelar</button>
                 </form>
               </div>
             </div>
@@ -277,7 +285,7 @@
                   <label for="country">País:</label>
                   <input type="text" id="country" required><br>
                   <button type="button" class="ButtonsConfig" onclick="saveAddress()">Guardar</button>
-                  <button type="button" class="ButtonsConfig" onclick="closeForm()">Cancelar</button>
+                  <button type="button" class="ButtonsConfig" onclick="closeFormAddresses()">Cancelar</button>
                 </form>
               </div>
                 

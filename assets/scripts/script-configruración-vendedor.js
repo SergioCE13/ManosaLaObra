@@ -40,79 +40,110 @@ let user = {
   email: "example@example.com",
   password: "password123",
   rfc: "CRGJ880326",
+  tel: 5552962378,
   desc: "Hola soy Carmen. Soy originaria de Cuetzalan, Puebla,  realizo prendas textiles tejidas en telar de cintura; además, utiliza una técnica única en el mundo conocida como 'tejido en curva' a muy corta edad aprendí a utilizar el telar gracias a mi abuela, en mi  juventud y adultez perfeccioné la técnica y generé piezas únicas que la hicieron destacar de manera internacional. Mi lengua natal es el  Náhuatl y a través de mi trabajo conservo las tradiciones de la cultura de la Sierra Norte del estado de Puebla. " ,
-  resi: "Puebla"
+  resi: "Puebla",
+  foto: null
 };
 
+let editPassword = false;
+
 function openFormCuenta() {
-  document.getElementById("editForm").style.display = "block";
-  document.getElementById("firstName").value = user.firstName;
-  document.getElementById("middleName").value = user.middleName;
-  document.getElementById("lastName").value = user.lastName;
-  document.getElementById("email").value = user.email;
-  document.getElementById("rfc").value = user.rfc;
-  document.getElementById("desc").value = user.desc;
-  document.getElementById("resi").value = user.resi;
-}
-
-function closeFormCuenta() {
-  document.getElementById("editForm").style.display = "none";
-  document.getElementById("editFormContent").reset(); // Limpiar el formulario al cerrar
-}
-
-function saveChanges() {
-  let newFirstName = document.getElementById("firstName").value;
-  let newMiddleName = document.getElementById("middleName").value;
-  let newLastName = document.getElementById("lastName").value;
-  let newPassword = document.getElementById("pwd").value;
-  let confirmPassword = document.getElementById("confirmPassword").value;
-  let newRfc = document.getElementById("rfc").value;
-  let newDesc = document.getElementById("desc").value;
-  let newResi = document.getElementById("resi").value;
-
-
-
-
-  if (newFirstName && newMiddleName &&  newLastName && newPassword && confirmPassword && newRfc && newDesc && newResi ) {
-    if (newPassword === confirmPassword) {
+    document.getElementById("editForm").style.display = "block";
+    document.getElementById("firstName").value = user.firstName;
+    document.getElementById("middleName").value = user.middleName;
+    document.getElementById("lastName").value = user.lastName;
+    document.getElementById("email").value = user.email;
+    document.getElementById("rfc").value = user.rfc;
+    document.getElementById("tel").value = user.tel;
+    document.getElementById("desc").value = user.desc;
+    document.getElementById("resi").value = user.resi;
+    document.getElementById("passwordFields").style.display = "none";
+  }
+  
+  function closeFormCuenta() {
+    document.getElementById("editForm").style.display = "none";
+    document.getElementById("editFormContent").reset(); // Limpiar el formulario al cerrar
+    document.getElementById("passwordFields").style.display = "none"; // Ocultar campos de contraseña
+    editPassword = false;
+  }
+  
+  function togglePasswordFields() {
+    editPassword = !editPassword;
+    document.getElementById("passwordFields").style.display = editPassword ? "block" : "none";
+  }
+  
+  function saveChanges() {
+    let newFirstName = document.getElementById("firstName").value;
+    let newMiddleName = document.getElementById("middleName").value;
+    let newLastName = document.getElementById("lastName").value;
+    let newPassword = document.getElementById("pwd").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    let newRfc = document.getElementById("rfc").value;
+    let newtel = document.getElementById("tel").value;
+    let newDesc = document.getElementById("desc").value;
+    let newResi = document.getElementById("resi").value;
+    let fotoInput = document.getElementById("foto");
+  
+    if (newFirstName && newMiddleName && newLastName && newRfc && newDesc && newResi && newtel && fotoInput) {
+      if (editPassword) {
+        if (newPassword && confirmPassword) {
+          if (newPassword === confirmPassword) {
+            user.password = newPassword;
+          } else {
+            document.getElementById("alerta-danger").style.display = "block";
+            return;
+          }
+        } else {
+          document.getElementById("alerta-danger2").style.display = "block";
+          return;
+        }
+      }
+  
       user.firstName = newFirstName;
       user.middleName = newMiddleName;
       user.lastName = newLastName;
-      user.password = newPassword;
       user.rfc = newRfc;
       user.desc = newDesc;
       user.resi = newResi;
-      displayAccountInfo();
+      user.tel = newtel;
+  
+      if (fotoInput.files && fotoInput.files[0]) {
+        let reader = new FileReader();
+        reader.onload = function (e) {
+          user.foto = e.target.result;
+          displayAccountInfo();
+        };
+        reader.readAsDataURL(fotoInput.files[0]);
+      } else {
+        displayAccountInfo();
+      }
+  
       closeFormCuenta();
-       //Código para aparecer y desaparecer alertas (aparece la alerta-success)
       document.getElementById("alerta-success").style.display = "block";
     } else {
-      // En caso de error mostramos una alerta-danger
-      document.getElementById("alerta-danger").style.display = "block";
+      document.getElementById("alerta-danger2").style.display = "block";
     }
-  } else {
-    // En caso de error mostramos una alerta-danger
-    document.getElementById("alerta-danger2").style.display = "block";
   }
-}
-
-function displayAccountInfo() {
-  let accountInfo = document.getElementById("accountInfo");
-  accountInfo.innerHTML = `
-    <p><strong>Nombre:</strong> ${user.firstName} ${user.middleName} ${user.lastName}</p>
-    <p><strong>Correo:</strong> ${user.email}</p>
-    <p><strong>Contraseña:</strong> ********</p>
-    <p><strong>RFC: </strong>${user.rfc}</p>
-    <p><strong>Descripción del vendedor: </strong>${user.desc}</p>
-    <p><strong>Estado de residencia: </strong>${user.resi}</p>
-  `;
-}
-
-// Mostrar detalles de la cuenta al cargar la página
-window.onload = function() {
-  displayAccountInfo();
-};
-
+  
+  function displayAccountInfo() {
+    let accountInfo = document.getElementById("accountInfo");
+    accountInfo.innerHTML = `
+      <p><strong>Nombre:</strong> ${user.firstName} ${user.middleName} ${user.lastName}</p>
+      <p><strong>Correo:</strong> ${user.email}</p>
+      <p><strong>Contraseña:</strong> ********</p>
+      <p><strong>RFC: </strong>${user.rfc}</p>
+      <p><strong>Número de teléfono: </strong>${user.tel}</p>
+      <p><strong>Descripción del vendedor: </strong>${user.desc}</p>
+      <p><strong>Estado de residencia: </strong>${user.resi}</p>
+      ${user.foto ? `<p><strong>Foto:</strong><br><img src="${user.foto}" alt="Foto de ${user.firstName}" style="max-width:200px;"></p>` : ''}
+    `;
+  }
+  
+  // Mostrar detalles de la cuenta al cargar la página
+  window.onload = function() {
+    displayAccountInfo();
+  };
 
 
   /**------------Funcion formulario direcciones------------ */
@@ -255,7 +286,7 @@ function displayCards() {
       <p><strong>Numero de tarjeta:</strong> ${card.cardNumber}</p>
       <p><strong>Propietario de la tarjeta:</strong> ${card.cardOwner}</p>
       <p><strong>Fecha de expitación:</strong> ${card.expiryDate}</p>
-      <p><strong>Código de seguridad:</strong> ${card.securityCode}</p>
+      <p><strong>Código de seguridad:</strong>***</p>
       <button class="ButtonsConfig ButtonEditCard" onclick="editCard(${index})">Editar</button>
       <button class="ButtonsConfig ButtonEditCard" onclick="deleteCard(${index})">Eliminar</button>
     `;

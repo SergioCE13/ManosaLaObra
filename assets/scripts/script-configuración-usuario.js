@@ -34,12 +34,14 @@ function mostrarFormulario(opcion) {
 /**--------Función para Detalles de cuenta---------- */
 
 let user = {
-  firstName: "Asbelita",
-  middleName: "Torales",
-  lastName: "Anell",
+  firstName: "Roberto",
+  middleName: "Rodriguez",
+  lastName: "Castro",
   email: "example@example.com",
   password: "password123"
 };
+
+let editPassword = false;
 
 function openFormCuenta() {
   document.getElementById("editForm").style.display = "block";
@@ -47,11 +49,19 @@ function openFormCuenta() {
   document.getElementById("middleName").value = user.middleName;
   document.getElementById("lastName").value = user.lastName;
   document.getElementById("email").value = user.email;
+  document.getElementById("passwordFields").style.display = "none";
 }
 
 function closeFormCuenta() {
   document.getElementById("editForm").style.display = "none";
   document.getElementById("editFormContent").reset(); // Limpiar el formulario al cerrar
+  document.getElementById("passwordFields").style.display = "none";
+  editPassword = false;
+}
+
+function togglePasswordFields() {
+  editPassword = !editPassword;
+  document.getElementById("passwordFields").style.display = editPassword ? "block" : "none";
 }
 
 function saveChanges() {
