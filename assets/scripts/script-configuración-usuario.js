@@ -64,12 +64,19 @@ function togglePasswordFields() {
   document.getElementById("passwordFields").style.display = editPassword ? "block" : "none";
 }
 
+
 function saveChanges() {
+
   let newFirstName = document.getElementById("firstName").value;
   let newMiddleName = document.getElementById("middleName").value;
   let newLastName = document.getElementById("lastName").value;
   let newPassword = document.getElementById("pwd").value;
   let confirmPassword = document.getElementById("confirmPassword").value;
+
+  if (!editPassword) {
+    newPassword = user.password
+    confirmPassword = user.password
+  }
 
   if (newFirstName && newMiddleName &&  newLastName && newPassword && confirmPassword) {
     if (newPassword === confirmPassword) {
