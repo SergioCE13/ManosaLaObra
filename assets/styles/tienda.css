@@ -74,6 +74,7 @@ nav ul li a {
   .content .title {
     font-size: 1rem;
     color: #2c3e50;
+    padding-top: 10px;
   }
   .content .release_date {
     color: #bdc3c7;
@@ -114,23 +115,23 @@ nav ul li a {
   }
    
 .one {
-    color: #E31B9F;
+    color: #ECAC44;
   }
    
 .two {
-    color: #E31B9F;
+  color: #ECAC44;
   }
    
 .three {
-    color: #E31B9F;
+  color: #ECAC44;
   }
    
 .four {
-    color: #E31B9F;
+  color: #ECAC44;
   }
    
 .five {
-    color: #E31B9F;
+  color: #ECAC44;
   }
 
   nav ul li a:hover{
