@@ -1,5 +1,8 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Etiquetas meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Alebrijes FullStack">
@@ -24,9 +27,25 @@
 
 </head>
 
-  <header>
-  
-  </header>
+
+<!--------------------------------------- Inicia el Header ------------------------------------------->
+<header>
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch('navbar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+          });
+      });
+    </script>
+    
+        <!-------------------------------------- Termina la NavBar ----------------------------------->
+    </header>
+    <!------------------------------- Termina el Header --------------------------------------------------------------->
+
 <body>
 
 
@@ -129,5 +148,18 @@
     </div>
     <!-- Grid container -->
 </footer>
-<!-- Fin del Footer -->    
+<!-- Fin del Footer -->
+
+
+
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--Conexión JS-->
+    <script src="navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
 </html>

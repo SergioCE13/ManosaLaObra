@@ -10,13 +10,13 @@
   <meta name="keywords" content="ecomerce, México, artesanías, venta, compra">
   <meta name="application-name" content="Manos a la Obra">
 
-
   <!-- Título de la página-->
   <title>Manos a al obra</title>
 
+  <!--Link swiper's CSS-->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <!--Fontawesome CDN Link-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Título de la página-->
 
 
   <!--Conexión Iconos BootStrap-->
@@ -28,6 +28,7 @@
 
   <!--Conexión Styles-->
   <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
+  <link rel="stylesheet" href="./assets/styles/style-swiper.css">
   <link rel="stylesheet" href="./assets/styles/style-swiper.css">
 
   <style>
@@ -46,241 +47,137 @@
 <!--------------------------------------- Inicia el Header ------------------------------------------->
 <header>
   <!------------------------------ Inicia la NavBar ------------------------------------>
-  <header>
-    <!------------------------------ Inicia la NavBar ------------------------------------>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="Index.html">
-              <img src="./assets/images/Logo.png" width="50" height="50">
-          </a>
-          <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation" style="box-shadow: none;">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                      <a class="nav-link" href="./Tienda.html">Tienda</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                          aria-expanded="false">
-                          Nosotros
-                      </a>
-                      <ul class="dropdown-menu" style="background-color: #e31ba0c5;">
-                          <li><a class="dropdown-item" href="./index-sobre-nosotros.html">Acerca de Nosotros</a></li>
-                          <li><a class="dropdown-item" href="./NuestrosArtesanos.html">Acerca de nuestros Artesanos</a></li>
-                          <li>
-                              <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="./Contactanos.html">Contactanos</a></li>
-                          
-                      </ul>
-                  </li>
-              </ul>
-              <form id="buscar" name="formulario" class="d-flex position-absolute top-50 start-50 translate-middle" role="search">
-                  <input class="form-control me-2"  type="search" placeholder="Search" aria-label="Search" id="buscarnav">
-                  <button class="btn btn-outline-success" id="search_btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                  </svg></button>
-              </form>
-              <a href="./carrito.html">
-                <i class="bi bi-cart3" style="padding-right: 15px; padding-left: 10px; color: #FFFFFF; font-size: 1.5rem;"></i>
-            </a>                
-            <div class="dropdown">
-              <i class="bi bi-person" style="padding-right: 15px; color: #FFFFFF; font-size: 1.8rem;" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"></i>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="background-color: #e31ba0c5;">
-                  <li><a class="dropdown-item" href="./login.html" style="color: #FFFFFF;">Login</a></li>
-                  <li><a class="dropdown-item" href="./formulario-registro-usuario.html" style="color: #FFFFFF;">Registro de Usuario</a></li>
-                  <li><a class="dropdown-item" href="./formulario-producto.html" style="color: #FFFFFF;">Registro de Producto</a></li>
-                  <li><a class="dropdown-item" href="./perfil-de-usuario.html" style="color: #FFFFFF;">Mi Perfil</a></li>
-                  <li><a class="dropdown-item" href="./wishlist.html" style="color: #FFFFFF;">Wishlist</a></li>
-                  <li><a class="dropdown-item" href="./configuracion-usuario.html" style="color: #FFFFFF;">Configuración</a></li>
-                  <li><a class="dropdown-item" href="./configuracion-del-vendedor.html" style="color: #FFFFFF;">Configuración del Vendedor</a></li>         
-              </ul>
-          </div>
-          </div>
-      </div>
-  </nav>
+  <div id="navbar-placeholder"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  });
+</script>
+
       <!-------------------------------------- Termina la NavBar ----------------------------------->
   </header>
   <!------------------------------- Termina el Header --------------------------------------------------------------->
-<!--------Inicia banner--------->
-<nav class = "info" >
-  <div class="cinta">
-    <h1 id="T1"> LAS MEJORES ARTESANIAS</h1>
-    <h2 id="T2"> DE MÉXICO PARA EL MUNDO </H2>
-  </div>
-</nav>
-<!----------------------Termina banner--------------->
+
 <body>
-<!--Inicia carrusel-->
+ <div class = "titulo1">
+    <h1>Las mejores artesanías </h1>
+    <h2>de México para el mundo</h2>
+ </div>
 
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"> <!--Se coloca para que el carrusel funcione correctamente-->
-  <div class="carousel-inner"> <!--Es el fondo o caja del carrusel-->
-    <div class="carousel-item active">
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="https://i.pinimg.com/originals/4c/46/21/4c4621f4067108491f6090b1137bfd38.jpg" class="imagen" alt="imagen" width=" 80px">
-              <p class="card-text">Barro negro.</p>
-            </div>
-          </div>
+ <div class="carousel">
+    <div class="card-container">
+      <div class="card">
+        <div class="pickgradient">
+          <img src="./assets/images/productos/Portada-Alfareria-Barro-Negro.jpeg">
         </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="https://experiencia.edomex.gob.mx/sites/default/files/2020-06/quexquemetls_1920x1080.jpg" class="imagen" alt="imagen" width=" 80px">
-              <p class="card-text">Textiles.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="http://s3.amazonaws.com/qroo/wp-content/uploads/2017/08/22224600/culturaa.jpg" class="imagen" alt="imagen" width="80px">
-              <p class="card-text">Accesorios.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="https://i.pinimg.com/originals/cf/cc/4c/cfcc4c74011d4efb2813cc6e58e5e24e.jpg" class="imagen" alt="imagen" width="80px">
-              <p class="card-text">Bolsos.</p>
-            </div>
-          </div>
-        </div>
+        <h1>Barro</h1>
       </div>
-    </div>
-    <div class="carousel-item">
-      <div class="row">
-        <div class="col-sm-3"> <!--Tamaño de cuadro de fondo-->
-          <div class="card">
-            <div class="card-body">
-              <img src="https://i.pinimg.com/originals/5a/8f/d4/5a8fd48c51956e78d88edfcad2acc4cf.jpg" class="imagen" alt="imagen" width=" 80px">
-              <p class="card-text">Alebrijes.</p>
-            </div>
-          </div>
+      <div class="card">
+        <div class="pickgradient">
+          <img src="assets/images/productos/craneo_grande1_600x.jpg">
         </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="https://madeheart.com/media/productphoto/640/67270129/025_150.jpg" class="imagen" alt="10px" width=" 80px">
-              <p class="card-text">Utensilios de cocina.</p>
-            </div>
-          </div>
+        <h1>Arte Huichol</h1>
+      </div>
+      <div class="card">
+        <div class="pickgradient">
+          <img src="assets/images/productos/PhotoRoom_20220116_213503_2048x.jpg">
         </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="https://tse1.mm.bing.net/th?id=OIP.5mn_anQ51Wb18o0qQVA5pgHaFj&pid=Api&P=0&h=180" class="imagen"
-              alt="imagen" width="80px">
-              <p class="card-text">Para el hogar</p>
-            </div>
-          </div>
+        <h1>Alebrijes</h1>
+      </div>
+      <div class="card">
+        <div class="pickgradient">
+          <img src="assets/images/productos/56109N002G7_02_600x.jpg">
         </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="https://i.pinimg.com/originals/e0/5e/92/e05e92e2dcbce8ac9bf275fc287de060.jpg" class="imagen" alt="10px" width="80px">
-              <p class="card-text">Calzado</p>
-            </div>
-          </div>
+        <h1>Barro Negro</h1>
+      </div>
+      <div class="card">
+        <div class="pickgradient">
+          <img src="assets/images/productos/Tenangos-3.jpeg">
         </div>
+        <h1>Textiles</h1>
+      </div>
+      <div class="card">
+        <div class="pickgradient">
+          <img src="assets/images/productos/images.jpeg">
+        </div>
+        <h1>Promociones</h1>
+      </div>
+      <div class="card">
+        <div class="pickgradient">
+          <img src="assets/images/productos/TB3P4OA03_02_600x.jpg">
+        </div>
+        <h1>Talavera</h1>
+      </div>
+      <div class="card">
+        <div class="pickgradient">
+          <img src="assets/images/productos/jc-ropa-artesanal-1.jpeg">
+        </div>
+        <h1>Prendas</h1>
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+  <div class="prd">
+  <div class="cardPromo">
+    <h3 class="promoT">Promoción</h3>
+    <div class="products">
+      <div class="pr_img">
+        <img src="assets/images/productos/Florero-Geronimo-Flores-Ramos-2.png" alt="" />
+      </div>
+      <div class="content">
+        <h3 class="title">Jarron</h3>
+        <p class="artesanos">Por: Artesanía Mexicana</p>
+        <span onclick="gfg(1)"
+        class="star">★
+        </span>
+        <span onclick="gfg(2)"
+        class="star">★
+        </span>
+        <span onclick="gfg(3)"
+        class="star">★
+        </span>
+        <span onclick="gfg(4)"
+        class="star">★
+        </span>
+        <span onclick="gfg(5)"
+        class="star">★
+        </span>
+        <p class="price">$ 350</p>
+      </div>
+    </div>
+  
 </div>
-<!--Termina carrusel-->
-
-<!-- Inicia bannner de productos recomendados-->
-
-<h1 class="favoritos">Recomendados para ti</h1>
-
-
-<!--Inicia sesion de productos en oferta-->
-<div class="container">
-  <div class="card">
-    <img class="img-cards" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQROAZzXUyuDuhaPtV_25Hsj4cnr4F1Bt2-JkvoWQWPgQ&s" alt="imagen">
-    <h2>Jarro Corazon</h2>
-    <p>Hermoso jarro diseñado para contener agua</p>
-    <a href="#"> Ver más</a>
-  </div>
-
-  <div class="card">
-    <img class="img-cards" src="https://m.media-amazon.com/images/I/618Lqt5TAbS._UF1000,1000_QL80_DpWeblab_.jpg" alt="imagen">
-    <div class="text-itemcard">
-    <h2>Alebrije</h2>
-    <p>Hermoso Alebrije para decoración</p>
-    <a href="#"> Ver más</a>
-  </div>
-  </div>
-
-  <div class="card">
-    <img src="https://oaxacabarronegro.com/wp-content/uploads/2021/10/Cantaro-Tradicional-Barro-negro-mediano-3-rotated.jpg" alt="imagen">
-    <h2>Florero de barro</h2>
-    <p>Hermoso jarro diseñado para la decoracion del hogar</p>
-    <a href="#"> Ver más</a>
-  </div>
-<br>
-<div class="container">
-  <div class="card">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQROAZzXUyuDuhaPtV_25Hsj4cnr4F1Bt2-JkvoWQWPgQ&s" alt="imagen">
-    <h2>Jarro Corazon</h2>
-    <p>Hermoso jarro diseñado para contener agua</p>
-    <a href="#"> Ver más</a>
-  </div>
-
-  <div class="card">
-    <img src="https://m.media-amazon.com/images/I/618Lqt5TAbS._UF1000,1000_QL80_DpWeblab_.jpg" alt="imagen">
-    <h2>Alebrije</h2>
-    <p>Hermoso Alebrije para decoración</p>
-    <a href="#"> Ver más</a>
-  </div>
-
-  <div class="card">
-    <img src="https://oaxacabarronegro.com/wp-content/uploads/2021/10/Cantaro-Tradicional-Barro-negro-mediano-3-rotated.jpg" alt="imagen">
-    <h2>Florero de barro</h2>
-    <p>Hermoso jarro diseñado para la decoracion del hogar</p>
-    <a href="#"> Ver más</a>
+  
+  
+  <div class="carousel-p">
+    <h3 class="dest">Productos Destacados</h3>
+    <div class="card-container-p">
+      
+      <div class="card-destacados">
+        <div class="cont">
+          <div class="products_wrapper">
+            
+          </div>
+        </div>
+      </div>
+      
   </div>
 </div>
-
-<!--Inicia sesion de productos en oferta-->
-
-  <scrip src ="./assets/scripts/index-principal.js"></script>
-</body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
+  
+  <!-- jQuery, Popper.js, and Bootstrap JS -->
+  <script src="assets/scripts/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <!---------------------------------------------Inicio de Footer----------------------------------------------------->
 
-  <footer class="text-center-text-lg-start-text-white" style="background-color: #969696" id="footer">
+  <footer class="text-center text-lg-start text-white" style="background-color: #969696">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
     <!-- Section: Links -->
@@ -293,7 +190,7 @@
                 Manos a la Obra
             </h6>
             <p class="font-weight-bold">
-                Preguntas frecuentes  |  Términos y condiciones  | Aviso de privacidad  | Política de envío
+                Preguntas frecuentes  |  <a href="Terminos y condiciones.html" target="_blank">Terminos y Condiciones</a>  | <a href="Politicas de Privacidad.html" target="_blank">Aviso de privacidad</a>  | <a href="Politas de envio.html" target="_blank">Política de envío</a>
             </p>
         </div>
     <!-- Section: Copyright -->
@@ -315,6 +212,8 @@
         <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
             <!-- Facebook -->
             <a
+            href="https://www.facebook.com"
+            target="_blank"
             class="btn btn-outline-light btn-floating m-1"
             class="text-white"
             role="button"
@@ -323,6 +222,8 @@
 
             <!-- Twitter -->
             <a
+            href="https://twitter.com"
+            target="_blank"
             class="btn btn-outline-light btn-floating m-1"
             class="text-white"
             role="button"
@@ -331,6 +232,8 @@
 
             <!-- Google -->
             <a
+            href="https://www.google.com"
+            target="_blank"
             class="btn btn-outline-light btn-floating m-1"
             class="text-white"
             role="button"
@@ -339,6 +242,8 @@
 
             <!-- Instagram -->
             <a
+            href="https://www.instagram.com"
+            target="_blank"
             class="btn btn-outline-light btn-floating m-1"
             class="text-white"
             role="button"
@@ -353,13 +258,13 @@
 </footer>
 <!-- Fin del Footer -->
 
-<!--Conexión JS-->
-            
-<script src="./script-sobre-nosotros.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-                crossorigin="anonymous"></script>
-<script src="./assets/scripts/script-funciones.js"></script>
+  <!--Conexión JS-->
+  <script src="navbar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="script-funciones.js"></script>
 </body>
 
 </html>

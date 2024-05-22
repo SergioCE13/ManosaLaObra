@@ -1,0 +1,120 @@
+
+.table-responsive, .info-section {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.product-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.product-name {
+    display: flex;
+    align-items: center;
+}
+
+.info-section h3 {
+    margin-bottom: 20px;
+}
+
+/* Estilos generales para el acordeon */
+
+.accordion {
+    width: 100%;
+    background-color: #e31ba0;
+    border-radius: 10px;
+}
+
+.accordion-button {
+    background-color: #969696;
+    color: #ffffff;
+    border: none;
+}
+
+.accordion-item {
+    background-color: #969696;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #ffffff;
+    background-color: #e31ba0;
+}
+
+/* Estilos generales para las tablas */
+.table {
+    border: 1px solid #dee2e6;
+}
+
+.table thead {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.table tbody tr {
+    transition: background-color 0.2s;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+.product-img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.text-center button {
+    margin: 10px;
+}
+
+
+/* Estilos para botones */
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-primary {
+    background-color: #ECAC44;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #969696;
+    color: #343a40;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
