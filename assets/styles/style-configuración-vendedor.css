@@ -1,3 +1,4 @@
+
 /*-------------Styles del menú lateral------------------*/
 
 ::after,
@@ -216,7 +217,6 @@ input[type="number"] {
 
 }
 
-
 input[type="email"] {
     width: 100%;
     padding: 8px;
@@ -226,6 +226,7 @@ input[type="email"] {
     background-color: var(--color--secundario);
 
 }
+
 
 
 /*--------------------*/
@@ -246,7 +247,7 @@ input[type="email"] {
 
 .account-details {
     width: 700px;
-    height: 470px;
+    height: 600px;
     margin: 20px auto;
     padding: 20px;
     /*border: 1px solid #ccc;*/
@@ -260,7 +261,7 @@ input[type="email"] {
   
   #editForm {
     width: 800px;
-    height: 700px;
+    height: 950px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 5px;
@@ -456,3 +457,8 @@ input[type="email"] {
     }
 
   }
+
+
+
+  
+
