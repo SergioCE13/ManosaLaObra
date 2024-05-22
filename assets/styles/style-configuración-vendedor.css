@@ -217,6 +217,17 @@ input[type="number"] {
 
 }
 
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--color--secundario);
+
+}
+
+
 
 /*--------------------*/
 .contenido {
@@ -236,7 +247,7 @@ input[type="number"] {
 
 .account-details {
     width: 700px;
-    height: 550px;
+    height: 650px;
     margin: 20px auto;
     padding: 20px;
     /*border: 1px solid #ccc;*/
@@ -250,7 +261,7 @@ input[type="number"] {
   
   #editForm {
     width: 800px;
-    height: 850px;
+    height: 950px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 5px;
@@ -263,7 +274,7 @@ input[type="number"] {
 
   #cardForm {
     width: 800px;
-    height: 480px;
+    height: 550px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 5px;
