@@ -42,22 +42,14 @@
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-.custom-toggler.navbar-toggler {
-    border-color: rgb(255, 255, 255);
-} 
+.dropdown-menu .dropdown-item:hover {
+    background-color: #000000; /* Cambiar el color de fondo */
+    color: #FFFFFF; /* Cambiar el color del texto */
+}
 
-@media only screen and (max-width: 990px){
-    #principal{ /* Queries para pantallas entre 601px a 990px*/
-        display: block;
-    }
-    #principal1{
-        display: none;
-    }
-    #buscar{
-        width: 55%;
-        padding-left: 10%;
-        margin-right: 0;
-    }
+.dropdown-menu .dropdown-item:active {
+    background-color: #555555; /* Mantener el color de fondo al hacer clic */
+    color: #FFFFFF; /* Mantener el color del texto al hacer clic */
 }
 /* --------------------------------------------- Estilos del Cuerpo -------------------------------------------*/
 body{ /* Estilos de la etiquea body*/
@@ -85,6 +77,9 @@ label, input{
     font-family: "Open Sans", sans-serif;
 }
 
+i{
+    cursor: pointer;
+}
 
 /* --------------------------------- Medias Queries para el funcionamiento responsive -------------------------*/ 
 @media only screen and (max-width: 600px) { /*Queries para pantallas de hasta 600px*/
@@ -96,7 +91,8 @@ label, input{
     }
 
 }
-footer{
-    
-    margin-top: auto;
+
+#principal{  /*Lo agregué*/
+    display: none;
+    font-size: 20px;
 }
