@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+  cargarCuenta();
+});
+
 
 const hamBurger = document.querySelector("#toggle-btn");
 
@@ -319,6 +323,22 @@ guardarTarjeta.addEventListener('click', function(){
     }
     saveCard();
 });
+
+
+/*-------------------------------------------------------------------------------------------- */
+function cargarCuenta(){
+  let cuenta = JSON.parse(localStorage.getItem('cuentas')) || [];
+  const cuentaJSON = {
+    "nombre": user.firstName,
+    "ape_pat": user.middleName,
+    "ape_mat": user.lastName,
+    "email": user.email,
+    "password": user.password
+  }
+
+  localStorage.setItem('cuentas', JSON.stringify(cuentaJSON));
+}
+
 
 
 const guardarDireccion = document.getElementById('guardar-direccion');
