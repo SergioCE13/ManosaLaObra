@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Etiquetas meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alebrijes FullStack">
+    <meta name="description" content="Plataforma ecommerce enfocada a la venta de artesanías mexicanas">
+    <meta name="keywords" content="ecomerce, México, artesanías, venta, compra">
+    <meta name="application-name" content="Manos a la Obra">
+
+    <!-- Título de la página-->
+    <title>Manos a al obra</title>
+
+    <!--Conexión Iconos BootStrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Conexión del Sitio con BootStrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--Conexión Styles-->
+    <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
+    <link rel="stylesheet" href="./assets/styles/formulario-usuario.css">
+
+
+
+    <!--------------------------------------- Inicia el Header ------------------------------------------->
+    <header>
+        <!------------------------------ Inicia la NavBar ------------------------------------>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="Index.html">
+                    <img src="./assets/images/Logo.png" width="50" height="50">
+                </a>
+                <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation" style="box-shadow: none;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Tienda.html">Tienda</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Nosotros
+                            </a>
+                            <ul class="dropdown-menu" style="background-color: #e31ba0c5;">
+                                <li><a class="dropdown-item" href="./index-sobre-nosotros.html">Acerca de Nosotros</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./NuestrosArtesanos.html">Acerca de nuestros
+                                        Artesanos</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="./Contactanos.html">Contactanos</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <form id="buscar" name="formulario"
+                        class="d-flex position-absolute top-50 start-50 translate-middle" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            id="buscarnav">
+                        <button class="btn btn-outline-success" id="search_btn" type="submit"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg></button>
+                    </form>
+                    <a href="./carrito-de-compras.html">
+                        <i class="bi bi-cart3"
+                            style="padding-right: 15px; padding-left: 10px; color: #FFFFFF; font-size: 1.5rem;"></i>
+                    </a>
+                    <div class="dropdown">
+                        <i class="bi bi-person" style="padding-right: 15px; color: #FFFFFF; font-size: 1.8rem;"
+                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton"
+                            style="background-color: #e31ba0c5;">
+                            <li><a class="dropdown-item" href="./login.html" style="color: #FFFFFF;">Login</a></li>
+                            <li><a class="dropdown-item" href="./formulario-registro-usuario.html"
+                                    style="color: #FFFFFF;">Registro de Usuario</a></li>
+                            <li><a class="dropdown-item" href="./formulario-producto.html"
+                                    style="color: #FFFFFF;">Registro de Producto</a></li>
+                            <li><a class="dropdown-item" href="./perfil-de-usuario.html" style="color: #FFFFFF;">Mi
+                                    Perfil</a></li>
+                            <li><a class="dropdown-item" href="./wishlist.html" style="color: #FFFFFF;">Wishlist</a>
+                            </li>
+                            <li><a class="dropdown-item" href="./configuracion-usuario.html"
+                                    style="color: #FFFFFF;">Configuración</a></li>
+                            <li><a class="dropdown-item" href="./configuracion-del-vendedor.html"
+                                    style="color: #FFFFFF;">Configuración del Vendedor</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-------------------------------------- Termina la NavBar ----------------------------------->
+    </header>
+    <!------------------------------- Termina el Header --------------------------------------------------------------->
+
+</head>
+
+<body>
+
+    <div class="container--title" id="titulo-formulario-cliente">
+        <h1 id="titulo">Registro de usuario</h1>
+    </div>
+
+    <!--------------------------------- Inicia el html del formulario ---------------------------------------->
+    <div class="alinear-formulario"> 
+    <form>
+        
+        <div class="caja-blanca"> <!-- Contenedor del cuerpo de la página-->
+            <div class="formulario"> <!-- Contenedor del formulario-->
+                <div class="container-titulo"> <!-- Contenedor del título de la página -->
+                    <h1 id="titulo-formulario">Ayudanos con tu información</h1>
+                </div>
+                <div class="form-group"> <!-- Contenedor del nombre del usuario-->
+                    <label for="input-nombre-usuario">Nombre</label>
+                    <input type="text" class="form-control" id="input-nombre-usuario" placeholder="Introduce tu nombre">
+                    <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
+                </div>
+                <div class="form-group"> <!-- Contenedor del nombre del usuario-->
+                    <label for="input-apellido-paterno">Apellido paterno</label>
+                    <input type="text" class="form-control" id="input-apellido-paterno"
+                        placeholder="Introduce apellido paterno">
+                    <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
+                </div>
+                <div class="form-group"> <!-- Contenedor del apellido paterno-->
+                    <label for="input-apellido-materno">Apellido materno</label>
+                    <input type="text" class="form-control" id="input-apellido-materno"
+                        placeholder="Introduce apellido materno">
+                    <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
+                </div>
+                <div class="form-group"> <!-- Conenedor del apellido materno-->
+                    <label for="input-numero-telefono">Número de télefono:</label>
+                    <input type="number" inputmode="numeric" class="form-control" id="input-numero-telefono"
+                        placeholder="Introduce tu número de celular">
+                    <small id="info-precio-producto" class="form-text text-muted">Este campo es obligatorio</small>
+                </div>
+                <div class="form-group"> <!-- Contenedor del correo de usuario-->
+                    <label for="input-email-usuario">Email (nombre de usuario)</label>
+                    <input type="email" class="form-control" id="input-email-usuario"
+                        placeholder="Introduce tu correo electronico">
+                    <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
+                </div>
+                <div class="form-group"> <!-- Contenedor de la contraseña del usuario-->
+                    <label for="input-contraseña">Contraseña</label>
+                    <input type="password" class="form-control" id="input-contraseña"
+                        placeholder="Introduce tu contraseña">
+                    <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
+                </div>
+                <div> <!-- Contenedor del título de categorías-->
+                    <label for="grupo-radio-buttons">Género</label>
+                </div>
+                <div class="grupo-radio-buttons" id="grupo-radio-buttons">
+                    <!-- Inicia el contenendor de los radio buttons -->
+                    <div class="form-check form-check-inline"> <!-- Primer radio button -->
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="Masculino">
+                        <label class="form-check-label" for="inlineRadio1">Masculino</label>
+                    </div>
+                    <div class="form-check form-check-inline"> <!-- Segundo radio button -->
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="Femenino">
+                        <label class="form-check-label" for="inlineRadio2">Femenino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline"><!-- Tercer radio button -->
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                value="Otro"><!-- Agregar la propiedad disable para deshabilitar-->
+                            <label class="form-check-label" for="inlineRadio4">Otro</label>
+                        </div>
+                    </div> <!-- Termina el contenedor de los radio buttons-->
+                    <div class="form-group"> <!-- Contenedor de dirección de envio-->
+                        <label for="input-direccion-envio">Dirección de envío</label>
+                        <input type="text" class="form-control" id="input-direccion-envio"
+                            placeholder="Introduce tu dirección">
+                        <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
+                    </div>
+                    <div class="form-group"> <!-- Contenedor de la edad del usuario-->
+                        <label for="">Edad:</label>
+                        <input type="number" inputmode="numeric" class="form-control" min="14" max="100" step="1"
+                            value="1" id="input-edad-usuario">
+                        <small id="info-edad-usuario" class="form-text text-muted">Este campo es obligatorio</small>
+                    </div>
+                    <!--<div class="form-group form-button">  Contenedor para ingresar imagen del producto
+                    <label for="">Ingresa una imagen de tu producto:</label>
+                    <input id="browse" type="file" multiple="multiple"/>
+                    <div id="preview"></div>
+                    <small id="info-imagen-producto" class="form-text text-muted">Este campo es obligatorio</small>
+                </div> -->
+                    <div class="mb-3 form-check"> <!--Checkbox terminos y condiciones -->
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Acepto los terminos y condiciones</label>
+                    </div>
+                    <!-- Contenedor de la alerta de BootStrap-->
+                    <div class="alert alert-success mt-3 alert-dismissible fade show" role="alert" id="alerta-success">
+                        <strong>Aviso: </strong> El registro del producto se ha realizado exitosamente.
+                        <!-- <a href="#" class ="alert-link"> lorem </a> -->
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+                        </button>
+                    </div>
+                    <!-- Contenedor de la alerta de BootStrap-->
+                    <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-danger">
+                        <strong>Aviso: </strong> El registro del producto se ha realizado exitosamente.
+                        <!-- <a href="#" class ="alert-link"> lorem </a> -->
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+                        </button>
+                    </div>
+                    <!-- Botón para enviar el formulario-->
+                    <input type="button" value="Enviar" id="button-submit" class="button-disabled">
+                </div> <!-- Cierre del div del formulario-->
+            </div> <!-- Cierre del div de Caja blanca -->
+        
+    </form>
+    </div>
+
+
+    <!------------------------------------ Inicia el Footer ----------------------------------------------------------->
+    <footer class="text-center text-lg-start text-white" style="background-color: #969696">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row d-flex align-items-center">
+                    <!-- Grid column -->
+                    <div class="col-md-7 col-lg-8 text-center text-md-start">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            Manos a la Obra
+                        </h6>
+                        <p class="font-weight-bold">
+                            Preguntas frecuentes | <a href="Terminos y condiciones.html" target="_blank">Terminos y
+                                Condiciones</a> | <a href="Politicas de Privacidad.html" target="_blank">Aviso de
+                                privacidad</a> | <a href="Politas de envio.html" target="_blank">Política de envío</a>
+                        </p>
+                    </div>
+                    <!-- Section: Copyright -->
+
+                    <div class="row d-flex align-items-center">
+                        <!-- Grid column -->
+                        <div class="col-md-7 col-lg-8 text-center text-md-start">
+                            <!-- Copyright -->
+                            <div>
+                                © 2024 Alebrijes Fullstack
+
+
+                            </div>
+                            <!-- Copyright -->
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com" target="_blank"
+                                class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="bi bi-facebook"></i></a>
+
+                            <!-- Twitter -->
+                            <a href="https://twitter.com" target="_blank" class="btn btn-outline-light btn-floating m-1"
+                                class="text-white" role="button"><i class="bi bi-twitter"></i></a>
+
+                            <!-- Google -->
+                            <a href="https://www.google.com" target="_blank"
+                                class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="bi bi-google"></i></a>
+
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com" target="_blank"
+                                class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="bi bi-instagram"></i></a>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+            </section>
+            <!-- Section: Copyright -->
+        </div>
+        <!-- Grid container -->
+    </footer>
+    <!-- Fin del Footer -->
+
+</body>
+
+
+<!-- jQuery, Popper.js, and Bootstrap JS -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!--Conexión JS-->
+<script src="./assets/scripts/formulario-usuario.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"> </script>
+
+</html>

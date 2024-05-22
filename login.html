@@ -22,7 +22,19 @@
 
     <!--Conexión Styles-->
     <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
-    <link rel="stylesheet" href="./wishlist.css">
+    <link rel="stylesheet" href="./assets/styles/style-login.css">
+
+     <!--Conexión Tipografía Darker Grotesque-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
+     
+     <!--Conexión Tipografía Open Sans-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+ 
+
     <style>
         /* Estilos para el contenedor de información */
         #informacion {
@@ -36,16 +48,14 @@
 
 </head>
 
-
+<body>
 <!--------------------------------------- Inicia el Header ------------------------------------------->
-<header>
-    <!------------------------------ Inicia la NavBar ------------------------------------>
+    <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="Index.html">
                     <img src="./assets/images/Logo.png" width="50" height="50">
                 </a>
-               
                 <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation" style="box-shadow: none;">
@@ -54,21 +64,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a id="principal1" class="nav-link active" aria-current="page" href="./Index.html" style="color: #FFFFFF">Manos a la
-                                Obra</a>
+                            <a class="nav-link" href="./Tienda.html">Tienda</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./Index.html">Tienda</a>
-                        </li>
-                        
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Nosotros
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu" style="background-color: #e31ba0c5;">
                                 <li><a class="dropdown-item" href="./index-sobre-nosotros.html">Acerca de Nosotros</a></li>
-                                <li><a class="dropdown-item" href="#">Acerca de nuestros Artesanos</a></li>
+                                <li><a class="dropdown-item" href="./NuestrosArtesanos.html">Acerca de nuestros Artesanos</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -83,47 +88,60 @@
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                         </svg></button>
                     </form>
-                    <i class="bi bi-cart3" style="padding-right: 15px; padding-left: 10px; color: #FFFFFF; font-size: 1.5rem;"></i>
-                    <i class="bi bi-person" style="padding-right: 15px; color: #FFFFFF; font-size: 1.8rem;" ></i>
-                    
+                    <a href="./carrito-de-compras.html">
+                      <i class="bi bi-cart3" style="padding-right: 15px; padding-left: 10px; color: #FFFFFF; font-size: 1.5rem;"></i>
+                  </a>                
+                  <div class="dropdown">
+                    <i class="bi bi-person" style="padding-right: 15px; color: #FFFFFF; font-size: 1.8rem;" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="background-color: #e31ba0c5;">
+                        <li><a class="dropdown-item" href="./login.html" style="color: #FFFFFF;">Login</a></li>
+                        <li><a class="dropdown-item" href="./formulario-registro-usuario.html" style="color: #FFFFFF;">Registro de Usuario</a></li>
+                        <li><a class="dropdown-item" href="./formulario-producto.html" style="color: #FFFFFF;">Registro de Producto</a></li>
+                        <li><a class="dropdown-item" href="./perfil-de-usuario.html" style="color: #FFFFFF;">Mi Perfil</a></li>
+                        <li><a class="dropdown-item" href="./wishlist.html" style="color: #FFFFFF;">Wishlist</a></li>
+                        <li><a class="dropdown-item" href="./configuracion-usuario.html" style="color: #FFFFFF;">Configuración</a></li>
+                        <li><a class="dropdown-item" href="./configuracion-del-vendedor.html" style="color: #FFFFFF;">Configuración del Vendedor</a></li>         
+                    </ul>
+                </div>
                 </div>
             </div>
         </nav>
-        <!-------------------------------------- Termina la NavBar ----------------------------------->
     </header>
     <!------------------------------- Termina el Header --------------------------------------------------------------->
 
-<body>
-<!--Inicia banner sobre wishlit-->
+   <!-----------------------------Inicia el contenedor de la página----------------------------------------------------------->
+    <main class="container-fluid py-5 d-flex justify-content-center">
+        <div class="main">
+            
+            <p><i class="bi bi-person-circle" style="color:var(--color--primario); font-size: 3rem;"></i></p>
+            <h3>Inicio de sesión</h3>
+            <form action="">
+                <label for="username">
+                    Usuario:
+                </label>
+                <input class="input-login" type="text" id="username" name="first" placeholder="Escribe tu usuario" required>
 
-<div class="cinta">
-    <div class="menu">
-        <a href="./wishlist.html"><button class="t1">Whislist
-                <img src="./assets/images/Logo/favorite_border_24dp.png" alt="icono" class="icono">
-            </button></a>
-        <div id="Contenedor-lista">
-            <a href="./lista.html"><button class="t1">Lista
-                    <img src="./assets/images/Logo/format_list_bulleted_24dp.png" alt="icono-2" class="icono">
-                </button></a>
+                <label for="password">
+                    Contraseña:
+                </label>
+                <input class="input-login" type="password" id="password" name="password" placeholder="Escribe tu contraseña" required>
+
+                <div class="wrap">
+                    <button class="btn-login" type="submit" onclick="saveData()">
+                        Iniciar sesión
+                    </button>
+                </div>
+            </form>
+            <p class="signup-link">No estás registrado?
+                <a href="./formulario-registro-usuario.html" style="text-decoration: none;">
+                    Crea una cuenta
+                </a>
+            </p>
         </div>
-    </div>
-</div>
-    <!--Inicia lupa de navegacion-->
-    <div class="informacion">
-        <div class="informacion--seccion">
-            <div class="lupa">
-            <img src="https://cdn-icons-png.flaticon.com/512/1150/1150652.png" alt="icono-3" width="300px" height="300px"></div>
-            <h1 class="empecemos">¡Empecemos a crear listas!</h1>
-            <p class="organiza">Organiza y agrupa tus productos 
-                <br>favoritos como mas te gusta.</p>
-           <a href="lista.html" class="button"><buttton type ="button" class="button"> + Agregar lista</a></buttton>
-        <br><br>
-    </div>
-    </div>
-</div>
 
+    </main>
 
-</body>
+<!-----------------------------Termina el contenedor de la página----------------------------------------------------------->
 
 <!------------------------------------ Inicia el Footer ----------------------------------------------------------->
 <footer class="text-center text-lg-start text-white" style="background-color: #969696">
@@ -139,7 +157,6 @@
                 Manos a la Obra
             </h6>
             <p class="font-weight-bold">
-
                 Preguntas frecuentes  |  <a href="Terminos y condiciones.html" target="_blank">Terminos y Condiciones</a>  | <a href="Politicas de Privacidad.html" target="_blank">Aviso de privacidad</a>  | <a href="Politas de envio.html" target="_blank">Política de envío</a>
             </p>
         </div>
@@ -207,8 +224,7 @@
     <!-- Grid container -->
 </footer>
 <!-- Fin del Footer -->
-
-
+</body>
 
     <!-- jQuery, Popper.js, and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -220,5 +236,6 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-<!-- Fin del Footer -->   
+    <script src="./assets/scripts/login-funcion.js"></script>
+
 </html>

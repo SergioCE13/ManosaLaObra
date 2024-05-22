@@ -31,10 +31,33 @@
     display: flex;
     align-items: center;
 }
+#principal{
+    display: none;
+    font-size: 20px;
+}
 
+.custom-btn{
+    color: #FFFFFF;
+}
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #000000; /* Cambiar el color de fondo */
+    color: #FFFFFF; /* Cambiar el color del texto */
+}
+
+.dropdown-menu .dropdown-item:active {
+    background-color: #555555; /* Mantener el color de fondo al hacer clic */
+    color: #FFFFFF; /* Mantener el color del texto al hacer clic */
+}
 /* --------------------------------------------- Estilos del Cuerpo -------------------------------------------*/
 body{ /* Estilos de la etiquea body*/
     background-color: #E4DDD3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container--title{ /* Estilos del banner del sitio*/
@@ -42,7 +65,6 @@ body{ /* Estilos de la etiquea body*/
     justify-content: center;
     background-color: #969696;
     opacity: 0.6;
-    padding-top: 10px;
 }
 
 .container--title h1{
@@ -56,10 +78,9 @@ label, input{
     font-family: "Open Sans", sans-serif;
 }
 
-#footer{
-    position: end;
-    justify-content: last baseline;
-    display: end;
+
+i{
+    cursor: pointer;
 }
 
 /* --------------------------------- Medias Queries para el funcionamiento responsive -------------------------*/ 
@@ -73,24 +94,7 @@ label, input{
 
 }
 
-.custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.custom-toggler.navbar-toggler {
-    border-color: rgb(255, 255, 255);
-} 
-
-@media only screen and (max-width: 990px){
-    #principal{ /* Queries para pantallas entre 601px a 990px*/
-        display: block;
-    }
-    #principal1{
-        display: none;
-    }
-    #buscar{
-        width: 55%;
-        padding-left: 10%;
-        margin-right: 0;
-    }
+#principal{  /*Lo agregué*/
+    display: none;
+    font-size: 20px;
 }
