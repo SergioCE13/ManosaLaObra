@@ -161,10 +161,28 @@ window.onload = function() {
     openFormAddresses();
   }
   
-  function deleteAddress(index) {
-    addresses.splice(index, 1);
-    displayAddresses();
-  }
+ // Resto del código...
+
+ function deleteAddress(index) {
+  // Eliminar la dirección del array de direcciones
+  addresses.splice(index, 1);
+  
+  // Obtener la lista de direcciones existentes del localStorage
+  let direcciones = JSON.parse(localStorage.getItem('direcciones')) || [];
+
+  // Eliminar la dirección correspondiente del localStorage
+  direcciones.splice(index, 1);
+
+  // Actualizar el localStorage con la lista de direcciones actualizada
+  localStorage.setItem('direcciones', JSON.stringify(direcciones));
+
+  // Mostrar la lista de direcciones actualizada en la interfaz de usuario
+  displayAddresses(); // Esta línea se agrega para volver a mostrar las direcciones actualizadas
+}
+
+
+// Funciones y código adicionales...
+
   
   function displayAddresses() {
     let addressList = document.getElementById("addressList");
@@ -232,6 +250,14 @@ function editCard(index) {
 
 function deleteCard(index) {
   cards.splice(index, 1);
+      // Obtener la lista de direcciones existentes del localStorage
+      let tarjetas = JSON.parse(localStorage.getItem('tarjetas')) || [];
+  
+      // Eliminar la dirección correspondiente del localStorage
+      tarjetas.splice(index, 1);
+    
+      // Actualizar el localStorage con la lista de direcciones actualizada
+      localStorage.setItem('tarjetas', JSON.stringify(tarjetas));
   displayCards();
 }
 
@@ -255,7 +281,89 @@ function displayCards() {
   });
 }
 
-/**----------- */
+/**----------- Apartado para el local Storage -----------------------------------------------*/
+
+// ----------------------------------------------  Añadimos el escucha de eventos al botón a través de una función anónima.  ----------------------------------------------------------
+
+const guardarTarjeta = document.getElementById('guardar-tarjeta');
+guardarTarjeta.addEventListener('click', function(){
+    // Obtener la lista de tarjetas existentes del localStorage
+    let tarjetas = JSON.parse(localStorage.getItem('tarjetas')) || [];
+
+    // Obtener los valores de los campos del formulario
+    const numeroTarjeta = document.getElementById('cardNumber').value;
+    const propietarioTarjeta = document.getElementById('cardOwner').value;
+    const fechaExpiracion = document.getElementById('expiryDate').value;
+    const codigoSeguridad = document.getElementById('securityCode').value;
+    console.log("datos obtenidos");
+  
+    // Crear un objeto JavaScript para proceder a generar el formato JSON
+    const tarjetaJSON = {
+        "cardNumber": numeroTarjeta,
+        "cardOwner": propietarioTarjeta,
+        "expiryDate": fechaExpiracion,
+        "securityCode": codigoSeguridad
+    };
+  
+    // Agregar la nueva tarjeta a la lista
+    tarjetas.push(tarjetaJSON);
+  
+    try {
+        // Intentar actualizar el localStorage con la lista de tarjetas actualizada
+        localStorage.setItem('tarjetas', JSON.stringify(tarjetas));
+        // Código para mostrar una alerta de éxito
+        document.getElementById("alerta-success").style.display = "block";
+    } catch (error) {
+        // En caso de error al actualizar el localStorage mostramos una alerta de error
+        document.getElementById("alerta-danger2").style.display = "block";
+    }
+    saveCard();
+});
+
+
+const guardarDireccion = document.getElementById('guardar-direccion');
+guardarDireccion.addEventListener('click', function(){
+// Obtener la lista de direcciones existentes del localStorage
+let direcciones = JSON.parse(localStorage.getItem('direcciones')) || [];
+
+// Obtener los valores de los campos del formulario
+const nombreCompleto = document.getElementById('fullName').value;
+const calle = document.getElementById('street').value;
+const numero = document.getElementById('number').value;
+const colonia = document.getElementById('neighborhood').value;
+const codigoPostal = document.getElementById('postalCode').value;
+const ciudad = document.getElementById('city').value;
+const pais = document.getElementById('country').value;
+
+// Crear un objeto JavaScript para proceder a generar el formato JSON
+const direccionJSON = {
+    "fullName": nombreCompleto,
+    "street": calle,
+    "number": numero,
+    "neighborhood": colonia,
+    "postalCode": codigoPostal,
+    "city": ciudad,
+    "country": pais
+};
+
+// Agregar la nueva dirección a la lista
+direcciones.push(direccionJSON);
+
+try {
+    // Intentar actualizar el localStorage con la lista de direcciones actualizada
+    localStorage.setItem('direcciones', JSON.stringify(direcciones));
+    // Código para mostrar una alerta de éxito
+    document.getElementById("alerta-success").style.display = "block";
+} catch (error) {
+    // En caso de error al actualizar el localStorage mostramos una alerta de error
+    document.getElementById("alerta-danger2").style.display = "block";
+}
+saveAddress();
+});
+
+
+
+
 
 
 

@@ -258,4 +258,3 @@ eliminarObjeto('JSONProducts', "Protector para celular");
   
 //borrando lista
 //borrarLista('JSONProducts');
-  
