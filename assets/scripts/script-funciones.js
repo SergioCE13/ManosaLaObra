@@ -1,4 +1,3 @@
-
 //lista de productos (listaProductos) con el nombre de las artesanías.
 let listaProductos = [
     {
@@ -105,7 +104,7 @@ let listaProductos = [
 
     },
     {
-      "name": "Pulsera huichol",
+      "nombre": "Pulsera huichol",
       "cost": 20,
       "category": "Moda",
       "description": "Pulsera artesanal con diseño huichol.",
@@ -253,17 +252,10 @@ agregarObjeto('JSONProducts',nuevoObjeto);
 //editando objeto
 editarObjeto('JSONProducts', "Pulsera huichol" , nuevaInformacion); 
 
-
+  
 //eliminando objeto
 eliminarObjeto('JSONProducts', "Protector para celular");
   
 //borrando lista
 //borrarLista('JSONProducts');
 
-
-
-
-
-  
-
-  

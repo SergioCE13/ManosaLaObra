@@ -1,3 +1,4 @@
+
 /* Traemos los componentes que vamos a utilizar para realizar la validación de los campos */
 const inputNombre = document.getElementById('input-nombre-producto');
 const inputPrecio = document.getElementById('input-precio-producto');
@@ -16,6 +17,7 @@ const inputLargo = document.getElementById('input-largo');
 
 // Variable para almacenar el estado de carga de imágenes
 let imagenesCargadas = false;
+
 
 // Deshabilitamos el botón del formularo ya que incialmente los campos están vacíos.
 buttonSubmit.classList.add('button-disabled');
