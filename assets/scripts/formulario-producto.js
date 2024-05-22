@@ -1,4 +1,3 @@
-
 /* Traemos los componentes que vamos a utilizar para realizar la validación de los campos */
 const inputNombre = document.getElementById('input-nombre-producto');
 const inputPrecio = document.getElementById('input-precio-producto');

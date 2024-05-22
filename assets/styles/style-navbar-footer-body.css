@@ -17,6 +17,7 @@
 
 .navbar { /* Estilos de la Navbar*/
     background-color: var(--color--primario);
+    padding:10px;
 }
 
 .navbar-nav .nav-link{ /* Estilo de los links en la barra de búsqueda*/
@@ -76,6 +77,7 @@ body{ /* Estilos de la etiquea body*/
 label, input{
     font-family: "Open Sans", sans-serif;
 }
+
 
 i{
     cursor: pointer;
