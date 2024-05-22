@@ -223,7 +223,7 @@
                     <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
                     </div>
                     <label for="foto">Foto:</label>
-                    <input type="file" id="foto" name="foto" accept="image/*" required>
+                    <input type="file" id="foto" name="foto" accept="image/*" required><br>
                     <button type="button" class="ButtonsConfig" onclick="saveChanges()">Guardar</button>
                     <button type="button" class="ButtonsConfig" onclick="closeFormCuenta()">Cancelar</button>
                   </form>
@@ -248,12 +248,12 @@
                   <input type="text" id="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" required><br>
                   <label for="cardOwner">Nombre del propietario:</label>
                   <input type="text" id="cardOwner" required><br>
-                  <label for="expiryDate">Fecha de expiración:</label>
-                  <input type="text" id="expiryDate" placeholder="MM/AA" required><br>
-                  <label for="securityCode">Código de seguridad:</label>
-                  <input type="text" id="securityCode" maxlength="3" placeholder="CVV" required><br>
-                  <label for="estadoCuenta">Estado de cuenta:</label>
-                  <input type="text" id="estadoCuenta" readonly value="Valor por defecto"><br>
+                  <label for="bank">Banco: </label>
+                  <input type="text" id="bank" required><br>
+                  <label for="compañía">Compañía: </label>
+                  <input type="text" id="compañia" placeholder="Visa/Mastercard/Amex" required><br>
+                  <label for="archivo">Añadir estado de cuenta:</label>
+                  <input type="file" id="estadoCuenta" name="archivo" id="estadoCuenta"><br>
                   <button type="button"  class="ButtonsConfig" onclick="saveCard()">Guardar</button>
                   <button type="button" class="ButtonsConfig" onclick="closeFormCards()">Cancelar</button>
                 </form>

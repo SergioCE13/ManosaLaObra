@@ -224,77 +224,89 @@ function openFormCuenta() {
   }
 
 
+
   /**---------------funcion para formulario de tarjeta ------------*/
 
-let cards = []; // Arreglo para almacenar las tarjetas
 
-function openFormCards() {
-  document.getElementById("cardForm").style.display = "block";
-}
+  let cards = []; // Arreglo para almacenar las tarjetas
 
-function closeFormCards() {
-  document.getElementById("cardForm").style.display = "none";
-  document.getElementById("cardFormContent").reset(); // Limpiar el formulario al cerrar
-}
+        function openFormCards() {
+            document.getElementById("cardForm").style.display = "block";
+        }
 
-function saveCard() {
-  let cardNumber = document.getElementById("cardNumber").value;
-  let cardOwner = document.getElementById("cardOwner").value;
-  let expiryDate = document.getElementById("expiryDate").value;
-  let securityCode = document.getElementById("securityCode").value;
+        function closeFormCards() {
+            document.getElementById("cardForm").style.display = "none";
+            document.getElementById("cardFormContent").reset(); // Limpiar el formulario al cerrar
+            document.getElementById("alerta-danger2").style.display = "none"; // Ocultar la alerta
+        }
 
-  if (cardNumber && cardOwner && expiryDate && securityCode) {
-    let newCard = {
-      cardNumber: cardNumber,
-      cardOwner: cardOwner,
-      expiryDate: expiryDate,
-      securityCode: securityCode
-    };
-    cards.push(newCard);
-    displayCards();
-    closeFormCards();
-  } else {
-    // En caso de error mostramos una alerta-danger
-    document.getElementById("alerta-danger2").style.display = "block";
-  }
-}
+        function saveCard() {
+          let cardNumber = document.getElementById("cardNumber").value;
+          let cardOwner = document.getElementById("cardOwner").value;
+          let bank = document.getElementById("bank").value;
+          let compañia = document.getElementById("compañia").value;
+          let estadoCuenta = document.getElementById("estadoCuenta");
+          
+      
+          // Validar que todos los campos incluyendo el archivo de estado de cuenta estén presentes
+          if (cardNumber && cardOwner && bank && compañia && estadoCuenta.files.length > 0) {
+              let newCard = {
+                  cardNumber: cardNumber,
+                  cardOwner: cardOwner,
+                  bank: bank,
+                  compañia: compañia,
+                  estadoCuentaData: estadoCuenta.files[0].name
+              };
+      
+              // Leer el archivo y guardarlo en el objeto newCard
+              let reader = new FileReader();
+              reader.onload = function (e) {
+                  newCard.estadoCuentaData = e.target.result; // Guardar el contenido del archivo
+                  cards.push(newCard);
+                  displayCards();
+                  closeFormCards();
+                  document.getElementById("alerta-success").style.display = "block";
+              };
+              reader.readAsDataURL(estadoCuenta.files[0]);
+          } else {
+              // En caso de error mostramos una alerta-danger
+              document.getElementById("alerta-danger2").style.display = "block";
+          }
+      }
 
-function editCard(index) {
-  let card = cards[index];
-  document.getElementById("cardNumber").value = card.cardNumber;
-  document.getElementById("cardOwner").value = card.cardOwner;
-  document.getElementById("expiryDate").value = card.expiryDate;
-  document.getElementById("securityCode").value = card.securityCode;
-  cards.splice(index, 1); // Eliminar la tarjeta actual antes de editarla
-  openFormCards();
-}
+        function editCard(index) {
+            let card = cards[index];
+            document.getElementById("cardNumber").value = card.cardNumber;
+            document.getElementById("cardOwner").value = card.cardOwner;
+            document.getElementById("bank").value = card.bank;
+            document.getElementById("compañia").value = card.compañia;
+            // El archivo no puede ser editado una vez subido
+            cards.splice(index, 1); // Eliminar la tarjeta actual antes de editarla
+            openFormCards();
+        }
 
-function deleteCard(index) {
-  cards.splice(index, 1);
-  displayCards();
-}
+        function deleteCard(index) {
+            cards.splice(index, 1);
+            displayCards();
+        }
 
-function displayCards() {
-  let cardList = document.getElementById("cardList");
-  cardList.innerHTML = ""; // Limpiar la lista antes de mostrar las tarjetas
+        function displayCards() {
+            let cardList = document.getElementById("cardList");
+            cardList.innerHTML = ""; // Limpiar la lista antes de mostrar las tarjetas
 
-  cards.forEach((card, index) => {
-    let item = document.createElement("div");
-    /*item.setAttribute( "class", "newCard" );*/
-    item.classList.add("card-item");
-    item.innerHTML = `
-      <p><strong>Numero de tarjeta:</strong> ${card.cardNumber}</p>
-      <p><strong>Propietario de la tarjeta:</strong> ${card.cardOwner}</p>
-      <p><strong>Fecha de expitación:</strong> ${card.expiryDate}</p>
-      <p><strong>Código de seguridad:</strong>***</p>
-      <button class="ButtonsConfig ButtonEditCard" onclick="editCard(${index})">Editar</button>
-      <button class="ButtonsConfig ButtonEditCard" onclick="deleteCard(${index})">Eliminar</button>
-    `;
-    cardList.appendChild(item);
-  });
-}
-
-/**----------- */
-
-
+            cards.forEach((card, index) => {
+                let item = document.createElement("div");
+                item.classList.add("card-item"); //añadiendo clase del div
+                item.innerHTML = `
+                    <p><strong>Numero de tarjeta:</strong> ${card.cardNumber}</p>
+                    <p><strong>Propietario de la tarjeta:</strong> ${card.cardOwner}</p>
+                    <p><strong>Banco:</strong> ${card.bank}</p>
+                    <p><strong>Compañía:</strong> ${card.compañia}</p>
+                    <p><strong>Archivo de estado de cuenta:</strong> estadoCuenta.pdf </p>
+                    <button class="ButtonsConfig ButtonEditCard" onclick="editCard(${index})">Editar</button>
+                    <button class="ButtonsConfig ButtonEditCard" onclick="deleteCard(${index})">Eliminar</button>
+                `;
+                cardList.appendChild(item);
+            });
+        }
 
