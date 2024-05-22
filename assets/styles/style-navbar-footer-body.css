@@ -8,7 +8,6 @@
 }
 
 /*----------------------------------------------- Estilos de la NAVBAR --------------------------------------*/
-
 .container-search{ /* Estilos de la barra de búsqueda*/ 
     display: flex;
     justify-content: center;
@@ -32,12 +31,12 @@
 }
 
 .dropdown-menu .dropdown-item:hover {
-    background-color: #000000; /* Cambiar el color de fondo */
+    background-color: #9696969d; /* Cambiar el color de fondo */
     color: #FFFFFF; /* Cambiar el color del texto */
 }
 
 .dropdown-menu .dropdown-item:active {
-    background-color: #555555; /* Mantener el color de fondo al hacer clic */
+    background-color: #ECAC44; /* Mantener el color de fondo al hacer clic */
     color: #FFFFFF; /* Mantener el color del texto al hacer clic */
 }
 /* --------------------------------------------- Estilos del Cuerpo -------------------------------------------*/
