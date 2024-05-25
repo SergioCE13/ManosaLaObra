@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
    
     <!--Conexión Styles-->
-    <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
-    <link rel="stylesheet" href="./assets/styles/style-configuración-usuario.css">
-    <link rel="stylesheet" href="./assets/styles/contactanos-styles.css">
+    <link rel="stylesheet" href="../styles/style-navbar-footer-body.css">
+    <link rel="stylesheet" href="../styles/style-configuración-usuario.css">
+    <link rel="stylesheet" href="../styles/contactanos-styles.css">
 
     <!--Conexión Tipografía Darker Grotesque-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,7 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      fetch('navbar.html')
+      fetch('./navbar.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('navbar-placeholder').innerHTML = data;
@@ -143,8 +143,8 @@
                     <input type="text" id="lastName" required><br>
                     <label for="email">Correo:</label>
                     <input type="email" id="email" readonly placeholder="Este campo no se puede modificar"><br>
-                    <!--<label for="tel">Número de teléfono:</label>
-                    <input type="number" id="tel" required><br>-->
+                    <label for="tel">Número de teléfono:</label>
+                    <input type="number" id="tel" required><br>
                     <button type="button" class="ButtonsConfig" onclick="togglePasswordFields()">Editar Contraseña</button><br><br>
                     <div id="passwordFields">
                     <label for="pwd">Nueva contraseña:</label>
@@ -172,20 +172,38 @@
               <div id="cardForm" class="form-popup" style="display: none;">
                 <form id="cardFormContent" class="form-container">
                   <h4>Agregar/Editar tarjeta</h4>
+
                   <label for="cardNumber">Número de tarjeta:</label>
-                  <input type="text" id="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" required><br>
+                  <input type="text" id="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" name="cardNumber" oninput="detectCompanyAndBank()"><br>
+
                   <label for="cardOwner">Nombre del propietario:</label>
-                  <input type="text" id="cardOwner" required><br>
+                  <input type="text" id="cardOwner" name="cardOwner"required><br>
+
                   <label for="expiryDate">Fecha de expiración:</label>
                   <input type="text" id="expiryDate" placeholder="MM/AA" required><br>
                   <label for="securityCode">Código de seguridad:</label>
-                  <input type="text" id="securityCode" maxlength="3" placeholder="CVV" required><br>
-                  <button type="button" id="guardar-tarjeta" class="ButtonsConfig">Guardar</button>
+                  <input type="text" id="securityCode"  name="securityCode" maxlength="3" placeholder="CVV" required><br>
+
+                  <label for="company">Compañía:</label>
+                  <input type="text" id="company" name="company" readonly><br>
+
+                  <label for="bank">Banco:</label>
+                  <input type="text" id="bank" name="bank" readonly><br>
+
+                  <!-- Radio buttons para seleccionar el tipo de tarjeta -->
+                  <label>Tipo de tarjeta:</label><br>
+                  <input type="radio" id="credit" name="cardType" value="Crédito">
+                  <label class="content-input" for="credit">Crédito</label><br>
+                  <input type="radio" id="debit" name="cardType" value="Débito">
+                  <label class="content-input" for="debit">Débito</label><br>
+
+                  <button type="button" id="guardar-tarjeta" class="ButtonsConfig" onclick="saveCard()">Guardar</button>
                   <button type="button" class="ButtonsConfig" onclick="closeFormCards()">Cancelar</button>
                 </form>
               </div>
             </div>
             
+
             <!-- Este div contiene el formulario de direcciones de envío y tiene la clase 'formulario' -->
             <div id="direcciones-envio" class="formulario" style="display: none;">
               <h4>Direcciones</h4>
@@ -200,23 +218,45 @@
               <div id="addressForm" class="form-popup" style="display: none;">
                 <form id="addressFormContent" class="form-container">
                   <h4>Agregar/Editar dirección</h4>
+
                   <label for="fullName">Nombre completo:</label>
                   <input type="text" id="fullName" required><br>
+
                   <label for="street">Calle:</label>
                   <input type="text" id="street"  autocomplete="street-address"  required><br>
-                  <label for="number">Número:</label>
-                  <input type="number" id="number" required><br>
+
+                  <label for="number">Número interior:</label>
+                  <input type="number" id="numberInt" required><br>
+
+                  <label for="number">Número exterior:</label>
+                  <input type="number" id="numberExt" required><br>
+
                   <label for="neighborhood">Colonia:</label>
-                  <input type="text" id="neighborhood" required><br>
+                  <select name="neighborhood" id="neighborhood" required></select><br>
+
                   <label for="postalCode">Código Postal:</label>
-                  <input type="text" id="postalCode" required><br>
-                  <label for="city">Ciudad o Municipio:</label>
-                  <input type="text" id="city" required><br>
+                  <input type="text" id="postalCode" onblur="fetchPostalCodeInfo()" required><br>
+
+                  <label for="city">Municipio:</label>
+                  <input type="text" id="municipio" required ><br>
+
+                  <label for="city">Ciudad:</label>
+                  <input type="text" id="city" required ><br>
+
+                  <label for="state">Estado:</label>
+                  <input type="text" id="state" required ><br>
+                    
+
                   <label for="country">País:</label>
-                  <input type="text" id="country" required><br>
-                  <button type="button" id = "guardar-direccion" class="ButtonsConfig">Guardar</button>
+                  <input type="text" id="country" value="México" readonly required><br>
+
+                  <button type="button" id = "guardar-direccion" class="ButtonsConfig" onclick="saveAddress()">Guardar</button>
                   <button type="button" class="ButtonsConfig" onclick="closeFormAddresses()">Cancelar</button>
                 </form>
+              </div>
+
+              <div id="errorMessage" style="display: none; color: red;">
+                No se encontraron detalles para el código postal ingresado.
               </div>
                 
             </div>
@@ -336,8 +376,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
-  
-    <script src="script-funciones.js"></script>
-<script src="./assets/scripts/script-configuración-usuario.js"></script>
+
+<script src="script-funciones.js"></script>
+<script src="../scripts/script-configuración-usuario.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 </html>

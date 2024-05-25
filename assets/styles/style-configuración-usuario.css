@@ -115,7 +115,7 @@ a.sidebar-link:hover {
 }
 
 #sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
-    position: absolute;
+    /*position: absolute;*/
     top: 0;
     left: 70px;
     background-color: #0e2238;
@@ -260,7 +260,7 @@ input[type="email"] {
   
   #editForm {
     width: 800px;
-    height: 700px;
+    height: 800px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 5px;
@@ -273,7 +273,7 @@ input[type="email"] {
 
   #cardForm {
     width: 800px;
-    height: 550px;
+    height: 650px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 5px;
@@ -285,7 +285,7 @@ input[type="email"] {
   
   #addressForm {
     width: 800px;
-    height: 800px;
+    height: 900px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 5px;
@@ -358,6 +358,70 @@ input[type="email"] {
     height: 5px;
     padding-left: 50px;
 }
+
+#neighborhood {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--color--secundario);
+}
+
+
+
+  
+ /* Estilo general para el label del radio button */
+.content-input {
+    padding-left: 25px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+  }
+  
+  /* Ocultar el radio button original */
+  input[type="radio"] {
+    display: none;
+  }
+  
+  /* Estilo del círculo personalizado */
+  .content-input::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    background-color: var(--color--secundario);
+  }
+  
+  /* Estilo del círculo cuando el radio button está seleccionado */
+  input[type="radio"]:checked + .content-input::before {
+    background-color: var(--color--yellow);
+    border-color: var(--color--yellow);
+  }
+  
+  /* Estilo del punto interno cuando está seleccionado */
+  .content-input::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color--secundario);
+    opacity: 0;
+  }
+  
+  input[type="radio"]:checked + .content-input::after {
+    opacity: 1;
+  }
+
 
 
  @media screen and (max-width: 1025px) {
