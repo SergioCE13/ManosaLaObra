@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Etiquetas meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alebrijes FullStack" />
+    <meta name="description" content="Plataforma ecommerce enfocada a la venta de artesanías mexicanas" />
+    <meta name="keywords" content="ecomerce, México, artesanías, venta, compra" />
+    <meta name="application-name" content="Manos a la Obra" />
+    <title>Registro de Vendedor</title>
+
+    <!-------------- Conexiones de estilos------------->
+
+    <!---------------BootStrap---------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--Conexión Iconos BootStrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-------------------- Fuentes -------------------->
+
+    <!--Conexión Tipografía Darker Grotesque-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
+
+    <!--Conexión Tipografía Open Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Open+Sans:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <!-- Conexión con las Hojas de estilo específicas -->
+    <link rel="stylesheet" href="../styles/style-navbar-footer-body.css">
+    <link rel="stylesheet" href="../styles/registro-vendedor.css">
+</head>
+
+<!--------------------------------------- Inicia el Header ------------------------------------------->
+<header>
+    <div id="navbar-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                });
+        });
+    </script>
+</header>
+<!------------------------------- Termina el Header --------------------------------------------------------------->
+
+<body>
+    <div class="container--title" id="titulo-formulario-cliente">
+        <h1 id="titulo">Registro de vendedor</h1>
+    </div>
+
+    <!--------------------------------- Inicia el html del formulario ---------------------------------------->
+    <div class="alinear-formulario">
+        <form>
+            <div class="caja-blanca"> <!-- Contenedor del cuerpo de la página-->
+                <div class="formulario"> <!-- Contenedor del formulario-->
+                    <div class="container-titulo"> <!-- Contenedor del título de la página -->
+                        <h1 id="titulo-formulario">Ingresa los datos del vendedor</h1>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-nombre-usuario">Nombre:</label>
+                        <input type="text" class="form-control" id="input-nombre-vendedor"
+                            placeholder="Introduce el nombre">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="input-apellido-paterno">Apellido paterno:</label>
+                            <input type="text" class="form-control" id="input-apellido-paterno"
+                                placeholder="Introduce apellido paterno">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="input-apellido-materno">Apellido materno:</label>
+                            <input type="text" class="form-control" id="input-apellido-materno"
+                                placeholder="Introduce apellido materno">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="input-numero-telefono">Número de teléfono:</label>
+                            <input type="number" inputmode="numeric" class="form-control" id="input-telefono"
+                                placeholder="Introduce el número de celular">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="input-email-usuario">Email (nombre de usuario):</label>
+                            <input type="email" class="form-control" id="input-email"
+                                placeholder="Introduce el correo electrónico">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="input-contraseña">Contraseña:</label>
+                            <input type="password" class="form-control" id="input-password"
+                                placeholder="Introduce la contraseña">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="input-confirmar-contraseña">Confirma la contraseña:</label>
+                            <input type="password" class="form-control" id="input-confirmar-password"
+                                placeholder="Repite la contraseña">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="grupo-radio-buttons">Género:</label>
+                    </div>
+                    <div class="grupo-radio-buttons" id="grupo-radio-buttons">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="Masculino">
+                            <label class="form-check-label" for="inlineRadio1">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="Femenino">
+                            <label class="form-check-label" for="inlineRadio2">Femenino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                value="Otro">
+                            <label class="form-check-label" for="inlineRadio4">Otro</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-direccion">Dirección:</label><br>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <label for="input-calle">Calle:</label>
+                                <input type="text" class="form-control" id="input-calle"
+                                    placeholder="Introduce la calle">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="input-numero-interior">Número interior:</label>
+                                <input type="text" class="form-control" id="input-numero-interior"
+                                    placeholder="Introduce el número interior">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="input-numero-exterior">Número exterior:</label>
+                                <input type="text" class="form-control" id="input-numero-exterior"
+                                    placeholder="Introduce el número exterior">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <label for="input-colonia">Colonia:</label>
+                                <input type="text" class="form-control" id="input-colonia"
+                                    placeholder="Introduce la colonia">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="input-codigo-postal">Código Postal:</label>
+                                <input type="text" class="form-control" id="input-codigo-postal"
+                                    placeholder="Introduce el código postal">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="input-delegacion">Delegación/Municipio:</label>
+                                <input type="text" class="form-control" id="input-delegacion"
+                                    placeholder="Introduce la delegación o municipio">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6 dropup">
+                                <label for="input-estado">Estado:</label>
+                                <select class="form-select" id="input-estado">
+                                    <option selected>Selecciona el estado</option>
+                                    <option>Aguascalientes</option>
+                                    <option>Baja California</option>
+                                    <option>Baja California Sur</option>
+                                    <option>Campeche</option>
+                                    <option>Chiapas</option>
+                                    <option>Chihuahua</option>
+                                    <option>Coahuila</option>
+                                    <option>Colima</option>
+                                    <option>Durango</option>
+                                    <option>Estado de México</option>
+                                    <option>Guanajuato</option>
+                                    <option>Guerrero</option>
+                                    <option>Hidalgo</option>
+                                    <option>Jalisco</option>
+                                    <option>Michoacán</option>
+                                    <option>Morelos</option>
+                                    <option>Nayarit</option>
+                                    <option>Nuevo León</option>
+                                    <option>Oaxaca</option>
+                                    <option>Puebla</option>
+                                    <option>Querétaro</option>
+                                    <option>Quintana Roo</option>
+                                    <option>San Luis Potosí</option>
+                                    <option>Sinaloa</option>
+                                    <option>Sonora</option>
+                                    <option>Tabasco</option>
+                                    <option>Tamaulipas</option>
+                                    <option>Tlaxcala</option>
+                                    <option>Veracruz</option>
+                                    <option>Yucatán</option>
+                                    <option>Zacatecas</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-fecha-nacimiento">Fecha de nacimiento:</label>
+                        <input type="date" class="form-control" id="input-fecha-nacimiento">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Acepto los términos y condiciones</label>
+                    </div>
+                    <div class="alert alert-success mt-3 alert-dismissible fade show" role="alert" id="alerta-success">
+                        <strong>Aviso: </strong> El registro del producto se ha realizado exitosamente.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-danger">
+                        <strong>Aviso: </strong> El registro del producto se ha realizado exitosamente.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                    </div>
+                    <input type="button" value="Enviar" id="button-submit" class="button-disabled">
+                </div>
+            </div> <!-- Cierre del div de Caja blanca -->
+        </form>
+    </div>
+
+
+    <footer class="text-center text-lg-start text-white" style="background-color: #969696">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row d-flex align-items-center">
+                    <!-- Grid column -->
+                    <div class="col-md-7 col-lg-8 text-center text-md-start">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            Manos a la Obra
+                        </h6>
+                        <p class="font-weight-bold">
+                            Preguntas frecuentes | <a href="Terminos y condiciones.html" target="_blank">Terminos y
+                                Condiciones</a> | <a href="Politicas de Privacidad.html" target="_blank">Aviso de
+                                privacidad</a> | <a href="Politas de envio.html" target="_blank">Política de envío</a>
+                        </p>
+                    </div>
+                    <!-- Section: Copyright -->
+
+                    <div class="row d-flex align-items-center">
+                        <!-- Grid column -->
+                        <div class="col-md-7 col-lg-8 text-center text-md-start">
+                            <!-- Copyright -->
+                            <div>
+                                © 2024 Alebrijes Fullstack
+
+
+                            </div>
+                            <!-- Copyright -->
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com" target="_blank"
+                                class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="bi bi-facebook"></i></a>
+
+                            <!-- Twitter -->
+                            <a href="https://twitter.com" target="_blank" class="btn btn-outline-light btn-floating m-1"
+                                class="text-white" role="button"><i class="bi bi-twitter"></i></a>
+
+                            <!-- Google -->
+                            <a href="https://www.google.com" target="_blank"
+                                class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="bi bi-google"></i></a>
+
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com" target="_blank"
+                                class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                    class="bi bi-instagram"></i></a>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+            </section>
+            <!-- Section: Copyright -->
+        </div>
+        <!-- Grid container -->
+    </footer>
+    
+    <!-- Conexiones de Scripts-->
+    <script src="../scripts/registro-vendedor.js"></script>
+    
+    <!-------------- BootStrap --------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
