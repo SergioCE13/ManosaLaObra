@@ -70,6 +70,17 @@ label, input{
 }
 
 
+p a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+p a:hover{
+    color: #ECAC44;
+    text-decoration:underline
+}
+
+
 /* --------------------------------- Medias Queries para el funcionamiento responsive -------------------------*/ 
 @media only screen and (max-width: 600px) { /*Queries para pantallas de hasta 600px*/
     .container-form{
@@ -106,4 +117,10 @@ label, input{
 #principal{  /*Lo agregué*/
     display: none;
     font-size: 20px;
+}
+
+@media screen and (max-width: 800px){
+    #search_btn, #buscarnav{
+        display:none
+    }
 }

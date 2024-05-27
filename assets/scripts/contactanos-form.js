@@ -64,5 +64,6 @@ function validarCampos() {
 nameInput.addEventListener('input', validarCampos);
 emailInput.addEventListener('input', validarCampos);
 phoneInput.addEventListener('input', validarCampos);
+mensajeInput.addEventListener('input', validarCampos);
 
 

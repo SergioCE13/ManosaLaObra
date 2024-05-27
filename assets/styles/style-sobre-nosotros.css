@@ -22,6 +22,16 @@
     font-variation-settings:"wdth" 100;
 }
 
+.carousel-control-next-icon {
+    background-image: url(../images/img.login/icons8-chevron-left-80.png);
+    rotate: 180deg;
+
+}
+
+.carousel-control-prev-icon {
+    background-image: url(../images/img.login/icons8-chevron-left-80.png);
+}
+
 
 .desc-valores {
     height: 200px;
