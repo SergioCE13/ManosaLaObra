@@ -41,7 +41,13 @@
 }
 /* --------------------------------------------- Estilos del Cuerpo -------------------------------------------*/
 body{ /* Estilos de la etiquea body*/
-    background-color: #E4DDD3;
+    background-color: var(--color--secundario);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top: auto;
 }
 
 .container--title{ /* Estilos del banner del sitio*/

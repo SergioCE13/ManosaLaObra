@@ -3,8 +3,8 @@ const gameData = [
     id: 1,
     title: "Venado Acostado",
     category: "Huichol",
-    artesano: "Tienda Huichol",
-    img: "assets/images/productos/Venado_acostado_EPX055_tierrahuichol_03_2024.jpg",
+    artesano: "José Pérez",
+    img: "/assets/images/productos/Venado_acostado_EPX055_tierrahuichol_03_2024.jpg",
     price: "$ 350",
   },
 
@@ -12,80 +12,80 @@ const gameData = [
     id: 2,
     title: "Alebrije Perro",
     category: "Alebrijes",
-    artesano: "Tienda Huichol",
-    img: "assets/images/productos/1a3927b1d28959f46cc7d944aec11784.jpeg",
+    artesano: "José Pérez",
+    img: "/assets/images/productos/1a3927b1d28959f46cc7d944aec11784.jpeg",
     price: "$ 1,000",
   },
   {
     id: 3,
     title: "Jarron",
     category: "Barro Negro",
-    artesano: "Tienda Huichol",
-    img: "assets/images/productos/56109N002G7_02_600x.jpg",
+    artesano: "José Pérez",
+    img: "/assets/images/productos/56109N002G7_02_600x.jpg",
     price: "$ 1,250",
   },
   {
     id: 4,
     title: "Alebrije Pantera",
     category: "Alebrijes",
-    artesano: "Tienda Huichol",
-    img: "assets/images/productos/alebrije-de-jaguar-con-alas-con-significado.jpeg",
+    artesano: "José Pérez",
+    img: "/assets/images/productos/alebrije-de-jaguar-con-alas-con-significado.jpeg",
     price: "$ 2,500",
   },
   {
     id: 5,
     title: "Craneo Huichol",
     category: "Huichol",
-    artesano: "Tienda Huichol",
-    img: "assets/images/productos/craneo_grande1_600x.jpg",
+    artesano: "José Pérez",
+    img: "/assets/images/productos/craneo_grande1_600x.jpg",
     price: "$ 400",
   },
   {
     id: 6,
     title: "Plato Talavera",
     category: "Talavera",
-    artesano: "Tienda Huichol",
-    img: "assets/images/productos/download.jpeg",
+    artesano: "José Pérez",
+    img: "/assets/images/productos/download.jpeg",
     price: "$ 250",
   },
   {
     id: 7,
     title: "Coyote Alebrije",
     category: "Alebrijes",
-    artesano: "Tienda Huichol",
-    img: "assets/images/productos/PhotoRoom_20220116_213503_2048x.jpg",
+    artesano: "José Pérez",
+    img: "/assets/images/productos/PhotoRoom_20220116_213503_2048x.jpg",
     price: "$ 400",
   },
   {
     id: 8,
     title: "Juego de Jarrones",
     category: "Barro Negro",
-    artesano: "Tienda Huichol",
-    img: "assets/images/productos/Portada-Alfareria-Barro-Negro.jpeg",
+    artesano: "José Pérez",
+    img: "/assets/images/productos/Portada-Alfareria-Barro-Negro.jpeg",
     price: "$ 2,300",
   },
   {
     id: 9,
-    title: "Juego de Te de Talavera",
+    title: "Juego de Te",
     category: "Talavera",
-    artesano: "Tienda Huichol",
-    img: "assets/images/productos/TALAVERA.jpeg",
+    artesano: "José Pérez",
+    img: "/assets/images/productos/TALAVERA.jpeg",
     price: "$ 999",
   },
   {
     id: 10,
     title: "Jarron de Talavera",
     category: "Talavera",
-    artesano: "Tienda Huichol",
-    img: "assets/images/productos/TB3P4OA03_02_600x.jpg",
+    artesano: "José Pérez",
+    img: "/assets/images/productos/TB3P4OA03_02_600x.jpg",
     price: "$ 1,350",
   },
   {
     id: 11,
     title: "Tejido Tradicional",
     category: "Textiles",
-    artesano: "Tienda Huichol",
-    img: "assets/images/productos/Tenangos-3.jpeg",
+    artesano: "José Pérez",
+    img: "/assets/images/productos/Tenangos-3.jpeg",
     price: "$ 700",
   }
 ];
@@ -140,53 +140,24 @@ let displayData = productosCard.map(function (cat_items) {
           </div>
           <div class="content">
             <h3 class="title">${cat_items.title}</h3>
-            <p class="artesanos">Por: ${cat_items.artesano}</p>
-            <span onclick="gfg(1)"
-            class="star">★
-            </span>
-            <span onclick="gfg(2)"
-            class="star">★
-            </span>
-            <span onclick="gfg(3)"
-            class="star">★
-            </span>
-            <span onclick="gfg(4)"
-            class="star">★
-            </span>
-            <span onclick="gfg(5)"
-            class="star">★
-            </span>
+            <p class="artesanos">Artesano: ${cat_items.artesano}</p>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
             <p class="price"> ${cat_items.price}</p>
+            <div class="btnproducto">
+            <button class="button-33"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+          </svg></button>
+          <button class="button-33"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-heart-eyes" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M11.315 10.014a.5.5 0 0 1 .548.736A4.498 4.498 0 0 1 7.965 13a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .548-.736h.005l.017.005.067.015.252.055c.215.046.515.108.857.169.693.124 1.522.242 2.152.242.63 0 1.46-.118 2.152-.242a26.58 26.58 0 0 0 1.109-.224l.067-.015.017-.004.005-.002zM4.756 4.566c.763-1.424 4.02-.12.952 3.434-4.496-1.596-2.35-4.298-.952-3.434zm6.488 0c1.398-.864 3.544 1.838-.952 3.434-3.067-3.554.19-4.858.952-3.434z"/></svg></button>
+            
+            </div>
           </div>
         </div>`;
 });
 displayData = displayData.join("");
 productContainer.innerHTML = displayData;
 }
-// Para acceder a las estrellas
-let stars = 
-  document.getElementsByClassName("star");
-let output = 
-  document.getElementById("output");
 
-// Función que registra las estrellas
-function gfg(n) {
-  remove();
-  for (let i = 0; i < n; i++) {
-      if (n == 1) cls = "one";
-      else if (n == 2) cls = "two";
-      else if (n == 3) cls = "three";
-      else if (n == 4) cls = "four";
-      else if (n == 5) cls = "five";
-      stars[i].className = "star " + cls;
-  }
-}
-
-// Funcion que retira las estrellas
-function remove() {
-  let i = 0;
-  while (i < 5) {
-      stars[i].className = "star";
-      i++;
-  }
-}
