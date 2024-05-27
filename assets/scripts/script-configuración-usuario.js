@@ -35,7 +35,104 @@ function mostrarFormulario(opcion) {
       formulario.style.display = 'block'; // Muestra el formulario estableciendo su estilo de visualización como 'block'
     }
   }
-/**--------Función para Detalles de cuenta---------- */
+
+
+  /*----------------------------------------------------------------------------------------------------------*/ 
+
+//Función para aparecer la alerta-success
+function myFunctionAlertSuccess() {
+  $('#alerta-success').fadeIn(1000);
+  setTimeout(function() { 
+      $('#alerta-success').fadeOut(1000); 
+  }, 5000);
+}
+
+//Función para aparecer la alerta-danger
+function myFunctionAlertDanger() {
+  $('#alerta-danger').fadeIn(1000);
+  setTimeout(function() { 
+      $('#alerta-danger').fadeOut(1000); 
+  }, 5000);
+}
+
+//Función para aparecer la alerta-dangerCampos
+function myFunctionAlertDangerCampos() {
+  $('#alerta-dangerCampos').fadeIn(1000);
+  setTimeout(function() { 
+      $('#alerta-dangerCampos').fadeOut(1000); 
+  }, 5000);
+}
+
+
+//Función para aparecer la alerta-dangerContra
+function myFuntionAlertaDangerContra() {
+  $('#alerta-dangerContra').fadeIn(1000);
+  setTimeout(function() { 
+      $('#alerta-dangerContra').fadeOut(1000); 
+  }, 5000);
+}
+
+
+//Función para aparecer la alerta-dangerNameApellidos
+function myFuntionAlertaDangerNameApellidos() {
+  $('#alerta-dangerNameApellidos').fadeIn(1000);
+  setTimeout(function() { 
+      $('#alerta-dangerNameApellidos').fadeOut(1000); 
+  }, 5000);
+}
+
+//Función para aparecer la alerta-dangerNumber
+function myFuntionAlertaDangerNumber() {
+  $('#alerta-dangerNumber').fadeIn(1000);
+  setTimeout(function() { 
+      $('#alerta-dangerNumber').fadeOut(1000); 
+  }, 5000);
+}
+
+//Función para aparecer la alerta-dangerCard
+function myFuntionAlertaDangerCard() {
+  $('#alerta-dangerCard').fadeIn(1000);
+  setTimeout(function() { 
+      $('#alerta-dangerCard').fadeOut(1000); 
+  }, 5000);
+}
+
+
+//Función para aparecer la alerta-dangerExpiryDate
+function myFuntionAlertaDangerExpiryDate() {
+  $('#alerta-dangerExpiryDate').fadeIn(1000);
+  setTimeout(function() { 
+      $('#alerta-dangerExpiryDate').fadeOut(1000); 
+  }, 5000);
+}
+
+
+//Función para aparecer la alerta-dangerCVV
+function myFuntionAlertaDangerCVV() {
+  $('#alerta-dangerCVV').fadeIn(1000);
+  setTimeout(function() { 
+      $('#alerta-dangerCVV').fadeOut(1000); 
+  }, 5000);
+}
+
+//Función para aparecer la alerta errorMessageCP
+function myFuntionAlertaErrorMessageCP() {
+  $('#errorMessageCP').fadeIn(1000);
+  setTimeout(function() { 
+      $('#errorMessageCP').fadeOut(1000); 
+  }, 5000);
+}
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------*/ 
+
+
+/**----------------------------------Funciones para Detalles de cuenta------------------------------------------- */
 
 let user = {
   firstName: "Roberto",
@@ -43,7 +140,7 @@ let user = {
   lastName: "Castro",
   email: "example@example.com",
   telefono: "2969613706",
-  password: "password123"
+  password: "Password123!"
 };
 
 let editPassword = false;
@@ -70,6 +167,78 @@ function togglePasswordFields() {
   document.getElementById("passwordFields").style.display = editPassword ? "block" : "none";
 }
 
+//Funciones Regex para validaciones de campos
+
+function isValid_Password(password) {
+  // Regex to check valid
+  // Contraseña tenga al menos una letra minúscula, una letra mayúscula, un dígito, un carácter especial y un mínimo de 8 caracteres.
+  let regex = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%?&.,\-_:])[A-Za-z\d@$!%?&.,\-_:]{8,}$/);
+
+  // if password
+  // is empty return false
+  if (password == null) {
+      myFuntionAlertaDangerContra()
+      return false;
+
+  }
+  
+  // Return true if the password
+  // matched the ReGex
+  if (regex.test(password) == true) {
+      return true;
+  }
+  else {
+      myFuntionAlertaDangerContra()
+      return false;
+  }
+}
+
+function isValid_NameApellidos(name) {
+  // Regex to check valid
+ //isValid_NameApellidos
+  let regex = new RegExp(/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]+$/);
+
+  // if name
+  // is empty return false
+  if (name == null) {
+    myFuntionAlertaDangerNameApellidos()
+      return false;
+  }
+  
+  // Return true if the name
+  // matched the ReGex
+  if (regex.test(name) == true) {
+      return true;
+  }
+  else {
+    myFuntionAlertaDangerNameApellidos()
+      return false;
+  }
+}
+
+function isValid_Tel(tel) {
+  //Regex to check valid
+ //isValid_Tel
+  let regex = new RegExp( /^\d{10}$/);
+
+  // if tel
+  // is empty return false
+  if (tel == null) {
+    myFuntionAlertaDangerNumber()
+      return false;
+  }
+  
+  // Return true if the tel
+  // matched the ReGex
+  if (regex.test(tel) == true) {
+      return true;
+  }
+  else {
+    myFuntionAlertaDangerNumber()
+      return false;
+  }
+}
+
 
 function saveChanges() {
 
@@ -85,7 +254,7 @@ function saveChanges() {
     confirmPassword = user.password
   }
 
-  if (newFirstName && newMiddleName &&  newLastName && newPassword && confirmPassword) {
+  if (isValid_NameApellidos(newFirstName) && isValid_NameApellidos(newMiddleName) &&  isValid_NameApellidos(newLastName) && isValid_Password(newPassword) && confirmPassword && isValid_Tel(newTel)) {
     if (newPassword === confirmPassword) {
       user.firstName = newFirstName;
       user.middleName = newMiddleName;
@@ -94,15 +263,15 @@ function saveChanges() {
       user.telefono = newTel;
       displayAccountInfo();
       closeFormCuenta();
-       //Código para aparecer y desaparecer alertas (aparece la alerta-success)
-      document.getElementById("alerta-success").style.display = "block";
+       //Se llama a la función para aparecer la alerta-success
+       myFunctionAlertSuccess();
     } else {
-      // En caso de error mostramos una alerta-danger
-      document.getElementById("alerta-danger").style.display = "block";
+      //Se llama a la función para aparecer la alerta-danger
+      myFunctionAlertDanger()
     }
   } else {
-    // En caso de error mostramos una alerta-danger
-    document.getElementById("alerta-danger2").style.display = "block";
+    //Se llama a la función para aparecer la alerta-danger2
+    myFunctionAlertDangerCampos()
   }
 }
 
@@ -123,7 +292,7 @@ window.onload = function() {
 
 
 
-  /**------------Funcion formulario direcciones------------ */
+  /**---------------------------------------Funcion formulario direcciones----------------------------------------- */
 
   let addresses = []; // Arreglo para almacenar las direcciones
 
@@ -169,34 +338,13 @@ window.onload = function() {
   
     } catch (error) {
       console.error('Error fetching postal code details:', error);
-      document.getElementById('errorMessage').style.display = 'block';
+      myFuntionAlertaErrorMessageCP()
       document.getElementById('neighborhood').value = '';
       document.getElementById('state').value = '';
       document.getElementById('city').value = '';
       document.getElementById('municipio').value = '';
     }
   }
-
-
-  /*let endpoint_sepomex  = "https://api.copomex.com/query/";
-  let method_sepomex = 'info_cp/';
-  let cp = "09810";
-  let variable_string = '?type=simplified';
-  let  token = '&token=0acd3e82-60b5-4281-9947-9b5e93338282';
-  let url = endpoint_sepomex + method_sepomex + cp + variable_string + token;
-
-  $.get(url){
-      .done(function( data ) {
-          let content = JSON.parse(data);
-
-          if((content[0].error){
-              console.log('Algo salio mal');
-          }else{
-              console.log('Todo bien');
-          }
-      });
-  }*/
-
   
   function saveAddress() {
     let fullName = document.getElementById("fullName").value;
@@ -210,7 +358,7 @@ window.onload = function() {
     let municipio = document.getElementById("municipio").value;
     let city = document.getElementById("city").value;
   
-    if (fullName && street && numberInt && numberExt && neighborhood && postalCode && country && city && municipio) {
+    if (isValid_NameApellidos(fullName) && street && numberInt && numberExt && neighborhood && postalCode && country && city && municipio) {
       let newAddress = {
         fullName: fullName,
         street: street,
@@ -226,9 +374,11 @@ window.onload = function() {
       addresses.push(newAddress);
       displayAddresses();
       closeFormAddresses();
+      //Se llama a la función para aparecer la alerta-Success
+      myFunctionAlertSuccess();
     } else {
-      // En caso de error mostramos una alerta-danger
-      document.getElementById("alerta-danger2").style.display = "block";
+      //Se llama a la función para aparecer la alerta-danger
+      myFunctionAlertDangerCampos();
     }
   }
   
@@ -254,14 +404,14 @@ window.onload = function() {
   // Eliminar la dirección del array de direcciones
   addresses.splice(index, 1);
   
-  // Obtener la lista de direcciones existentes del localStorage
+  /*// Obtener la lista de direcciones existentes del localStorage
   let direcciones = JSON.parse(localStorage.getItem('direcciones')) || [];
 
   // Eliminar la dirección correspondiente del localStorage
   direcciones.splice(index, 1);
 
   // Actualizar el localStorage con la lista de direcciones actualizada
-  localStorage.setItem('direcciones', JSON.stringify(direcciones));
+  localStorage.setItem('direcciones', JSON.stringify(direcciones));*/
 
   // Mostrar la lista de direcciones actualizada en la interfaz de usuario
   displayAddresses(); // Esta línea se agrega para volver a mostrar las direcciones actualizadas
@@ -279,7 +429,7 @@ window.onload = function() {
       item.classList.add("address-item");
       item.innerHTML = `
         <p><strong>${address.fullName}</strong></p>
-        <p>${address.street}, ${address.numberInt}, ${address.numberExt} , ${address.neighborhood}, ${address.postalCode}</p>
+        <p>${address.street}, ${address.numberInt}, ${address.numberExt} , ${address.postalCode}, ${address.neighborhood}</p>
         <p>${address.municipio}, ${address.city}, ${address.state},${address.country}</p>
         <button class="ButtonsConfig ButtonEditCard" onclick="editAddress(${index})">Editar</button>
         <button class="ButtonsConfig ButtonEditCard" onclick="deleteAddress(${index})">Eliminar</button>
@@ -288,7 +438,7 @@ window.onload = function() {
     });
   }
 
- /**---------------funcion para formulario de tarjeta ------------*/
+ /**--------------------------------------Funciones para formulario de tarjeta ------------------------------------*/
 
  let cards = []; // Arreglo para almacenar las tarjetas
 
@@ -345,8 +495,97 @@ window.onload = function() {
    }
  }
 
+
+//Funciones Regex para validaciones de campos
+
+function isValid_CVV_Number(CVV_Number) {
+
+  if (CVV_Number.length < 4) {
+    myFuntionAlertaDangerCVV();
+    return false;
+  }
+  // Regex to check valid
+  // CVV_Number  
+  let regex = new RegExp(/^[0-9]{3,4}$/);
+
+  // if CVV_Number 
+  // is empty return false
+  if (CVV_Number == null) {
+      myFuntionAlertaDangerCVV();
+      return false;
+  }
+
+  // Return true if the CVV_Number
+  // matched the ReGex
+  if (regex.test(CVV_Number) == true) {
+      return true;
+  }
+  else {
+    myFuntionAlertaDangerCVV();
+      return false;
+  }
+}
+
+function isValid_expiryDate(expiryDate_Number) {
+
+  if (expiryDate_Number.length < 4) {
+    myFuntionAlertaDangerExpiryDate();
+    return false;
+  }
+  // Regex to check valid
+  // expiryDate_Number
+  let regex = new RegExp(/^(0[1-9]|1[0-2])([0-9]{2})$/);
+
+  // if expiryDate_Number
+  // is empty return false
+  if (expiryDate_Number == null) {
+      myFuntionAlertaDangerExpiryDate();
+      return "false";
+  }
+  
+  // Return true if the expiryDate_Number
+  // matched the ReGex
+  if (regex.test(expiryDate_Number) == true) {
+      return "true";
+  }
+  else {
+      myFuntionAlertaDangerExpiryDate();
+      return "false";
+  }
+}
+
+function isValid_cardNumber(cardNumber) {
+
+  if (cardNumber.length < 16) {
+    myFuntionAlertaDangerCard();
+    return false;
+  }
+  // Regex to check valid
+  // cardNumber 
+  let regex = new RegExp(/^(?:\d[ -]*?){13,16}$/);
+
+  // if cardNumber
+  // is empty return false
+  if (cardNumber == null) {
+      myFuntionAlertaDangerCard();
+      return false;
+  }
+  
+  // Return true if the cardNumber
+  // matched the ReGex
+  if (regex.test(cardNumber) == true) {
+      return true;
+  }
+  else {
+    myFuntionAlertaDangerCard();
+      return false;
+  }
+
+}
+
 // Función para guardar una nueva tarjeta
  function saveCard() {
+ 
    let cardNumber = document.getElementById("cardNumber").value;
    let cardOwner = document.getElementById("cardOwner").value;
    let expiryDate = document.getElementById("expiryDate").value;
@@ -355,7 +594,9 @@ window.onload = function() {
    let bank = document.getElementById("bank").value;
    let cardType = document.querySelector('input[name="cardType"]:checked').value;
 
-   if (cardNumber && cardOwner && expiryDate && securityCode && company && bank && cardType) {
+   
+
+   if (isValid_cardNumber(cardNumber) && isValid_NameApellidos(cardOwner) && isValid_expiryDate(expiryDate) && isValid_CVV_Number(securityCode) && company && bank && cardType) {
      let newCard = {
        cardNumber: cardNumber,
        cardOwner: cardOwner,
@@ -368,9 +609,11 @@ window.onload = function() {
      cards.push(newCard); // Agregar la nueva tarjeta al arreglo
      displayCards(); // Actualizar la lista de tarjetas mostradas
      closeFormCards(); // Cerrar el formulario
+     myFunctionAlertSuccess(); //llamamos la función de la alerta alerta-success
+
    } else {
-     // En caso de error mostramos una alerta-danger
-     document.getElementById("alerta-danger2").style.display = "block";
+     // En caso de error llamamos la función de la alerta alerta-dangerCampos
+     myFunctionAlertDangerCampos();
    }
  }
 
@@ -425,10 +668,14 @@ window.onload = function() {
    });
  }
 
+
+
+
+
  /**----------- Apartado para el local Storage -----------------------------------------------*/
 
 
-// Añadir el escucha de eventos al botón para guardar la tarjeta
+/*// Añadir el escucha de eventos al botón para guardar la tarjeta
  const guardarTarjeta = document.getElementById('guardar-tarjeta');
  guardarTarjeta.addEventListener('click', function(){
      // Obtener la lista de tarjetas existentes del localStorage
@@ -471,147 +718,8 @@ window.onload = function() {
      saveCard();
  });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /**---------------funcion para formulario de tarjeta ------------*/
-
-/*let cards = []; // Arreglo para almacenar las tarjetas
-
-function openFormCards() {
-  document.getElementById("cardForm").style.display = "block";
-}
-
-function closeFormCards() {
-  document.getElementById("cardForm").style.display = "none";
-  document.getElementById("cardFormContent").reset(); // Limpiar el formulario al cerrar
-}
-
-function saveCard() {
-  let cardNumber = document.getElementById("cardNumber").value;
-  let cardOwner = document.getElementById("cardOwner").value;
-  let expiryDate = document.getElementById("expiryDate").value;
-  let securityCode = document.getElementById("securityCode").value;
-
-  if (cardNumber && cardOwner && expiryDate && securityCode) {
-    let newCard = {
-      cardNumber: cardNumber,
-      cardOwner: cardOwner,
-      expiryDate: expiryDate,
-      securityCode: securityCode
-    };
-    cards.push(newCard);
-    displayCards();
-    closeFormCards();
-  } else {
-    // En caso de error mostramos una alerta-danger
-    document.getElementById("alerta-danger2").style.display = "block";
-  }
-}
-
-function editCard(index) {
-  let card = cards[index];
-  document.getElementById("cardNumber").value = card.cardNumber;
-  document.getElementById("cardOwner").value = card.cardOwner;
-  document.getElementById("expiryDate").value = card.expiryDate;
-  document.getElementById("securityCode").value = card.securityCode;
-  cards.splice(index, 1); // Eliminar la tarjeta actual antes de editarla
-  openFormCards();
-}
-
-function deleteCard(index) {
-  cards.splice(index, 1);
-      // Obtener la lista de direcciones existentes del localStorage
-      let tarjetas = JSON.parse(localStorage.getItem('tarjetas')) || [];
-  
-      // Eliminar la dirección correspondiente del localStorage
-      tarjetas.splice(index, 1);
-    
-      // Actualizar el localStorage con la lista de direcciones actualizada
-      localStorage.setItem('tarjetas', JSON.stringify(tarjetas));
-  displayCards();
-}
-
-function displayCards() {
-  let cardList = document.getElementById("cardList");
-  cardList.innerHTML = ""; // Limpiar la lista antes de mostrar las tarjetas
-
-  cards.forEach((card, index) => {
-    let item = document.createElement("div");
-    /*item.setAttribute( "class", "newCard" ); --
-    item.classList.add("card-item");
-    item.innerHTML = `
-      <p><strong>Numero de tarjeta:</strong> ${card.cardNumber}</p>
-      <p><strong>Propietario de la tarjeta:</strong> ${card.cardOwner}</p>
-      <p><strong>Fecha de expitación:</strong> ${card.expiryDate}</p>
-      <p><strong>Código de seguridad:</strong> ${card.securityCode}</p>
-      <button class="ButtonsConfig ButtonEditCard" onclick="editCard(${index})">Editar</button>
-      <button class="ButtonsConfig ButtonEditCard" onclick="deleteCard(${index})">Eliminar</button>
-    `;
-    cardList.appendChild(item);
-  });
-}*/
-
-/**----------- Apartado para el local Storage -----------------------------------------------
-
-// ----------------------------------------------  Añadimos el escucha de eventos al botón a través de una función anónima.  ----------------------------------------------------------
-
-const guardarTarjeta = document.getElementById('guardar-tarjeta');
-guardarTarjeta.addEventListener('click', function(){
-    // Obtener la lista de tarjetas existentes del localStorage
-    let tarjetas = JSON.parse(localStorage.getItem('tarjetas')) || [];
-
-    // Obtener los valores de los campos del formulario
-    const numeroTarjeta = document.getElementById('cardNumber').value;
-    const propietarioTarjeta = document.getElementById('cardOwner').value;
-    const fechaExpiracion = document.getElementById('expiryDate').value;
-    const codigoSeguridad = document.getElementById('securityCode').value;
-    console.log("datos obtenidos");
-  
-    // Crear un objeto JavaScript para proceder a generar el formato JSON
-    const tarjetaJSON = {
-        "cardNumber": numeroTarjeta,
-        "cardOwner": propietarioTarjeta,
-        "expiryDate": fechaExpiracion,
-        "securityCode": codigoSeguridad
-    };
-  
-    // Agregar la nueva tarjeta a la lista
-    tarjetas.push(tarjetaJSON);
-  
-    try {
-        // Intentar actualizar el localStorage con la lista de tarjetas actualizada
-        localStorage.setItem('tarjetas', JSON.stringify(tarjetas));
-        // Código para mostrar una alerta de éxito
-        document.getElementById("alerta-success").style.display = "block";
-    } catch (error) {
-        // En caso de error al actualizar el localStorage mostramos una alerta de error
-        document.getElementById("alerta-danger2").style.display = "block";
-    }
-    saveCard();
-});*/
-
-
-/*-------------------------------------------------------------------------------------------- */
-function cargarCuenta(){
+-------------------------------------------------------------------------------------------- */
+/*function cargarCuenta(){
   let cuenta = JSON.parse(localStorage.getItem('cuentas')) || [];
   const cuentaJSON = {
     "nombre": user.firstName,
@@ -664,7 +772,7 @@ try {
     document.getElementById("alerta-danger2").style.display = "block";
 }
 saveAddress();
-});
+});*/
 
 
 

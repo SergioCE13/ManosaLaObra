@@ -55,6 +55,7 @@ body {
 }
 
 #sidebar.expand {
+    z-index:1;
     width: 260px;
     min-width: 260px;
 }
@@ -115,7 +116,7 @@ a.sidebar-link:hover {
 }
 
 #sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
-    /*position: absolute;*/
+    position: absolute;
     top: 0;
     left: 70px;
     background-color: #0e2238;
@@ -424,7 +425,7 @@ input[type="email"] {
 
 
 
- @media screen and (max-width: 1025px) {
+  @media screen and (max-width: 1025px) {
     .contenido {
       margin-left: 50px;
       margin-top: 10px;
