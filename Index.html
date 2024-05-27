@@ -29,6 +29,7 @@
   <!--Conexión Styles-->
   <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
   <link rel="stylesheet" href="./assets/styles/style-swiper.css">
+  <link rel="stylesheet" href="./assets/styles/style-swiper.css">
 
   <style>
     /* Estilos para el contenedor de información */
@@ -46,12 +47,11 @@
 <!--------------------------------------- Inicia el Header ------------------------------------------->
 <header>
   <!------------------------------ Inicia la NavBar ------------------------------------>
-<!-- index.html or any other HTML file -->
-<div id="navbar-placeholder"></div>
+  <div id="navbar-placeholder"></div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    fetch('navbar.html')
+    fetch('./assets/html/navbar.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
@@ -64,207 +64,197 @@
   <!------------------------------- Termina el Header --------------------------------------------------------------->
 
 <body>
+ <div class = "titulo1">
+    <h1>Las mejores artesanías </h1>
+    <h2>de México para el mundo</h2>
+ </div>
 
-  <section>
-    <div class="swiper mySwiper container">
-      <div class="swiper-wrapper content">
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img
-                src="https://lh3.googleusercontent.com/NBiQ0_PkXlDVCvMCj-r4CTbL-YYCgkMAkdqfpfQ6s5RHWHLupD366iV3m7I9fGYkX3p9zQu2PhZcRpUGWC0HXb2R45FuvJNp63zC6SpRdQQWwuoKQZ54xnit9KsNI72wC_qG4GtzhQ"
-                alt="" />
-            </div>
-
-            <div class="name-profession">
-              <span class="name">Barro Negro</span>
-            </div>
-          </div>
+ <div class="carousel">
+    <div class="card-container">
+      <div class="card">
+        <div class="pickgradient">
+          <img src="./assets/images/productos/Portada-Alfareria-Barro-Negro.jpeg">
         </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img src="https://visitchiapas.com/v1/admin/archivos/Turismo/multimedia/caf59e18_14062020_1938.jpg"
-                alt="" />
-            </div>
-
-            <div class="name-profession">
-              <span class="name">Textiles</span>
-            </div>
-          </div>
+        <h1>Barro</h1>
+      </div>
+      <div class="card">
+        <div class="pickgradient">
+          <img src="assets/images/productos/craneo_grande1_600x.jpg">
         </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img src="https://visitchiapas.com/v1/admin/archivos/Turismo/multimedia/caf59e18_14062020_1938.jpg"
-                alt="" />
-            </div>
-            <div class="name-profession">
-              <span class="name">Alebrijes</span>
-            </div>
-          </div>
+        <h1>Arte Huichol</h1>
+      </div>
+      <div class="card">
+        <div class="pickgradient">
+          <img src="assets/images/productos/PhotoRoom_20220116_213503_2048x.jpg">
         </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img
-                src="https://www.elsoldezacatecas.com.mx/cultura/uvhjbp-artesanias-elaboradas-con-chaquira/ALTERNATES/LANDSCAPE_960/Artesan%C3%ADas%20elaboradas%20con%20chaquira"
-                alt="" />
-            </div>
-
-            <div class="name-profession">
-              <span class="name">Artesanias</span>
-            </div>
-          </div>
+        <h1>Alebrijes</h1>
+      </div>
+      <div class="card">
+        <div class="pickgradient">
+          <img src="assets/images/productos/56109N002G7_02_600x.jpg">
         </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img src="https://i.pinimg.com/736x/c9/13/15/c913159aee633a85ac7f03194d96189b.jpg" alt="" />
-            </div>
-            <div class="name-profession">
-              <span class="name">Ropa para damas</span>
-            </div>
-          </div>
+        <h1>Barro Negro</h1>
+      </div>
+      <div class="card">
+        <div class="pickgradient">
+          <img src="assets/images/productos/Tenangos-3.jpeg">
         </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsx6L6jwjQSOlGqR6FwE6-3BNUPo5srJtG14GjHqaDGEPw_M4Ky1m3HkcvRfttHawqj_E&usqp=CAU"
-                alt="" />
-            </div>
-
-            <div class="name-profession">
-              <span class="name">Ropa para caballeros</span>
-            </div>
-          </div>
+        <h1>Textiles</h1>
+      </div>
+      <div class="card">
+        <div class="pickgradient">
+          <img src="assets/images/productos/images.jpeg">
         </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtUysoXzwURun1ilhK6jWObPZt2F3nHiROv8f_9VlolQ&s"
-                alt="" />
-            </div>
-            <div class="name-profession">
-              <span class="name">Para el hogar</span>
-            </div>
-          </div>
+        <h1>Promociones</h1>
+      </div>
+      <div class="card">
+        <div class="pickgradient">
+          <img src="assets/images/productos/TB3P4OA03_02_600x.jpg">
         </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img
-                src="https://artesaniasdecolombia.com.co/Documentos/Contenido/11544_expoartesanias-artesanias-colombia-mesa-decoracion-corferias-2013.jpg"
-                alt="" />
-            </div>
-            <div class="name-profession">
-              <span class="name">Decoración</span>
-            </div>
-          </div>
+        <h1>Talavera</h1>
+      </div>
+      <div class="card">
+        <div class="pickgradient">
+          <img src="assets/images/productos/jc-ropa-artesanal-1.jpeg">
         </div>
-        <div class="swiper-slide card">
-          <div class="card-content">
-            <div class="image">
-              <img
-                src="https://radionacional-v3.s3.amazonaws.com/s3fs-public/styles/portadas_relaciona_4_3/public/node/article/field_image/IMG-20210625-WA0026.jpg?h=c673cd1c&itok=g6Aie70Q"
-                alt="" />
-            </div>
-            <div class="name-profession">
-              <span class="name">Vasijas de barro</span>
-            </div>
+        <h1>Prendas</h1>
+      </div>
+    </div>
+  </div>
+  <div class="prd">
+  <div class="cardPromo">
+    <h3 class="promoT">Promoción</h3>
+    <div class="products">
+      <div class="pr_img">
+        <img src="assets/images/productos/Florero-Geronimo-Flores-Ramos-2.png" alt="" />
+      </div>
+      <div class="content">
+        <h3 class="title">Jarron</h3>
+        <p class="artesanos">Por: Artesanía Mexicana</p>
+        <span onclick="gfg(1)"
+        class="star">★
+        </span>
+        <span onclick="gfg(2)"
+        class="star">★
+        </span>
+        <span onclick="gfg(3)"
+        class="star">★
+        </span>
+        <span onclick="gfg(4)"
+        class="star">★
+        </span>
+        <span onclick="gfg(5)"
+        class="star">★
+        </span>
+        <p class="price">$ 350</p>
+      </div>
+    </div>
+  
+</div>
+  
+  
+  <div class="carousel-p">
+    <h3 class="dest">Productos Destacados</h3>
+    <div class="card-container-p">
+      
+      <div class="card-destacados">
+        <div class="cont">
+          <div class="products_wrapper">
+            
           </div>
         </div>
       </div>
-      <div class="botones">
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      </div>
-
-  </section>
-
-
-
-
-
-
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      slidesPerGroup: 3,
-      loop: true,
-      loopFillGroupWithBlank: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
+      
+  </div>
+</div>
+</div>
+  
   <!-- jQuery, Popper.js, and Bootstrap JS -->
+  <script src="assets/scripts/index.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
- <!------------------------------------ Inicia el Footer ----------------------------------------------------------->
- <footer class="text-center text-lg-start text-white mt-auto" style="background-color: #969696">
-  <!-- Grid container -->
-  <div class="container p-4 pb-0">
+  <!---------------------------------------------Inicio de Footer----------------------------------------------------->
+
+  <footer class="text-center text-lg-start text-white" style="background-color: #969696">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
     <!-- Section: Links -->
     <section class="">
-      <!--Grid row-->
-      <div class="row d-flex align-items-center">
+        <!--Grid row-->
+        <div class="row d-flex align-items-center">
         <!-- Grid column -->
         <div class="col-md-7 col-lg-8 text-center text-md-start">
-          <h6 class="text-uppercase mb-4 font-weight-bold">
-            Manos a la Obra
-          </h6>
-          <p class="font-weight-bold">
-            Preguntas frecuentes | Términos y condiciones | Aviso de privacidad | Política de envío
-          </p>
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+                Manos a la Obra
+            </h6>
+            <p class="font-weight-bold">
+                Preguntas frecuentes  |  <a href="Terminos y condiciones.html" target="_blank">Terminos y Condiciones</a>  | <a href="Politicas de Privacidad.html" target="_blank">Aviso de privacidad</a>  | <a href="Politas de envio.html" target="_blank">Política de envío</a>
+            </p>
         </div>
-        <!-- Section: Copyright -->
+    <!-- Section: Copyright -->
+    
         <div class="row d-flex align-items-center">
-          <!-- Grid column -->
-          <div class="col-md-7 col-lg-8 text-center text-md-start">
+        <!-- Grid column -->
+        <div class="col-md-7 col-lg-8 text-center text-md-start">
             <!-- Copyright -->
             <div>
-              © 2024 Alebrijes Fullstack
+            © 2024 Alebrijes Fullstack
+            
+            
             </div>
             <!-- Copyright -->
-          </div>
-          <!-- Grid column -->
+        </div>
+        <!-- Grid column -->
 
-          <!-- Grid column -->
-          <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+        <!-- Grid column -->
+        <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
             <!-- Facebook -->
-            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="bi bi-facebook"></i></a>
+            <a
+            href="https://www.facebook.com"
+            target="_blank"
+            class="btn btn-outline-light btn-floating m-1"
+            class="text-white"
+            role="button"
+            ><i class="bi bi-facebook"></i
+            ></a>
 
             <!-- Twitter -->
-            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="bi bi-twitter"></i></a>
+            <a
+            href="https://twitter.com"
+            target="_blank"
+            class="btn btn-outline-light btn-floating m-1"
+            class="text-white"
+            role="button"
+            ><i class="bi bi-twitter"></i
+            ></a>
 
             <!-- Google -->
-            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="bi bi-google"></i></a>
+            <a
+            href="https://www.google.com"
+            target="_blank"
+            class="btn btn-outline-light btn-floating m-1"
+            class="text-white"
+            role="button"
+            ><i class="bi bi-google"></i
+            ></a>
 
             <!-- Instagram -->
-            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="bi bi-instagram"></i></a>
-          </div>
-          <!-- Grid column -->
+            <a
+            href="https://www.instagram.com"
+            target="_blank"
+            class="btn btn-outline-light btn-floating m-1"
+            class="text-white"
+            role="button"
+            ><i class="bi bi-instagram"></i></a>
+        </div>
+        <!-- Grid column -->
         </div>
     </section>
     <!-- Section: Copyright -->
-  </div>
-  <!-- Grid container -->
+    </div>
+    <!-- Grid container -->
 </footer>
 <!-- Fin del Footer -->
 

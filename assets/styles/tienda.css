@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ruda:wght@400;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "poppins", sans-serif;
+  background-color: #ddd;
+  width: 100%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cats{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin:0;
+    
+}
+
+nav ul li a {
+    display: flex;
+    width: 200px;
+    padding: 0.5rem 1rem;
+    border: solid 1px grey;
+    background-color: #969696;
+    color: #FFFF;
+}
+
+/* product start */
+.products_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 10%;
+    justify-content: space-evenly;
+  }
+  
+  .products {
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 100px
+  }
+  .pr_img img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    padding: 15px 15px 0 15px;
+  }
+  .content {
+    padding: 0 1rem 1rem 1rem;
+  }
+  .content .title {
+    font-size: 1rem;
+    color: #2c3e50;
+  }
+  .content .release_date {
+    color: #bdc3c7;
+  }
+  .content .price {
+    
+    padding: 0.5rem;
+    width: 60%;
+    color: #E31B9F;
+    margin: 0.5rem 0;
+  }
+  main{
+    display: flex;
+    width: 100%;
+    background-color: #E4DDD3;
+    min-height: 600px;
+    
+
+  }
+  .sidebar{
+    min-width: 200px;
+    background-color: #969696;
+    
+
+  }
+  .containerCat{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+.star {
+    font-size: 2vh;
+    cursor: pointer;
+  }
+   
+.one {
+    color: #E31B9F;
+  }
+   
+.two {
+    color: #E31B9F;
+  }
+   
+.three {
+    color: #E31B9F;
+  }
+   
+.four {
+    color: #E31B9F;
+  }
+   
+.five {
+    color: #E31B9F;
+  }
+
+  nav ul li a:hover{
+    background-color: #696d72;
+  }
+  nav ul li a:focus{
+    background-color: #696d72;
+    border: inset #bdc3c7 2px;
+  }
+
+  @media only screen and (max-width: 990px){
+    main{
+        flex-direction: column;
+    }
+    .cats{
+        flex-direction: row;
+        overflow: scroll;
+    }
+    .containerCat{
+        display: block;
+    }
+    nav ul li a{
+        width: 135px;
+        height: 55px;
+        align-items: center;
+    }
+
+
+  }
+  
