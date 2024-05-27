@@ -55,7 +55,7 @@
 <!------------------------------- Termina el Header --------------------------------------------------------------->
 
 <body>
-    <div class="container--title" id="titulo-formulario-cliente">
+    <div class="container--title" id="titulo-formulario-vendedor">
         <h1 id="titulo">Registro de vendedor</h1>
     </div>
 
@@ -65,7 +65,7 @@
             <div class="caja-blanca"> <!-- Contenedor del cuerpo de la página-->
                 <div class="formulario"> <!-- Contenedor del formulario-->
                     <div class="container-titulo"> <!-- Contenedor del título de la página -->
-                        <h1 id="titulo-formulario">Ingresa los datos del vendedor</h1>
+                        <h1 id="titulo-formulario">INGRESA LOS DATOS DEL VENDEDOR</h1>
                     </div>
                     <div class="form-group">
                         <label for="input-nombre-usuario">Nombre:</label>
@@ -89,6 +89,7 @@
                             <label for="input-numero-telefono">Número de teléfono:</label>
                             <input type="number" inputmode="numeric" class="form-control" id="input-telefono"
                                 placeholder="Introduce el número de celular">
+                            <small class="form-text text-muted">10 dígitos.</small>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="input-email-usuario">Email (nombre de usuario):</label>
@@ -101,11 +102,14 @@
                             <label for="input-contraseña">Contraseña:</label>
                             <input type="password" class="form-control" id="input-password"
                                 placeholder="Introduce la contraseña">
+                            <small class="form-text text-muted">8 caracteres con 1 mayúscula, 1 minúscula, 1 número y 1
+                                caracter (@$!%*?&.,-_:)</small>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="input-confirmar-contraseña">Confirma la contraseña:</label>
                             <input type="password" class="form-control" id="input-confirmar-password"
                                 placeholder="Repite la contraseña">
+                            <small class="form-text text-muted">Debe ser exactamente igual a la anterior.</small>
                         </div>
                     </div>
                     <div>
@@ -149,60 +153,27 @@
                         </div>
                         <div class="row">
                             <div class="form-group col-md-4">
-                                <label for="input-colonia">Colonia:</label>
-                                <input type="text" class="form-control" id="input-colonia"
-                                    placeholder="Introduce la colonia">
-                            </div>
-                            <div class="form-group col-md-4">
                                 <label for="input-codigo-postal">Código Postal:</label>
                                 <input type="text" class="form-control" id="input-codigo-postal"
                                     placeholder="Introduce el código postal">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="input-colonia">Colonia:</label>
+                                <select class="form-control" id="input-colonia">
+                                    <option selected>Selecciona la colonia</option>
+                                </select>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="input-delegacion">Delegación/Municipio:</label>
                                 <input type="text" class="form-control" id="input-delegacion"
                                     placeholder="Introduce la delegación o municipio">
                             </div>
-                        </div>
-                        <div class="row">
                             <div class="form-group col-md-6 dropup">
                                 <label for="input-estado">Estado:</label>
-                                <select class="form-select" id="input-estado">
-                                    <option selected>Selecciona el estado</option>
-                                    <option>Aguascalientes</option>
-                                    <option>Baja California</option>
-                                    <option>Baja California Sur</option>
-                                    <option>Campeche</option>
-                                    <option>Chiapas</option>
-                                    <option>Chihuahua</option>
-                                    <option>Coahuila</option>
-                                    <option>Colima</option>
-                                    <option>Durango</option>
-                                    <option>Estado de México</option>
-                                    <option>Guanajuato</option>
-                                    <option>Guerrero</option>
-                                    <option>Hidalgo</option>
-                                    <option>Jalisco</option>
-                                    <option>Michoacán</option>
-                                    <option>Morelos</option>
-                                    <option>Nayarit</option>
-                                    <option>Nuevo León</option>
-                                    <option>Oaxaca</option>
-                                    <option>Puebla</option>
-                                    <option>Querétaro</option>
-                                    <option>Quintana Roo</option>
-                                    <option>San Luis Potosí</option>
-                                    <option>Sinaloa</option>
-                                    <option>Sonora</option>
-                                    <option>Tabasco</option>
-                                    <option>Tamaulipas</option>
-                                    <option>Tlaxcala</option>
-                                    <option>Veracruz</option>
-                                    <option>Yucatán</option>
-                                    <option>Zacatecas</option>
-                                </select>
+                                <input type="text" id="input-estado" class="form-control"
+                                    placeholder="Introduce el estado">
                             </div>
-                            
+
                         </div>
                     </div>
                     <div class="form-group">
@@ -211,14 +182,15 @@
                     </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Acepto los términos y condiciones</label>
+                        <label class="form-check-label" for="exampleCheck1">Acepto los <a
+                                href="./Terminos y condiciones.html" target="_blank">términos y condiciones</a></label>
                     </div>
                     <div class="alert alert-success mt-3 alert-dismissible fade show" role="alert" id="alerta-success">
                         <strong>Aviso: </strong> El registro del producto se ha realizado exitosamente.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
                     </div>
                     <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-danger">
-                        <strong>Aviso: </strong> El registro del producto se ha realizado exitosamente.
+                        <strong>Aviso: </strong> Porfavor, rellene todos los campos correctamente.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
                     </div>
                     <input type="button" value="Enviar" id="button-submit" class="button-disabled">
@@ -228,76 +200,26 @@
     </div>
 
 
-    <footer class="text-center text-lg-start text-white" style="background-color: #969696">
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-            <!-- Section: Links -->
-            <section class="">
-                <!--Grid row-->
-                <div class="row d-flex align-items-center">
-                    <!-- Grid column -->
-                    <div class="col-md-7 col-lg-8 text-center text-md-start">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">
-                            Manos a la Obra
-                        </h6>
-                        <p class="font-weight-bold">
-                            Preguntas frecuentes | <a href="Terminos y condiciones.html" target="_blank">Terminos y
-                                Condiciones</a> | <a href="Politicas de Privacidad.html" target="_blank">Aviso de
-                                privacidad</a> | <a href="Politas de envio.html" target="_blank">Política de envío</a>
-                        </p>
-                    </div>
-                    <!-- Section: Copyright -->
-
-                    <div class="row d-flex align-items-center">
-                        <!-- Grid column -->
-                        <div class="col-md-7 col-lg-8 text-center text-md-start">
-                            <!-- Copyright -->
-                            <div>
-                                © 2024 Alebrijes Fullstack
-
-
-                            </div>
-                            <!-- Copyright -->
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-                            <!-- Facebook -->
-                            <a href="https://www.facebook.com" target="_blank"
-                                class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
-                                    class="bi bi-facebook"></i></a>
-
-                            <!-- Twitter -->
-                            <a href="https://twitter.com" target="_blank" class="btn btn-outline-light btn-floating m-1"
-                                class="text-white" role="button"><i class="bi bi-twitter"></i></a>
-
-                            <!-- Google -->
-                            <a href="https://www.google.com" target="_blank"
-                                class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
-                                    class="bi bi-google"></i></a>
-
-                            <!-- Instagram -->
-                            <a href="https://www.instagram.com" target="_blank"
-                                class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
-                                    class="bi bi-instagram"></i></a>
-                        </div>
-                        <!-- Grid column -->
-                    </div>
-            </section>
-            <!-- Section: Copyright -->
-        </div>
-        <!-- Grid container -->
+    <footer class="text-center text-lg-start text-white" style="background-color: #696868 ">
+        <div id="footer-script"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                fetch('./footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer-script').innerHTML = data;
+                    });
+            });
+        </script>
     </footer>
-    
+
     <!-- Conexiones de Scripts-->
     <script src="../scripts/registro-vendedor.js"></script>
-    
+
     <!-------------- BootStrap --------------------->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>

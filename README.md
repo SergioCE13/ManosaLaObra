@@ -15,7 +15,7 @@ El proyecto consiste en crear el FrontEnd y BackEnd de una plataforma web tipo e
 ## Sobre Alebrijes Full Stack
 Alebrijes Full Stack es un equipo de desarrolladores(as) mexicanos(as) conformado por: 
 - [Asbel Torales](https://www.linkedin.com/in/asbeltorales "Asbel Torales")
-- [David Salvatori](http://facebook.com "David Salvatori")
+- [David Salvatori](https://mx.linkedin.com/in/david-salvatori-3561bb2b6 "David Salvatori")
 - [David Ortiz](https://www.linkedin.com/in/david-ortiz-campos "David Ortiz")
 - [Diana López](https://www.linkedin.com/in/diana-mariela-l%C3%B3pez-ortiz-a39a481ba "Diana López")
 - [Eduardo Sosa](https://www.linkedin.com/in/eduardo-sosa-fullstack "Eduardo Sosa")
