@@ -46,3 +46,24 @@ function seleccionarProducto(nombreProducto) {
   nuevoProducto.textContent = nombreProducto;
   listaSeleccionados.appendChild(nuevoProducto);
 }
+
+
+// Crear ventana emergente
+
+
+function abrirVentana() {
+  // Abrir una nueva ventana
+  var nuevaVentana = window.open("", "button", "width=300,height=200");
+
+  // Escribir contenido en la nueva ventana
+  nuevaVentana.document.write("<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Ventana Emergente</title></head><body><div class='ventana'><h1>Contenido de la ventana emergente</h1><button onclick='cerrarVentana()'>Cerrar Ventana</button></div></body></html>");
+
+  // Estilo de la nueva ventana
+  nuevaVentana.document.querySelector('body').style.margin = '0';
+  nuevaVentana.document.querySelector('.button').style.margin = '20px';
+}
+
+function cerrarVentana() {
+  // Cerrar la ventana
+  window.close();
+}

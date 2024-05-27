@@ -21,8 +21,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!--Conexión Styles-->
-    <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
-    <link rel="stylesheet" href="./wishlist.css">
+    <link rel="stylesheet" href="../styles/style-navbar-footer-body.css">
+    <link rel="stylesheet" href="../styles/wishlist.css">
     <style>
         /* Estilos para el contenedor de información */
         #informacion {
@@ -40,55 +40,18 @@
 <!--------------------------------------- Inicia el Header ------------------------------------------->
 <header>
     <!------------------------------ Inicia la NavBar ------------------------------------>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./assets/images/Logo.png" width="50" height="50">
-                </a>
-               
-                <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation" style="box-shadow: none;">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a id="principal1" class="nav-link active" aria-current="page" href="./Index.html" style="color: #FFFFFF">Manos a la
-                                Obra</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./Index.html">Tienda</a>
-                        </li>
-                        
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Nosotros
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./index-sobre-nosotros.html">Acerca de Nosotros</a></li>
-                                <li><a class="dropdown-item" href="#">Acerca de nuestros Artesanos</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="./Contactanos.html">Contactanos</a></li>
-                                
-                            </ul>
-                        </li>
-                    </ul>
-                    <form id="buscar" name="formulario" class="d-flex position-absolute top-50 start-50 translate-middle" role="search">
-                        <input class="form-control me-2"  type="search" placeholder="Search" aria-label="Search" id="buscarnav">
-                        <button class="btn btn-outline-success" id="search_btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                        </svg></button>
-                    </form>
-                    <i class="bi bi-cart3" style="padding-right: 15px; padding-left: 10px; color: #FFFFFF; font-size: 1.5rem;"></i>
-                    <i class="bi bi-person" style="padding-right: 15px; color: #FFFFFF; font-size: 1.8rem;" ></i>
-                    
-                </div>
-            </div>
-        </nav>
+    <div id="navbar-placeholder"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch("./navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  });
+</script>
+
         <!-------------------------------------- Termina la NavBar ----------------------------------->
     </header>
     <!------------------------------- Termina el Header --------------------------------------------------------------->
@@ -98,12 +61,12 @@
 
 <div class="cinta">
     <div class="menu">
-        <a href="./wishlist.html"><button class="t1">Whislist
-                <img src="./assets/images/Logo/favorite_border_24dp.png" alt="icono" class="icono">
+        <a href="./wishlist.html"><button class="t1">Wishlist
+                <img src="../images/Logo/favorite_border_24dp.png" alt="icono" class="icono">
             </button></a>
         <div id="Contenedor-lista">
             <a href="./lista.html"><button class="t1">Lista
-                    <img src="./assets/images/Logo/format_list_bulleted_24dp.png" alt="icono-2" class="icono">
+                    <img src="../images/Logo/format_list_bulleted_24dp.png" alt="icono-2" class="icono">
                 </button></a>
         </div>
     </div>
@@ -116,7 +79,7 @@
             <h1 class="empecemos">¡Empecemos a crear listas!</h1>
             <p class="organiza">Organiza y agrupa tus productos 
                 <br>favoritos como mas te gusta.</p>
-           <a href="lista.html" class="button"><buttton type ="button" class="button"> + Agregar lista</a></buttton>
+           <a href="./lista.html" class="button"><buttton type ="button" class="button"> + Agregar lista</a></buttton>
         <br><br>
     </div>
     </div>

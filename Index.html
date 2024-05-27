@@ -29,6 +29,7 @@
   <!--Conexión Styles-->
   <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
   <link rel="stylesheet" href="./assets/styles/style-swiper.css">
+  <link rel="stylesheet" href="./assets/styles/INDEX.CSS">
 
   <style>
     /* Estilos para el contenedor de información */
@@ -46,61 +47,18 @@
 <!--------------------------------------- Inicia el Header ------------------------------------------->
 <header>
   <!------------------------------ Inicia la NavBar ------------------------------------>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="Index.html">
-            <img src="./assets/images/Logo.png" width="50" height="50">
-        </a>
-        <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation" style="box-shadow: none;">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="./Tienda.html">Tienda</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Nosotros
-                    </a>
-                    <ul class="dropdown-menu" style="background-color: #e31ba0c5;">
-                        <li><a class="dropdown-item" href="./index-sobre-nosotros.html">Acerca de Nosotros</a></li>
-                        <li><a class="dropdown-item" href="./NuestrosArtesanos.html">Acerca de nuestros Artesanos</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="./Contactanos.html">Contactanos</a></li>
-                        
-                    </ul>
-                </li>
-            </ul>
-            <form id="buscar" name="formulario" class="d-flex position-absolute top-50 start-50 translate-middle" role="search">
-                <input class="form-control me-2"  type="search" placeholder="Search" aria-label="Search" id="buscarnav">
-                <button class="btn btn-outline-success" id="search_btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                </svg></button>
-            </form>
-            <a href="./carrito-de-compras.html">
-              <i class="bi bi-cart3" style="padding-right: 15px; padding-left: 10px; color: #FFFFFF; font-size: 1.5rem;"></i>
-          </a>                
-          <div class="dropdown">
-            <i class="bi bi-person" style="padding-right: 15px; color: #FFFFFF; font-size: 1.8rem;" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"></i>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="background-color: #e31ba0c5;">
-                <li><a class="dropdown-item" href="./login.html" style="color: #FFFFFF;">Login</a></li>
-                <li><a class="dropdown-item" href="./formulario-registro-usuario.html" style="color: #FFFFFF;">Registro de Usuario</a></li>
-                <li><a class="dropdown-item" href="./formulario-producto.html" style="color: #FFFFFF;">Registro de Producto</a></li>
-                <li><a class="dropdown-item" href="./perfil-de-usuario.html" style="color: #FFFFFF;">Mi Perfil</a></li>
-                <li><a class="dropdown-item" href="./wishlist.html" style="color: #FFFFFF;">Wishlist</a></li>
-                <li><a class="dropdown-item" href="./configuracion-usuario.html" style="color: #FFFFFF;">Configuración</a></li>
-                <li><a class="dropdown-item" href="./configuracion-del-vendedor.html" style="color: #FFFFFF;">Configuración del Vendedor</a></li>         
-            </ul>
-        </div>
-        </div>
-    </div>
-</nav>
+  <div id="navbar-placeholder"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch("./assets/html/navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  });
+</script>
+
       <!-------------------------------------- Termina la NavBar ----------------------------------->
   </header>
   <!------------------------------- Termina el Header --------------------------------------------------------------->
@@ -111,55 +69,63 @@
     <h2>de México para el mundo</h2>
  </div>
 
- <div class="carousel">
-    <div class="card-container">
-      <div class="card">
+ <div class="carousel-p" >
+    <div class="card-container-p"><!--Para agregar la barra de desplazamiento se agrega -p en card-container--> 
+      <div class="card" >
         <div class="pickgradient">
-          <img src="assets/images/Imagenes.carousel/img-barros.png">
+          <img src="./assets/images/productos/Portada-Alfareria-Barro-Negro.jpeg">
         </div>
-        <h1>Barro</h1>
-      </div>
+        
+       <a href="/ManosaLaObra/assets/html/Tienda.html"><h1 >Barro</h1>
+      </div></a>
       <div class="card">
         <div class="pickgradient">
           <img src="assets/images/productos/craneo_grande1_600x.jpg">
         </div>
+        <a href="/ManosaLaObra/assets/html/Tienda.html">
         <h1>Arte Huichol</h1>
-      </div>
+      </div></a>
       <div class="card">
         <div class="pickgradient">
           <img src="assets/images/productos/PhotoRoom_20220116_213503_2048x.jpg">
         </div>
+        <a href="/ManosaLaObra/assets/html/Tienda.html">
         <h1>Alebrijes</h1>
-      </div>
+      </div></a>
       <div class="card">
         <div class="pickgradient">
           <img src="assets/images/productos/56109N002G7_02_600x.jpg">
         </div>
+        <a href="/ManosaLaObra/assets/html/Tienda.html">
         <h1>Barro Negro</h1>
-      </div>
+      </div></a>
       <div class="card">
         <div class="pickgradient">
           <img src="assets/images/productos/Tenangos-3.jpeg">
         </div>
+        <a href="/ManosaLaObra/assets/html/Tienda.html">
         <h1>Textiles</h1>
-      </div>
+      </div></a>
       <div class="card">
         <div class="pickgradient">
           <img src="assets/images/productos/images.jpeg">
         </div>
+        <a href="/ManosaLaObra/assets/html/Tienda.html">
         <h1>Promociones</h1>
-      </div>
+      </div></a>
       <div class="card">
         <div class="pickgradient">
           <img src="assets/images/productos/TB3P4OA03_02_600x.jpg">
         </div>
+        <a href="/ManosaLaObra/assets/html/Tienda.html">
         <h1>Talavera</h1>
-      </div>
+      </div></a>
       <div class="card">
         <div class="pickgradient">
           <img src="assets/images/productos/jc-ropa-artesanal-1.jpeg">
         </div>
-        <h1>Prendas</h1>
+        <a href="/ManosaLaObra/assets/html/Tienda.html">
+        <h1>Prendas</h1></a>
       </div>
     </div>
   </div>
@@ -188,7 +154,7 @@
         <span onclick="gfg(5)"
         class="star">★
         </span>
-        <p class="price">$ 350</p>
+        <p class="price" >$ 350</p>
       </div>
     </div>
   
@@ -212,7 +178,8 @@
 </div>
   
   <!-- jQuery, Popper.js, and Bootstrap JS -->
-  <script src="assets/scripts/index.js"></script>
+  <script src="/ManosaLaObra/assets/scripts/index.js"></script>
+  <script src="/ManosaLaObra/assets/scripts/index-principal.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -298,7 +265,6 @@
     </div>
     <!-- Grid container -->
 </footer>
-<!-- Fin del Footer -->
 <!-- Fin del Footer -->
 
   <!--Conexión JS-->
