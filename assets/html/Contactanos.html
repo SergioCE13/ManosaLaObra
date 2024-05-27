@@ -23,7 +23,6 @@
     
     <!--Conexión Styles-->
     <link rel="stylesheet" href="../styles/style-navbar-footer-body.css">
-
 </head>
 
 <!--------------------------------------- Inicia el Header ------------------------------------------->
@@ -33,7 +32,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    fetch('../html/navbar.html')
+    fetch('./navbar.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
@@ -179,16 +178,12 @@
     <!-- Otros scripts -->
     <script src="navbar.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+       <!---------------------------------------------Inicio de Footer----------------------------------------------------->
     <script>
         $(document).ready(function(){
           $('.dropdown-toggle').dropdown();
         });
     </script>
 </body>
-<!----------------------------------------------- Termina el Body --------------------------------------------->
-
-
- <!---------------------------------------------Inicio de Footer----------------------------------------------------->
-
 <!-- Fin del Footer -->
 </html>
