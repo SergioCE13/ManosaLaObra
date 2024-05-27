@@ -1,0 +1,307 @@
+/*Banner de whislits*/
+.cinta {
+  background-color: #969696;
+  width: auto;
+  height: auto;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+
+}
+
+.header,
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-left: 30px;
+  border-right: 400;
+  padding: 15px 30px;
+}
+
+.header,
+.t1 {
+  color: #ffffff;
+  font-size: large;
+  font-family: "Open Sans", sans-serif;
+  background-color: #969696;
+  border: none;
+}
+
+.header,
+.icono {
+  width: 30px;
+  height: 35px;
+}
+
+/*Lista de numeros de navegacion*/
+div #menu-b {
+  margin: 50px auto;
+
+}
+
+/*Posicion de la barra*/
+#menu-b ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/*Barras debajo de los numeros */
+#menu-b ul li {
+  margin: 0px 10px;
+  float: left;
+  justify-content: end;
+  align-items: center;
+}
+
+/*Letras y barra*/
+#menu-b ul li a {
+
+  font-family: normal 15px "Open Sans", sans-serif;
+  color: black;
+  text-decoration: none;
+  padding: 5px 5px 5px 15px;
+  border-bottom: solid 5px #ffffff;
+}
+
+#menu-b ul li a:hover {
+  color: #E31B9F;
+  border-color: #E31B9F;
+
+}
+
+/*Parte de atras */
+.carta-producto {
+  background-color: #E31B9F;
+  width: 400px;
+  z-index: 1;
+}
+
+/*Parte para agregar los productos*/
+.container {
+  margin: 50px auto;
+  text-align: center;
+}
+
+button {
+  margin-top: 10px;
+}
+
+/*Parte de listas*/
+.Titulo3 {
+  justify-content: center;
+  color: #E31B9F;
+  font-size: "Open Sans", sans-serif;
+  font-size: large;
+}
+
+.Botones {
+  display: flex;
+  justify-content: space-around;
+
+}
+.product{
+  font-family: "Open Sans", sans-serif;
+  display: inline;
+  padding: 5px;
+  text-align: center;
+}
+
+#product-input {
+  font-family: "Open Sans", sans-serif;
+  display: inline;
+  padding: 5px;
+  width: 300px;
+  text-align: center;
+  margin: 0px 120px;
+  border-radius: 30px;
+  color: black;
+  background-color: #ffffff;
+  border-style: none;
+}
+
+#product-input:hover{
+  background-color: #ECAC44;
+}
+
+.product1{
+  font-family: "Open Sans", sans-serif;
+  display: inline;
+  padding: 5px;
+  width: 130px;
+  height:35px;
+  text-align: center;
+  margin: 0px 10px;
+  border-radius: 30px;
+  color: #ffffff;
+  background-color: #E31B9F;
+  border-style: none;
+} 
+
+.product1:hover{
+  background-color: #ECAC44;
+}
+#product-list{
+  font-family: "Open Sans", sans-serif;
+  background-color: #E31B9F;
+  margin:0px 50px;
+  border-radius: 30px;
+  padding: 8px 8px;
+  border-style: none;
+  color:#ffffff;
+}
+
+#product-list:hover{
+background-color: #ECAC44;
+}
+
+/*Comienza seleccion de lista*/
+.btn-btn-primary{
+  background-color: #E31B9F;
+  border-style: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin: 20px 80px;
+  color:#ffffff;
+  font-size: medium;
+  font-family: "Open Sans", sans-serif;
+}
+
+.btn-btn-primary:hover{
+  background-color: #ECAC44;
+  font-family: "Open Sans", sans-serif;
+}
+/*contenedor tarjetas*/
+.card .mb-3{
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+  border-style:dotted;
+  border-color: #E31B9F;
+  margin:150px 300px;
+
+}
+/*Imagen*/
+.col-md-4{
+  margin:20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+}
+
+.img-fluid{
+  margin:20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+
+}
+.card-title{
+  margin: 0px 40px;
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+}
+
+.card-title1{
+  width: 50px;
+  height: 50px;
+}
+.texto02{
+  margin: 0px 40px;
+  font-size: 20px;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+}
+
+.texto02:hover {
+  color:#E31B9F
+}
+
+.agregar{
+  background-color: #E31B9F;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 10px;
+  padding:0px 15px;
+  margin:50px 40px;
+
+}
+
+.eliminar{
+  background-color: #E31B9F;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 10px;
+  margin:10px 10px 50px 40px;
+  padding: 0px 15px;
+}
+#comprar{
+  background-color: #E31B9F;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 10px;
+  margin:50px 40px;
+  padding: 0px 5px;
+}
+
+.agregar:hover{
+  background-color: #ECAC44;
+ 
+}
+
+.eliminar:hover{
+  background-color: #ECAC44;
+}
+#comprar:hover{
+  background-color: #ECAC44;
+}
+
+.Contador-titulo{
+  margin: 10px 40px;
+}
+
+.Contador{
+  margin: 5px 80px;
+  font-size: 20px;
+}
+
+
+
+
+/*Footer*/
+.text-center text-lg-start text-white {
+  position: end;
+  padding: 15px;
+}
+
+/*Se agrega para hacerlo responsivo*/
+@media screen and (min-width: 200px) {
+  /* Cambios en el encabezado */
+  .header {
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Cambios en el menú */
+  .menu {
+    flex-direction: row;
+    align-items: center;
+
+  }
+  
+  /* Cambios en la lista de navegación */
+  #menu-b ul li {
+    margin: 0px 10px;
+  }
+  
+  /* Cambios en las tarjetas */
+  .card .mb-3 {
+    flex: 0 0 calc(40% - 10px);
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+}

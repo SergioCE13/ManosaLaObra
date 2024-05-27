@@ -1,0 +1,103 @@
+:root{
+    --color--primario: #E31B9F;
+    --color--secundario: #E4DDD3;
+    --color--terciario: #969696;
+    --color--yellow: #ECAC44; 
+    --color--blanco: #FFFFFF;
+    --color--negro: #000000;
+}
+
+/*----------------------------------------------- Estilos de la NAVBAR --------------------------------------*/
+.container-search{ /* Estilos de la barra de búsqueda*/ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar { /* Estilos de la Navbar*/
+    background-color: var(--color--primario);
+}
+
+.navbar-nav .nav-link{ /* Estilo de los links en la barra de búsqueda*/
+    color: var(--color--blanco);
+}
+
+#search_btn {/* Estilos del botón de la barra de búsqueda*/
+    background-color: var(--color--primario);
+    color: var(--color--blanco);
+    border-color: var(--color--blanco);
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #9696969d; /* Cambiar el color de fondo */
+    color: #FFFFFF; /* Cambiar el color del texto */
+}
+
+.dropdown-menu .dropdown-item:active {
+    background-color: #ECAC44; /* Mantener el color de fondo al hacer clic */
+    color: #FFFFFF; /* Mantener el color del texto al hacer clic */
+}
+/* --------------------------------------------- Estilos del Cuerpo -------------------------------------------*/
+body{ /* Estilos de la etiquea body*/
+    background-color: #E4DDD3;
+}
+
+.container--title{ /* Estilos del banner del sitio*/
+    display: flex;
+    justify-content: center;
+    background-color: #969696;
+    opacity: 0.6;
+    padding-top: 10px;
+}
+
+.container--title h1{
+    font-family: "Open Sans", sans-serif;
+    justify-content: center;
+    margin-top: 5px;
+    color: #FFFFFF;
+}
+
+label, input{
+    font-family: "Open Sans", sans-serif;
+}
+
+
+/* --------------------------------- Medias Queries para el funcionamiento responsive -------------------------*/ 
+@media only screen and (max-width: 600px) { /*Queries para pantallas de hasta 600px*/
+    .container-form{
+        display: block;
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-top: 10px;
+    }
+
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgb(255, 255, 255);
+} 
+
+@media only screen and (max-width: 990px){
+    #principal{ /* Queries para pantallas entre 601px a 990px*/
+        display: block;
+    }
+    #principal1{
+        display: none;
+    }
+    #buscar{
+        width: 55%;
+        padding-left: 10%;
+        margin-right: 0;
+    }
+}
+
+#principal{  /*Lo agregué*/
+    display: none;
+    font-size: 20px;
+}
