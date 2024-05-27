@@ -1,0 +1,93 @@
+.cinta{
+    background-color: #969696;
+    width: auto;
+    height: auto;
+    color:#ffffff;
+    font-family: "Open Sans", sans-serif;
+    padding:20px;
+
+}
+
+.header ,.menu{
+    display:flex;
+   justify-content: space-between;
+   align-items: baseline;
+   border-left: 30px;
+   border-right: 400;
+   padding: 0px 30px;
+}
+
+.header , .t1{
+    color: #ffffff;
+    font-size: large;
+    font-family: "Open Sans", sans-serif;
+    background-color: #969696;
+        border: none;
+}
+.header, .icono {
+    width: 30px;
+    height: 30px;
+}
+
+/*Inicia cuerpo de wishlist*/
+.informacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lupa {
+    text-align: center;
+    padding:30px;
+    align-items: center;
+}
+
+.empecemos{
+    text-align: center;
+    font-size: 35px;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+
+.organiza{
+    text-align: center;
+    font-size: 25px;
+    font-family: "Open Sans", sans-serif;
+    color: #E31B9F;
+}
+
+.button {
+    display: block; /* Convertir el botón en un bloque para ocupar todo el ancho disponible */
+    margin: auto; /* Centrar horizontalmente el botón */
+    width: 200px; 
+    background-color: #E31B9F;
+    border: none; 
+    border-radius: 20px;
+    padding: 5px 0px; 
+    font-size: 20px; 
+    text-align: center;
+    color: white; 
+    cursor: pointer; 
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    border:30px;
+
+}
+ .button:hover {
+    background-color: #ECAC44;
+ }
+
+
+    
+ footer {
+    width: 100%;
+    height: 200px; /* Ajusta el alto según tus necesidades */
+    color: white;
+    text-align: center;
+    padding-top: 20px; 
+    position: end;
+    bottom: 0;
+}
+
+
