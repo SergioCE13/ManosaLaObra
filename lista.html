@@ -21,9 +21,9 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!--Conexión Styles-->
-    <link rel="stylesheet" href="../styles/style-navbar-footer-body.css">
-    <link rel=" stylesheet" href="../html/Tienda.html">
-    <link rel="stylesheet" href="../styles/lista.css">
+    <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
+    <link rel=" stylesheet" href=".assets/tienda.css">
+    <link rel="stylesheet" href="./lista.css">
     <style>
         /* Estilos para el contenedor de información */
         #informacion {
@@ -45,7 +45,7 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-        fetch('./navbar.html')
+        fetch('navbar.html')
           .then(response => response.text())
           .then(data => {
             document.getElementById('navbar-placeholder').innerHTML = data;
@@ -61,11 +61,11 @@
     <div class="cinta">
         <div class="menu">
             <a href="./wishlist.html"><button class="t1">Whislist
-                    <img src="../images/Logo/favorite_border_24dp.png" alt="icono" class="icono">
+                    <img src="./assets/images/Logo/favorite_border_24dp.png" alt="icono" class="icono">
                 </button></a>
             <div id="Contenedor-lista">
                 <a href="./lista.html"><button class="t1">Lista
-                        <img src="../images/Logo/format_list_bulleted_24dp.png" alt="icono-2" class="icono">
+                        <img src="./assets/images/Logo/format_list_bulleted_24dp.png" alt="icono-2" class="icono">
                     </button></a>
             </div>
         </div>
@@ -94,7 +94,7 @@
             <div class="card mb-3" style="max-width: 1000px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="../images/Logo/41AGxHb60AL._AC_SY580_.jpg" class="img-fluid rounded-start"
+                        <img src="./assets/images/Logo/41AGxHb60AL._AC_SY580_.jpg" class="img-fluid rounded-start"
                             alt="bolso">
                     </div>
                     <div class="col-md-8">
@@ -116,7 +116,7 @@
             <div class="card mb-3" style="max-width: 1000px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="../images/Logo/89518720-sonriendo-sentarse-cute-trapo-muñeca-aislada.jpg"
+                        <img src="./assets/images/Logo/89518720-sonriendo-sentarse-cute-trapo-muñeca-aislada.jpg"
                             class="img-fluid rounded-start" alt="muñeca">
                     </div>
                     <div class="col-md-8">
@@ -151,7 +151,8 @@
         </ul>
     </div>
 
-    <script src="../scripts/lista.js"></script>
+    <script src="./lista.js"></script>
+    <script src="./contador.js"></script>
 </body>
 
 <!------------------------------------------------------------->

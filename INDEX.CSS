@@ -89,7 +89,7 @@
 .titulo1{ /* Estilos del banner del sitio*/
   display: flex;
     flex-direction: column;
-    background-image: url(/ManosaLaObra/assets/images/Logo/holi.png);
+    background-image: url(../images/Logo/holi.png);
     background-size: 330px;
     opacity: 0.8;
     margin: 0;
