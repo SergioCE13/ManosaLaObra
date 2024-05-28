@@ -41,7 +41,13 @@
 }
 /* --------------------------------------------- Estilos del Cuerpo -------------------------------------------*/
 body{ /* Estilos de la etiquea body*/
-    background-color: #E4DDD3;
+    background-color: var(--color--secundario);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top: auto;
 }
 
 .container--title{ /* Estilos del banner del sitio*/
@@ -61,6 +67,17 @@ body{ /* Estilos de la etiquea body*/
 
 label, input{
     font-family: "Open Sans", sans-serif;
+}
+
+
+p a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+p a:hover{
+    color: #ECAC44;
+    text-decoration:underline
 }
 
 
@@ -100,4 +117,10 @@ label, input{
 #principal{  /*Lo agregué*/
     display: none;
     font-size: 20px;
+}
+
+@media screen and (max-width: 800px){
+    #search_btn, #buscarnav{
+        display:none
+    }
 }

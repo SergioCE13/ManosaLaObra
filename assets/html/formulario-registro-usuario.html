@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Etiquetas meta -->
     <meta charset="UTF-8">
@@ -11,7 +10,12 @@
     <meta name="application-name" content="Manos a la Obra">
 
     <!-- Título de la página-->
-    <title>Manos a al obra</title>
+    <title>Manos a la Obra</title>
+
+    <!--Link swiper's CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--Fontawesome CDN Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!--Conexión Iconos BootStrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -21,149 +25,185 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!--Conexión Styles-->
-    <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
-    <link rel="stylesheet" href="./assets/styles/formulario-usuario.css">
+    <link rel="stylesheet" href="../styles/style-navbar-footer-body.css">
+    <link rel="stylesheet" href="../styles/formulario-usuario.css">
 
-
-
-    <!--------------------------------------- Inicia el Header ------------------------------------------->
-    <header>
-        <!------------------------------ Inicia la NavBar ------------------------------------>
-        <div id="navbar-placeholder"></div>
-
-        <script>
-          document.addEventListener("DOMContentLoaded", function() {
-            fetch('navbar.html')
-              .then(response => response.text())
-              .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-              });
-          });
-        </script>
-        
-        <!-------------------------------------- Termina la NavBar ----------------------------------->
-    </header>
-    <!------------------------------- Termina el Header --------------------------------------------------------------->
-
+    <style>
+        /* Estilos para el contenedor de información */
+        #informacion {
+            display: none;
+            /* Inicialmente oculto */
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
-<body>
+<!--------------------------------------- Inicia el Header ------------------------------------------->
+<header>
+    <!------------------------------ Inicia la NavBar ------------------------------------>
+    <div id="navbar-placeholder"></div>
 
-    <div class="container--title" id="titulo-formulario-cliente">
-        <h1 id="titulo">Registro de usuario</h1>
-    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                });
+        });
+    </script>
+    <!-------------------------------------- Termina la NavBar ----------------------------------->
+</header>
 
-    <!--------------------------------- Inicia el html del formulario ---------------------------------------->
-    <div class="alinear-formulario"> 
-    <form>
+<!------------------------------- Termina el Header --------------------------------------------------------------->
+<body class="d-flex flex-column min-vh-100">
+    <section class="flex-grow-1">
+        <div class="container--title" id="titulo-formulario-cliente">
+            <h1 id="titulo">Registro de usuario</h1>
+        </div>
         
-        <div class="caja-blanca"> <!-- Contenedor del cuerpo de la página-->
-            <div class="formulario"> <!-- Contenedor del formulario-->
-                <div class="container-titulo"> <!-- Contenedor del título de la página -->
-                    <h1 id="titulo-formulario">Ayudanos con tu información</h1>
-                </div>
-                <div class="form-group"> <!-- Contenedor del nombre del usuario-->
-                    <label for="input-nombre-usuario">Nombre</label>
-                    <input type="text" class="form-control" id="input-nombre-usuario" placeholder="Introduce tu nombre">
-                    <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
-                </div>
-                <div class="form-group"> <!-- Contenedor del nombre del usuario-->
-                    <label for="input-apellido-paterno">Apellido paterno</label>
-                    <input type="text" class="form-control" id="input-apellido-paterno"
-                        placeholder="Introduce apellido paterno">
-                    <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
-                </div>
-                <div class="form-group"> <!-- Contenedor del apellido paterno-->
-                    <label for="input-apellido-materno">Apellido materno</label>
-                    <input type="text" class="form-control" id="input-apellido-materno"
-                        placeholder="Introduce apellido materno">
-                    <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
-                </div>
-                <div class="form-group"> <!-- Conenedor del apellido materno-->
-                    <label for="input-numero-telefono">Número de télefono:</label>
-                    <input type="number" inputmode="numeric" class="form-control" id="input-numero-telefono"
-                        placeholder="Introduce tu número de celular">
-                    <small id="info-precio-producto" class="form-text text-muted">Este campo es obligatorio</small>
-                </div>
-                <div class="form-group"> <!-- Contenedor del correo de usuario-->
-                    <label for="input-email-usuario">Email (nombre de usuario)</label>
-                    <input type="email" class="form-control" id="input-email-usuario"
-                        placeholder="Introduce tu correo electronico">
-                    <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
-                </div>
-                <div class="form-group"> <!-- Contenedor de la contraseña del usuario-->
-                    <label for="input-contraseña">Contraseña</label>
-                    <input type="password" class="form-control" id="input-contraseña"
-                        placeholder="Introduce tu contraseña">
-                    <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
-                </div>
-                <div> <!-- Contenedor del título de categorías-->
-                    <label for="grupo-radio-buttons">Género</label>
-                </div>
-                <div class="grupo-radio-buttons" id="grupo-radio-buttons">
-                    <!-- Inicia el contenendor de los radio buttons -->
-                    <div class="form-check form-check-inline"> <!-- Primer radio button -->
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="Masculino">
-                        <label class="form-check-label" for="inlineRadio1">Masculino</label>
-                    </div>
-                    <div class="form-check form-check-inline"> <!-- Segundo radio button -->
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="Femenino">
-                        <label class="form-check-label" for="inlineRadio2">Femenino</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <div class="form-check form-check-inline"><!-- Tercer radio button -->
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                                value="Otro"><!-- Agregar la propiedad disable para deshabilitar-->
-                            <label class="form-check-label" for="inlineRadio4">Otro</label>
+        <!--------------------------------- Inicia el html del formulario ---------------------------------------->
+        <div class="alinear-formulario">
+            <form>
+                <div class="caja-blanca"> <!-- Contenedor del cuerpo de la página-->
+                    <div class="formulario"> <!-- Contenedor del formulario-->
+                        <div class="container-titulo"> <!-- Contenedor del título de la página -->
+                            <h1 id="titulo-formulario">Ayudanos con tus datos</h1>
                         </div>
-                    </div> <!-- Termina el contenedor de los radio buttons-->
-                    <div class="form-group"> <!-- Contenedor de dirección de envio-->
-                        <label for="input-direccion-envio">Dirección de envío</label>
-                        <input type="text" class="form-control" id="input-direccion-envio"
-                            placeholder="Introduce tu dirección">
-                        <small id="info-nombre-producto" class="form-text text-muted">Este campo es obligatorio</small>
+                        <div class="form-group">
+                            <label for="input-nombre-usuario">Nombre:</label>
+                            <input type="text" class="form-control" id="input-nombre-vendedor"
+                                placeholder="Introduce el nombre">
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="input-apellido-paterno">Apellido paterno:</label>
+                                <input type="text" class="form-control" id="input-apellido-paterno"
+                                    placeholder="Introduce apellido paterno">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="input-apellido-materno">Apellido materno:</label>
+                                <input type="text" class="form-control" id="input-apellido-materno"
+                                    placeholder="Introduce apellido materno">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="input-numero-telefono">Número de teléfono:</label>
+                                <input type="number" inputmode="numeric" class="form-control" id="input-telefono"
+                                    placeholder="Introduce el número de celular">
+                                <small class="form-text text-muted">10 dígitos.</small>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="input-email-usuario">Email (nombre de usuario):</label>
+                                <input type="email" class="form-control" id="input-email"
+                                    placeholder="Introduce el correo electrónico">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="input-contraseña">Contraseña:</label>
+                                <input type="password" class="form-control" id="input-password"
+                                    placeholder="Introduce la contraseña">
+                                <small class="form-text text-muted">8 caracteres con 1 mayúscula, 1 minúscula, 1 número y 1
+                                    caracter (@$!%*?&.,-_:)</small>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="input-confirmar-contraseña">Confirma la contraseña:</label>
+                                <input type="password" class="form-control" id="input-confirmar-password"
+                                    placeholder="Repite la contraseña">
+                                <small class="form-text text-muted">Debe ser exactamente igual a la anterior.</small>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="grupo-radio-buttons">Género:</label>
+                        </div>
+                        <div class="grupo-radio-buttons" id="grupo-radio-buttons">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="Masculino">
+                                <label class="form-check-label" for="inlineRadio1">Masculino</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="Femenino">
+                                <label class="form-check-label" for="inlineRadio2">Femenino</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                    value="Otro">
+                                <label class="form-check-label" for="inlineRadio4">Otro</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-direccion">Dirección:</label><br>
+                            <div class="row">
+                                <div class="form-group col-md-4">
+                                    <label for="input-calle">Calle:</label>
+                                    <input type="text" class="form-control" id="input-calle"
+                                        placeholder="Introduce la calle">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="input-numero-interior">Número interior:</label>
+                                    <input type="text" class="form-control" id="input-numero-interior"
+                                        placeholder="Introduce el número interior">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="input-numero-exterior">Número exterior:</label>
+                                    <input type="text" class="form-control" id="input-numero-exterior"
+                                        placeholder="Introduce el número exterior">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-4">
+                                    <label for="input-codigo-postal">Código Postal:</label>
+                                    <input type="text" class="form-control" id="input-codigo-postal"
+                                        placeholder="Introduce el código postal">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="input-colonia">Colonia:</label>
+                                    <select class="form-control" id="input-colonia">
+                                        <option selected>Selecciona la colonia</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="input-delegacion">Delegación/Municipio:</label>
+                                    <input type="text" class="form-control" id="input-delegacion"
+                                        placeholder="Introduce la delegación o municipio">
+                                </div>
+                                <div class="form-group col-md-6 dropup">
+                                    <label for="input-estado">Estado:</label>
+                                    <input type="text" id="input-estado" class="form-control"
+                                        placeholder="Introduce el estado">
+                                </div>
+    
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-fecha-nacimiento">Fecha de nacimiento:</label>
+                            <input type="date" class="form-control" id="input-fecha-nacimiento">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Acepto los <a
+                                    href="./Terminos y condiciones.html" target="_blank">términos y condiciones</a></label>
+                        </div>
+                        <div class="alert alert-success mt-3 alert-dismissible fade show" role="alert" id="alerta-success">
+                            <strong>Aviso: </strong> El registro del producto se ha realizado exitosamente.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-danger">
+                            <strong>Aviso: </strong> Porfavor, rellene todos los campos correctamente.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                        </div>
+                        <input type="button" value="Enviar" id="button-submit" class="button-disabled">
                     </div>
-                    <div class="form-group"> <!-- Contenedor de la edad del usuario-->
-                        <label for="">Edad:</label>
-                        <input type="number" inputmode="numeric" class="form-control" min="14" max="100" step="1"
-                            value="1" id="input-edad-usuario">
-                        <small id="info-edad-usuario" class="form-text text-muted">Este campo es obligatorio</small>
-                    </div>
-                    <!--<div class="form-group form-button">  Contenedor para ingresar imagen del producto
-                    <label for="">Ingresa una imagen de tu producto:</label>
-                    <input id="browse" type="file" multiple="multiple"/>
-                    <div id="preview"></div>
-                    <small id="info-imagen-producto" class="form-text text-muted">Este campo es obligatorio</small>
-                </div> -->
-                    <div class="mb-3 form-check"> <!--Checkbox terminos y condiciones -->
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Acepto los terminos y condiciones</label>
-                    </div>
-                    <!-- Contenedor de la alerta de BootStrap-->
-                    <div class="alert alert-success mt-3 alert-dismissible fade show" role="alert" id="alerta-success">
-                        <strong>Aviso: </strong> El registro del producto se ha realizado exitosamente.
-                        <!-- <a href="#" class ="alert-link"> lorem </a> -->
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
-                        </button>
-                    </div>
-                    <!-- Contenedor de la alerta de BootStrap-->
-                    <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-danger">
-                        <strong>Aviso: </strong> El registro del producto se ha realizado exitosamente.
-                        <!-- <a href="#" class ="alert-link"> lorem </a> -->
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
-                        </button>
-                    </div>
-                    <!-- Botón para enviar el formulario-->
-                    <input type="button" value="Enviar" id="button-submit" class="button-disabled">
-                </div> <!-- Cierre del div del formulario-->
-            </div> <!-- Cierre del div de Caja blanca -->
-        
-    </form>
-    </div>
-
-
+                </div> <!-- Cierre del div de Caja blanca -->
+            </form>
+        </div>
+    
     <!------------------------------------ Inicia el Footer ----------------------------------------------------------->
     <footer class="text-center text-lg-start text-white" style="background-color: #969696">
         <!-- Grid container -->
@@ -191,8 +231,6 @@
                             <!-- Copyright -->
                             <div>
                                 © 2024 Alebrijes Fullstack
-
-
                             </div>
                             <!-- Copyright -->
                         </div>
@@ -227,17 +265,15 @@
         <!-- Grid container -->
     </footer>
     <!-- Fin del Footer -->
-
+ 
 </body>
 
-
 <!-- jQuery, Popper.js, and Bootstrap JS -->
-<script src="js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!--Conexión JS-->
-<script src="./assets/scripts/formulario-usuario.js"></script>
+<script src="../scripts/registro-usuario.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"> </script>
