@@ -46,3 +46,7 @@ function seleccionarProducto(nombreProducto) {
   nuevoProducto.textContent = nombreProducto;
   listaSeleccionados.appendChild(nuevoProducto);
 }
+
+
+// Crear ventana emergente
+

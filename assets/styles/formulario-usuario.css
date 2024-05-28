@@ -1,123 +1,268 @@
-/* Estilos del body para centrar el contenido*/
-
-body form{
-    display: flex; /* Centramos el div que contendrá a el formulario*/
-    justify-content: center;
-
-}
-
-
-#titulo{
+.carousel {
+  
+  
+    padding-left: 100px;
+    padding-right: 100px;
+    margin:20px;
+    
+  }
+  .card-container {
+    
+    display: flex; /* Set inline elements */
+    overflow-x: auto; /* Set overflow in horizontal scroll */
+    overflow-y:auto; /* Hidden overflow in vertical scroll */
+    scroll-snap-type: x mandatory; /* Force the scroll to snap to the start of a scroll-snap area */
+    gap: 20px; /* Set gap between cards */
+    width: calc(100% - 16px);
+    margin: 8px;
+    
+    border-radius: 20px;
+    
+  }
+  .card-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome, Safari and Opera */
+  }
+  .card {
+    min-width: 200px; /* Set min width of card */
+    height: 300px; /* Set height of card */
+    scroll-snap-align: start; /* Set the element focus position in scroll container */
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    font-size: 65px;
-    font-weight: 600;
-    color: #FFFFFF;
-text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
-}
-
-#titulo-formulario-cliente{        background-image: url('../images/img.banners/artesanias3.jpg');
-        background-size: cover; /* Esto ajustará la imagen para cubrir todo el contenido del div */
-        background-position: center; /* Esto centrará la imagen en el div */
-        width: 100%;
-        height: 300px; /* Define la altura del div según tus necesidades */
-    
-}
-
-.caja-blanca { /* Estilos del contenedor del cuerpo del sitio*/
-    background-color: white;
-    border-radius: 15px;
-    margin: 50px 0px;
-    width: 70%;
-    -webkit-box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.85); 
-    box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.85);
-}  
-
-@media only screen and (max-width: 490px){
-    .caja-blanca{ /* Media query para el contenedor del cuerpo*/
-        width: 90%;
-        margin: 25px 0px;
-    }
-    
-
-}
-
-/* Estilos del formulario*/
-
-.container-titulo { /* Estilos para el título del formulario*/
-    text-align: center;
-    color: #E31B9F;
-    padding: 10px 0px;
+    background:#E31B9F;
+    border: none;
+    color: #ffff;
+    border-radius: 20px;
+  
+  }
+  .card:hover {
+    background: #d980bc; /* Set background color when hover */
+    cursor: pointer;
+  }
+      
+  
+  .pickgradient{
+    position:relative;
+    display:inline-block;
+     }
+     
+  .pickgradient:after {
+    content:'';
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    display:inline-block;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, #E31B9F 220%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(220%,#E31B9F)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,#E31B9F 220%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,#E31B9F 220%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,#E31B9F 220%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,#E31B9F 220%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+  }
+  
+  
+  .pickgradient img{
+    display:block;
+    height:250px;
+    width: 200px;
+    max-width: 250px;
+    object-fit: cover;
+    margin-top: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .pickgradient img:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+  .card h1{
     font-size: 25px;
-}
-
-.formulario {
-    margin: 30px 20px;
-}
-
-
-.form-button{ /* Estilos para el botón*/
+    margin: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .card a {
+    text-decoration: none;
+  }
+  
+  .titulo1{ /* Estilos del banner del sitio*/
     display: flex;
-    flex-direction: column;
-    margin: 15px 0px 15px 0px;
-}
-
-#button-submit{
-    background-color: #ECAC44;
-    color: #FFFFFF;
-    font-weight: 700;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 10px;
+      flex-direction: column;
+      background-image: url(../images/Logo/holi.png);
+      background-size: 330px;
+      opacity: 0.8;
+      margin: 0;
+      height: 100px;
+      color: #eeeeee;
+      align-items: center;
+      justify-content: center;
+      -webkit-text-stroke: 1.5px black;
+      
+  }
+  .productos{
+    margin: 20px;
+    display: flex;
+    background-color: black;
+  }
+  .promo{
+    margin :10px;
+    width: 30%;
+    height: 300px;
+    background-color: #eeeeee;
+    border-radius: 25px;
+  }
+  
+  
+  
+  .products_wrapper {
+    display: flex;
+    background-color: #fff;
+    gap: 20px;
+    
+    justify-content: space-evenly;
+  }
+  
+  .products {
+    cursor: pointer;
+    min-width: 100px;
+    scroll-snap-align: start;
+  }
+  .pr_img img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    padding: 15px 15px 0 15px;
+  }
+  .pr_img img:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+  .content {
+    padding: 0 1rem 1rem 1rem;
+  }
+  .content .title {
+    font-size: 1.3rem;
+    color: #E31B9F;
+  }
+  .content .release_date {
+    color: #bdc3c7;
+  }
+  .content .price {
+    
+    padding: 0.5rem;
+    width: 60%;
+    color: #E31B9F;
+    margin: 0.5rem 0;
+  }
+  
+  .price{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .cont{
+    display: flex;
+  }
+  
+  .star {
+    width: 9px;
+    height: 9px;
+  }
+  .card-container-p{
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    gap: 40px;
+    margin-top: 0;
+  
+    
+    border: #fff;
+    
+  }
+  .card-destacados{
+    min-width: 200px;
+      
+      scroll-snap-align: start;
+      display: flex;
+      align-items: center;
+      
+      border: none;
+     
+      border-radius: 15px;
+  }
+  
+  .pr_img{
+    border-radius: 15px;
+  }
+  .segundo{
+    display: flex;
+  
+  }
+  .carousel-p{
+    margin: 20px;
+      
+      max-width: 100%;
+      min-width: 300px;
+      padding-right: 30px;
+    
+  }
+  .dest{
+    
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding-left: 15px;
+      padding-top: 5px;
+      border: #fff;
+      margin: 0;
+      
+  }
+  .cardPromo{
+    margin: 20px;
+    padding-left: 30px;
+    min-width: 300px;
+    
+    
+  }
+  .promoT{
+    background-color: #fff;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding-left: 15px;
+      padding-top: 5px;
+      border: #fff;
+      margin: 0;
+      
+      
+  }
+  .prd{
+    display: flex;
     width: 100%;
-    justify-self: center;
-}
-
-#button-submit:hover{
-    background-color: #ebb661;
-    border: 1px solid rgb(97, 95, 95);
-}
-
-
-#button-submit:disabled{
-    background-color: #969696;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 10px;
-    width: 100%;
-    justify-self: center;
-    cursor: not-allowed; /* Cursor no permitido */
-}
-
-/* Estilos de las vistas previas de las imagenes cargadas en el formulario*/
-#Dimensiones{
-    display: flex;
-    flex-direction: column;
-
-}
-.dim{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.dim input{
-    width: 70px;
-}
-.dim label{
-    text-align: center;
-}
-#preview{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 3%;
-    gap: 10px;
-    opacity: 90%;
-    overflow: hidden;
-}
-
+  }
+  @media only screen and (max-width: 670px){
+    .prd{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .carousel{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .cardPromo {
+      margin: 10px;
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 320px;
+  }
+  .carousel-p {
+    margin: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 350px;
+  }
+  }
+  
+    
+  
+  

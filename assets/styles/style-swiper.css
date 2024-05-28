@@ -69,6 +69,10 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+.pickgradient:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
 .card h1{
   font-size: 25px;
   margin: 10px;
@@ -76,7 +80,7 @@
 .titulo1{ /* Estilos del banner del sitio*/
   display: flex;
     flex-direction: column;
-    background-color: #969696;
+    
     opacity: 0.6;
     margin: 0;
     height: 100px;
@@ -118,6 +122,7 @@
   height: 250px;
   object-fit: cover;
   padding: 15px 15px 0 15px;
+  border-radius: 30px;
 }
 .content {
   padding: 0 1rem 1rem 1rem;
@@ -146,7 +151,7 @@
   scroll-snap-type: x mandatory;
   gap: 40px;
   margin-top: 0;
-  background-color: #ffff;
+  
   
   border: #fff;
   
