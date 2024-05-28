@@ -29,7 +29,7 @@
   <!--Conexión Styles-->
   <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
   <link rel="stylesheet" href="./assets/styles/style-swiper.css">
-  <link rel="stylesheet" href="./assets/styles/style-swiper.css">
+  <link rel="stylesheet" href="./assets/styles/INDEX.CSS">
 
   <style>
     /* Estilos para el contenedor de información */
@@ -51,7 +51,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    fetch('navbar.html')
+    fetch("./assets/html/navbar.html")
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
@@ -69,55 +69,63 @@
     <h2>de México para el mundo</h2>
  </div>
 
- <div class="carousel">
-    <div class="card-container">
-      <div class="card">
+ <div class="carousel-p" >
+    <div class="card-container-p"><!--Para agregar la barra de desplazamiento se agrega -p en card-container--> 
+      <div class="card" >
         <div class="pickgradient">
           <img src="./assets/images/productos/Portada-Alfareria-Barro-Negro.jpeg">
         </div>
-        <h1>Barro</h1>
-      </div>
+        
+       <a href="/ManosaLaObra/assets/html/Tienda.html"><h1 >Barro</h1>
+      </div></a>
       <div class="card">
         <div class="pickgradient">
           <img src="assets/images/productos/craneo_grande1_600x.jpg">
         </div>
+        <a href="/ManosaLaObra/assets/html/Tienda.html">
         <h1>Arte Huichol</h1>
-      </div>
+      </div></a>
       <div class="card">
         <div class="pickgradient">
           <img src="assets/images/productos/PhotoRoom_20220116_213503_2048x.jpg">
         </div>
+        <a href="/ManosaLaObra/assets/html/Tienda.html">
         <h1>Alebrijes</h1>
-      </div>
+      </div></a>
       <div class="card">
         <div class="pickgradient">
           <img src="assets/images/productos/56109N002G7_02_600x.jpg">
         </div>
+        <a href="/ManosaLaObra/assets/html/Tienda.html">
         <h1>Barro Negro</h1>
-      </div>
+      </div></a>
       <div class="card">
         <div class="pickgradient">
           <img src="assets/images/productos/Tenangos-3.jpeg">
         </div>
+        <a href="/ManosaLaObra/assets/html/Tienda.html">
         <h1>Textiles</h1>
-      </div>
+      </div></a>
       <div class="card">
         <div class="pickgradient">
           <img src="assets/images/productos/images.jpeg">
         </div>
+        <a href="/ManosaLaObra/assets/html/Tienda.html">
         <h1>Promociones</h1>
-      </div>
+      </div></a>
       <div class="card">
         <div class="pickgradient">
           <img src="assets/images/productos/TB3P4OA03_02_600x.jpg">
         </div>
+        <a href="/ManosaLaObra/assets/html/Tienda.html">
         <h1>Talavera</h1>
-      </div>
+      </div></a>
       <div class="card">
         <div class="pickgradient">
           <img src="assets/images/productos/jc-ropa-artesanal-1.jpeg">
         </div>
-        <h1>Prendas</h1>
+        <a href="/ManosaLaObra/assets/html/Tienda.html">
+        <h1>Prendas</h1></a>
       </div>
     </div>
   </div>
@@ -146,7 +154,7 @@
         <span onclick="gfg(5)"
         class="star">★
         </span>
-        <p class="price">$ 350</p>
+        <p class="price" >$ 350</p>
       </div>
     </div>
   
@@ -170,7 +178,8 @@
 </div>
   
   <!-- jQuery, Popper.js, and Bootstrap JS -->
-  <script src="assets/scripts/index.js"></script>
+  <script src="/ManosaLaObra/assets/scripts/index.js"></script>
+  <script src="/ManosaLaObra/assets/scripts/index-principal.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
