@@ -21,8 +21,21 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!--Conexión Styles-->
-    <link rel="stylesheet" href="../styles/style-navbar-footer-body.css">
-    <link rel="stylesheet" href="../styles/wishlist.css">
+    <link rel="stylesheet" href="/assets/styles/style-navbar-footer-body.css">
+    <link rel="stylesheet" href="/assets/styles/style-login.css">
+    <link rel="stylesheet" href="/assets/styles/contactanos-styles.css">
+
+     <!--Conexión Tipografía Darker Grotesque-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
+     
+     <!--Conexión Tipografía Open Sans-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+ 
+
     <style>
         /* Estilos para el contenedor de información */
         #informacion {
@@ -36,57 +49,76 @@
 
 </head>
 
-
+<body>
 <!--------------------------------------- Inicia el Header ------------------------------------------->
-<header>
-    <!------------------------------ Inicia la NavBar ------------------------------------>
-    <div id="navbar-placeholder"></div>
+    <header>
+        <div id="navbar-placeholder"></div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
-      });
-  });
-</script>
-
-        <!-------------------------------------- Termina la NavBar ----------------------------------->
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            fetch('navbar-vendedor.html')
+              .then(response => response.text())
+              .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+              });
+          });
+        </script>
+        
     </header>
     <!------------------------------- Termina el Header --------------------------------------------------------------->
 
-<body>
-<!--Inicia banner sobre wishlit-->
+   <!-----------------------------Inicia el contenedor de la página----------------------------------------------------------->
+    <main class="container-fluid py-5 d-flex justify-content-center">
+        <div class="main">
+            
+            <p><i class="bi bi-person-circle" style="color:var(--color--primario); font-size: 3rem;"></i></p>
+            <h3>Inicio de sesión</h3>
+            <form action="">
+                <label for="username">
+                    Correo:
+                </label>
+                <input class="input-login" type="text" id="correo" name="first" placeholder="Escribe tu correo" required>
 
-<div class="cinta">
-    <div class="menu">
-        <a href="./wishlist.html"><button class="t1">Wishlist
-                <img src="../images/Logo/favorite_border_24dp.png" alt="icono" class="icono">
-            </button></a>
-        <div id="Contenedor-lista">
-            <a href="./lista.html"><button class="t1">Lista
-                    <img src="../images/Logo/format_list_bulleted_24dp.png" alt="icono-2" class="icono">
-                </button></a>
+                <label for="password">
+                    Contraseña:
+                </label>
+                <input class="input-login" type="password" id="pwd" name="password" placeholder="Escribe tu contraseña" required>
+
+                <div class="wrap">
+                    <button class="btn-login" id="loginButton"  type="submit" onclick="login()"> 
+                        Iniciar sesión
+                    </button>
+                </div>
+            </form>
         </div>
-    </div>
-</div>
-    <!--Inicia lupa de navegacion-->
-    <div class="informacion">
-        <div class="informacion--seccion">
-            <div class="lupa">
-            <img src="https://cdn-icons-png.flaticon.com/512/1150/1150652.png" alt="icono-3" width="300px" height="300px"></div>
-            <h1 class="empecemos">¡Empecemos a crear listas!</h1>
-            <p class="organiza">Organiza y agrupa tus productos 
-                <br>favoritos como mas te gusta.</p>
-           <a href="lista.html" class="button"><buttton type ="button" class="button"> + Agregar lista</a></buttton>
-        <br><br>
-    </div>
-    </div>
-</div>
 
+          <!-- Contenedor de la alerta de BootStrap-->
+          <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="errorMessageLogin" style="display: none;">
+            <i class="bi bi-exclamation-triangle-fill" style="color: red; align-items: center; justify-content: center;"></i> 
+              Error al obtener los datos de inicio de sesión.
+             <!---- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+              </button>-->
+          </div>
 
-</body>
+           <!-- Contenedor de la alerta de BootStrap-->
+           <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="InicioSesionExitoso" style="display: none;">
+            <i class="bi bi-exclamation-triangle-fill" style="color: red; align-items: center; justify-content: center;"></i> 
+              Inicio de sesión exitoso.
+             <!---- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+              </button>-->
+          </div>
+
+           <!-- Contenedor de la alerta de BootStrap-->
+           <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="errorInicioSesion" style="display: none;">
+            <i class="bi bi-exclamation-triangle-fill" style="color: red; align-items: center; justify-content: center;"></i> 
+              Error de inicio de sesión: Correo o contraseña incorrectos.
+             <!---- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+              </button>-->
+          </div>
+
+    </main>
+
+<!-----------------------------Termina el contenedor de la página----------------------------------------------------------->
 
 <!------------------------------------ Inicia el Footer ----------------------------------------------------------->
 <footer class="text-center text-lg-start text-white" style="background-color: #969696">
@@ -102,7 +134,6 @@
                 Manos a la Obra
             </h6>
             <p class="font-weight-bold">
-
                 Preguntas frecuentes  |  <a href="Terminos y condiciones.html" target="_blank">Terminos y Condiciones</a>  | <a href="Politicas de Privacidad.html" target="_blank">Aviso de privacidad</a>  | <a href="Politas de envio.html" target="_blank">Política de envío</a>
             </p>
         </div>
@@ -170,17 +201,21 @@
     <!-- Grid container -->
 </footer>
 <!-- Fin del Footer -->
+</body>
 
-
-
-    <!-- jQuery, Popper.js, and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+    
+    <!-- Conexión con jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+z5KA9QF1c8EIf+6cv8LfCW2x4EBY2F/vMHZ5ISK" crossorigin="anonymous"></script>
     <!--Conexión JS-->
+    <script src="/assets/scripts/login-funcion.js"></script>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-<!-- Fin del Footer -->   
+    
+
 </html>
