@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             };
 
             // Enviar datos a la API
-            fetch('/api/vendedor', {
+            fetch('http://localhost:8081/api/manosalaobrabackend/vendedor', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
