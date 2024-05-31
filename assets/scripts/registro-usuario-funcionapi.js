@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
           };
 
           // Enviar datos a la API
-          fetch('http://localhost:8081/api/mao/cliente', {
+          fetch('https://manos-a-la-obra.onrender.com/api/mao/cliente', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json'

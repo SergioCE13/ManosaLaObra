@@ -40,7 +40,7 @@ function  myFunctionErrorInicioSesion() {
 
 function login(){ 
     const correoElectronico = document.getElementById('correo').value;
-    const url = `http://localhost:8081/api/mao/cliente/${correoElectronico}`;
+    const url = `https://manos-a-la-obra.onrender.com/api/mao/cliente/${correoElectronico}`;
 
     //fetch para metodo get
     fetch(url)
