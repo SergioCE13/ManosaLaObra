@@ -35,11 +35,12 @@
 
 
     <!--Conexión JS-->
+     <script src="navbar.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
        crossorigin="anonymous"></script>
    
-     <script src="../scripts/script-funciones.js"></script>
+     <script src="script-funciones.js"></script>
    
 
 </head>
@@ -125,11 +126,9 @@
                 <hr>
                 <p>Apellido materno: Gracia <span id="lastnameMom"></span></p>
                 <hr>
-                <p>Correo: example@example.com <span id="email"></span></p>
+                <p>Correo: carmenrom@gmail.com <span id="email"></span></p>
                 <hr>
                 <p>Contraseña: ******** <span id="password"></span></p>
-                <hr>
-                <p>RFC: CRGJ880326 <span id="rfc"></span></p>
                 <hr>
                 <p>Número de teléfono: 5552962378 <span id="num"></span></p>
                 <hr>
@@ -161,8 +160,6 @@
                     <input type="text" id="lastName" required><br>
                     <label for="email">Correo:</label>
                     <input type="email" id="email" readonly placeholder="Este campo no se puede modificar"><br>
-                    <label for="rfc">RFC:</label>
-                    <input type="text" id="rfc" required><br>
                     <label for="num">Número de teléfono:</label>
                     <input type="number" id="tel" required><br>
                     <label for="desc">Descripción del vendedor:</label>
@@ -281,87 +278,20 @@
 
  <!---------------------------------------------Inicio de Footer----------------------------------------------------->
 
- <footer class="text-center text-lg-start text-white" style="background-color: #969696">
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-    <!-- Section: Links -->
-    <section class="">
-        <!--Grid row-->
-        <div class="row d-flex align-items-center">
-        <!-- Grid column -->
-        <div class="col-md-7 col-lg-8 text-center text-md-start">
-            <h6 class="text-uppercase mb-4 font-weight-bold">
-                Manos a la Obra
-            </h6>
-            <p class="font-weight-bold">
-                Preguntas frecuentes  |  <a href="Terminos y condiciones.html" target="_blank">Terminos y Condiciones</a>  | <a href="Politicas de Privacidad.html" target="_blank">Aviso de privacidad</a>  | <a href="Politas de envio.html" target="_blank">Política de envío</a>
-            </p>
-        </div>
-    <!-- Section: Copyright -->
-    
-        <div class="row d-flex align-items-center">
-        <!-- Grid column -->
-        <div class="col-md-7 col-lg-8 text-center text-md-start">
-            <!-- Copyright -->
-            <div>
-            © 2024 Alebrijes Fullstack
-            
-            
-            </div>
-            <!-- Copyright -->
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-            <!-- Facebook -->
-            <a
-            href="https://www.facebook.com"
-            target="_blank"
-            class="btn btn-outline-light btn-floating m-1"
-            class="text-white"
-            role="button"
-            ><i class="bi bi-facebook"></i
-            ></a>
-
-            <!-- Twitter -->
-            <a
-            href="https://twitter.com"
-            target="_blank"
-            class="btn btn-outline-light btn-floating m-1"
-            class="text-white"
-            role="button"
-            ><i class="bi bi-twitter"></i
-            ></a>
-
-            <!-- Google -->
-            <a
-            href="https://www.google.com"
-            target="_blank"
-            class="btn btn-outline-light btn-floating m-1"
-            class="text-white"
-            role="button"
-            ><i class="bi bi-google"></i
-            ></a>
-
-            <!-- Instagram -->
-            <a
-            href="https://www.instagram.com"
-            target="_blank"
-            class="btn btn-outline-light btn-floating m-1"
-            class="text-white"
-            role="button"
-            ><i class="bi bi-instagram"></i></a>
-        </div>
-        <!-- Grid column -->
-        </div>
-    </section>
-    <!-- Section: Copyright -->
-    </div>
-    <!-- Grid container -->
+ <footer class="text-center text-lg-start text-white" style="background-color: #696868 ">
+  <div id="footer-script"></div>
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          fetch('./footer.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('footer-script').innerHTML = data;
+              });
+      });
+  </script>
 </footer>
 <!-- Fin del Footer -->
 
-<script src="./assets/scripts/script-configruración-vendedor.js"></script>
+<script src="../scripts/script-configruración-vendedor.js"></script>
 </body>
 </html>

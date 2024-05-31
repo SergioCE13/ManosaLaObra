@@ -88,7 +88,7 @@
                             <small class="form-text text-muted">10 dígitos.</small>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="input-email-usuario">Email (nombre de usuario):</label>
+                            <label for="input-email-usuario">Email:</label>
                             <input type="email" class="form-control" id="input-email" placeholder="Introduce el correo electrónico">
                         </div>
                     </div>
@@ -122,43 +122,6 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="input-direccion">Dirección:</label><br>
-                        <div class="row">
-                            <div class="form-group col-md-4">
-                                <label for="input-calle">Calle:</label>
-                                <input type="text" class="form-control" id="input-calle" placeholder="Introduce la calle">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="input-numero-interior">Número interior:</label>
-                                <input type="text" class="form-control" id="input-numero-interior" placeholder="Introduce el número interior">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="input-numero-exterior">Número exterior:</label>
-                                <input type="text" class="form-control" id="input-numero-exterior" placeholder="Introduce el número exterior">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-4">
-                                <label for="input-codigo-postal">Código Postal:</label>
-                                <input type="text" class="form-control" id="input-codigo-postal" placeholder="Introduce el código postal">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="input-colonia">Colonia:</label>
-                                <select class="form-control" id="input-colonia">
-                                    <option selected>Selecciona la colonia</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="input-delegacion">Delegación/Municipio:</label>
-                                <input type="text" class="form-control" id="input-delegacion" placeholder="Introduce la delegación o municipio">
-                            </div>
-                            <div class="form-group col-md-6 dropup">
-                                <label for="input-estado">Estado:</label>
-                                <input type="text" id="input-estado" class="form-control" placeholder="Introduce el estado">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <label for="input-fecha-nacimiento">Fecha de nacimiento:</label>
                         <input type="date" class="form-control" id="input-fecha-nacimiento">
                     </div>
@@ -182,85 +145,18 @@
 
 <!---------------------------------------------Inicio de Footer----------------------------------------------------->
 
-    <footer class="text-center text-lg-start text-white" style="background-color: #969696">
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-        <!-- Section: Links -->
-        <section class="">
-            <!--Grid row-->
-            <div class="row d-flex align-items-center">
-            <!-- Grid column -->
-            <div class="col-md-7 col-lg-8 text-center text-md-start">
-                <h6 class="text-uppercase mb-4 font-weight-bold">
-                    Manos a la Obra
-                </h6>
-                <p class="font-weight-bold">
-                    Preguntas frecuentes  |  <a href="Terminos y condiciones.html" target="_blank">Terminos y Condiciones</a>  | <a href="Politicas de Privacidad.html" target="_blank">Aviso de privacidad</a>  | <a href="Politas de envio.html" target="_blank">Política de envío</a>
-                </p>
-            </div>
-        <!-- Section: Copyright -->
-        
-            <div class="row d-flex align-items-center">
-            <!-- Grid column -->
-            <div class="col-md-7 col-lg-8 text-center text-md-start">
-                <!-- Copyright -->
-                <div>
-                © 2024 Alebrijes Fullstack
-                
-                
-                </div>
-                <!-- Copyright -->
-            </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
-            <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-                <!-- Facebook -->
-                <a
-                href="https://www.facebook.com"
-                target="_blank"
-                class="btn btn-outline-light btn-floating m-1"
-                class="text-white"
-                role="button"
-                ><i class="bi bi-facebook"></i
-                ></a>
-    
-                <!-- Twitter -->
-                <a
-                href="https://twitter.com"
-                target="_blank"
-                class="btn btn-outline-light btn-floating m-1"
-                class="text-white"
-                role="button"
-                ><i class="bi bi-twitter"></i
-                ></a>
-    
-                <!-- Google -->
-                <a
-                href="https://www.google.com"
-                target="_blank"
-                class="btn btn-outline-light btn-floating m-1"
-                class="text-white"
-                role="button"
-                ><i class="bi bi-google"></i
-                ></a>
-    
-                <!-- Instagram -->
-                <a
-                href="https://www.instagram.com"
-                target="_blank"
-                class="btn btn-outline-light btn-floating m-1"
-                class="text-white"
-                role="button"
-                ><i class="bi bi-instagram"></i></a>
-            </div>
-            <!-- Grid column -->
-            </div>
-        </section>
-        <!-- Section: Copyright -->
-        </div>
-        <!-- Grid container -->
-    </footer>
+<footer class="text-center text-lg-start text-white" style="background-color: #696868 ">
+    <div id="footer-script"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('./footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-script').innerHTML = data;
+                });
+        });
+    </script>
+  </footer>
 
     <!-- Conexiones de Scripts-->
     <script src="../scripts/registro-vendedor.js"></script>

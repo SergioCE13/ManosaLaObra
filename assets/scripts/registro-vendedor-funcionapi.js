@@ -19,43 +19,25 @@ document.addEventListener('DOMContentLoaded', function () {
         const password = document.getElementById('input-password').value;
         const confirmarPassword = document.getElementById('input-confirmar-password').value;
         const genero = document.querySelector('input[name="inlineRadioOptions"]:checked')?.value;
-        const calle = document.getElementById('input-calle').value;
-        const numeroInterior = document.getElementById('input-numero-interior').value;
-        const numeroExterior = document.getElementById('input-numero-exterior').value;
-        const codigoPostal = document.getElementById('input-codigo-postal').value;
-        const colonia = document.getElementById('input-colonia').value;
-        const delegacion = document.getElementById('input-delegacion').value;
-        const estado = document.getElementById('input-estado').value;
         const fechaNacimiento = document.getElementById('input-fecha-nacimiento').value;
         const aceptaTerminos = document.getElementById('exampleCheck1').checked;
 
         // Validar que todos los campos estén llenos
-        if (nombre && apellidoPaterno && apellidoMaterno && telefono && email && password && confirmarPassword && genero && calle && numeroInterior && numeroExterior && codigoPostal && colonia && delegacion && estado && fechaNacimiento && aceptaTerminos) {
+        if (nombre && apellidoPaterno && apellidoMaterno && telefono && email && password && confirmarPassword && genero && fechaNacimiento && aceptaTerminos) {
             // Crear objeto con los datos
             const vendedorData = {
-                nombre,
-                apellidoPaterno,
-                apellidoMaterno,
-                telefono,
-                email,
-                password,
-                confirmarPassword,
-                genero,
-                direccion: {
-                    calle,
-                    numeroInterior,
-                    numeroExterior,
-                    codigoPostal,
-                    colonia,
-                    delegacion,
-                    estado
-                },
-                fechaNacimiento,
-                aceptaTerminos
+                correo: document.getElementById('input-email').value,
+                nombre: document.getElementById('input-nombre-vendedor').value,
+                apellidoPaterno: document.getElementById('input-apellido-paterno').value,
+                apellidoMaterno: document.getElementById('input-apellido-materno').value,
+                genero: document.querySelector('input[name="inlineRadioOptions"]:checked').value,
+                telefono: document.getElementById('input-telefono').value,
+                fechaNacimiento: document.getElementById('input-fecha-nacimiento').value,
+                password: document.getElementById('input-password').value
             };
 
             // Enviar datos a la API
-            fetch('http://localhost:8081/api/manosalaobrabackend/vendedor', {
+            fetch('http://localhost:8081/api/mao/vendedor', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

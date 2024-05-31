@@ -37,9 +37,8 @@ let user = {
   firstName: "Carmen",
   middleName: "Romero",
   lastName: "Garcia",
-  email: "example@example.com",
+  email: "carmenrom@gmail.com",
   password: "password123",
-  rfc: "CRGJ880326",
   tel: 5552962378,
   desc: "Hola soy Carmen. Soy originaria de Cuetzalan, Puebla,  realizo prendas textiles tejidas en telar de cintura; además, utiliza una técnica única en el mundo conocida como 'tejido en curva' a muy corta edad aprendí a utilizar el telar gracias a mi abuela, en mi  juventud y adultez perfeccioné la técnica y generé piezas únicas que la hicieron destacar de manera internacional. Mi lengua natal es el  Náhuatl y a través de mi trabajo conservo las tradiciones de la cultura de la Sierra Norte del estado de Puebla. " ,
   resi: "Puebla",
@@ -54,7 +53,6 @@ function openFormCuenta() {
     document.getElementById("middleName").value = user.middleName;
     document.getElementById("lastName").value = user.lastName;
     document.getElementById("email").value = user.email;
-    document.getElementById("rfc").value = user.rfc;
     document.getElementById("tel").value = user.tel;
     document.getElementById("desc").value = user.desc;
     document.getElementById("resi").value = user.resi;
@@ -79,13 +77,12 @@ function openFormCuenta() {
     let newLastName = document.getElementById("lastName").value;
     let newPassword = document.getElementById("pwd").value;
     let confirmPassword = document.getElementById("confirmPassword").value;
-    let newRfc = document.getElementById("rfc").value;
     let newtel = document.getElementById("tel").value;
     let newDesc = document.getElementById("desc").value;
     let newResi = document.getElementById("resi").value;
     let fotoInput = document.getElementById("foto");
   
-    if (newFirstName && newMiddleName && newLastName && newRfc && newDesc && newResi && newtel && fotoInput) {
+    if (newFirstName && newMiddleName && newLastName && newDesc && newResi && newtel && fotoInput) {
       if (editPassword) {
         if (newPassword && confirmPassword) {
           if (newPassword === confirmPassword) {
@@ -103,7 +100,6 @@ function openFormCuenta() {
       user.firstName = newFirstName;
       user.middleName = newMiddleName;
       user.lastName = newLastName;
-      user.rfc = newRfc;
       user.desc = newDesc;
       user.resi = newResi;
       user.tel = newtel;
@@ -132,7 +128,6 @@ function openFormCuenta() {
       <p><strong>Nombre:</strong> ${user.firstName} ${user.middleName} ${user.lastName}</p>
       <p><strong>Correo:</strong> ${user.email}</p>
       <p><strong>Contraseña:</strong> ********</p>
-      <p><strong>RFC: </strong>${user.rfc}</p>
       <p><strong>Número de teléfono: </strong>${user.tel}</p>
       <p><strong>Descripción del vendedor: </strong>${user.desc}</p>
       <p><strong>Estado de residencia: </strong>${user.resi}</p>
