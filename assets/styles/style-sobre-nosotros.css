@@ -1,0 +1,194 @@
+/*Estilos del contenedor del Carousel*/
+.carousel-container {
+    width: 100%; /* Ancho del contenedor */
+    margin: 0 auto; /* Centrar horizontalmente */
+    border-radius: 20px; /* Bordes redondos */
+    overflow: hidden; /* Evitar que las esquinas de las imágenes sobresalgan */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+.carousel-caption {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.container-text {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
+
+.desc-valores {
+    height: 200px;
+}
+
+.mostrar-div {
+    padding: 50px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente del texto */
+    border-radius: 10px;
+    color: var(--color--blanco);
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    
+
+}
+
+@media screen and (max-width: 992px) {
+    .mostrar-div{
+        display:block;
+
+
+    }
+}
+
+/*Estilos del contenedor las Cards*/
+.cards-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    
+}
+
+/*Estilos de las Cards*/
+.card {
+    background-color: var(--color--secundario);
+    margin: 0.5em;
+    border-color: none;
+    box-shadow: 5px 5px 15px gray;
+    overflow: hidden;
+}
+
+/*Estilos del titulo de la la página de "nuestro equipo"*/
+.text-equipo {
+    text-align: center;
+    font-family: "Darker Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+
+/*Estilos del titulo de las Cards*/
+.card-title {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+
+}
+
+/*Estilos del texto de las Cards*/
+.card-text {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    
+}
+
+/*Estilos del cuerpo de las Cards*/
+.card-body {
+    background-color: var(--color--secundario);
+    
+    
+   
+}
+
+/*Estilos del botón*/
+.btn-custom-color {
+    background-color: var(--color--yellow);
+    border-color: var(--color--yellow);
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    color: var(--color--blanco);
+
+}
+
+
+/*Estilo al interactuar con el botón*/
+
+.btn-custom-color:hover {
+    color: var(--color--primario);
+
+}
+
+
+/*Estilos del texto del carousel*/
+.container-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente del texto */
+    border-radius: 10px;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    color: var(--color--blanco);
+
+
+}
+
+.carousel-caption { /*Lo agregué*/
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/*Para quitarle las viñetas a la página de valores*/
+ .desc-valores li {
+
+    list-style: none;
+}
+
+/*Estilos para el titulo del modal*/
+.modal-title {
+    text-align: center;
+    font-family: "Darker Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+   
+}
+
+/*Estilos para la descripción del Modal*/
+.modal-body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+   
+
+}
+
+/*Estilos para el contenedor del Modal*/
+.modal-content  {
+    
+    background-color: var(--color--secundario);
+    width: 650px;
+    margin: 10%;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.modal-dialog {
+    display: flex;
+    flex-wrap: wrap;
+
+}

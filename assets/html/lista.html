@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Etiquetas meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alebrijes FullStack">
+    <meta name="description" content="Plataforma ecommerce enfocada a la venta de artesanías mexicanas">
+    <meta name="keywords" content="ecomerce, México, artesanías, venta, compra">
+    <meta name="application-name" content="Manos a la Obra">
+
+    <!-- Título de la página-->
+    <title>Manos a al obra</title>
+
+    <!--Conexión Iconos BootStrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Conexión del Sitio con BootStrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--Conexión Styles-->
+    <link rel="stylesheet" href="../styles/style-navbar-footer-body.css">
+    <link rel=" stylesheet" href="../styles/tienda.css">
+    <link rel="stylesheet" href="../styles/lista.css">
+    <style>
+        /* Estilos para el contenedor de información */
+        #informacion {
+            display: none;
+            /* Inicialmente oculto */
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+
+<!--------------------------------------- Inicia el Header ------------------------------------------->
+<header>
+    <!------------------------------ Inicia la NavBar ------------------------------------>
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch('navbar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+          });
+      });
+    </script>
+    
+    <!-------------------------------------- Termina la NavBar ----------------------------------->
+</header>
+
+<body>
+    <!--Inicia banner sobre wishlit-->
+    <div class="cinta">
+        <div class="menu">
+            <a href="./wishlist.html"><button class="t1">Whislist
+                    <img src="../images/Logo/favorite_border_24dp.png" alt="icono" class="icono">
+                </button></a>
+            <div id="Contenedor-lista">
+                <a href="./lista.html"><button class="t1">Lista
+                        <img src="../images/Logo/format_list_bulleted_24dp.png" alt="icono-2" class="icono">
+                    </button></a>
+            </div>
+        </div>
+    </div>
+
+    <!--Inicia cuadro de productos-->
+    <div class="container">
+        <form class="product">
+            <input type="text" id="product-input" placeholder="Ingrese el nombre de la lista">
+            <button type="button" class="product1" onclick="agregarLista()">Agregar Lista</button>
+        </form>
+        <select id="product-list">
+            <option value="">Selecciona una lista</option>
+        </select>
+    </div>
+
+    <!--Empieza tarjetas de productos-->
+    <button class="btn-btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+        aria-expanded="false" aria-controls="collapseExample">
+        Novedades
+    </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <!--Se crean las tarjetas-->
+            <div class="card mb-3" style="max-width: 1000px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="../images/Logo/41AGxHb60AL._AC_SY580_.jpg" class="img-fluid rounded-start"
+                            alt="bolso">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Bolso para dama</h5>
+                            <p class="texto02">ver mas información acerca del producto</p>
+
+                            <!--Se agrega el contador de productos-->
+
+                            <h6 class="Contador-titulo">Productos total agregados</h6><br>
+                            <h6 class="Contador" id="contador-bolso">1</h6>
+                            <button class="agregar" data-contador-id="contador-bolso">Agregar</button>
+                            <button class="eliminar" data-contador-id="contador-bolso">Eliminar</button>
+                            <button id="comprar">Comprar producto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 1000px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="../images/Logo/89518720-sonriendo-sentarse-cute-trapo-muñeca-aislada.jpg"
+                            class="img-fluid rounded-start" alt="muñeca">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Muñeca de trapo</h5>
+                            <p class="texto02">ver mas informacion acerca del producto</p>
+                            <!--Se agrega el contador de productos-->
+                            <h6 class="Contador-titulo">Productos total agregados</h6><br>
+                            <h6 class="Contador" id="contador-muneca">1</h6>
+                            <button class="agregar" data-contador-id="contador-muneca">Agregar</button>
+                            <button class="eliminar" data-contador-id="contador-muneca">Eliminar</button>
+                            <button id="comprar">Comprar producto</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Menu de lista de posicionamiento-->
+
+    <div id="menu-b">
+        <ul>
+            <li><a href="#">Anterior</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">Siguiente</a></li>
+        </ul>
+    </div>
+
+    <script src="../scripts/lista.js"></script>
+</body>
+
+<!--------------------------Inicio de footer----------------------------------->
+<footer class="text-center text-lg-start text-white" style="background-color: #696868 ">
+    <div id="footer-script"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('./footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-script').innerHTML = data;
+                });
+        });
+    </script>
+</footer>
+
+<!-- Fin del Footer -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const agregarButtons = document.querySelectorAll(".agregar");
+        const eliminarButtons = document.querySelectorAll(".eliminar");
+
+        agregarButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const contadorId = this.getAttribute("data-contador-id");
+                const contadorElement = document.getElementById(contadorId);
+                let count = parseInt(contadorElement.textContent, 10);
+                contadorElement.textContent = count + 1;
+            });
+        });
+
+        eliminarButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const contadorId = this.getAttribute("data-contador-id");
+                const contadorElement = document.getElementById(contadorId);
+                let count = parseInt(contadorElement.textContent, 10);
+                if (count === 1) { // Si el contador es 1, elimina el producto
+                    // Encuentra el elemento padre (card) del botón y lo elimina
+                    const card = this.closest('.card');
+                    card.parentNode.removeChild(card);
+                    contadorElement.textContent = 0; // Reinicia el contador a 0
+                } else if (count > 1) { // Si el contador es mayor que 1, simplemente resta uno
+                    contadorElement.textContent = count - 1;
+                }
+            });
+        });
+    });
+</script>
+
+
+<!-- jQuery, Popper.js, and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!--Conexión JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Etiquetas meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alebrijes FullStack">
+    <meta name="description" content="Plataforma ecommerce enfocada a la venta de artesanías mexicanas">
+    <meta name="keywords" content="ecomerce, México, artesanías, venta, compra">
+    <meta name="application-name" content="Manos a la Obra">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la página-->
+    <title>Manos a al obra</title>
+
+    <!--Conexión Iconos BootStrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Conexión del Sitio con BootStrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--Conexión Styles-->
+    <link rel="stylesheet" href="../styles/style-navbar-footer-body.css">
+    <link rel="stylesheet" href="../styles/producto.css">
+
+    <style>
+        /* Estilos para el contenedor de información */
+        #informacion {
+            display: none;
+            /* Inicialmente oculto */
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+
+<!--------------------------------------- Inicia el Header ------------------------------------------->
+<header>
+    <!------------------------------ Inicia la NavBar ------------------------------------>
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch('navbar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+          });
+      });
+    </script>
+    
+        <!-------------------------------------- Termina la NavBar ----------------------------------->
+    </header>
+    <!------------------------------- Termina el Header --------------------------------------------------------------->
+
+<body class="cuerpo-producto">
+    <div class="body-container">
+        <div class="caja-blanca">
+            <!-------------------- Inicia seccion 1 Información del producto --------------------------------------->
+            <section class="seccion-info-producto" style="margin:  20px; ">
+                <div class="titulo-producto-movil">
+                    <h1 id="titulo-principal-movil"> Centro de mesa de barro negro</h1>
+                    <button id = "boton-corazon1" onclick="cambioCorazon2()">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="M440-498.33Zm0 377.66-108.33-98.66q-82-75-137.5-130t-90-100.67q-34.5-45.67-49.34-86.67-14.83-41-14.83-87Q40-715 101.33-777.5q61.34-62.5 152-62.5 55.34 0 103.34 25T440-742.67Q479.33-792 526.33-816t100.34-24q80.71 0 135.52 51.83 54.81 51.84 69.48 126.84H764q-12-50-48.67-81-36.66-31-88.66-31-51 0-92.67 29.83t-70.33 82.83h-48Q388-713 345.5-743.17q-42.5-30.16-92.17-30.16-63 0-104.83 42.83t-41.83 106.83q0 37 15 73t52.59 82.22q37.59 46.21 102.33 108Q341.33-298.67 440-209.33q30-27 60.67-53.67 30.66-26.67 56.33-49.33l7.42 7.31q7.42 7.32 16.08 15.85 8.66 8.54 16.08 15.85L604-266q-25.33 22.67-56 49.17t-61.33 54.16l-46.67 42ZM726.67-280v-126.67H600v-66.66h126.67V-600h66.66v126.67H920v66.66H793.33V-280h-66.66Z"/></svg>
+                    </button>
+                </div>
+                <!------ Inica fila 1 de la sección de información del producto ------->
+                <div class="columnas-info-producto">
+                    <!-- Inicia div para la columna 1"Imagenes del producto"-->
+                    <div class="images-producto">
+                        <div class="imagen-main">
+                            <div class="carousel-container">
+                                <div class="carousel-slide">
+                                    <img src="../images/producto/producto1.png" alt="Imagen 1">
+                                    <img src="../images/producto/producto2.png" alt="Imagen 2">
+                                    <img src="../images/producto//producto3.jpg" alt="Imagen 3">
+                                </div>
+                                <button  class = "controles-carrusel" id="prevBtn">&#10094;</button>
+                                <button class = "controles-carrusel" id="nextBtn">&#10095;</button>
+                            </div>
+                        </div><br>
+                        <div class="miniaturas">
+                            <div class="imagen-zoom">
+                                <img src="../images/producto/producto1.png" alt="" width="100%">
+                                <div class="zoom-area"></div>
+                            </div>
+                            <div class="imagen-zoom">
+                                <img src="../images/producto/producto2.png" alt="" width="100%">
+                                <div class="zoom-area"></div>
+                            </div>
+                        </div>
+                        
+                        <div id="zoom" class="zoom"></div>
+                        <br>
+                        <div class="info-vendedor">
+                            <a href="./NuestrosArtesanos.html"><img src="../images/producto/artista.png" alt="" width="100%"></a>
+                        </div>
+                    </div><!-- Termina div columna 1-->
+
+                    <!-- Inicia div para la columna 2, fila 1 "Interacción con el producto"-->
+                    <div class="interac-producto">
+
+                        <!-- Inicia div para el Título, estrellas y boton fav del producto -->
+                        <div class="titulo-stars-fav">
+                            <div class="titulo-producto">
+                                Centro de mesa de barro
+                                <button id = "boton-corazon2" onclick="cambioCorazon()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="M440-497Zm0 376-99-91q-87-80-144.5-137T104-452q-35-46-49.5-86.5T40-625q0-90 60.5-152.5T250-840q57 0 105.5 26.5T440-736q42-54 89-79t101-25q80.58 0 135.29 55Q820-730 832-652h-59q-9-55-46.5-91.5T630-780q-51 0-95 31t-71 88h-49q-26-56-70-87.5T250-780q-66 0-108 44.5T100-625q0 39 15.5 76t53.89 84.07q38.39 47.06 104.5 110Q340-292 440-200q32-29 60.5-54t56.5-49l6.63 6.47q6.63 6.48 14.37 14.03 7.74 7.55 14.37 14.03L599-262q-27 24-56 49t-62 55l-41 37Zm290-159v-130H600v-60h130v-130h60v130h130v60H790v130h-60Z"/></svg>
+                                </button>
+                            </div>
+                        </div><!-- Termina div de título-->
+
+                        <!-- Inicia div para precio del producto y de envio-->
+                        <div class="precio-envio">
+                            <div class="puntuacion">
+                                <div class = "titulo-stars">Puntuación:</div>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                            <div class="precios">
+                                <div class="precio">$2,500.00</div>
+                                <div class="envio"> + $96.23 de envio</div>
+                            </div>
+                        </div><!-- Termina div precio-->
+
+                        <!-- Inicia el div para los botones comprar y carrito -->
+                        <div class="botones-producto">
+                            <button class="" id="boton-comprar" type="button">Comprar</button>
+                            <button class="" id ="boton-carrito" type="button">Añadir al carrito</button>
+                        </div>
+
+                        <!-- Inicia el div para mostrar la descripción del producto-->
+                        <div class="acerca-producto"><span> Acerca del producto:</span><br>Esta pieza forma parte de la propuesta original del Taller "Fabian", inspirado en la fusión del diseño de calidad con cortes arriesgados, sobre la cerámica de barro negro, es una pieza que puede exponerse de distintas formas y en diferentes espacios, principalmente esta pensada para lucirlo en una mesa de centro en un área común o lucirlo en un espacio de trabajo ya sea en un escritorio o un muebel multiusos.
+                        </div><!-- Termina div descripción-->
+                    </div><!-- Termina div interacción producto-->
+                </div>
+
+                <!-------- Inicia fila 2 de la sección de información del producto ------->
+                <div class="info-extra">
+
+                    <div class="caracteristicas-producto">
+                        <span>Medidas del producto:</span><br>Ancho: 25cm<br>Largo: 25cm<br>Alto: 25cm
+                    </div>
+                    <div class="info-adicional">
+                        <span>Información adicional:</span><br>Técnica: Corte en barro negro<br>Materiales: Ceramica, pintura, barniz<br>
+                    </div>
+                </div> <!-- Termina fila 2 información del producto-->
+            </section>
+            <!-------------------- Termina seccion 1 Información del producto --------------------------------------->
+
+
+
+        <!-------------------- Inicia sección 2 Comentarios del producto --------------------------------------->
+        <section class="seccion-comentarios">
+            <!-- Inicia div de preguntas y respuestas-->
+            <div class="titulo-preguntas"> <!-- Inicia titulo preguntas/respuestas-->
+                <h4 class="titulo">Preguntas y respuestas</h4>
+            </div> <!-- Termina pregutnas/respuestas-->
+            <div class="botones-preguntas"><!-- Inicia que quieres saber-->
+                <h5 class="sub-titulo">¿Qué quieres saber?</h5>
+                <button type="button" class="btn1"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                Costo y tiempo de envío
+                </button>
+                <button type="button" class="btn2"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                Medios de pago y promociones
+                </button>
+                <button type="button" class="btn3"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                Calidad
+                </button>
+            </div> <!-- Termina que quieres saber-->
+            <div class="preguntar"> <!-- Inicia div preguntar -->
+                <h5 class="ref-pregunta">Preguntale al vendedor y/o otros compradores</h5>
+                <input class="texto-pregunta" type="search" placeholder="Escribe un comentario" aria-label="Search">
+                <button class="btn-preguntar" type="submit">Preguntar</button>
+                <select class="opciones-busqueda">
+                    <option>Más recientes</option>
+                    <option>Destacados</option>
+                </select>
+            </div> <!-- Termina div preguntar-->
+
+            <!-- Inicia div de comentario-->
+            <div class="comentario">
+                <h6 class="nombre-usuario">rosario_canta@gmail.com</h6> <!-- Nombre-usuario --> <!--Estrellas de bootstrap-->
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <div class="texto-comentario">¡Hola! Estoy encantada con esta pieza, creo que es estupenda para la decoración de mi casa ¿Hacen envios internacionales?</div> <!-- Texto del comentario-->
+                <button class="like" id="btn-like"><i class="bi bi-hand-thumbs-up"></i> <span id="contador">0</span></button> <!-- Botones like y responder-->
+                <button class="responder">Responder</button>
+            </div>
+
+            <!-- Este HTML genera un comentario que responde a otro previamente realizado.-->
+
+            <div class="comentario-replica">
+                <h6 class="nombre-usuario">eduardo.soegui@gmail.com</h6> 
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <div class="texto-comentario">Hola Rosario, me comunico de parte de Manos a la obra. Sí hacemos de envíos internacionales. Gracias por tu comentario, cualquier otra duda que tengas, la puedes consultar con nosotrxs </div>
+                <button class="like" id="btn-like"><i class="bi bi-hand-thumbs-up"></i> <span id="contador">0</span></button> <!-- Botones like y responder-->
+                <button class="responder">Responder</button>
+            </div> 
+            </section>
+            <!-------------------- Termina sección 2 Comentarios del producto --------------------------------------->
+        </div><!-- Caja producto -->
+    </div>
+
+
+    <script src="../scripts/producto.js"></script>
+
+</body>
+
+ <!---------------------------------------------Inicio de Footer----------------------------------------------------->
+
+ <footer class="text-center text-lg-start text-white" style="background-color: #696868 ">
+    <div id="footer-script"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('./footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-script').innerHTML = data;
+                });
+        });
+    </script>
+</footer>
+
+<!-- Fin del Footer -->
+
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--Conexión JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Etiquetas meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <!-- Título de la página-->
+  <title>Mi cuenta</title>
+  <!--------------------------- Conexiones para Estilos------------------------->
+
+  <!-- Conexión con BootStrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!--Conexión Iconos BootStrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!--Conexión Styles-->
+  <link rel="stylesheet" href="../styles/style-navbar-footer-body.css">
+  <link rel="stylesheet" href="../styles/style-configuracion-vendedor.css">
+  <link rel="stylesheet" href="../styles/contactanos-styles.css">
+
+  <!--Conexión Tipografía Darker Grotesque-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
+
+  <!--Conexión Tipografía Open Sans-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Open+Sans:ital@0;1&display=swap"
+    rel="stylesheet">
+
+
+
+
+</head>
+<!--------------------------------------- Inicia el Header ------------------------------------------->
+<header>
+  <div id="navbar-placeholder"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch('./navbar-vendedor.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    });
+  </script>
+
+  <!-------------------------------------- Termina la NavBar ----------------------------------->
+</header>
+<!------------------------------- Termina el Header --------------------------------------------------------------->
+
+
+<!-------------------------------------------------- Inicia el Body ------------------------------------------------>
+
+<body class="body-style">
+
+  <!-------------------------------- Empieza el contenedor de la página ----------------------------------------------------------->
+
+  <div class="wrapper">
+    <aside id="sidebar">
+      <div class="d-flex">
+        <button id="toggle-btn" type="button">
+          <i class="bi bi-person-vcard-fill" onclick="mostrarFormulario('opciones-cuenta')"></i>
+        </button>
+        <div class="sidebar-logo">
+          <a href="#" class="sidebar-link" onclick="mostrarFormulario('opciones-cuenta')">Cuenta vendedor</a>
+        </div>
+      </div>
+      <ul class="sidebar-nav">
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link" onclick="mostrarFormulario('opciones-editarCuenta')">
+            <i class="bi bi-gear"></i>
+            <span>Configuración</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link" onclick="mostrarFormulario('opciones-pago')">
+            <i class="bi bi-credit-card-fill"></i>
+            <span>Pagos</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link" onclick="mostrarFormulario('opciones-producto')">
+            <i class="bi bi-shop"></i>
+            <span>Productos</span>
+          </a>
+        </li>
+
+      </ul>
+    </aside>
+
+    <div class="main p-3">
+
+      <div class="contenido" id="contenido">
+
+
+        <!-- Este div contiene las opciones de cuenta y tiene la clase 'formulario' -->
+        <div id="opciones-cuenta" class="formulario" style="display: block;">
+
+
+          <div class="account-details">
+            <h4>Cuenta Vendedor</h4>
+            <br>
+            <p>Nombre: Carmen <span id="name"></span></p>
+            <hr>
+            <p>Apellido paterno: Romero <span id="lastnameDad"></span></p>
+            <hr>
+            <p>Apellido materno: Gracia <span id="lastnameMom"></span></p>
+            <hr>
+            <p>Correo: carmen.romero@gmail.com <span id="email"></span></p>
+            <hr>
+            <p>Contraseña: ******** <span id="password"></span></p>
+            <hr>
+            <p>RFC: CRGJ880326 <span id="rfc"></span></p>
+            <hr>
+            <p>Número de teléfono: 5552962378 <span id="num"></span></p>
+            <hr>
+            <p>Descripción del vendedor: Hola soy Carmen. (Historia)
+              <hr>
+            <p>Estado de residencia: Puebla <span id="est"></span></p>
+            <hr>
+          </div>
+        </div>
+
+
+        <div id="opciones-editarCuenta" class="formulario" style="display: none;">
+          <h4>Detalles de cuenta</h4>
+          <div id="accountInfo">
+            <!-- Detalles de la cuenta se mostrarán aquí -->
+          </div>
+
+          <button class="ButtonsConfig" onclick="openFormCuenta()">Editar Cuenta</button>
+
+          <!-- Formulario para editar datos de la cuenta -->
+          <div id="editForm" class="form-popup" style="display: none;">
+            <form id="editFormContent" class="form-container">
+              <h4>Editar cuenta vendedor</h4>
+              <label for="firstName">Nombre:</label>
+              <input type="text" id="firstName" required><br>
+              <label for="middleName">Apellido paterno:</label>
+              <input type="text" id="middleName"><br>
+              <label for="lastName">Apellido materno:</label>
+              <input type="text" id="lastName" required><br>
+              <label for="email">Correo:</label>
+              <input type="email" id="email" readonly placeholder="Este campo no se puede modificar"><br>
+              <label for="rfc">RFC:</label>
+              <input type="text" id="rfc" required><br>
+              <label for="num">Número de teléfono:</label>
+              <input type="number" id="tel" required><br>
+              <label for="desc">Descripción del vendedor:</label>
+              <input type="text" id="desc" required><br>
+              <label for="desc">Estado de residencia:</label>
+              <input type="text" id="resi" required><br>
+              <button type="button" class="ButtonsConfig" onclick="togglePasswordFields()">Editar
+                Contraseña</button><br><br>
+              <div id="passwordFields">
+                <label for="pwd">Nueva contraseña:</label>
+                <input type="password" id="pwd" name="pwd"><br><br>
+                <label for="confirmPassword">Confirmar Contraseña:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+              </div>
+              <label for="foto">Foto:</label>
+              <input type="file" id="foto" name="foto" accept="image/*" required><br>
+              <button type="button" class="ButtonsConfig" onclick="saveChanges()">Guardar</button>
+              <button type="button" class="ButtonsConfig" onclick="closeFormCuenta()">Cancelar</button>
+            </form>
+          </div>
+        </div>
+
+
+        <!-- Este div contiene las opciones de pago y tiene la clase 'formulario' -->
+        <div id="opciones-pago" class="formulario" style="display: none;">
+          <h4>Tarjetas</h4>
+          <div id="cardList">
+            <!-- Tarjetas se agregarán dinámicamente aquí -->
+          </div>
+
+          <button class="ButtonsConfig" onclick="openFormCards()">Añadir tarjeta</button>
+
+          <!-- Formulario para agregar/editar tarjetas -->
+          <div id="cardForm" class="form-popup" style="display: none;">
+            <form id="cardFormContent" class="form-container">
+              <h4>Agregar/Editar tarjeta</h4>
+              <label for="cardNumber">Número de tarjeta:</label>
+              <input type="text" id="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" required><br>
+              <label for="cardOwner">Nombre del propietario:</label>
+              <input type="text" id="cardOwner" required><br>
+              <label for="bank">Banco: </label>
+              <input type="text" id="bank" required><br>
+              <label for="compañía">Compañía: </label>
+              <input type="text" id="compañia" placeholder="Visa/Mastercard/Amex" required><br>
+              <label for="archivo">Añadir estado de cuenta:</label>
+              <input type="file" id="estadoCuenta" name="archivo" id="estadoCuenta"><br>
+              <button type="button" class="ButtonsConfig" onclick="saveCard()">Guardar</button>
+              <button type="button" class="ButtonsConfig" onclick="closeFormCards()">Cancelar</button>
+            </form>
+          </div>
+        </div>
+
+        
+
+          <!-----------------este div contiene la configuración del procuto y tien la clase formulario-->
+          <div id="opciones-producto" class="formulario" style="display: none;"> 
+            <h4>Editar información del producto</h4>
+            <div id="productInfo">
+
+            </div>
+            <button class="ButtonConfig" onclick="openFormProduct()">Modificar producto</button>
+
+            <div id="productForm" class="form-popup" style="display: none;">
+              <form id="ProductFormContent" class="form-container">
+                <h4>Configuración del producto</h4>
+                
+                <label for="editProduct" >Nombre del producto</label><!-- Contenedor del nombre del producto-->
+                <input type="text" class="form-control" id="editProduct" placeholder="Introduce el nombre del producto">
+                
+                <label for="editPrice">Precio:</label><!-- Conenedor del precio del producto-->
+                <input type="number" inputmode="numeric" class="form-control" id="editPrice" placeholder="Fija el precio de tu producto">
+                
+                <label for="editDescription"> Descripción: </label><!-- Contenedor del area de texto para la descripción-->
+                <textarea class="form-control" id="editDescription" rows="3" placeholder="Escribe una descripción general de tu producto"></textarea>
+                
+                <label for="editInfo"> Información adicional: </label><!-- Contenedor del área de texto para información adicional-->
+                <textarea class="form-control" id="editInfo" rows="3" placeholder="Aqui puedes escribir algún dato curioso sobre tu producto"></textarea>
+                
+                <label for="editStock">Existencias:</label><!-- Contenedor del campo de existencias-->
+                <input type="number" inputmode="numeric" class="form-control" min="1" max="100" step="1" value="1" id="editStock">
+                
+                <label for="dimensions">Dimensiones:</label><!-- Contenedor del campo de medidas-->       
+                <label for="editHigh">Alto (cm):  <input type="number" inputmode="numeric" class="form-control" id="high"></label>
+                <label for="editWidht">Ancho (cm):   <input type="number" inputmode="numeric" class="form-control" id="width"></label>
+                <label for="editLength">Largo (cm):   <input type="number" inputmode="numeric" class="form-control" id="length"></label>
+
+                <label for="">Ingresa una imagen de tu producto:</label>
+                  <input id="image" type="file" multiple="multiple"/>
+                  <div id="preview"></div>
+                  
+                <button type="button" class="ButtonsConfig" id="buttonSubmit" onclick="saveProduct()">Guardar</button>
+                <button type="button" class="ButtonsConfig" onclick="closeFormProducts()">Cancelar</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contenedor de la alerta de BootStrap-->
+        <div class="alert alert-success mt-3 alert-dismissible fade show" role="alert" id="alerta-success"
+          style="display: none;">
+          <i class="bi bi-check-circle-fill" style="color: green;"></i>
+          Los cambios se guardaron correctamente.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+          </button>
+        </div>
+        <!-- Contenedor de la alerta de BootStrap-->
+        <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-danger"
+          style="display: none;">
+          <i class="bi bi-exclamation-triangle-fill"
+            style="color: red; align-items: center; justify-content: center;"></i>
+          La contraseña no coincidió. Por favor, confirme su nueva contraseña.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+          </button>
+        </div>
+        <!-- Contenedor de la alerta de BootStrap-->
+        <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-danger2"
+          style="display: none;">
+          <i class="bi bi-exclamation-triangle-fill"
+            style="color: red; align-items: center; justify-content: center;"></i>
+          Por favor llene todos los campos.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-------------------------------- Termina el contenedor de la página ----------------------------------------------------------->
+
+
+<!------------------------------------ Inicia el Footer ----------------------------------------------------------->
+<footer class="text-center text-lg-start text-white" style="background-color: #696868 ">
+  <div id="footer-script"></div>
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          fetch('./footer.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('footer-script').innerHTML = data;
+              });
+      });
+  </script>
+</footer>
+<!-- Fin del Footer -->
+  <!-- Fin del Footer -->
+  <!--Conexión JS-->
+  <script src="navbar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="script-funciones.js"></script>
+  <script src="../scripts/script-configruracion-vendedor.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+
+</html>
