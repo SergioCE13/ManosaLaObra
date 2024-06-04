@@ -1,4 +1,3 @@
-
 /*-------------Styles del menú lateral------------------*/
 
 ::after,
@@ -56,6 +55,7 @@ body {
 }
 
 #sidebar.expand {
+    z-index:1;
     width: 260px;
     min-width: 260px;
 }
@@ -155,6 +155,7 @@ a.sidebar-link:hover {
 /*------------Styles de container y formularios--------*/
 
 
+
 h1 {
     text-align: center;
     margin-bottom: 20px;
@@ -247,7 +248,7 @@ input[type="email"] {
 
 .account-details {
     width: 700px;
-    height: 600px;
+    height: 650px;
     margin: 20px auto;
     padding: 20px;
     /*border: 1px solid #ccc;*/
@@ -261,7 +262,7 @@ input[type="email"] {
   
   #editForm {
     width: 800px;
-    height: 950px;
+    height: 800px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 5px;
@@ -274,7 +275,19 @@ input[type="email"] {
 
   #cardForm {
     width: 800px;
-    height: 550px;
+    height: 650px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-color: var(--color--secundario);
+    transition: transform 0.2s;
+  }
+
+  #productForm {
+    width: 800px;
+    height: 700px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 5px;
@@ -286,7 +299,7 @@ input[type="email"] {
   
   #addressForm {
     width: 800px;
-    height: 800px;
+    height: 900px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 5px;
@@ -324,7 +337,15 @@ input[type="email"] {
     border-radius: 10px;
 }
 
+.ButtonConfig{
+    border-radius: 10px;
+}
+
 .ButtonsConfig:hover {
+    background-color: var(--color--yellow);
+}
+
+.ButtonConfig:hover {
     background-color: var(--color--yellow);
 }
 
@@ -361,7 +382,84 @@ input[type="email"] {
 }
 
 
- @media screen and (max-width: 1025px) {
+
+
+
+#neighborhood {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--color--secundario);
+}
+
+
+
+  
+ /* Estilo general para el label del radio button */
+.content-input {
+    padding-left: 25px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+  }
+  
+  /* Ocultar el radio button original */
+  input[type="radio"] {
+    display: none;
+  }
+  
+  /* Estilo del círculo personalizado */
+  .content-input::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    background-color: var(--color--secundario);
+  }
+  
+  /* Estilo del círculo cuando el radio button está seleccionado */
+  input[type="radio"]:checked + .content-input::before {
+    background-color: var(--color--yellow);
+    border-color: var(--color--yellow);
+  }
+  
+  /* Estilo del punto interno cuando está seleccionado */
+  .content-input::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color--secundario);
+    opacity: 0;
+  }
+  
+  input[type="radio"]:checked + .content-input::after {
+    opacity: 1;
+  }
+/*---------------------Configuración del producto-------------------------- */
+#editDescription{
+    background-color: var(--color--secundario);
+    border: 2px solid #ccc;
+}
+
+#editInfo{
+    background-color: var(--color--secundario);
+    border: 2px solid #ccc;
+}
+
+
+  @media screen and (max-width: 1025px) {
     .contenido {
       margin-left: 50px;
       margin-top: 10px;
@@ -461,4 +559,6 @@ input[type="email"] {
 
 
   
+
+
 

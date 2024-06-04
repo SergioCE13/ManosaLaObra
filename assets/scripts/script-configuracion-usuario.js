@@ -136,12 +136,12 @@ function myFuntionAlertaErrorMessageCP() {
 
 
 let user = {
-  firstName: "Cristian",
-  middleName: "Nodales",
-  lastName: "Bonaparte",
-  email: "crisbona@gmail.com",
+  firstName: "Maria",
+  middleName: "Rodriguez",
+  lastName: "Castro",
+  email: "maria.rc@gmail.com",
   telefono: "2969613706",
-  password: "Password123!"
+  password: "Contraseña123."
 };
 
 

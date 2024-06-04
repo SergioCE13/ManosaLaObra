@@ -42,6 +42,9 @@
 /* --------------------------------------------- Estilos del Cuerpo -------------------------------------------*/
 body{ /* Estilos de la etiquea body*/
     background-color: #E4DDD3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container--title{ /* Estilos del banner del sitio*/
@@ -100,4 +103,8 @@ label, input{
 #principal{  /*Lo agregué*/
     display: none;
     font-size: 20px;
+}
+
+footer{
+    margin-top: auto;
 }
