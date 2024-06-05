@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compra</title>
+
+    <!-- Conexión con BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Conexión Iconos BootStrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Conexión con la hoja de estilos personalizada -->
+    <link rel="stylesheet" href="../styles/contactanos-styles.css">
+    <link rel="stylesheet" href="../styles/style-navbar-footer-body.css">
+    <link rel="stylesheet" href="../styles/style-swiper.css">
+    <link rel="stylesheet" href="../styles/carrrito.css">
+    <!-- Estilos adicionales -->
+</head>
+
+<body>
+    <header>
+        <!-- Inicia la NavBar -->
+<!-- index.html or any other HTML file -->
+<div id="navbar-placeholder"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  });
+</script>
+
+        <!-- Termina la NavBar -->
+    </header>
+    <!-- Dirección de Entrega -->
+<!-- Dirección de Entrega -->
+<div class="container mt-5">
+    <div class="accordion" id="accordionDireccion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingDireccion">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDireccion" aria-expanded="false" aria-controls="collapseDireccion">
+                    Dirección de Entrega
+                </button>
+            </h2>
+            <div id="collapseDireccion" class="accordion-collapse collapse" aria-labelledby="headingDireccion" data-bs-parent="#accordionDireccion">
+                <div class="accordion-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover align-middle">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">Dirección de Entrega</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="radio" name="direccion" id="direccion1">
+                                    </td>
+                                    <td class="w-50">
+                                        <label for="direccion1">
+                                            <strong>Casa</strong><br>
+                                            Calle 123, Ciudad, Código Postal, País
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-primary" href="./configuracion-usuario.html">Cambiar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" name="direccion" id="direccion2">
+                                    </td>
+                                    <td class="w-50">
+                                        <label for="direccion2">
+                                            <strong>Oficina</strong><br>
+                                            Calle 456, Ciudad, Código Postal, País
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-primary" href="./configuracion-usuario.html">Cambiar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Información de Pago -->
+<div class="container mt-3">
+    <div class="accordion" id="accordionPago">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingPago">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePago" aria-expanded="false" aria-controls="collapsePago">
+                    Información de Pago
+                </button>
+            </h2>
+            <div id="collapsePago" class="accordion-collapse collapse" aria-labelledby="headingPago" data-bs-parent="#accordionPago">
+                <div class="accordion-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover align-middle">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">Información de Pago</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="radio" name="pago" id="pago1">
+                                    </td>
+                                    <td class="w-50">
+                                        <label for="pago1">
+                                            <strong>Tarjeta Visa</strong><br>
+                                            **** **** **** 1234
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-primary" href="./configuracion-usuario.html">Cambiar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" name="pago" id="pago2">
+                                    </td>
+                                    <td class="w-50">
+                                        <label for="pago2">
+                                            <strong>Tarjeta MasterCard</strong><br>
+                                            **** **** **** 5678
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-primary" href="configuracion-usuario.html">Cambiar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Resumen de Pedido -->
+<div class="container mt-3">
+    <div class="accordion" id="accordionResumen">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingResumen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseResumen" aria-expanded="false" aria-controls="collapseResumen">
+                    Resumen de Pedido
+                </button>
+            </h2>
+            <div id="collapseResumen" class="accordion-collapse collapse" aria-labelledby="headingResumen" data-bs-parent="#accordionResumen">
+                <div class="accordion-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Precio Unitario</th>
+                                    <th>Cantidad</th>
+                                    <th>Total</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-items">
+                                <tr data-product-id="1">
+                                    <td class="product-name"><img src="../images/producto/producto1.png" alt="Producto 1" class="product-img">Esfera metal artesano</td>
+                                    <td>$10.00</td>
+                                    <td>
+                                        <div class="input-group">
+                                            <button class="btn btn-secondary btn-decrement" data-product-id="1">-</button>
+                                            <input type="text" class="form-control text-center quantity-input" value="1" data-product-id="1">
+                                            <button class="btn btn-secondary btn-increment" data-product-id="1">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="product-total" data-product-id="1">$10.00</td>
+                                    <td><button class="btn btn-danger btn-delete" data-product-id="1">Eliminar</button></td>
+                                </tr>
+                                <tr data-product-id="2">
+                                    <td class="product-name"><img src="../images/productos/craneo_grande1_600x.jpg" alt="Producto 2" class="product-img">Calavera</td>
+                                    <td>$20.00</td>
+                                    <td>
+                                        <div class="input-group">
+                                            <button class="btn btn-secondary btn-decrement" data-product-id="2">-</button>
+                                            <input type="text" class="form-control text-center quantity-input" value="1" data-product-id="2">
+                                            <button class="btn btn-secondary btn-increment" data-product-id="2">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="product-total" data-product-id="2">$20.00</td>
+                                    <td><button class="btn btn-danger btn-delete" data-product-id="2">Eliminar</button></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="text-end"><strong>Total del Pedido:</strong></td>
+                                    <td id="order-total">$30.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary">Realizar Pedido</button>
+                        <button class="btn btn-danger" id="empty-cart">Vaciar Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <!-- Scripts -->
+    <!-- Conexión con jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+z5KA9QF1c8EIf+6cv8LfCW2x4EBY2F/vMHZ5ISK" crossorigin="anonymous"></script>
+    <!-- Conexión con BootStrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Otros scripts -->
+    <script src="../scripts/script-funciones.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+  <!---------------------------------------------Inicio de Footer----------------------------------------------------->
+
+  <footer class="text-center text-lg-start text-white" style="background-color: #696868 ">
+    <div id="footer-script"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('./footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-script').innerHTML = data;
+                });
+        });
+    </script>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        function updateTotals() {
+            let orderTotal = 0;
+            document.querySelectorAll(".product-total").forEach(function(totalCell) {
+                const productId = totalCell.dataset.productId;
+                const quantity = parseInt(document.querySelector(`.quantity-input[data-product-id="${productId}"]`).value);
+                const price = parseFloat(totalCell.previousElementSibling.previousElementSibling.innerText.slice(1));
+                const total = price * quantity;
+                totalCell.innerText = `$${total.toFixed(2)}`;
+                orderTotal += total;
+            });
+            document.getElementById("order-total").innerText = `$${orderTotal.toFixed(2)}`;
+        }
+    
+        document.querySelectorAll(".btn-increment").forEach(function(button) {
+            button.addEventListener("click", function() {
+                const productId = this.dataset.productId;
+                const input = document.querySelector(`.quantity-input[data-product-id="${productId}"]`);
+                input.value = parseInt(input.value) + 1;
+                updateTotals();
+            });
+        });
+    
+        document.querySelectorAll(".btn-decrement").forEach(function(button) {
+            button.addEventListener("click", function() {
+                const productId = this.dataset.productId;
+                const input = document.querySelector(`.quantity-input[data-product-id="${productId}"]`);
+                if (parseInt(input.value) > 1) {
+                    input.value = parseInt(input.value) - 1;
+                    updateTotals();
+                }
+            });
+        });
+    
+        document.querySelectorAll(".btn-delete").forEach(function(button) {
+            button.addEventListener("click", function() {
+                const productId = this.dataset.productId;
+                const row = document.querySelector(`tr[data-product-id="${productId}"]`);
+                row.parentNode.removeChild(row);
+                updateTotals();
+            });
+        });
+    
+        document.getElementById("empty-cart").addEventListener("click", function() {
+            document.querySelectorAll(".quantity-input").forEach(function(input) {
+                input.value = 1;
+            });
+            document.querySelectorAll("tbody tr[data-product-id]").forEach(function(row) {
+                row.parentNode.removeChild(row);
+            });
+            updateTotals();
+        });
+    
+        updateTotals();
+    });
+    </script>
+</html>

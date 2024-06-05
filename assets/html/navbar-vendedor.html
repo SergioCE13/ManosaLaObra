@@ -1,0 +1,64 @@
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/contactanos-styles.css">
+
+<style>
+    .navbar {
+        font-family: 'Open Sans', sans-serif;
+    }
+    .navbar .nav-link,
+    .navbar .dropdown-item,
+    .navbar .navbar-brand,
+    .navbar .btn {
+        font-weight: 400; /* Bold weight */
+    }
+</style>
+
+
+
+<nav class="navbar navbar-expand-lg" style="z-index:2 ;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="./Index2.html">
+            <img src="../images/Logo.png" width="50" height="50">
+        </a>
+        <a id="principal" class="nav-link active" aria-current="page" href="Index.html" style="color: #FFFFFF">Manos a la Obra</a>
+        <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="box-shadow: none;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="./Tienda.html">Tienda</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Nosotros
+                    </a>
+                    <ul class="dropdown-menu" style="background-color: #e31ba0b6;">
+                        <li><a class="dropdown-item" href="./index-sobre-nosotros.html" style="color: #FFFFFF;">Acerca de Nosotros</a></li>
+                        <li><a class="dropdown-item" href="./NuestrosArtesanos.html" style="color: #FFFFFF;">Acerca de nuestros Artesanos</a></li>
+                        <li><a class="dropdown-item" href="./Contactanos.html" style="color: #FFFFFF;">Contactanos</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form id="buscar" name="formulario" class="d-flex position-absolute top-50 start-50 translate-middle" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" id="buscarnav">
+                <button class="btn btn-outline-success" id="search_btn" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                </button>
+            </form>
+            <a href="./carrito-de-compras.html">
+                <i class="bi bi-cart3" style="padding-right: 15px; padding-left: 10px; color: #FFFFFF; font-size: 1.5rem;"></i>
+            </a>
+            <div class="dropdown">
+                <i class="bi bi-person" style="padding-right: 15px; color: #FFFFFF; font-size: 1.8rem;" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="background-color: #e31ba0b6;">
+                    <li><a class="dropdown-item" href="./formulario-producto.html" style="color: #FFFFFF;">Registro de Producto</a></li>       
+                    <li><a class="dropdown-item" href="./configuracion-del-vendedor.html" style="color: #FFFFFF;">Configuración del Vendedor</a></li>
+                    <li><a class="dropdown-item" href="../../index.html" style="color: #FFFFFF;">Cerrar Sesión</a></li>          
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

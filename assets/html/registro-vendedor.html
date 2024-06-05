@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Etiquetas meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alebrijes FullStack" />
+    <meta name="description" content="Plataforma ecommerce enfocada a la venta de artesanías mexicanas" />
+    <meta name="keywords" content="ecomerce, México, artesanías, venta, compra" />
+    <meta name="application-name" content="Manos a la Obra" />
+    <title>Registro de Vendedor</title>
+
+    <!-------------- Conexiones de estilos------------->
+
+    <!---------------BootStrap---------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--Conexión Iconos BootStrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-------------------- Fuentes -------------------->
+
+    <!--Conexión Tipografía Darker Grotesque-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
+
+    <!--Conexión Tipografía Open Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Open+Sans:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <!-- Conexión con las Hojas de estilo específicas -->
+    <link rel="stylesheet" href="../styles/style-navbar-footer-body.css">
+    <link rel="stylesheet" href="../styles/registro-vendedor.css">
+</head>
+
+<!--------------------------------------- Inicia el Header ------------------------------------------->
+<header>
+    <div id="navbar-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                });
+        });
+    </script>
+</header>
+<!------------------------------- Termina el Header --------------------------------------------------------------->
+
+<body>
+    <div class="container--title" id="titulo-formulario-vendedor">
+        <h1 id="titulo">Registro de vendedor</h1>
+    </div>
+
+    <!--------------------------------- Inicia el html del formulario ---------------------------------------->
+    <div class="alinear-formulario">
+        <form id="registro-vendedor-form">
+            <div class="caja-blanca"> <!-- Contenedor del cuerpo de la página-->
+                <div class="formulario"> <!-- Contenedor del formulario-->
+                    <div class="container-titulo"> <!-- Contenedor del título de la página -->
+                        <h1 id="titulo-formulario">INGRESA LOS DATOS DEL VENDEDOR</h1>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-nombre-usuario">Nombre:</label>
+                        <input type="text" class="form-control" id="input-nombre-vendedor" placeholder="Introduce el nombre">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="input-apellido-paterno">Apellido paterno:</label>
+                            <input type="text" class="form-control" id="input-apellido-paterno" placeholder="Introduce apellido paterno">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="input-apellido-materno">Apellido materno:</label>
+                            <input type="text" class="form-control" id="input-apellido-materno" placeholder="Introduce apellido materno">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="input-numero-telefono">Número de teléfono:</label>
+                            <input type="number" inputmode="numeric" class="form-control" id="input-telefono" placeholder="Introduce el número de celular">
+                            <small class="form-text text-muted">10 dígitos.</small>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="input-email-usuario">Email:</label>
+                            <input type="email" class="form-control" id="input-email" placeholder="Introduce el correo electrónico">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="input-contraseña">Contraseña:</label>
+                            <input type="password" class="form-control" id="input-password" placeholder="Introduce la contraseña">
+                            <small class="form-text text-muted">8 caracteres con 1 mayúscula, 1 minúscula, 1 número y 1 caracter (@$!%*?&.,-_:)</small>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="input-confirmar-contraseña">Confirma la contraseña:</label>
+                            <input type="password" class="form-control" id="input-confirmar-password" placeholder="Repite la contraseña">
+                            <small class="form-text text-muted">Debe ser exactamente igual a la anterior.</small>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="grupo-radio-buttons">Género:</label>
+                    </div>
+                    <div class="grupo-radio-buttons" id="grupo-radio-buttons">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Masculino">
+                            <label class="form-check-label" for="inlineRadio1">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Femenino">
+                            <label class="form-check-label" for="inlineRadio2">Femenino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Otro">
+                            <label class="form-check-label" for="inlineRadio4">Otro</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-fecha-nacimiento">Fecha de nacimiento:</label>
+                        <input type="date" class="form-control" id="input-fecha-nacimiento">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Acepto los <a href="./Terminos y condiciones.html" target="_blank">términos y condiciones</a></label>
+                    </div>
+                    <div class="alert alert-success mt-3 alert-dismissible fade show" role="alert" id="alerta-success">
+                        <strong>Aviso: </strong> El registro del producto se ha realizado exitosamente.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-danger">
+                        <strong>Aviso: </strong> Porfavor, rellene todos los campos correctamente.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                    </div>
+                    <input type="submit" value="Enviar" id="button-submit" class="button-disabled">
+                </div>
+            </div> <!-- Cierre del div de Caja blanca -->
+        </form>
+    </div>
+
+<!---------------------------------------------Inicio de Footer----------------------------------------------------->
+
+<footer class="text-center text-lg-start text-white" style="background-color: #696868 ">
+    <div id="footer-script"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('./footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-script').innerHTML = data;
+                });
+        });
+    </script>
+  </footer>
+
+    <!-- Conexiones de Scripts-->
+    <script src="../scripts/registro-vendedor.js"></script>
+    <script src="../scripts/registro-vendedor-funcionapi.js"></script>
+
+    <!-------------- BootStrap --------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

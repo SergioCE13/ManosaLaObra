@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!--------------------------- Conexiones para Estilos------------------------->
+
+   <!-- Conexión con BootStrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <!--Conexión Iconos BootStrap-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+   <!-- Conexión con la hoja de estilos -->
+   <link rel="stylesheet" href="../styles/contactanos-styles.css">
+   
+ <!--Conexión Styles-->
+ <link rel="stylesheet" href="../styles/style-navbar-footer-body.css">
+ <link rel="stylesheet" href="../styles/style-swiper.css">
+
+     <!--Conexión JS-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+   crossorigin="anonymous"></script>
+
+ <script src="../scripts/script-funciones.js"></script>
+
+</head>
+<header>
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch('navbar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+          });
+      });
+    </script>
+    
+</header>
+<body>
+ 
+</body>
+ <!---------------------------------------------Inicio de Footer----------------------------------------------------->
+
+ <footer class="text-center text-lg-start text-white" style="background-color: #696868 ">
+    <div id="footer-script"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('./footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-script').innerHTML = data;
+                });
+        });
+    </script>
+</footer>
+
+<!-- Fin del Footer -->   
+</html>
