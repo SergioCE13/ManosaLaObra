@@ -268,8 +268,44 @@ background-color: #ECAC44;
   font-size: 20px;
 }
 
+#nuevo-elemento {
+  background-color: #E31B9F;
+}
 
+#contenedorBotones {
+  padding: 30px;
+  
+  
 
+}
+#nuevoElemento {
+  justify-content: center;
+  margin: 15px 250px 0px 250px;
+  width: 20px 20px;
+  border-radius: 35px;
+  text-align: center;
+}
+ 
+.Botones{
+  background-color: #ECAC44;
+  font-size: large;
+}
+
+.Agregar{
+  font-size: large;
+  margin: 10px 600px 10px;
+  width: 150px;
+  height: 30px;
+  border-radius: 25px;
+  background-color:#E31B9F;
+  color: #ffffff; 
+  font-family: "Open Sans", sans-serif;
+}
+
+.Agregar:hover{
+  background-color: #ECAC44;
+  color: aliceblue;
+}
 
 /*Footer*/
 .text-center text-lg-start text-white {

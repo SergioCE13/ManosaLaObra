@@ -1,48 +1,30 @@
-function agregarLista() {
-  var input = document.getElementById("product-input");
-  var lista = input.value.trim();
-
-  if (lista !== "") {
-    var select = document.getElementById("product-list");
-    var option = document.createElement("option");
-    option.text = lista;
-    option.value = lista;
-    select.add(option);
-
-    // Limpiar el campo de entrada después de agregar el producto
-    input.value = "";
-  }
+function agregarElemento() {
+  // Obtener el valor del input
+  let nuevoTextoBoton = document.getElementById("nuevoElemento").value;
+  
+  // Crear un nuevo botón
+  let boton = document.createElement("button");
+  
+  // Agregar el texto ingresado al nuevo botón
+  boton.appendChild(document.createTextNode(nuevoTextoBoton));
+  
+  // Agregar el botón al contenedor de botones en el HTML
+  document.getElementById("contenedorBotones").appendChild(boton);
+  
+  // Asociar un evento al botón para mostrar contenido específico
+  boton.addEventListener("click", function() {
+      let contenido = "";
+      if (nuevoTextoBoton === "Botón 1") {
+          contenido = "¡Este es el contenido del Botón 1!";
+      } else if (nuevoTextoBoton === "Botón 2") {
+          contenido = "El Botón 2 muestra este contenido.";
+      } else {
+          contenido = "No hay contenido específico para este botón.";
+      }
+      document.getElementById("contenido").innerText = contenido;
+  });
+  
+  // Limpiar el input después de agregar el botón al contenedor
+  document.getElementById("nuevoElemento").value = "";
 }
-function agregarProducto() {
-var input = document.getElementById("product-input");
-var producto = input.value.trim();
-
-if (producto !== "") {
-  var select = document.getElementById("product-list");
-  var option = document.createElement("option");
-  option.text = producto;
-  option.value = producto;
-  select.add(option);
-
-  // Limpiar el campo de entrada después de agregar el producto
-  input.value = "";
-}
-}
-
-function seleccionarProducto(nombreProducto) {
-  var listaSeleccionados = document.getElementById("selected-products");
-
-  // Verificar si el producto ya ha sido seleccionado
-  var productosSeleccionados = listaSeleccionados.getElementsByTagName("li");
-  for (var i = 0; i < productosSeleccionados.length; i++) {
-    if (productosSeleccionados[i].textContent === nombreProducto) {
-      alert("¡Este producto ya ha sido seleccionado!");
-      return; // Salir de la función si el producto ya está en la lista
-    }
-  }
-
-  // Si el producto no ha sido seleccionado previamente, agregarlo a la lista
-  var nuevoProducto = document.createElement("li");
-  nuevoProducto.textContent = nombreProducto;
-  listaSeleccionados.appendChild(nuevoProducto);
-}
+ 

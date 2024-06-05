@@ -50,15 +50,15 @@
     <div id="navbar-placeholder"></div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        fetch('navbar.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('navbar-placeholder').innerHTML = data;
-          });
-      });
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                });
+        });
     </script>
-    
+
     <!-------------------------------------- Termina la NavBar ----------------------------------->
 </header>
 <!------------------------------- Termina el Header --------------------------------------------------------------->
@@ -66,13 +66,8 @@
 <body>
 
     <div class="Title-pag">
-        Nuestros Artesanos
+        <h1 class="Title-pag1">Nuestros Artesanos</h1>
     </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
 
     <!---------------------------------------------Inicia Carousel------------------------------------------>
 
@@ -96,247 +91,252 @@
 
 
 
-                <!-- "Nuestros artesanos" 1/2 ------->
-                <div class="carousel-item active">
-                    <!--Contenedor del titulo de la página-->
 
 
-                    <!--Contenedor de las Cards página 1-->
-                    <div class="cards-wrapper">
 
-                        <!--Inicia Card Angel Soto-->
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="../images/Artesanos/art2.jpeg" alt="Foto Angel">
-                            <div class="card-body">
-                                <h5 class="card-title">Carmen</h5>
-                                <p class="card-text">Artesana de textiles</p>
+                <!--Contenedor de las Cards página 1-->
+                <div class="cards-wrapper">
 
-                                <!--Contenedor para el Botón -->
-                                <div class="container">
-                                    <!-- Botón para Abrir Tarjeta -->
-                                    <button class="btn btn-custom-color" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModalAS">
-                                        Saber más
-                                    </button>
+                    <!--Inicia Card Carmen-->
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../images/Artesanos/art2.jpeg" alt="Foto Angel">
+                        <div class="card-body">
+                            <h5 class="card-title">Carmen</h5>
+                            <p class="card-text">Artesana de textiles</p>
 
-                                    <!-- Tarjeta con Información (Modal) -->
-                                    <div class="modal fade bd-example-modal-lg" id="exampleModalAS" tabindex="-1"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h3 class="modal-title" id="exampleModalLabelAS">Hola, soy Carmen
-                                                    </h3>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
+                            <!--Contenedor para el Botón -->
+                            <div class="container">
+                                <!-- Botón para Abrir Tarjeta -->
+                                <button class="btn btn-custom-color" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModalAS">
+                                    Saber más
+                                </button>
 
-                                                    <img class="img-modal" src="../images/Artesanos/art2.jpeg"
-                                                        style="float: right;">
-                                                    <div class="text-modal">
-                                                    <p>Soy originaria de Cuetzalan, Puebla, realizo prendas textiles
+                                <!-- Tarjeta con Información (Modal) -->
+                                <div class="modal fade bd-example-modal-lg" id="exampleModalAS" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="exampleModalLabelAS">Hola, soy Carmen
+                                                </h3>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <img class="img-modal" src="../images/Artesanos/art2.jpeg"
+                                                    style="float: right;">
+                                                <div class="text-modal">
+                                                    <p>Soy originaria de Cuetzalan, Puebla, llevo 30 años realizando
+                                                        prendas
+                                                        textiles
                                                         tejidas en telar de cintura; además, utiliza una técnica
                                                         única en el mundo conocida como “tejido en curva”.
                                                         A muy corta edad aprendí a utilizar el telar gracias a mi
                                                         abuela, en mi juventud y adultez perfeccioné la técnica y
-                                                        generé piezas únicas que la hicieron destacar de manera
+                                                        generé piezas únicas que me hicieron destacar de manera
                                                         internacional.
                                                         Mi lengua natal es el Náhuatl y a través de mi trabajo
                                                         conservo las tradiciones de la cultura de la Sierra Norte
                                                         del estado de Puebla.</p>
-                                                    </div>
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <a role="button" id="btn-art" href="Tienda.html">Ver artesanias</a>
-                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a role="button" id="btn-art" href="Tienda.html">Ver artesanias</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!--Termina Card Angel Soto-->
-
-
-                        <!--Inicia Card Asbel Torales-->
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="../images/Artesanos/art1.jpeg" alt="Foto Asbel">
-                            <div class="card-body">
-                                <h5 class="card-title">Jorge</h5>
-                                <p class="card-text">Artesano de barro negro</p>
-
-                                <!--Contenedor para el Botón -->
-                                <div class="container">
-                                    <!-- Botón para Abrir Tarjeta -->
-                                    <button class="btn btn-custom-color" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModalAT">
-                                        Saber más
-                                    </button>
-
-                                    <!-- Tarjeta con Información (Modal) -->
-                                    <div class="modal fade bd-example-modal-lg" id="exampleModalAT" tabindex="-1"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h3 class="modal-title" id="exampleModalLabelAT">Hola, soy Jorge
-                                                    </h3>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <img class="img-modal" src="../images/Artesanos/art1.jpeg"
-                                                        style="float: right;">
-
-                                                        <p>Nací en las montañas de Oaxaca, México, rodeado de la rica
-                                                            tradición del barro negro. Desde pequeño, ayudaba a mi abuelo en
-                                                            su taller, fascinado por la magia de transformar la arcilla en
-                                                            arte.
-                                                            <br>
-                                                            A pesar de los desafíos modernos, decidí honrar nuestras raíces
-                                                            dedicándome por completo al oficio. Con el tiempo, mi trabajo
-                                                            ganó reconocimiento, pero para mí, el verdadero éxito es
-                                                            preservar nuestra cultura a través de mis creaciones.
-                                                            <br>
-                                                            Cada pieza que moldeo es un tributo a mi herencia y una
-                                                            celebración de la belleza del arte tradicional mexicano.
-                                                            Mientras mis manos sigan modelando el barro negro, seguiré
-                                                            contando la historia de mi pueblo.
-                                                        </p>
-
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <a role="button" id="btn-art" href="Tienda.html">Ver artesanias</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Termina Card de Asbel Torales-->
-
-
-
-                        <!--Inicia Card David Ortiz-->
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="../images/Artesanos/art3.jpeg" alt="Foto David">
-                            <div class="card-body">
-                                <h5 class="card-title">Antonio</h5>
-                                <p class="card-text">Artesano de ceramica</p>
-
-                                <!--Contenedor para Botón -->
-                                <div class="container">
-                                    <!-- Botón para Abrir Tarjeta -->
-                                    <button class="btn btn-custom-color" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModalDO">
-                                        Saber más
-                                    </button>
-
-                                    <!-- Tarjeta con Información (Modal) -->
-                                    <div class="modal fade bd-example-modal-lg" id="exampleModalDO" tabindex="-1"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h3 class="modal-title" id="exampleModalLabelDO">Hola, soy Antonio
-                                                    </h3>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <img class="img-modal" src="../images/Artesanos/art3.jpeg"
-                                                        style="float: right;">
-                                                        <p>Desde mi infancia en el pintoresco pueblo de San Martín
-                                                            Tilcajete, en Oaxaca, los alebrijes han sido mi pasión y mi
-                                                            vida. Recuerdo con cariño los días en que observaba a mi padre,
-                                                            un talentoso tallador de madera, dar forma a estas criaturas
-                                                            fantásticas con habilidad y destreza. Desde entonces, supe que
-                                                            quería seguir sus pasos y dedicarme al arte de los alebrijes.
-                                                            <br>
-                                                            A medida que crecía, me sumergí profundamente en el mundo de la
-                                                            talla de madera. Cada pieza que esculpía era una oportunidad
-                                                            para explorar mi imaginación y transmitir la riqueza de la
-                                                            cultura oaxaqueña. Inspirada por las historias de nuestra
-                                                            comunidad y la exuberante naturaleza que nos rodea, encontraba
-                                                            en los alebrijes una forma de expresar mi creatividad y conectar
-                                                            con mis raíces.</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <a role="button" id="btn-art" href="Tienda.html">Ver artesanias</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Termina Card David Ortiz-->
-
-                        <!--Inicia Card David Salvatori-->
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="../images/Artesanos/art4.jpeg" alt="Foto David Salva">
-                            <div class="card-body">
-                                <h5 class="card-title">Lupita</h5>
-                                <p class="card-text">Artesana de alebrijes</p>
-
-                                <!--Contenedor para el Botón-->
-                                <div class="container">
-                                    <!-- Botón para Abrir Tarjeta -->
-                                    <button class="btn btn-custom-color" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModalDS">
-                                        Saber más
-                                    </button>
-
-                                    <!-- Tarjeta con Información (Modal) -->
-                                    <div class="modal fade bd-example-modal-lg" id="exampleModalDS" tabindex="-1"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h3 class="modal-title" id="exampleModalLabelDS">Hola, soy Lupita
-                                                    </h3>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <img class="img-modal" src="../images/Artesanos/art4.jpeg"
-                                                        style="float: right;">
-                                                        <p>Desde mi niñez en los campos de Chiapas, la cerámica ha sido mi
-                                                            pasión. Recuerdo con cariño los días en que acompañaba a mi
-                                                            abuela al río para recolectar la arcilla que luego daría forma
-                                                            en su modesto taller. Inspirado por sus manos hábiles y su
-                                                            conexión con la tierra, pronto me sumergí en el arte de la
-                                                            alfarería.
-                                                            <br>
-                                                            A medida que crecía, mi amor por la cerámica se arraigaba más
-                                                            profundamente en mi ser. Experimentaba con técnicas ancestrales
-                                                            y buscaba capturar la esencia misma de la selva chiapaneca en
-                                                            cada una de mis creaciones. Mis manos, guiadas por la tradición
-                                                            y el respeto por la naturaleza, moldeaban no solo vasijas y
-                                                            figurillas, sino también historias, transmitiendo la riqueza
-                                                            cultural y espiritual de nuestra tierra a través de mis obras.
-                                                        </p>
-
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <a role="button" id="btn-art" href="Tienda.html">Ver artesanias</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Termina Card de David Salvatori-->
-
-
                     </div>
+                    <!--Termina Card Angel Soto-->
+
+
+                    <!--Inicia Card Asbel Torales-->
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../images/Artesanos/art1.jpeg" alt="Foto Asbel">
+                        <div class="card-body">
+                            <h5 class="card-title">Jorge</h5>
+                            <p class="card-text">Artesano de barro negro</p>
+
+                            <!--Contenedor para el Botón -->
+                            <div class="container">
+                                <!-- Botón para Abrir Tarjeta -->
+                                <button class="btn btn-custom-color" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModalAT">
+                                    Saber más
+                                </button>
+
+                                <!-- Tarjeta con Información (Modal) -->
+                                <div class="modal fade bd-example-modal-lg" id="exampleModalAT" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="exampleModalLabelAT">Hola, soy Jorge
+                                                </h3>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img class="img-modal" src="../images/Artesanos/art1.jpeg"
+                                                    style="float: right;">
+
+                                                <p>Nací hace 61 años en las montañas de Oaxaca, México, rodeado de la
+                                                    rica
+                                                    tradición del barro negro. Desde pequeño, ayudaba a mi abuelo en
+                                                    su taller, fascinado por la magia de transformar la arcilla en
+                                                    arte.
+                                                    <br>
+                                                    A pesar de los desafíos modernos, decidí honrar nuestras raíces
+                                                    dedicándome por completo al oficio a la edad de 16 años. Con el
+                                                    tiempo, mi trabajo
+                                                    ganó reconocimiento, pero para mí, el verdadero éxito es
+                                                    preservar nuestra cultura a través de mis creaciones.
+                                                    <br>
+                                                    Cada pieza que moldeo es un tributo a mi herencia y una
+                                                    celebración de la belleza del arte tradicional mexicano.
+                                                    Mientras mis manos sigan modelando el barro negro, seguiré
+                                                    contando la historia de mi pueblo.
+                                                </p>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a role="button" id="btn-art" href="Tienda.html">Ver artesanias</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Termina Card de Asbel Torales-->
+
+
+
+                    <!--Inicia Card David Ortiz-->
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../images/Artesanos/art3.jpeg" alt="Foto David">
+                        <div class="card-body">
+                            <h5 class="card-title">Antonio</h5>
+                            <p class="card-text">Artesano de ceramica</p>
+
+                            <!--Contenedor para Botón -->
+                            <div class="container">
+                                <!-- Botón para Abrir Tarjeta -->
+                                <button class="btn btn-custom-color" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModalDO">
+                                    Saber más
+                                </button>
+
+                                <!-- Tarjeta con Información (Modal) -->
+                                <div class="modal fade bd-example-modal-lg" id="exampleModalDO" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="exampleModalLabelDO">Hola, soy Antonio
+                                                </h3>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img class="img-modal" src="../images/Artesanos/art3.jpeg"
+                                                    style="float: right;">
+                                                <p>Desde mi infancia en el pintoresco pueblo de San Martín
+                                                    Tilcajete, en Oaxaca, los alebrijes han sido mi pasión y mi
+                                                    vida. Recuerdo con cariño los días en que observaba a mi padre,
+                                                    un talentoso tallador de madera, dar forma a estas criaturas
+                                                    fantásticas con habilidad y destreza. Desde entonces, supe que
+                                                    quería seguir sus pasos y dedicarme al arte de los alebrijes.
+                                                    <br>
+                                                    A partir de los 20 años me sumergí profundamente en el mundo de la
+                                                    talla de madera. Cada pieza que esculpía era una oportunidad
+                                                    para explorar mi imaginación y transmitir la riqueza de la
+                                                    cultura oaxaqueña. Inspirada por las historias de nuestra
+                                                    comunidad y la exuberante naturaleza que nos rodea, encontraba
+                                                    en los alebrijes una forma de expresar mi creatividad y conectar
+                                                    con mis raíces.
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a role="button" id="btn-art" href="Tienda.html">Ver artesanias</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Termina Card David Ortiz-->
+
+                    <!--Inicia Card David Salvatori-->
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../images/Artesanos/art4.jpeg" alt="Foto David Salva">
+                        <div class="card-body">
+                            <h5 class="card-title">Lupita</h5>
+                            <p class="card-text">Artesana de alebrijes</p>
+
+                            <!--Contenedor para el Botón-->
+                            <div class="container">
+                                <!-- Botón para Abrir Tarjeta -->
+                                <button class="btn btn-custom-color" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModalDS">
+                                    Saber más
+                                </button>
+
+                                <!-- Tarjeta con Información (Modal) -->
+                                <div class="modal fade bd-example-modal-lg" id="exampleModalDS" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="exampleModalLabelDS">Hola, soy Lupita
+                                                </h3>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img class="img-modal" src="../images/Artesanos/art4.jpeg"
+                                                    style="float: right;">
+                                                <p>Desde mi niñez en los campos de Chiapas, la cerámica ha sido mi
+                                                    pasión. Recuerdo con cariño los días en que acompañaba a mi
+                                                    abuela al río para recolectar la arcilla que luego daría forma
+                                                    en su modesto taller. Inspirado por sus manos hábiles y su
+                                                    conexión con la tierra, pronto me sumergí en el arte de la
+                                                    alfarería.
+                                                    <br>
+                                                    A medida que crecía, mi amor por la cerámica se arraigaba más
+                                                    profundamente en mi ser. Experimentaba con técnicas ancestrales
+                                                    y buscaba capturar la esencia misma de la selva chiapaneca en
+                                                    cada una de mis creaciones. Mis manos, guiadas por la tradición
+                                                    y el respeto por la naturaleza, moldeaban no solo vasijas y
+                                                    figurillas, sino también historias, transmitiendo la riqueza
+                                                    cultural y espiritual de nuestra tierra a través de mis obras
+                                                    ,actualmente tengo 20 años trabajando en el taller de productos de
+                                                    cerámica de la familia.
+                                                </p>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a role="button" id="btn-art" href="Tienda.html">Ver artesanias</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Termina Card de David Salvatori-->
+
+
                 </div>
             </div>
-
         </div>
+
+    </div>
     </div>
 
     <!--Termina el carousel-->

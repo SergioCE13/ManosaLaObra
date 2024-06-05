@@ -118,6 +118,12 @@
     height: 250px;
     object-fit: cover;
     padding: 15px 15px 0 15px;
+
+  }
+
+  .pr_img img:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
   }
   .content {
     padding: 0 1rem 1rem 1rem;
@@ -130,7 +136,7 @@
     color: #bdc3c7;
   }
   .content .price {
-    
+    font-size: 20px;
     padding: 0.5rem;
     width: 60%;
     color: #E31B9F;
