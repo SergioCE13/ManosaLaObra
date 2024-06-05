@@ -17,11 +17,6 @@
     
     <!--Conexión Iconos BootStrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-   
-    <!--Conexión Styles-->
-    <link rel="stylesheet" href="./assets/styles/style-navbar-footer-body.css">
-    <link rel="stylesheet" href="./assets/styles/style-configuración-usuario.css">
-    <link rel="stylesheet" href="./assets/styles/contactanos-styles.css">
 
     <!--Conexión Tipografía Darker Grotesque-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,8 +28,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
 
+    <!--Conexión Styles-->
+    <link rel="stylesheet" href="../styles/style-navbar-footer-body.css">
+    <link rel="stylesheet" href="../styles/style-configuración-usuario.css">
+    <link rel="stylesheet" href="../styles/contactanos-styles.css">
 
-   
 
 </head>
  <!--------------------------------------- Inicia el Header ------------------------------------------->
@@ -43,7 +41,7 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      fetch('navbar.html')
+      fetch('./navbar.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('navbar-placeholder').innerHTML = data;
@@ -104,20 +102,20 @@
             <div id="opciones-cuenta" class="formulario" style="display: block;">
             
     
-              <div class="account-details">
+              <div class="account-details" id="miCuenta">
                 <h4>Mi cuenta</h4>
                 <br>
-                <p>Nombre: Roberto <span id="name"></span></p>
+                <p>Nombre:  <span id="name"> </span></p>
                 <hr>
-                <p>Apellido paterno: Rodriguez <span id="lastnameDad"></span></p>
+                <p>Apellido paterno:  <span id="lastnameDad"></span></p>
                 <hr>
-                <p>Apellido materno: Castro <span id="lastnameMom"></span></p>
+                <p>Apellido materno:  <span id="lastnameMom"></span></p>
                 <hr>
-                <p>Correo: example@example.com <span id="email"></span></p>
+                <p>Correo:  <span id="email"></span></p>
                 <hr>
-                <p>Número de teléfono: 5552962378 <span id="num"></span></p>
+                <p>Número de teléfono:  <span id="num"></span></p>
                 <hr>
-                <p>Contraseña: ******* <span id="password"></span></p>
+                <p>Contraseña:  <span id="password"></span></p>
                 <hr>
               </div>
             </div>
@@ -143,14 +141,14 @@
                     <input type="text" id="lastName" required><br>
                     <label for="email">Correo:</label>
                     <input type="email" id="email" readonly placeholder="Este campo no se puede modificar"><br>
-                    <!--<label for="tel">Número de teléfono:</label>
-                    <input type="number" id="tel" required><br>-->
+                    <label for="tel">Número de teléfono:</label>
+                    <input type="number" id="tel" required><br>
                     <button type="button" class="ButtonsConfig" onclick="togglePasswordFields()">Editar Contraseña</button><br><br>
                     <div id="passwordFields">
                     <label for="pwd">Nueva contraseña:</label>
-                    <input type="password" id="pwd" name="pwd" ><br><br>
+                    <input type="password" id="pwd" name="pwd" placeholder="Introduce la nueva contraseña"><br><br>
                     <label for="confirmPassword">Confirmar Contraseña:</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirma la contraseña" required><br><br>
                     </div>
                     <button type="button" class="ButtonsConfig" onclick="saveChanges()">Guardar</button>
                     <button type="button" class="ButtonsConfig" onclick="closeFormCuenta()">Cancelar</button>
@@ -172,20 +170,39 @@
               <div id="cardForm" class="form-popup" style="display: none;">
                 <form id="cardFormContent" class="form-container">
                   <h4>Agregar/Editar tarjeta</h4>
+
                   <label for="cardNumber">Número de tarjeta:</label>
-                  <input type="text" id="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" required><br>
+                  <input type="text" id="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="16" pattern="\d{16}" name="cardNumber" oninput="detectCompanyAndBank()"><br>
+
                   <label for="cardOwner">Nombre del propietario:</label>
-                  <input type="text" id="cardOwner" required><br>
+                  <input type="text" id="cardOwner" name="cardOwner"required><br>
+
                   <label for="expiryDate">Fecha de expiración:</label>
-                  <input type="text" id="expiryDate" placeholder="MM/AA" required><br>
+                  <input type="text" id="expiryDate" placeholder="MM/AA" maxlength="4" minlength="4"required><br>
+
                   <label for="securityCode">Código de seguridad:</label>
-                  <input type="text" id="securityCode" maxlength="3" placeholder="CVV" required><br>
-                  <button type="button" id="guardar-tarjeta" class="ButtonsConfig">Guardar</button>
+                  <input type="text" id="securityCode"  name="securityCode" maxlength="4" minlength="3" placeholder="CVV" required><br>
+
+                  <label for="company">Compañía:</label>
+                  <input type="text" id="company" name="company" readonly><br>
+
+                  <label for="bank">Banco:</label>
+                  <input type="text" id="bank" name="bank" readonly><br>
+
+                  <!-- Radio buttons para seleccionar el tipo de tarjeta -->
+                  <label>Tipo de tarjeta:</label><br>
+                  <input type="radio" id="credit" name="cardType" value="Crédito">
+                  <label class="content-input" for="credit">Crédito</label><br>
+                  <input type="radio" id="debit" name="cardType" value="Débito" checked>
+                  <label class="content-input" for="debit">Débito</label><br>
+
+                  <button type="button" id="guardar-tarjeta" class="ButtonsConfig" onclick="saveCard()">Guardar</button>
                   <button type="button" class="ButtonsConfig" onclick="closeFormCards()">Cancelar</button>
                 </form>
               </div>
             </div>
             
+
             <!-- Este div contiene el formulario de direcciones de envío y tiene la clase 'formulario' -->
             <div id="direcciones-envio" class="formulario" style="display: none;">
               <h4>Direcciones</h4>
@@ -200,24 +217,46 @@
               <div id="addressForm" class="form-popup" style="display: none;">
                 <form id="addressFormContent" class="form-container">
                   <h4>Agregar/Editar dirección</h4>
+
                   <label for="fullName">Nombre completo:</label>
                   <input type="text" id="fullName" required><br>
+
                   <label for="street">Calle:</label>
                   <input type="text" id="street"  autocomplete="street-address"  required><br>
-                  <label for="number">Número:</label>
-                  <input type="number" id="number" required><br>
-                  <label for="neighborhood">Colonia:</label>
-                  <input type="text" id="neighborhood" required><br>
+
+                  <label for="number">Número interior:</label>
+                  <input type="number" id="numberInt" required><br>
+
+                  <label for="number">Número exterior:</label>
+                  <input type="number" id="numberExt" required><br>
+
                   <label for="postalCode">Código Postal:</label>
-                  <input type="text" id="postalCode" required><br>
-                  <label for="city">Ciudad o Municipio:</label>
-                  <input type="text" id="city" required><br>
+                  <input type="text" id="postalCode" onblur="fetchPostalCodeInfo()" required><br>
+
+                  <label for="neighborhood">Colonia:</label>
+                  <select name="neighborhood" id="neighborhood" required></select><br>
+
+                  <label for="city">Municipio:</label>
+                  <input type="text" id="municipio" required ><br>
+
+                  <label for="city">Ciudad:</label>
+                  <input type="text" id="city" required ><br>
+
+                  <label for="state">Estado:</label>
+                  <input type="text" id="state" required ><br>
+                    
+
                   <label for="country">País:</label>
-                  <input type="text" id="country" required><br>
-                  <button type="button" id = "guardar-direccion" class="ButtonsConfig">Guardar</button>
+                  <input type="text" id="country" value="México" readonly required><br>
+
+                  <button type="button" id = "guardar-direccion" class="ButtonsConfig" onclick="saveAddress()">Guardar</button>
                   <button type="button" class="ButtonsConfig" onclick="closeFormAddresses()">Cancelar</button>
                 </form>
               </div>
+
+              <!--<div id="errorMessage"  style="display: none; color: red;">
+                No se encontraron detalles para el código postal ingresado.
+              </div>-->
                 
             </div>
     
@@ -225,8 +264,8 @@
             <div class="alert alert-success mt-3 alert-dismissible fade show" role="alert" id="alerta-success" style="display: none;">
               <i class="bi bi-check-circle-fill" style="color: green;"></i> 
               Los cambios se guardaron correctamente.
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
-              </button>
+              <!--<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+              </button>-->
           </div>
           <!-- Contenedor de la alerta de BootStrap-->
           <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-danger" style="display: none;">
@@ -236,108 +275,107 @@
             </button>
           </div>
            <!-- Contenedor de la alerta de BootStrap-->
-           <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-danger2" style="display: none;">
+           <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-dangerCampos" style="display: none;">
             <i class="bi bi-exclamation-triangle-fill" style="color: red; align-items: center; justify-content: center;"></i> 
             Por favor llene todos los campos.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
-            </button>
+            <!--<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+            </button>-->
           </div>
+           <!-- Contenedor de la alerta de BootStrap-->
+          <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-dangerContra" style="display: none;">
+            <i class="bi bi-exclamation-triangle-fill" style="color: red; align-items: center; justify-content: center;"></i> 
+            El campo de contraseña no puede estar vacío y debe de tener al menos una letra minúscula, una letra mayúscula, un dígito, un carácter especial y un mínimo de 8 caracteres.
+           <!---- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+            </button>-->
+          </div>
+
+          <!-- Contenedor de la alerta de BootStrap-->
+           <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-dangerNameApellidos" style="display: none;">
+          <i class="bi bi-exclamation-triangle-fill" style="color: red; align-items: center; justify-content: center;"></i> 
+            Los campos de Nombre y apellidos no pueden estar vacíos y no aceptan carácteres numéricos.
+           <!---- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+            </button>-->
+          </div>
+
+            <!-- Contenedor de la alerta de BootStrap-->
+            <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-dangerNumber" style="display: none;">
+              <i class="bi bi-exclamation-triangle-fill" style="color: red; align-items: center; justify-content: center;"></i> 
+                El campo de añadir teléfono no puede estar vacío y solo puede contener 10 carácteres numéricos.
+               <!---- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+                </button>-->
+            </div>
+           <!-- Contenedor de la alerta de BootStrap-->
+           <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-dangerCard" style="display: none;">
+            <i class="bi bi-exclamation-triangle-fill" style="color: red; align-items: center; justify-content: center;"></i> 
+              El campo de añadir tarjeta no puede estar vacío y tiene que contener 16 carácteres numéricos.
+             <!---- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+              </button>-->
+          </div>
+
+          <!-- Contenedor de la alerta de BootStrap-->
+          <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-dangerExpiryDate" style="display: none;">
+            <i class="bi bi-exclamation-triangle-fill" style="color: red; align-items: center; justify-content: center;"></i> 
+              El campo de expiración de la tarjeta no puede estar vacío y tiene que contener 4 carácteres numéricos.
+             <!---- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+              </button>-->
+          </div>
+
+          <!-- Contenedor de la alerta de BootStrap-->
+          <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="alerta-dangerCVV" style="display: none;">
+            <i class="bi bi-exclamation-triangle-fill" style="color: red; align-items: center; justify-content: center;"></i> 
+              El campo de CVV no puede estar vacío y tiene que contener mínimo 3 carácteres numéricos.
+             <!---- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+              </button>-->
+          </div>
+
+           <!-- Contenedor de la alerta de BootStrap-->
+           <div class="alert alert-danger mt-3 alert-dismissible fade show" role="alert" id="errorMessageCP" style="display: none;">
+            <i class="bi bi-exclamation-triangle-fill" style="color: red; align-items: center; justify-content: center;"></i> 
+              No se encontraron detalles para el código postal ingresado.
+             <!---- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar">
+              </button>-->
+          </div>
+   </div>
+     </div>
+
      </div>
     </div>
     </div>
     
-    <!-------------------------------- Termina el contenedor de la página ----------------------------------------------------------->
+  <!------------------------------------- Termina el contenedor de la página ----------------------------------------------------------->
     
 
  <!---------------------------------------------Inicio de Footer----------------------------------------------------->
 
- <footer class="text-center text-lg-start text-white" style="background-color: #969696">
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-    <!-- Section: Links -->
-    <section class="">
-        <!--Grid row-->
-        <div class="row d-flex align-items-center">
-        <!-- Grid column -->
-        <div class="col-md-7 col-lg-8 text-center text-md-start">
-            <h6 class="text-uppercase mb-4 font-weight-bold">
-                Manos a la Obra
-            </h6>
-            <p class="font-weight-bold">
-                Preguntas frecuentes  |  <a href="Terminos y condiciones.html" target="_blank">Terminos y Condiciones</a>  | <a href="Politicas de Privacidad.html" target="_blank">Aviso de privacidad</a>  | <a href="Politas de envio.html" target="_blank">Política de envío</a>
-            </p>
-        </div>
-    <!-- Section: Copyright -->
-    
-        <div class="row d-flex align-items-center">
-        <!-- Grid column -->
-        <div class="col-md-7 col-lg-8 text-center text-md-start">
-            <!-- Copyright -->
-            <div>
-            © 2024 Alebrijes Fullstack
-            
-            
-            </div>
-            <!-- Copyright -->
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-            <!-- Facebook -->
-            <a
-            href="https://www.facebook.com"
-            target="_blank"
-            class="btn btn-outline-light btn-floating m-1"
-            class="text-white"
-            role="button"
-            ><i class="bi bi-facebook"></i
-            ></a>
-
-            <!-- Twitter -->
-            <a
-            href="https://twitter.com"
-            target="_blank"
-            class="btn btn-outline-light btn-floating m-1"
-            class="text-white"
-            role="button"
-            ><i class="bi bi-twitter"></i
-            ></a>
-
-            <!-- Google -->
-            <a
-            href="https://www.google.com"
-            target="_blank"
-            class="btn btn-outline-light btn-floating m-1"
-            class="text-white"
-            role="button"
-            ><i class="bi bi-google"></i
-            ></a>
-
-            <!-- Instagram -->
-            <a
-            href="https://www.instagram.com"
-            target="_blank"
-            class="btn btn-outline-light btn-floating m-1"
-            class="text-white"
-            role="button"
-            ><i class="bi bi-instagram"></i></a>
-        </div>
-        <!-- Grid column -->
-        </div>
-    </section>
-    <!-- Section: Copyright -->
-    </div>
-    <!-- Grid container -->
+ <footer class="text-center text-lg-start text-white" style="background-color: #696868 ">
+  <div id="footer-script"></div>
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          fetch('./footer.html')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('footer-script').innerHTML = data;
+              });
+      });
+  </script>
 </footer>
 <!-- Fin del Footer -->
-    <!--Conexión JS-->
-    <script src="navbar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
-  
-    <script src="script-funciones.js"></script>
-<script src="./assets/scripts/script-configuración-usuario.js"></script>
+
+<!-- Scripts -->
+<script src="../scripts/script-configuración-usuario.js"></script>
+<script src="../scripts/configuracion-usuarioApi.js"></script>
+<!-- Conexión con jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+z5KA9QF1c8EIf+6cv8LfCW2x4EBY2F/vMHZ5ISK" crossorigin="anonymous"></script>
+<!-- Conexión con BootStrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- Otros scripts -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.dropdown-toggle').dropdown();
+  });
+</script>
 </body>
+<!----------------------------------------------- Termina el Body --------------------------------------------->
 </html>

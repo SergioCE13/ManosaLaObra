@@ -139,9 +139,9 @@ let user = {
   firstName: "Maria",
   middleName: "Rodriguez",
   lastName: "Castro",
-  email: "example@example.com",
+  email: "maria.rc@gmail.com",
   telefono: "2969613706",
-  password: "Password123!"
+  password: "Contraseña123."
 };
 
 
@@ -330,7 +330,7 @@ window.onload = function() {
     async function fetchPostalCodeInfo() {
     const postalCode = document.getElementById('postalCode').value; //Aquí se obtiene el valor del campo de entrada del código postal.
     //const apiUrl = `https://api.copomex.com/query/info_cp/09810?token=0acd3e82-60b5-4281-9947-9b5e93338282`; 
-    const apiUrl =`https://api.copomex.com/query/info_cp/${postalCode}?type=simplified&token=0acd3e82-60b5-4281-9947-9b5e93338282`;
+    const apiUrl =`https://api.copomex.com/query/info_cp/${postalCode}?type=simplified&token=pruebas`;
     try {
       const response = await fetch(apiUrl); //Utiliza fetch para realizar una solicitud GET a la API.
       if (!response.ok) {

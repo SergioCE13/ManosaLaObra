@@ -23,21 +23,6 @@ body {
 
 }
 
-.carousel-control-next-icon {
-    background-image: url(../images/img.login/icons8-chevron-left-80.png);
-    rotate: 180deg;
-
-}
-
-.carousel-control-prev-icon {
-    background-image: url(../images/img.login/icons8-chevron-left-80.png);
-
-    
-}
-
-.carousel-control-next {
-    color: var(--color--yellow);
-}
 
 .container-int {
     background-color: white;
@@ -246,12 +231,12 @@ body {
     margin: 50% 0%;
     padding: 10px;
     justify-content: center;
-
+    
 
 
 }
 
-.text-modal {
+.text-modal{
     padding: 15px;
 }
 
@@ -307,14 +292,16 @@ body {
     .modal-body {
         width: 90%;
     }
-
     .img-modal {
         width: 40%;
         height: 40%;
     }
-
     .modal-body {
         width: 100%;
     }
 
 }
+
+
+
+

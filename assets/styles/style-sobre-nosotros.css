@@ -1,3 +1,7 @@
+
+
+
+
 /*Estilos del contenedor del Carousel*/
 .carousel-container {
     width: 100%; /* Ancho del contenedor */
@@ -25,11 +29,18 @@
 .carousel-control-next-icon {
     background-image: url(../images/img.login/icons8-chevron-left-80.png);
     rotate: 180deg;
-
 }
 
 .carousel-control-prev-icon {
     background-image: url(../images/img.login/icons8-chevron-left-80.png);
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 60px;
+    height: 100px;
+    margin-top: 20%;
+    margin-left: 20px;
+    margin-right: 20px;
 
     
 }
